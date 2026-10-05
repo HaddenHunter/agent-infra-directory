@@ -130,12 +130,22 @@ jobs:
           git commit -m "chore: refresh tool, paper and news metadata"
           git push --force-with-lease -u origin "$BRANCH"
 
-          if gh pr view "$BRANCH" --json number >/dev/null 2>&1; then
-            echo "PR 已存在，本次刷新已更新到该 PR。"
+          # 分支已经推上去了，数据就在上面。所以「开 PR」失败不该让整个任务红掉——
+          # gh pr create 依赖仓库开关 "Allow GitHub Actions to create and approve
+          # pull requests"（默认关闭），该开关关着时会报 not permitted to create
+          # pull requests。这里降级为警告 + 给出一次性开 PR 的链接。
+          COMPARE="${{ github.server_url }}/${{ github.repository }}/compare/main...$BRANCH?expand=1"
+
+          if gh pr create \
+            --base main \
+            --head "$BRANCH" \
+            --title "chore: 数据动态刷新（$(date -u '+%Y-%m-%d')）" \
+            --body-file /tmp/pr-body.md 2>/tmp/gh-error.log; then
+            echo "已创建 PR。"
+          elif grep -qi "already exists" /tmp/gh-error.log; then
+            # 分支已存在说明上一轮已经开过 PR，这次 push 已经把内容更新进去了
+            echo "PR 已存在，本次刷新已更新到该分支。"
           else
-            gh pr create \
-              --base main \
-              --head "$BRANCH" \
-              --title "chore: 数据动态刷新（$(date -u '+%Y-%m-%d')）" \
-              --body-file /tmp/pr-body.md
+            echo "::warning::自动开 PR 失败，但分支已推送成功，数据没丢。手动开 PR：$COMPARE"
+            cat /tmp/gh-error.log
           fi
