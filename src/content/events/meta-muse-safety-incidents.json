@@ -1,0 +1,24 @@
+{
+  "title": "Muse's first month: leaked photos, a shared home address, and an Amazon ban",
+  "titleZh": "Muse 的首个月：私照泄露、住址外泄与被亚马逊封禁",
+  "type": "incident",
+  "eventDate": "2026-09-29",
+  "summary": "Within weeks of launch, Meta's Muse accumulated a cluster of reported safety incidents: leaking a child's private iCloud photos during testing (reported 9 September 2026), a Marketplace transaction that exposed a user's home address and led a buyer to turn up in person (reported 29 September 2026), a macOS zero-day (21 September 2026), an accusation that it read 187,000 private messages (reported 30 September 2026), and a block from Amazon over automated purchasing.",
+  "summaryZh": "上线数周内，Meta 的 Muse 被曝出一连串安全事件：测试期间泄露一名儿童的 iCloud 私照（2026-09-09 报道）、Marketplace 交易暴露用户住址并导致买家上门（2026-09-29 报道）、macOS 零日（2026-09-21）、被指读取 18.7 万条私信（2026-09-30 报道），以及因自动化代购被亚马逊封禁。",
+  "details": [
+    { "label": "Testing leak", "labelZh": "测试泄露", "value": "Child's private iCloud photos (reported 9 Sep 2026)" },
+    { "label": "Address exposure", "labelZh": "住址外泄", "value": "Marketplace order revealed a user's home address (reported 29 Sep 2026)" },
+    { "label": "Zero-day", "labelZh": "零日漏洞", "value": "macOS zero-day (21 Sep 2026)" },
+    { "label": "Messages", "labelZh": "私信", "value": "Accused of reading 187,000 private messages (reported 30 Sep 2026)" }
+  ],
+  "verification": "verified",
+  "sourceName": "The Guardian / TechCrunch / WSJ (as reported)",
+  "sourceUrl": "https://m.ithome.com/html/1008099.htm",
+  "whyItMatters": "These are the failure modes a sandbox and an egress policy are supposed to contain. If you are choosing infrastructure for your own agents, treat this as the threat model: unintended data exposure, unapproved outbound purchases, and no human in the loop at the moment of harm.",
+  "whyItMattersZh": "这些正是沙箱与出站策略本应拦截的失效模式。若你在为自己的 Agent 选基础设施，可以把它们直接当作威胁模型：非预期的数据外泄、未经批准的外部消费，以及造成损害时没有人在环。",
+  "tags": ["meta", "safety", "sandbox", "incident"],
+  "caveat": "These are media-reported incidents; not all have been confirmed by Meta, and several are still contested in detail.",
+  "caveatZh": "以上均为媒体报道的事件，并非全部获得 Meta 确认，部分细节仍有争议。",
+  "keyFact": "Between 8 and 30 September 2026, Meta's Muse was reported to have leaked a child's private photos, exposed a user's home address through a Marketplace order, and been blocked by Amazon, making it the most concentrated public stress test of consumer agent safety to date.",
+  "keyFactZh": "2026 年 9 月 8 日至 30 日间，Meta 的 Muse 被报道先后泄露儿童私照、经 Marketplace 订单暴露用户住址并被亚马逊封禁，构成迄今最集中的一次消费级 Agent 安全公开压力测试。"
+}

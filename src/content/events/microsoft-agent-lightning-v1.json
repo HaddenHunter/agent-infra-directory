@@ -1,0 +1,22 @@
+{
+  "title": "Microsoft's Agent Lightning v1.0 puts the production harness inside the training loop",
+  "titleZh": "微软 Agent Lightning v1.0：把生产 harness 放进训练循环",
+  "type": "framework",
+  "eventDate": "2026-08-18",
+  "summary": "Microsoft published Agent Lightning v1.0, an MIT-licensed reinforcement-learning framework for agents, with a technical report on arXiv (2608.17528) dated 18 August 2026. Its core idea is to let the production harness own the interaction loop rather than rebuilding tool-calling logic inside the trainer. With roughly 3,500 lines of core Python and only 6,000 training examples, it reports lifting Qwen3.5-9B on SWE-bench Verified from 41.8% to 56.4%, a 14.6-point absolute gain.",
+  "summaryZh": "微软发布 Agent Lightning v1.0——MIT 许可的 Agent 强化学习框架，技术报告于 2026 年 8 月 18 日发布在 arXiv（2608.17528）。其核心思路是让生产 harness 掌控交互循环，而不是在训练系统里重建工具调用逻辑。核心 Python 约 3,500 行，仅用 6,000 条训练样本，报告称把 Qwen3.5-9B 在 SWE-bench Verified 上从 41.8% 提升至 56.4%，绝对提升 14.6 个百分点。",
+  "details": [
+    { "label": "License", "labelZh": "许可证", "value": "MIT" },
+    { "label": "Core size", "labelZh": "核心代码量", "value": "~3,500 lines of core Python" },
+    { "label": "Training data", "labelZh": "训练数据", "value": "6,000 training examples" },
+    { "label": "Reported gain", "labelZh": "报告提升", "value": "Qwen3.5-9B on SWE-bench Verified: 41.8% → 56.4% (+14.6 points)" }
+  ],
+  "verification": "verified",
+  "sourceName": "arXiv 2608.17528 / microsoft/agent-lightning",
+  "sourceUrl": "https://arxiv.org/abs/2608.17528v1",
+  "whyItMatters": "If the harness you already run in production can be the training environment, agent quality improvements stop requiring a parallel simulation stack. That lowers the cost of turning operational traces into training signal.",
+  "whyItMattersZh": "如果你生产环境里跑的那套 harness 可以直接充当训练环境，那么提升 Agent 质量就不再需要另建一套仿真栈。这降低了把线上轨迹转化为训练信号的代价。",
+  "tags": ["microsoft", "rl", "training", "harness"],
+  "keyFact": "Microsoft's Agent Lightning v1.0, with a technical report dated 18 August 2026, is an MIT-licensed agent RL framework that reports raising Qwen3.5-9B on SWE-bench Verified from 41.8% to 56.4% using only 6,000 training examples.",
+  "keyFactZh": "微软 Agent Lightning v1.0（技术报告日期 2026 年 8 月 18 日）是 MIT 许可的 Agent 强化学习框架，报告称仅用 6,000 条训练样本就把 Qwen3.5-9B 在 SWE-bench Verified 上从 41.8% 提升到 56.4%。"
+}

@@ -118,7 +118,7 @@ const events = defineCollection({
   schema: z.object({
     title: z.string(),
     titleZh: z.string(),
-    type: z.enum(['launch', 'funding', 'incident', 'framework', 'policy']),
+    type: z.enum(['launch', 'funding', 'incident', 'framework', 'policy', 'research']),
     /** 事件发生日期，用于时效锚点 */
     eventDate: z.string(),
     summary: z.string(),
@@ -135,6 +135,10 @@ const events = defineCollection({
     verification: z.enum(['verified', 'single-source', 'unverified', 'disputed']),
     sourceName: z.string(),
     sourceUrl: z.string().url(),
+    /** aihot 式「推荐理由」：这条对做选型的人意味着什么 */
+    whyItMatters: z.string().optional(),
+    whyItMattersZh: z.string().optional(),
+    tags: z.array(z.string()).default([]),
     caveat: z.string().optional(),
     caveatZh: z.string().optional(),
     /** 首句必须含日期锚点，便于 AI 引用 */

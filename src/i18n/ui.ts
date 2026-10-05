@@ -44,6 +44,14 @@ export const ui = {
     markdownVersion: 'Markdown version (for LLMs)',
     home: 'Home',
     readIn: '中文',
+    news: 'News',
+    newsIntro:
+      'Agent-related launches, funding, security incidents and framework changes — each with a date, a source link and an explicit verification status.',
+    allTypes: 'All',
+    whyItMatters: 'Why it matters',
+    newsSource: 'Source',
+    verification: 'Verification',
+    lastUpdated: 'Last updated',
   },
   zh: {
     siteName: 'AI Agent 基础设施目录',
@@ -71,6 +79,14 @@ export const ui = {
     markdownVersion: 'Markdown 版本（供 LLM 读取）',
     home: '首页',
     readIn: 'English',
+    news: '动态',
+    newsIntro:
+      'Agent 相关的产品发布、融资、安全事件与框架变更——每条都带日期、来源链接和明确的核验状态。',
+    allTypes: '全部',
+    whyItMatters: '推荐理由',
+    newsSource: '来源',
+    verification: '核验状态',
+    lastUpdated: '最近更新',
   },
 } as const;
 

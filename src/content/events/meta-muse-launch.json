@@ -1,0 +1,24 @@
+{
+  "title": "Meta launches Muse, a consumer personal agent that acts on your behalf",
+  "titleZh": "Meta 发布 Muse：替你行事的消费级个人 Agent",
+  "type": "launch",
+  "eventDate": "2026-09-08",
+  "summary": "Meta launched Muse on 8 September 2026 in the US across iOS, Android, web and WhatsApp. Muse is a consumer personal agent that can shop, manage email and calendar, book travel and make payments, running on what Meta calls a Muse Secure VM. Muse itself is free; the paid tiers are Power at $20 per month and Maximum at $100 per month.",
+  "summaryZh": "Meta 于 2026 年 9 月 8 日在美国上线 Muse，覆盖 iOS、Android、网页与 WhatsApp。Muse 是消费级个人 Agent，可代用户购物、管理邮件与日历、订票与付款，运行于 Meta 所称的 Muse Secure VM。Muse 本身免费，付费档为 Power $20/月与 Maximum $100/月。",
+  "details": [
+    { "label": "Availability", "labelZh": "上线范围", "value": "US, from 8 September 2026 (iOS / Android / web / WhatsApp)" },
+    { "label": "Free tier", "labelZh": "免费档", "value": "Muse itself is free" },
+    { "label": "Paid tiers", "labelZh": "付费档", "value": "Power $20/month; Maximum $100/month" },
+    { "label": "Isolation", "labelZh": "隔离方式", "value": "Runs on a Muse Secure VM" }
+  ],
+  "verification": "verified",
+  "sourceName": "Meta Newsroom",
+  "sourceUrl": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/",
+  "whyItMatters": "A consumer agent that can spend money and touch email is the first mass-market test of agent sandboxing under real adversarial pressure. Watch whether its isolation story holds — that is the same question enterprises are asking about self-hosted sandboxes.",
+  "whyItMattersZh": "一个能花钱、能读邮件的消费级 Agent，是 Agent 沙箱在真实对抗压力下的首次大规模检验。它的隔离叙事能否站住，与企业级自托管沙箱面临的是同一个问题。",
+  "tags": ["meta", "personal-agent", "consumer"],
+  "caveat": "A commonly repeated version of this story says Muse's lowest tier is $20/month. Muse is actually free; $20 is the lowest paid tier.",
+  "caveatZh": "常见误传称「Muse 最低档 $20/月」。实际是：Muse 本身免费，$20 为最低付费档。",
+  "keyFact": "Meta launched Muse on 8 September 2026 as a free consumer personal agent in the US with paid tiers at $20 and $100 per month, running on a dedicated Muse Secure VM.",
+  "keyFactZh": "Meta 于 2026 年 9 月 8 日在美国推出消费级个人 Agent「Muse」，本体免费，付费档为每月 $20 与 $100，运行于专属的 Muse Secure VM。"
+}

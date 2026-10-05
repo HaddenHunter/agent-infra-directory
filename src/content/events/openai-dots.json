@@ -1,0 +1,22 @@
+{
+  "title": "OpenAI launches dots, an always-on personal agent with its own cloud computer",
+  "titleZh": "OpenAI 发布 dots：自带云电脑的常驻个人 Agent",
+  "type": "launch",
+  "eventDate": "2026-09-29",
+  "summary": "At DevDay on 29 September 2026, OpenAI launched dots, a personal agent powered by GPT-6 Astra that runs in its own cloud computer around the clock, connects to more than 4,000 apps, and can be reached from ChatGPT, Slack and Microsoft Teams. An enterprise tier called specialist dots gets independent identity and credentials, aimed at email marketing, accounting and legal analysis. Pro tiers cost $100, $200 and $500 per month; Business Premium is $125 per seat per month.",
+  "summaryZh": "在 2026 年 9 月 29 日的 DevDay 上，OpenAI 发布 dots——由 GPT-6 Astra 驱动、拥有独立云电脑、7×24 小时运行的个人 Agent，可连接 4,000+ 应用，并通过 ChatGPT、Slack、Microsoft Teams 触达。企业版 specialist dots 拥有独立身份与凭证，面向邮件营销、会计与法律分析。Pro 档定价 $100/$200/$500 每月，Business Premium 为 $125/座/月。",
+  "details": [
+    { "label": "Model", "labelZh": "驱动模型", "value": "GPT-6 Astra" },
+    { "label": "Integrations", "labelZh": "应用连接", "value": "4,000+" },
+    { "label": "Pricing", "labelZh": "定价", "value": "Pro $100 / $200 / $500 per month; Business Premium $125 per seat per month" },
+    { "label": "Channels", "labelZh": "触达渠道", "value": "ChatGPT, Slack, Microsoft Teams (SMS in limited beta)" }
+  ],
+  "verification": "verified",
+  "sourceName": "OpenAI",
+  "sourceUrl": "https://openai.com/index/introducing-dots/",
+  "whyItMatters": "The agent's unit of deployment is shifting from a chat session to a persistent, identity-bearing sandbox with its own compute. That is exactly the primitive the sandbox and identity categories in this directory exist to supply — so expect 'which sandbox / which agent identity' to become the buying questions that follow.",
+  "whyItMattersZh": "Agent 的部署单元正从「一次对话」转向「有独立身份、常驻运行的沙箱」。这恰好对应本站沙箱与身份两个分类所提供的能力——可以预期「选哪个沙箱 / 哪套 Agent 身份」会成为紧随其后的采购问题。",
+  "tags": ["openai", "personal-agent", "cloud-computer"],
+  "keyFact": "As of 29 September 2026, OpenAI's dots is an always-on personal agent running in its own cloud computer with 4,000+ app integrations and Pro pricing of $100, $200 and $500 per month.",
+  "keyFactZh": "截至 2026 年 9 月 29 日，OpenAI 的 dots 是运行在自有云电脑中的常驻个人 Agent，可连接 4,000+ 应用，Pro 档定价为每月 $100/$200/$500。"
+}

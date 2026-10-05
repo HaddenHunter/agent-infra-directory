@@ -1,0 +1,21 @@
+{
+  "title": "Google starts converting Gems into reusable Skills on 17 November 2026",
+  "titleZh": "Google 将于 2026 年 11 月 17 日起把 Gems 自动转为可复用 Skills",
+  "type": "policy",
+  "eventDate": "2026-11-17",
+  "summary": "Google's help documentation confirms that Gems begin migrating to Skills for personal Google accounts from November 2026, with automatic conversion. The in-app notice gives 17 November 2026 as the start date. Workspace business accounts follow in March 2027 and education accounts in June 2027.",
+  "summaryZh": "Google 帮助文档确认，自 2026 年 11 月起个人 Google 账户的 Gems 将开始向 Skills 迁移，且为自动转换；应用内通知给出起始日期为 2026 年 11 月 17 日。Workspace 企业版随后于 2027 年 3 月、教育版 2027 年 6 月跟进。",
+  "details": [
+    { "label": "Personal accounts", "labelZh": "个人账户", "value": "From 17 November 2026, automatic conversion" },
+    { "label": "Workspace business", "labelZh": "Workspace 企业版", "value": "March 2027" },
+    { "label": "Education", "labelZh": "教育版", "value": "June 2027" }
+  ],
+  "verification": "verified",
+  "sourceName": "Google Support",
+  "sourceUrl": "https://support.google.com/gemini/answer/18560919?p=gems_to_skills",
+  "whyItMatters": "Reusable Skills shift agent configuration from a per-user setting into a portable artefact. That is the same direction MCP and the skill marketplaces are moving, and it changes what 'migrating your agent setup' means.",
+  "whyItMattersZh": "可复用 Skills 把 Agent 配置从「每个用户的设置」变成可携带的产物。这与 MCP 及各类 skill 市场的方向一致，也改变了「迁移你的 Agent 配置」这件事的含义。",
+  "tags": ["google", "skills", "migration"],
+  "keyFact": "Google will begin automatically converting Gems into reusable Skills for personal Google accounts on 17 November 2026, with Workspace business accounts following in March 2027.",
+  "keyFactZh": "Google 将于 2026 年 11 月 17 日起为个人 Google 账户自动把 Gems 转换为可复用 Skills，Workspace 企业版将于 2027 年 3 月跟进。"
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Instinct raises $1B at a $10B valuation with a 14-person team",
+  "titleZh": "Instinct 以 14 人团队完成 $10 亿融资、估值 $100 亿",
+  "type": "funding",
+  "eventDate": "2026-09-28",
+  "summary": "Instinct announced a $1B Series C at a $10B post-money valuation on 28 September 2026, led by Sequoia Capital, Benchmark and Coatue, with founder Noah Shinn. The company builds a personal AI agent that takes tasks via text and phone and remains in early access. It has 14 employees, and roughly one month earlier raised $250M at a $2.5B valuation — a four-fold valuation increase in about a month.",
+  "summaryZh": "Instinct 于 2026 年 9 月 28 日宣布完成 $10 亿 C 轮融资，投后估值 $100 亿，由 Sequoia Capital、Benchmark 与 Coatue 投资，创始人为 Noah Shinn。公司产品为通过短信与电话接受任务的个人 AI Agent，仍处 early access。团队 14 人；约一个月前刚以 $25 亿估值完成 $2.5 亿融资——约一个月内估值翻了四倍。",
+  "details": [
+    { "label": "Round", "labelZh": "轮次", "value": "Series C — $1B at $10B post-money" },
+    { "label": "Investors", "labelZh": "投资方", "value": "Sequoia Capital, Benchmark, Coatue" },
+    { "label": "Team", "labelZh": "团队规模", "value": "14 employees" },
+    { "label": "Prior round", "labelZh": "上一轮", "value": "$250M at $2.5B (August 2026)" }
+  ],
+  "verification": "verified",
+  "sourceName": "BusinessWire / TechCrunch",
+  "sourceUrl": "https://techcrunch.com/2026/09/28/viral-ai-agent-instinct-raises-1b-series-c-at-a-10b-valuation/",
+  "whyItMatters": "A 14-person team at a $10B valuation is the clearest pricing signal yet that the market is valuing the personal-agent interface layer, not the infrastructure beneath it. It also tells you where the competitive pressure on self-hosted alternatives is coming from.",
+  "whyItMattersZh": "14 人团队对应 $100 亿估值，是迄今最清晰的市场定价信号：资本在给「个人 Agent 的交互层」定价，而不是它下面的基础设施。这同时也说明自托管替代方案正面临来自哪里的竞争压力。",
+  "tags": ["funding", "personal-agent", "valuation"],
+  "keyFact": "On 28 September 2026, Instinct raised a $1B Series C at a $10B valuation with only 14 employees, roughly quadrupling its $2.5B valuation from about a month earlier.",
+  "keyFactZh": "2026 年 9 月 28 日，Instinct 以仅 14 人的团队完成 $10 亿 C 轮融资、估值 $100 亿，较约一个月前的 $25 亿估值翻了约四倍。"
+}

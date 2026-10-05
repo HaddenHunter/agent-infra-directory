@@ -1,0 +1,24 @@
+{
+  "title": "OpenAI ships GPT-6.1 Sol: near-Astra capability at a tenth of the cached-input price",
+  "titleZh": "OpenAI 发布 GPT-6.1 Sol：能力接近 Astra，缓存输入价格降至十分之一",
+  "type": "launch",
+  "eventDate": "2026-09-29",
+  "summary": "OpenAI released GPT-6.1 Sol on 29 September 2026, positioned as close to GPT-6 Astra in capability at a much lower cost. API pricing is $2 per million input tokens, $10 per million output tokens and $0.10 per million cached input tokens. OpenAI says that under low reasoning effort the share of responses containing factual errors fell from 11.4% on GPT-6 Sol to 7.7%.",
+  "summaryZh": "OpenAI 于 2026 年 9 月 29 日发布 GPT-6.1 Sol，定位为能力接近 GPT-6 Astra、成本低得多。API 定价为每百万输入 token $2、每百万输出 token $10、每百万缓存输入 token $0.10。OpenAI 称在低推理强度下，含事实错误的回答占比从 GPT-6 Sol 的 11.4% 降至 7.7%。",
+  "details": [
+    { "label": "Input / output", "labelZh": "输入 / 输出", "value": "$2 / $10 per million tokens" },
+    { "label": "Cached input", "labelZh": "缓存输入", "value": "$0.10 per million tokens" },
+    { "label": "Factual error rate", "labelZh": "事实错误率", "value": "11.4% → 7.7% (low reasoning effort)" },
+    { "label": "Availability", "labelZh": "可用范围", "value": "ChatGPT Work / Codex and API — not standard ChatGPT" }
+  ],
+  "verification": "verified",
+  "sourceName": "OpenAI / TechCrunch",
+  "sourceUrl": "https://openai.com/index/introducing-gpt-6-1-sol/",
+  "whyItMatters": "The 11.4% to 7.7% figure applies specifically to low reasoning effort on hard prompts. If you are wiring this into an agent loop, that qualifier decides whether the reliability number is relevant to your workload.",
+  "whyItMattersZh": "11.4%→7.7% 这个数字有明确限定：低推理强度 + 困难提示集。如果要把该模型接进 Agent 循环，这个限定条件决定了这个可靠性数字对你的场景是否适用。",
+  "tags": ["openai", "model", "pricing"],
+  "caveat": "The factual-error reduction is scoped to low reasoning effort on difficult prompts, not a blanket model-wide figure. The model is not available in standard ChatGPT.",
+  "caveatZh": "事实错误率的下降限定于「低推理强度 + 困难提示」，并非全模型口径；且该模型不在普通 ChatGPT 中提供。",
+  "keyFact": "OpenAI's GPT-6.1 Sol, released 29 September 2026, costs $2 per million input tokens and $10 per million output tokens, with cached input at $0.10, and cuts factual-error responses from 11.4% to 7.7% under low reasoning effort.",
+  "keyFactZh": "OpenAI 于 2026 年 9 月 29 日发布的 GPT-6.1 Sol，价格为每百万输入 token $2、输出 $10，缓存输入 $0.10，并在低推理强度下把含事实错误的回答占比从 11.4% 降至 7.7%。"
+}

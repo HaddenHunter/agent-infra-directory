@@ -1,0 +1,24 @@
+{
+  "title": "Armadin raises $255.5M to attack companies with agent swarms — on purpose",
+  "titleZh": "Armadin 融资 $2.555 亿：用 Agent 集群持续攻击企业以做安全测试",
+  "type": "funding",
+  "eventDate": "2026-10-01",
+  "summary": "Armadin announced a $255.5M Series B at a valuation above $2.5B on 1 October 2026, co-led by Andreessen Horowitz and Accel, with Bain Capital Ventures and Redpoint joining and existing investors including 8VC, Google Ventures, In-Q-Tel and Kleiner Perkins returning. Total funding is $445M. The company was founded by Kevin Mandia, who previously founded Mandiant. Its product runs continuously online agent swarms that chain vulnerabilities together to simulate attack paths.",
+  "summaryZh": "Armadin 于 2026 年 10 月 1 日宣布完成 $2.555 亿 B 轮融资，估值超过 $25 亿，由 Andreessen Horowitz 与 Accel 联合领投，Bain Capital Ventures、Redpoint 加入，8VC、Google Ventures、In-Q-Tel、Kleiner Perkins 等原股东跟投。累计融资 $4.45 亿。公司由 Mandiant 创始人 Kevin Mandia 创立，其产品部署持续在线的 Agent 集群，自行串联漏洞以模拟攻击链。",
+  "details": [
+    { "label": "Round", "labelZh": "轮次", "value": "Series B — $255.5M at >$2.5B valuation" },
+    { "label": "Co-leads", "labelZh": "联合领投", "value": "Andreessen Horowitz and Accel" },
+    { "label": "Total raised", "labelZh": "累计融资", "value": "$445M" },
+    { "label": "Founder", "labelZh": "创始人", "value": "Kevin Mandia (founder of Mandiant)" }
+  ],
+  "verification": "verified",
+  "sourceName": "PRNewswire / TechCrunch",
+  "sourceUrl": "https://techcrunch.com/2026/10/01/kevin-mandias-new-agent-swarm-security-startup-armadin-raises-255-5m-at-2-5b-valuation/",
+  "whyItMatters": "Agent security has separated from agent infrastructure into its own funded category. If you are buying sandboxing, expect a second line item for continuously testing whether that sandboxing holds.",
+  "whyItMattersZh": "Agent 安全已经从 Agent 基础设施中分化出来，成为独立且获得重金投入的品类。若你正在采购沙箱能力，就要预期还会有第二笔预算，用来持续检验这套沙箱是否真的守得住。",
+  "tags": ["funding", "security", "agent-swarm"],
+  "caveat": "Announcement date is 1 October 2026; some outlets carried it on 2 October, which is where the commonly cited 10/02 date comes from.",
+  "caveatZh": "公告日期为 2026 年 10 月 1 日；部分媒体于 10 月 2 日转载，常见的「10/02」即由此而来。",
+  "keyFact": "Armadin, founded by Mandiant's Kevin Mandia, raised a $255.5M Series B at a valuation above $2.5B on 1 October 2026 to run continuously online agent swarms that simulate attack chains against enterprises.",
+  "keyFactZh": "由 Mandiant 创始人 Kevin Mandia 创立的 Armadin，于 2026 年 10 月 1 日完成 $2.555 亿 B 轮融资、估值超 $25 亿，用于持续运行模拟攻击链的 Agent 集群为企业做安全测试。"
+}

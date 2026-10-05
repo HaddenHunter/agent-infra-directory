@@ -1,0 +1,184 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import EventCard from '../../components/EventCard.astro';
+import { t, SITE_URL, type Locale } from '../../i18n/ui';
+import { eventTypes, eventTypeKeys, type EventType } from '../../lib/news';
+
+const locale: Locale = 'en';
+const s = t(locale);
+
+const all = await getCollection('events');
+const events = all.sort((a, b) => b.data.eventDate.localeCompare(a.data.eventDate));
+const latest = events[0]?.data.eventDate ?? '';
+
+// 按日期分组，便于渲染时间轴
+const groups: { date: string; items: typeof events }[] = [];
+for (const e of events) {
+  const last = groups[groups.length - 1];
+  if (last && last.date === e.data.eventDate) last.items.push(e);
+  else groups.push({ date: e.data.eventDate, items: [e] });
+}
+
+const counts = Object.fromEntries(
+  eventTypeKeys.map((k) => [k, events.filter((e) => e.data.type === k).length])
+) as Record<EventType, number>;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: `Agent news — ${s.siteName}`,
+  url: `${SITE_URL}/news/`,
+  numberOfItems: events.length,
+  inLanguage: 'en',
+};
+---
+
+<BaseLayout
+  locale={locale}
+  title={`Agent news — ${s.siteName}`}
+  description={s.newsIntro}
+  path="/news/"
+  alternates={{ en: '/news/', zh: '/zh/news/' }}
+  jsonLd={jsonLd}
+>
+  <div id="news-root" data-empty="No entries match that filter.">
+    <header class="flex flex-wrap items-end justify-between gap-4">
+      <div>
+        <h1 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-50">
+          {s.news}
+        </h1>
+        <p class="mt-2 max-w-2xl text-slate-600 dark:text-slate-400">{s.newsIntro}</p>
+        <p class="mt-2 text-sm text-slate-500">
+          {events.length} entries · {s.lastUpdated} {latest}
+        </p>
+      </div>
+      <div class="flex flex-col gap-2 sm:items-end">
+        <label class="relative w-full max-w-xs">
+          <span class="sr-only">Search news</span>
+          <input
+            id="news-search"
+            type="search"
+            placeholder="Search titles, sources, tags…"
+            class="w-full rounded-lg border border-slate-300 bg-white py-2 pl-9 pr-3 text-sm
+              placeholder:text-slate-400 focus:border-indigo-500 focus:outline-none focus:ring-2
+              focus:ring-indigo-200 dark:border-slate-700 dark:bg-slate-900 dark:focus:ring-indigo-900"
+          />
+          <svg
+            class="pointer-events-none absolute left-3 top-2.5 h-4 w-4 text-slate-400"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </label>
+        <a
+          class="text-xs text-indigo-600 hover:underline dark:text-indigo-400"
+          href="/news.md"
+          data-astro-prefetch="false">Markdown digest →</a
+        >
+      </div>
+    </header>
+
+    <div class="mt-6 flex flex-wrap gap-2">
+      <button
+        type="button"
+        data-filter-type="all"
+        aria-pressed="true"
+        class="filter-chip badge badge-cat cursor-pointer">All ({events.length})</button
+      >
+      {
+        eventTypeKeys.map((k) => (
+          <button
+            type="button"
+            data-filter-type={k}
+            aria-pressed="false"
+            class="filter-chip badge badge-neutral cursor-pointer"
+          >
+            {eventTypes[k].en} ({counts[k]})
+          </button>
+        ))
+      }
+    </div>
+
+    <div class="mt-8 space-y-10">
+      {
+        groups.map((group) => (
+          <section>
+            <h2 class="sticky top-16 z-10 -mx-1 mb-4 bg-slate-50/80 px-1 py-1 text-sm font-semibold tracking-wide text-slate-500 backdrop-blur dark:bg-slate-950/80 dark:text-slate-400">
+              {group.date}
+            </h2>
+            <div class="space-y-4">
+              {group.items.map((e) => (
+                <EventCard locale={locale} event={e} />
+              ))}
+            </div>
+          </section>
+        ))
+      }
+    </div>
+
+    <p id="news-empty" class="mt-10 hidden rounded-xl border border-dashed border-slate-300 p-10 text-center text-slate-500 dark:border-slate-700">
+      No entries match that filter.
+    </p>
+  </div>
+
+  <style>
+    .filter-chip[aria-pressed='true'] {
+      background-color: var(--color-indigo-600);
+      color: #fff;
+    }
+  </style>
+
+  <script>
+    function initNewsFilter() {
+      const root = document.getElementById('news-root');
+      if (!root || root.dataset.bound === '1') return;
+      root.dataset.bound = '1';
+
+      const input = root.querySelector('#news-search');
+      const cards = Array.from(root.querySelectorAll('[data-type]'));
+      const chips = Array.from(root.querySelectorAll('[data-filter-type]'));
+      const empty = root.querySelector('#news-empty');
+      const sections = Array.from(root.querySelectorAll('section'));
+      let activeType = 'all';
+
+      function apply() {
+        const q = (input && input.value ? input.value : '').trim().toLowerCase();
+        let visible = 0;
+        for (const card of cards) {
+          const matchType = activeType === 'all' || card.dataset.type === activeType;
+          const matchQ = !q || (card.dataset.search || '').includes(q);
+          const show = matchType && matchQ;
+          card.style.display = show ? '' : 'none';
+          if (show) visible++;
+        }
+        // 隐藏没有可见条目的日期分组
+        for (const section of sections) {
+          const anyVisible = Array.from(section.querySelectorAll('[data-type]')).some(
+            (c) => c.style.display !== 'none'
+          );
+          section.style.display = anyVisible ? '' : 'none';
+        }
+        if (empty) empty.style.display = visible === 0 ? '' : 'none';
+      }
+
+      chips.forEach((chip) => {
+        chip.addEventListener('click', () => {
+          activeType = chip.dataset.filterType;
+          chips.forEach((c) => c.setAttribute('aria-pressed', String(c === chip)));
+          apply();
+        });
+      });
+
+      if (input) input.addEventListener('input', apply);
+      apply();
+    }
+    initNewsFilter();
+    document.addEventListener('astro:after-swap', initNewsFilter);
+  </script>
+</BaseLayout>

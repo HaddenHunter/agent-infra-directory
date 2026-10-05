@@ -1,0 +1,24 @@
+{
+  "title": "Temporal raises $550M at $12.55B as durable execution becomes agent plumbing",
+  "titleZh": "Temporal 融资 $5.5 亿、估值 $125.5 亿：持久化执行成为 Agent 管道",
+  "type": "funding",
+  "eventDate": "2026-09-14",
+  "summary": "Temporal announced a $550M Series E at a $12.55B valuation on 14 September 2026, led by Lightspeed with Wellington Management, Goldman Sachs Alternatives and Tiger Global co-leading. The company reports more than 4,300 paying customers and annualised revenue above $250M, up 200% year on year. Temporal provides durable execution — workflow state that survives process restarts — which is the guarantee long-running agents depend on.",
+  "summaryZh": "Temporal 于 2026 年 9 月 14 日宣布完成 $5.5 亿 E 轮融资，估值 $125.5 亿，由 Lightspeed 领投，Wellington Management、Goldman Sachs Alternatives 与 Tiger Global 联合领投。公司称付费客户超过 4,300 家，年化收入超过 $2.5 亿、同比增长 200%。Temporal 提供持久化执行（进程重启后工作流状态不丢），这正是长时运行 Agent 所依赖的保证。",
+  "details": [
+    { "label": "Round", "labelZh": "轮次", "value": "Series E — $550M at $12.55B valuation" },
+    { "label": "Lead", "labelZh": "领投", "value": "Lightspeed, with Wellington, Goldman Sachs Alternatives, Tiger Global" },
+    { "label": "Customers", "labelZh": "客户", "value": "4,300+ paying customers" },
+    { "label": "Revenue", "labelZh": "收入", "value": ">$250M annualised, +200% year on year" }
+  ],
+  "verification": "verified",
+  "sourceName": "Temporal",
+  "sourceUrl": "https://temporal.io/news/temporal-raises-550m-at-a-12-55b-valuation",
+  "whyItMatters": "Durable execution is the unglamorous guarantee behind every 'the agent kept working overnight' claim. Its valuation is a proxy for how much production agent workloads now depend on restart-safe state rather than a framework's built-in persistence.",
+  "whyItMattersZh": "持久化执行是所有「Agent 通宵跑完任务」说法背后那个不起眼的保证。它的估值可以视为一个代理指标，反映生产环境中的 Agent 负载在多大程度上依赖「重启不丢状态」，而非框架自带的持久化。",
+  "tags": ["funding", "durable-execution", "infrastructure"],
+  "caveat": "The official figure is 4,300+ paying customers; this is sometimes written as 'enterprise customers', which overstates it.",
+  "caveatZh": "官方口径为 4,300+ 付费客户；常被写成「企业客户」，属于夸大。",
+  "keyFact": "Temporal raised a $550M Series E at a $12.55B valuation on 14 September 2026, reporting 4,300+ paying customers and annualised revenue above $250M for its durable execution platform.",
+  "keyFactZh": "Temporal 于 2026 年 9 月 14 日完成 $5.5 亿 E 轮融资、估值 $125.5 亿，并称其持久化执行平台拥有 4,300+ 付费客户、年化收入超 $2.5 亿。"
+}

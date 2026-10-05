@@ -1,0 +1,24 @@
+{
+  "title": "Korea's government-led free AI service is not a joint telco launch",
+  "titleZh": "韩国政府主导的全民免费 AI：并非三家电信商联合推出",
+  "type": "policy",
+  "eventDate": "2026-10-03",
+  "summary": "Korea's nationwide free AI service, 모두의 AI, is a government-led program run by the Ministry of Science and ICT, targeting 15 million users within the year. It opens in beta in October 2026 and launches officially in December 2026. SK Telecom, Kakao and KT each won separate contracts and compete with one another as independent consortia, each allocated 512 B200 GPUs — they are not jointly launching the service.",
+  "summaryZh": "韩国全民免费 AI 服务「모두의 AI」是由科学技术信息通信部主导的政府项目，目标年内覆盖 1500 万用户，2026 年 10 月开放 Beta、12 月正式上线。SK 电讯、Kakao 与 KT 各自独立中标、相互竞争，各获配 512 块 B200 GPU——并非联合推出该服务。",
+  "details": [
+    { "label": "Owner", "labelZh": "主导方", "value": "Korean Ministry of Science and ICT (government program)" },
+    { "label": "Timeline", "labelZh": "时间线", "value": "Beta October 2026; official launch December 2026" },
+    { "label": "Participants", "labelZh": "参与方", "value": "SKT, Kakao and KT as separate competing consortia (512 B200 GPUs each)" },
+    { "label": "Target", "labelZh": "目标", "value": "15 million users within the year" }
+  ],
+  "verification": "verified",
+  "sourceName": "Seoul Economic TV / BigGo Finance",
+  "sourceUrl": "https://m.sentv.co.kr/article/view/sentv202610020100",
+  "whyItMatters": "A widely circulated version of this story says the three telcos are jointly launching it. They are not — they are competing contractors. That distinction matters if you are tracking who actually operates the infrastructure.",
+  "whyItMattersZh": "流传较广的版本称三家电信商「联合推出」，事实并非如此——它们是相互竞争的中标方。若你在追踪究竟由谁运营这套基础设施，这个区别很关键。",
+  "tags": ["korea", "policy", "sovereign-ai"],
+  "caveat": "Commonly misreported as a joint SKT / Kakao / KT launch. It is a government program with three separate competing consortia, and October 2026 is beta, not general availability.",
+  "caveatZh": "常被误报为 SKT / Kakao / KT 联合推出。实为政府主导项目、三家独立竞争的中标方；且 2026 年 10 月是 Beta 而非正式上线。",
+  "keyFact": "Korea's free nationwide AI service 모두의 AI is a government-led program with SKT, Kakao and KT as separate competing consortia, entering beta in October 2026 and launching officially in December 2026.",
+  "keyFactZh": "韩国全民免费 AI 服务 모두의 AI 是政府主导项目，SK 电讯、Kakao、KT 为三家各自独立竞争的中标方，2026 年 10 月进入 Beta、12 月正式上线。"
+}

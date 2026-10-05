@@ -1,0 +1,21 @@
+{
+  "title": "Manus returns with Cue, giving each personal agent its own phone number and wallet",
+  "titleZh": "Manus 携 Cue 回归：每个个人 Agent 拥有独立手机号与钱包",
+  "type": "launch",
+  "eventDate": "2026-09-28",
+  "summary": "Manus launched Manus 2.0 and a standalone personal agent app called Cue on 28 September 2026, in which each agent gets its own email address, phone number, wallet and cloud computer. Early access is free but invitation-gated. The launch follows Manus resuming independent operations on 1 September 2026 after a reported $2B acquisition by Meta was blocked in China in April.",
+  "summaryZh": "Manus 于 2026 年 9 月 28 日发布 Manus 2.0 与独立个人 Agent 应用 Cue，其中每个 Agent 拥有独立的邮箱、电话号码、钱包与云电脑。早期访问免费但需邀请码。此前，Meta 约 20 亿美元的收购于 4 月在中国被否决，Manus 于 2026 年 9 月 1 日宣布恢复独立运营。",
+  "details": [
+    { "label": "Product", "labelZh": "产品", "value": "Manus 2.0 + Cue personal agent app" },
+    { "label": "Per-agent assets", "labelZh": "每个 Agent 的资产", "value": "Own email, phone number, wallet, cloud computer" },
+    { "label": "Access", "labelZh": "访问方式", "value": "Free early access, invitation-gated" }
+  ],
+  "verification": "verified",
+  "sourceName": "The Next Web / Global Times",
+  "sourceUrl": "https://thenextweb.com/news/manus-2-0-cue-ai-agents-email-phone-wallet",
+  "whyItMatters": "Giving an agent its own phone number and wallet is a concrete answer to the agent identity problem: the agent becomes a first-class entity that can be authenticated, rate-limited and audited, rather than a process borrowing a human's credentials.",
+  "whyItMattersZh": "给 Agent 独立的手机号与钱包，是对「Agent 身份」问题的一种具体解法：Agent 成为可被认证、限流与审计的一等实体，而不是借用人类凭证的进程。",
+  "tags": ["manus", "personal-agent", "identity"],
+  "keyFact": "On 28 September 2026, Manus launched Cue, a personal agent app in which each agent has its own email address, phone number, wallet and cloud computer.",
+  "keyFactZh": "2026 年 9 月 28 日，Manus 发布个人 Agent 应用 Cue，其中每个 Agent 都拥有独立的邮箱、电话、钱包与云电脑。"
+}

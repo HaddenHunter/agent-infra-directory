@@ -1,0 +1,96 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { t, type Locale } from '../i18n/ui';
+import {
+  eventTypes,
+  verificationLabels,
+  verificationBadge,
+  type Verification,
+} from '../lib/news';
+
+export interface Props {
+  locale: Locale;
+  event: CollectionEntry<'events'>;
+}
+
+const { locale, event } = Astro.props;
+const d = event.data;
+const s = t(locale);
+
+const title = locale === 'zh' ? d.titleZh : d.title;
+const summary = locale === 'zh' ? d.summaryZh : d.summary;
+const why = locale === 'zh' ? d.whyItMattersZh : d.whyItMatters;
+const caveat = locale === 'zh' ? d.caveatZh : d.caveat;
+const keyFact = locale === 'zh' ? d.keyFactZh : d.keyFact;
+const typeLabel = eventTypes[d.type][locale];
+const vLabel = verificationLabels[d.verification as Verification][locale];
+const vClass = verificationBadge[d.verification as Verification];
+
+const searchBlob = [d.title, d.titleZh, d.summary, d.summaryZh, d.sourceName, ...d.tags]
+  .filter(Boolean)
+  .join(' ')
+  .toLowerCase();
+---
+
+<article
+  id={event.id}
+  class="card scroll-mt-24"
+  data-type={d.type}
+  data-search={searchBlob}
+>
+  <div class="flex flex-wrap items-center gap-2">
+    <time datetime={d.eventDate} class="badge badge-neutral">{d.eventDate}</time>
+    <span class="badge badge-cat">{typeLabel}</span>
+    <span class={`badge ${vClass}`}>{vLabel}</span>
+  </div>
+
+  <h3 class="mt-3 text-lg font-semibold leading-snug text-slate-900 dark:text-slate-100">
+    {title}
+  </h3>
+
+  <blockquote class="key-fact mt-3 !p-3 text-sm">
+    <p>{keyFact}</p>
+  </blockquote>
+
+  <p class="mt-3 text-sm text-slate-600 dark:text-slate-400">{summary}</p>
+
+  {
+    why && (
+      <p class="mt-3 rounded-lg bg-slate-50 p-3 text-sm text-slate-700 dark:bg-slate-950/60 dark:text-slate-300">
+        <strong class="text-slate-900 dark:text-slate-100">{s.whyItMatters}：</strong>
+        {why}
+      </p>
+    )
+  }
+
+  {
+    d.details.length > 0 && (
+      <table class="facts-table mt-3">
+        <tbody>
+          {d.details.map((row) => (
+            <tr>
+              <th>{locale === 'zh' ? row.labelZh : row.label}</th>
+              <td>{row.value}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    )
+  }
+
+  {
+    caveat && (
+      <p class="alert-caveat mt-3">
+        <strong>{locale === 'zh' ? '注意：' : 'Caveat: '}</strong>
+        {caveat}
+      </p>
+    )
+  }
+
+  <p class="mt-3 text-xs text-slate-500 dark:text-slate-400">
+    {s.newsSource}：
+    <a class="underline hover:text-indigo-600" href={d.sourceUrl} rel="nofollow noopener">
+      {d.sourceName}
+    </a>
+  </p>
+</article>

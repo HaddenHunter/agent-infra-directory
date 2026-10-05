@@ -1,0 +1,21 @@
+{
+  "title": "KT launches Agentic On, an enterprise agent platform wired into existing systems",
+  "titleZh": "KT 发布 Agentic On：接入既有系统的企业级 Agent 平台",
+  "type": "launch",
+  "eventDate": "2026-09-27",
+  "summary": "KT announced Agentic On on 27 September 2026, an enterprise AI agent platform that connects agents to a company's existing data and business systems to automate multi-step work such as document review, approval requests and system entry, with permissions and privacy controls. On 1 October 2026 KT also published a hospital-workflow standard model covering registration, clinical records and post-discharge follow-up.",
+  "summaryZh": "KT 于 2026 年 9 月 27 日发布企业级 AI Agent 平台 Agentic On，把 Agent 接入企业既有数据与业务系统，自动化文档审查、审批请求、系统录入等多步骤工作，并带权限与隐私管控。2026 年 10 月 1 日，KT 又发布了覆盖挂号、诊疗记录与出院后管理的医院流程标准模型。",
+  "details": [
+    { "label": "Platform", "labelZh": "平台", "value": "Agentic On (multi-agent, connects to existing systems)" },
+    { "label": "Announced", "labelZh": "发布时间", "value": "27 September 2026" },
+    { "label": "Healthcare model", "labelZh": "医疗模型", "value": "Hospital workflow standard model, 1 October 2026" }
+  ],
+  "verification": "verified",
+  "sourceName": "Korea Economic Daily / Seoul Economic Daily",
+  "sourceUrl": "https://en.sedaily.com/technology/2026/09/27/kt-unveils-agentic-on-platform-linking-ai-agents-to-company",
+  "whyItMatters": "Telco-built agent platforms are a distinct go-to-market from framework vendors: they arrive with the integration work and the compliance posture already attached, which is often the actual blocker for enterprise rollout.",
+  "whyItMattersZh": "电信运营商做 Agent 平台，是与框架厂商不同的打法：它们自带集成工作与合规姿态，而这两点往往才是企业落地的真正卡点。",
+  "tags": ["kt", "enterprise", "korea"],
+  "keyFact": "KT announced the enterprise agent platform Agentic On on 27 September 2026, connecting agents to existing corporate systems with permission and privacy controls, followed by a hospital-workflow standard model on 1 October 2026.",
+  "keyFactZh": "KT 于 2026 年 9 月 27 日发布企业级 Agent 平台 Agentic On，在权限与隐私管控下把 Agent 接入企业既有系统，并于 2026 年 10 月 1 日发布医院流程标准模型。"
+}

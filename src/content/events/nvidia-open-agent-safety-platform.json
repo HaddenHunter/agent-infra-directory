@@ -1,0 +1,24 @@
+{
+  "title": "NVIDIA ships an agent safety platform built to quarantine rogue agents in milliseconds",
+  "titleZh": "NVIDIA 发布 Agent 安全平台：毫秒级隔离失控 Agent",
+  "type": "framework",
+  "eventDate": "2026-09-28",
+  "summary": "NVIDIA announced the Open Agent Safety Platform on 28 September 2026. It pairs OpenShell, the Apache-2.0 Rust runtime that sandboxes agents at the kernel level, with NVIDIA Sentry, an out-of-band watchdog running on BlueField-4 DPUs that NVIDIA says can isolate and stop an agent that steps out of bounds in milliseconds. More than 100 partners signed on at launch; OpenAI was notably absent from the list.",
+  "summaryZh": "NVIDIA 于 2026 年 9 月 28 日发布 Open Agent Safety Platform，由 OpenShell（在 Linux 内核层隔离 Agent 的 Apache-2.0 Rust 运行时）与 NVIDIA Sentry（运行于 BlueField-4 DPU 的带外看门狗）组成。NVIDIA 称 Sentry 可在毫秒级隔离并停止越界 Agent。发布时超过 100 家合作伙伴加入，但 OpenAI 明显不在名单中。",
+  "details": [
+    { "label": "Software layer", "labelZh": "软件层", "value": "OpenShell — Apache-2.0, Rust, kernel-level sandboxing" },
+    { "label": "Hardware layer", "labelZh": "硬件层", "value": "NVIDIA Sentry — out-of-band watchdog on BlueField-4 DPUs" },
+    { "label": "Claimed latency", "labelZh": "声称延迟", "value": "Millisecond isolation of rogue agents" },
+    { "label": "Partners", "labelZh": "合作伙伴", "value": "100+ at launch; OpenAI absent" }
+  ],
+  "verification": "verified",
+  "sourceName": "NVIDIA Newsroom",
+  "sourceUrl": "https://nvidianews.nvidia.com/news/open-agent-safety-platform",
+  "whyItMatters": "This splits agent safety into two layers that can be evaluated separately: a software policy boundary you can read and audit (OpenShell), and a hardware kill switch you have to buy. Self-hosters can adopt the first today; the second requires specific DPUs.",
+  "whyItMattersZh": "它把 Agent 安全拆成两层，可以分别评估：一层是你可读可审计的软件策略边界（OpenShell），另一层是需要采购硬件的急停开关。自托管团队今天就能用上前者，后者则依赖特定 DPU。",
+  "tags": ["nvidia", "sandbox", "safety", "incident-response"],
+  "caveat": "Sentry requires BlueField-4 DPUs, so the millisecond quarantine claim applies only to deployments with that hardware. It is presented as a reference system design.",
+  "caveatZh": "Sentry 依赖 BlueField-4 DPU，因此「毫秒级隔离」只适用于配备该硬件的部署；官方将其定位为参考系统设计。",
+  "keyFact": "NVIDIA's Open Agent Safety Platform, announced 28 September 2026, combines the Apache-2.0 OpenShell sandbox with a BlueField-4 watchdog called Sentry that NVIDIA claims can quarantine a rogue agent in milliseconds.",
+  "keyFactZh": "NVIDIA 于 2026 年 9 月 28 日发布的 Open Agent Safety Platform，把 Apache-2.0 的 OpenShell 沙箱与 BlueField-4 上的 Sentry 看门狗组合起来，NVIDIA 称后者可在毫秒级隔离失控 Agent。"
+}

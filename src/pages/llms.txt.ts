@@ -25,6 +25,10 @@ export const GET: APIRoute = async () => {
   lines.push(
     `- ${SITE_URL}/compare/langgraph-vs-crewai/: LangGraph vs CrewAI comparison`,
     '',
+    '## Dynamic pages (updated as events happen)',
+    `- ${SITE_URL}/news.md: agent-related launches, funding, security incidents and framework changes, each with a date anchor, a source link and a verification status`,
+    `- ${SITE_URL}/news/: the same digest as an HTML page with filters`,
+    '',
     '## Notes',
     '- The Chinese version of every page is served under the /zh/ prefix.',
     '- Every tool page also has a Markdown rendition at /tools/{slug}.md (e.g. /tools/langgraph.md).',

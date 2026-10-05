@@ -1,0 +1,23 @@
+{
+  "title": "NeoHorse-1 claims to be the first agent-native model line",
+  "titleZh": "NeoHorse-1 自称首个 Agent-Native 模型系列",
+  "type": "research",
+  "eventDate": "2026-09-08",
+  "summary": "Released on 8 September 2026 by TokenRhythm with Wuwen Xinqiong and partners including Tsinghua, Peking University and Alibaba, NeoHorse-1 is presented as an agent-native model in 4B and 9B sizes, trained so that using tools, receiving feedback and correcting errors becomes part of the model's own capability. Reporting says the 4B version has the top unweighted average among same-size peers across 10 benchmarks and beats the Qwen3.5-9B base model on five benchmarks; the 9B version's macro average rises from 65.60 to 69.04.",
+  "summaryZh": "NeoHorse-1 于 2026 年 9 月 8 日由基元律动联合无问芯穹及清华、北大、阿里等合作方发布，定位为 Agent-Native 模型，含 4B 与 9B 两个版本，训练时把使用工具、接收反馈与纠正错误内化为模型自身能力。报道称 4B 版本在 10 项基准的未加权平均居同规模模型之首，并在五项基准上超过 Qwen3.5-9B 底座；9B 版本宏平均从 65.60 升至 69.04。",
+  "details": [
+    { "label": "Sizes", "labelZh": "版本", "value": "4B and 9B" },
+    { "label": "Released", "labelZh": "发布日期", "value": "8 September 2026" },
+    { "label": "Reported result", "labelZh": "报告结果", "value": "4B: top unweighted average among same-size peers on 10 benchmarks; 9B macro average 65.60 → 69.04" }
+  ],
+  "verification": "single-source",
+  "sourceName": "Science and Technology Daily",
+  "sourceUrl": "http://www.stdaily.com/web/gdxw/2026-09/09/content_577906.html",
+  "whyItMatters": "Baking tool use into the model, rather than orchestrating it externally, is the alternative bet to the whole framework category in this directory. Whether it wins decides how much orchestration code you actually need.",
+  "whyItMattersZh": "把工具使用「内化进模型」而非在外部编排，是对本站整个「框架」分类的另一种下注。它是否成立，决定了你实际需要写多少编排代码。",
+  "tags": ["model", "agent-native", "china"],
+  "caveat": "The 'first agent-native model' claim is the publisher's own framing. The top-average claim applies to the 4B model and is scoped to same-size comparisons; the partner list in some reports omits CUHK-Shenzhen. Figures have not been independently reproduced here.",
+  "caveatZh": "「首个 Agent-Native 模型」为发布方自称。「榜首」仅针对 4B 模型且限定同规模对比；部分报道的合作方名单漏列香港中文大学（深圳）。相关数字本站未独立复现。",
+  "keyFact": "NeoHorse-1, released 8 September 2026 in 4B and 9B sizes, claims to be the first agent-native model line, with its 4B version reported to top same-size peers across 10 benchmarks.",
+  "keyFactZh": "NeoHorse-1 于 2026 年 9 月 8 日发布 4B 与 9B 版本，自称首个 Agent-Native 模型系列，报道称其 4B 版本在 10 项基准的未加权平均位居同规模模型之首。"
+}

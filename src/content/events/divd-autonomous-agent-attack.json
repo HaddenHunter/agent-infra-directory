@@ -1,0 +1,24 @@
+{
+  "title": "An autonomous agent chained two Zammad zero-days to breach DIVD",
+  "titleZh": "一个自主 Agent 串联两个 Zammad 零日漏洞入侵 DIVD",
+  "type": "incident",
+  "eventDate": "2026-09-21",
+  "summary": "The Dutch Institute for Vulnerability Disclosure (DIVD) disclosed that its network was breached on 21 September 2026, with an attacker chaining two Zammad zero-days — CVE-2026-102489 for session hijacking to remote code execution, and CVE-2026-102490 for local privilege escalation to root — going from hijacked session to root in seconds. DIVD said the modus operandi indicates an agentic AI powered attack that decided each step on its own.",
+  "summaryZh": "荷兰漏洞披露研究所（DIVD）披露其网络于 2026 年 9 月 21 日被入侵：攻击者串联两个 Zammad 零日漏洞——CVE-2026-102489（会话劫持到 RCE）与 CVE-2026-102490（本地提权到 root），从劫持会话到取得 root 仅用数秒。DIVD 表示攻击手法「表明」这是一次 Agentic AI 驱动的攻击，由 AI 自行决定每一步。",
+  "details": [
+    { "label": "Victim", "labelZh": "受害方", "value": "DIVD (Dutch Institute for Vulnerability Disclosure)" },
+    { "label": "Date", "labelZh": "日期", "value": "21 September 2026 (disclosed late September / early October)" },
+    { "label": "Vulnerabilities", "labelZh": "漏洞", "value": "CVE-2026-102489 (session hijack → RCE) and CVE-2026-102490 (LPE to root)" },
+    { "label": "Time to root", "labelZh": "取得 root 用时", "value": "Seconds after session hijack" }
+  ],
+  "verification": "verified",
+  "sourceName": "SecurityWeek / DIVD case DIVD-2026-00015",
+  "sourceUrl": "https://www.securityweek.com/zammad-zero-days-exploited-in-ai-powered-divd-hack/",
+  "whyItMatters": "The two zero-days are confirmed; the 'fully autonomous agent' framing is DIVD's inference, not a logged certainty. For infrastructure choices, the lesson still holds: chained exploits complete in seconds, which is faster than most human incident response, and argues for default-deny egress rather than after-the-fact detection.",
+  "whyItMattersZh": "两个零日漏洞是确证的，但「完全自主 Agent」这一判断属于 DIVD 的推断而非确凿日志。不过对选型而言结论依然成立：链式利用在数秒内完成，快于多数人工响应，这支持「默认拒绝出站」而非事后检测的思路。",
+  "tags": ["security", "incident", "zero-day", "autonomous-agent"],
+  "caveat": "DIVD's wording is that the attack 'indicates' agentic AI involvement. Calls describing it as the first fully autonomous agent attack are media framing; the July 2026 OpenAI–Hugging Face incident is also described as a first.",
+  "caveatZh": "DIVD 的措辞是攻击手法「表明」有 Agentic AI 参与。「首例完全自主 Agent 攻击」属媒体定性；2026 年 7 月的 OpenAI–Hugging Face 事件同样被称作首例。",
+  "keyFact": "On 21 September 2026 an attacker chained two Zammad zero-days (CVE-2026-102489 and CVE-2026-102490) to breach the Dutch Institute for Vulnerability Disclosure, going from a hijacked session to root in seconds; DIVD says the pattern indicates agentic AI involvement.",
+  "keyFactZh": "2026 年 9 月 21 日，攻击者串联两个 Zammad 零日漏洞（CVE-2026-102489 与 CVE-2026-102490）入侵荷兰漏洞披露研究所，从会话劫持到取得 root 仅数秒；DIVD 称该手法表明有 Agentic AI 参与。"
+}

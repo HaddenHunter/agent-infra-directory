@@ -1,0 +1,21 @@
+{
+  "title": "OpenAI turns ChatGPT into a shared workspace where humans and agents share documents",
+  "titleZh": "OpenAI 把 ChatGPT 变成人与 Agent 共享文档的协作空间",
+  "type": "launch",
+  "eventDate": "2026-09-29",
+  "summary": "OpenAI announced ChatGPT Space on 29 September 2026, a Notion-style collaborative workspace where people, ChatGPT and dots agents share pages, files and projects in one place. It began rolling out on 1 October 2026 to Pro, Business and Enterprise users, starting on desktop and web before mobile.",
+  "summaryZh": "OpenAI 于 2026 年 9 月 29 日发布 ChatGPT Space——一个 Notion 式的协作空间，人、ChatGPT 与 dots Agent 在同一处共享页面、文件与项目。自 2026 年 10 月 1 日起向 Pro、Business、Enterprise 用户推出，先桌面与网页端，后移动端。",
+  "details": [
+    { "label": "What it is", "labelZh": "形态", "value": "Shared workspace for people + ChatGPT + dots" },
+    { "label": "Rollout", "labelZh": "推出时间", "value": "From 1 October 2026 (Pro / Business / Enterprise)" },
+    { "label": "Platform order", "labelZh": "平台顺序", "value": "Desktop and web first, mobile later" }
+  ],
+  "verification": "verified",
+  "sourceName": "Engadget",
+  "sourceUrl": "https://www.engadget.com/2272248/chatgpt-space-for-work/",
+  "whyItMatters": "Agents entering shared documents means the permission boundary moves from 'can this agent call this tool' to 'can this agent read and edit this page' — a document-level authorization problem that identity vendors in this directory are explicitly targeting.",
+  "whyItMattersZh": "Agent 进入共享文档后，权限边界从「这个 Agent 能不能调这个工具」变成「它能不能读写这一页」——这正是本站身份分类里各家厂商正在攻的文档级授权问题。",
+  "tags": ["openai", "workspace", "collaboration"],
+  "keyFact": "OpenAI's ChatGPT Space, announced 29 September 2026, is a shared workspace where people, ChatGPT and dots agents co-edit pages and files, rolling out from 1 October 2026 to Pro, Business and Enterprise users.",
+  "keyFactZh": "OpenAI 于 2026 年 9 月 29 日发布的 ChatGPT Space，是一个人、ChatGPT 与 dots Agent 共同编辑页面与文件的共享工作区，自 2026 年 10 月 1 日起向 Pro、Business、Enterprise 用户推出。"
+}

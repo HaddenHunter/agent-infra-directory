@@ -1,0 +1,23 @@
+{
+  "title": "Google releases Gemini 4 Argon, gated to vetted cyber defenders first",
+  "titleZh": "Google 发布 Gemini 4 Argon：首批仅向受审核网络防御者开放",
+  "type": "launch",
+  "eventDate": "2026-09-30",
+  "summary": "Google announced Gemini 4 Argon on 30 September 2026, its first Gemini 4 model, aimed at complex coding and research. It is initially available through the Fairwind program to vetted cyber defenders across 650+ partner organisations and to Google internal teams. Google said paid API customers and Google AI Ultra subscribers will get priority access to the general release, but gave no date and has not yet opened it.",
+  "summaryZh": "Google 于 2026 年 9 月 30 日发布 Gemini 4 Argon，这是其首个 Gemini 4 模型，面向复杂编码与研究任务。初期通过 Fairwind 计划向 650+ 合作方的受审核网络防御者及 Google 内部团队开放。Google 表示付费 API 客户与 Google AI Ultra 订阅者将优先获得正式发布版本，但未给出时间表，目前尚未开放。",
+  "details": [
+    { "label": "Model", "labelZh": "模型", "value": "Gemini 4 Argon (first Gemini 4 model)" },
+    { "label": "Initial access", "labelZh": "初始开放范围", "value": "Fairwind program — 650+ partner organisations, vetted defenders" },
+    { "label": "Broader access", "labelZh": "更广泛开放", "value": "Announced as priority for API customers and AI Ultra subscribers; no date" }
+  ],
+  "verification": "verified",
+  "sourceName": "Google Blog",
+  "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+  "whyItMatters": "Staged release of frontier models to vetted defenders is becoming a pattern. If your agent's capability depends on a new frontier model, availability gating — not benchmarks — may be the binding constraint.",
+  "whyItMattersZh": "把前沿模型分阶段开放给受审核防御者正在成为惯例。若你的 Agent 能力依赖某一新前沿模型，真正的约束可能是「能否拿到访问权」，而不是基准分数。",
+  "tags": ["google", "model", "access-gating"],
+  "caveat": "Broader availability to API customers and AI Ultra subscribers is an announced intention with no date, not a shipped feature.",
+  "caveatZh": "向 API 客户与 AI Ultra 订阅者开放目前只是已宣布的意向，没有时间表，尚未落地。",
+  "keyFact": "Google announced Gemini 4 Argon on 30 September 2026, limiting initial access to vetted cyber defenders in the Fairwind program and Google internal teams, with broader access announced but not dated.",
+  "keyFactZh": "Google 于 2026 年 9 月 30 日发布 Gemini 4 Argon，初期仅向 Fairwind 计划中的受审核网络防御者与 Google 内部团队开放；更广泛开放已宣布但无时间表。"
+}
