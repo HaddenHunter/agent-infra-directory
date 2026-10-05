@@ -1,0 +1,125 @@
+name: Refresh data
+
+# 数据动态更新：定时把工具元数据与新闻候选刷一遍，然后开一个 PR 等人签核。
+#
+# 为什么是 PR 而不是直接提交 main：
+#   - fetch:github 只回填机器可验证的字段（stars / archived / lastPush），但它会
+#     报告 license 冲突这类需要人判断的情况（例如 Dify 的 "Dify Open Source License"
+#     对 GitHub 的 NOASSERTION）。自动合并等于把这些判断也自动化了。
+#   - fetch:news 产出的候选**必须**经人工挑选、补齐 keyFact 与 whyItMatters 后才能
+#     进 src/content/events/。这是全站可信度的底线，不能交给定时任务。
+#   候选落在 content-inbox/，不在 src/content/ 下，因此即使 PR 一直没人合，
+#   它们也不会出现在站点上。
+
+on:
+  schedule:
+    # 每天 02:17 UTC（北京时间 10:17）。避开整点，减少排队。
+    - cron: '17 2 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: refresh-data
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Refresh tool metadata
+        env:
+          # 未认证时 GitHub API 上限 60 次/小时，认证后 5,000 次/小时。
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -o pipefail
+          npm run fetch:github 2>&1 | tee /tmp/github-refresh.log
+
+      - name: Collect news candidates
+        run: |
+          set -o pipefail
+          npm run fetch:news 2>&1 | tee /tmp/news-refresh.log
+
+      # 刷新后的数据若违反 schema（例如 category 拼错），这里会先失败，
+      # 不至于把一个构建不过的 PR 递到人面前。
+      - name: Verify the site still builds
+        run: npm run build
+
+      - name: Compose PR body
+        run: |
+          {
+            echo "## 数据动态刷新"
+            echo
+            echo "运行时间：$(date -u '+%Y-%m-%d %H:%M UTC')　工作流：[#${{ github.run_number }}](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})"
+            echo
+            echo "### 工具元数据（机器可验证）"
+            echo
+            echo '```'
+            tail -n 40 /tmp/github-refresh.log
+            echo '```'
+            echo
+            echo "> \`stars\` / \`archived\` / \`lastPush\` 由 GitHub API 回填，只覆盖这三个字段，"
+            echo "> 手写的 license、description、keyFact 不会被改动。上面若出现 license 冲突，"
+            echo "> 需要人工判断以谁为准。"
+            echo
+            echo "### 新闻候选（**不会**自动发布）"
+            echo
+            echo '```'
+            tail -n 25 /tmp/news-refresh.log
+            echo '```'
+            echo
+            echo "候选写入 \`content-inbox/news-candidates.json\`，不在 \`src/content/\` 下，"
+            echo "所以不会被站点渲染。要收录的话："
+            echo
+            echo "1. 在候选里挑出值得收录的；"
+            echo "2. 补齐 \`keyFact\`、\`whyItMatters\`、\`sourceUrl\` 等字段；"
+            echo "3. 移到 \`src/content/events/\` 并显式设置 \`verification\`；"
+            echo "4. 把该条从 \`content-inbox/news-candidates.json\` 中删掉。"
+            echo
+            echo "不打算收录的候选可以留在原处——脚本会按 URL 去重，不会重复刷出来。"
+            echo
+            echo "- [ ] license 冲突已人工判断（若有）"
+            echo "- [ ] 已挑选并核验要收录的新闻候选（可选，可以只合工具元数据）"
+          } > /tmp/pr-body.md
+
+      - name: Open or update the review PR
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          if git diff --quiet; then
+            echo "本轮没有任何变更，跳过 PR。"
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # 固定分支名：每次刷新都更新同一个 PR，而不是每天攒一个新的。
+          BRANCH="automated/data-refresh"
+          git checkout -B "$BRANCH"
+          git add src/content/tools content-inbox
+          git commit -m "chore: refresh tool metadata and news candidates"
+          git push --force-with-lease -u origin "$BRANCH"
+
+          if gh pr view "$BRANCH" --json number >/dev/null 2>&1; then
+            echo "PR 已存在，本次刷新已更新到该 PR。"
+          else
+            gh pr create \
+              --base main \
+              --head "$BRANCH" \
+              --title "chore: 数据动态刷新（$(date -u '+%Y-%m-%d')）" \
+              --body-file /tmp/pr-body.md
+          fi

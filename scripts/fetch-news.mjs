@@ -48,7 +48,10 @@ const FEEDS = [
   { name: 'TechCrunch AI', url: 'https://techcrunch.com/category/artificial-intelligence/feed/' },
   { name: 'The Verge AI', url: 'https://www.theverge.com/rss/ai-artificial-intelligence/index.xml' },
   { name: 'NVIDIA Blog', url: 'https://blogs.nvidia.com/feed/' },
-  { name: 'Microsoft AI', url: 'https://blogs.microsoft.com/ai/feed/' },
+  // 原先这里放的是微软 AI 博客，其 feed 现已返回 410 Gone；而 blogs.microsoft.com
+  // 全站对非浏览器 UA 一律回 403，无法验证可用的替代地址，因此不再猜地址，改用
+  // 一个能实测通过的独立来源（Atom，parseFeed 已支持 <entry>）。
+  { name: 'Simon Willison', url: 'https://simonwillison.net/atom/everything/' },
   { name: 'Hacker News (agent)', url: 'https://hnrss.org/newest?q=agent&count=30' },
   { name: 'arXiv cs.AI', url: 'http://export.arxiv.org/rss/cs.AI' },
 ];
@@ -57,6 +60,12 @@ const FEEDS = [
 const MAX_AGE_DAYS = 21;
 /** 每个源最多产出多少条候选，防止单个大源淹没队列 */
 const MAX_PER_FEED = 25;
+/**
+ * 待审队列上限。这条流水线是每天定时跑的，而 arXiv cs.AI 这类源每天都有几十篇新论文，
+ * 不封顶的话 JSON 会以每月数 MB 的速度膨胀，每日 PR 的 diff 也会失控。
+ * 超出时丢弃**最旧**的候选——它们同样是人工最久没处理、最不可能再处理的那批。
+ */
+const MAX_INBOX = 400;
 
 const UA = 'agent-infra-directory-news-collector/0.1 (+https://agent.c8.fit)';
 
@@ -179,12 +188,22 @@ for (const feed of FEEDS) {
   }
 }
 
+// 入队顺序即时间顺序（旧 → 新），所以保留末尾就是保留最新的。
+let dropped = 0;
+if (existing.length > MAX_INBOX) {
+  dropped = existing.length - MAX_INBOX;
+  existing.splice(0, dropped);
+}
+
 await mkdir(INBOX_DIR, { recursive: true });
 await writeFile(INBOX_FILE, JSON.stringify(existing, null, 2) + '\n');
 
 console.log('采集结果：');
 for (const line of report) console.log('  ' + line);
 console.log(`\n新增候选 ${added.length} 条，累计待审 ${existing.length} 条`);
+if (dropped) {
+  console.log(`（队列超过上限 ${MAX_INBOX}，已丢弃最旧的 ${dropped} 条）`);
+}
 console.log(`待审文件：content-inbox/news-candidates.json`);
 console.log(
   '\n⚠️  这些候选不会出现在站点上。请人工挑选、补齐 keyFact 与 whyItMatters 后，' +
