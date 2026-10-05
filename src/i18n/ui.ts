@@ -52,6 +52,13 @@ export const ui = {
     newsSource: 'Source',
     verification: 'Verification',
     lastUpdated: 'Last updated',
+    benchmarks: 'Benchmarks',
+    benchmarksIntro:
+      'What each agent benchmark actually measures, how credible it is, and which widely repeated numbers do not survive checking. Every entry states its frontier level and its caveats.',
+    frontier: '2026 frontier',
+    humanBaseline: 'Human baseline',
+    credibility: 'Credibility',
+    contested: 'Contested claim',
   },
   zh: {
     siteName: 'AI Agent 基础设施目录',
@@ -87,6 +94,13 @@ export const ui = {
     newsSource: '来源',
     verification: '核验状态',
     lastUpdated: '最近更新',
+    benchmarks: '评测与基准',
+    benchmarksIntro:
+      '每个 Agent 基准究竟在测什么、可信度如何，以及哪些广为流传的数字经不起核对。每个条目都写明前沿水平与可信度提示。',
+    frontier: '2026 前沿',
+    humanBaseline: '人类基线',
+    credibility: '可信度',
+    contested: '常见的错误说法',
   },
 } as const;
 

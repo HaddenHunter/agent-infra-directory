@@ -1,0 +1,18 @@
+{
+  "name": "Agent sandbox comparison (10 options, 2026)",
+  "category": "infra",
+  "description": "Third-party comparison of ten agent sandbox tools with concrete selection advice.",
+  "descriptionZh": "第三方对十款 Agent 沙箱工具的比较，并给出具体选型建议。",
+  "frontier": "Recommendations: Membrane (Docker + eBPF) for balance, NVIDIA OpenShell for Kubernetes policy, Agent Safehouse for macOS, Docker Sandboxes for Docker-in-Docker",
+  "frontierZh": "建议：Membrane（Docker + eBPF）适合均衡；NVIDIA OpenShell 适合 Kubernetes 策略；Agent Safehouse 适合 macOS；Docker Sandboxes 适合 Docker-in-Docker",
+  "credibility": "Useful because it names the trade-off rather than a winner. Two corrections matter: Agent Safehouse and Membrane are real but small projects, and one widely circulated version of this comparison attributes Docker-in-Docker support to E2B — the original recommends Docker Sandboxes for that, while E2B's pitch is managed cloud isolation with no local install.",
+  "credibilityZh": "价值在于它点出取舍而非评选唯一赢家。两点需纠正：Agent Safehouse 与 Membrane 真实但项目很小；另外流传的一个版本把 Docker-in-Docker 推荐记到了 E2B 头上——原文该位置推荐的是 Docker Sandboxes，而 E2B 的卖点是无需本地安装的托管云隔离。",
+  "verification": "verified",
+  "sourceName": "Awesome Agents sandbox comparison",
+  "sourceUrl": "https://awesomeagents.ai/tools/best-agent-sandbox-tools-2026/",
+  "lastUpdated": "2026-10-04",
+  "keyFact": "A 20 March 2026 comparison of ten agent sandbox tools recommended Membrane (Docker plus eBPF monitoring) for the best security-to-simplicity balance, NVIDIA OpenShell for enterprise policy enforcement on Kubernetes, Agent Safehouse for macOS users and Docker Sandboxes for Docker-in-Docker needs.",
+  "keyFactZh": "2026 年 3 月 20 日发布的十款 Agent 沙箱对比建议：追求安全与简洁的均衡选 Membrane（Docker + eBPF 监控）；需要 Kubernetes 上的企业级策略执行选 NVIDIA OpenShell；macOS 用户选 Agent Safehouse；需要 Docker-in-Docker 能力选 Docker Sandboxes。",
+  "debunks": "The claim that the comparison recommends E2B for Docker-in-Docker.",
+  "debunksZh": "「该对比推荐用 E2B 来做 Docker-in-Docker」这一说法。"
+}

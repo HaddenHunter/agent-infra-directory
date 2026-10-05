@@ -1,0 +1,161 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BenchmarkCard from '../../components/BenchmarkCard.astro';
+import { t, SITE_URL, type Locale } from '../../i18n/ui';
+import {
+  benchmarkCategories,
+  benchmarkCategoryKeys,
+  benchmarkUrl,
+  type BenchmarkCategory,
+} from '../../lib/benchmarks';
+
+const locale: Locale = 'en';
+const s = t(locale);
+
+const all = await getCollection('benchmarks');
+const items = all.sort((a, b) =>
+  a.data.category === b.data.category
+    ? a.data.name.localeCompare(b.data.name)
+    : a.data.category.localeCompare(b.data.category)
+);
+
+const counts = Object.fromEntries(
+  benchmarkCategoryKeys.map((k) => [k, items.filter((e) => e.data.category === k).length])
+) as Record<BenchmarkCategory, number>;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: `Agent benchmarks — ${s.siteName}`,
+  url: `${SITE_URL}/benchmarks/`,
+  numberOfItems: items.length,
+  inLanguage: 'en',
+};
+---
+
+<BaseLayout
+  locale={locale}
+  title={`Agent benchmarks — ${s.siteName}`}
+  description={s.benchmarksIntro}
+  path="/benchmarks/"
+  alternates={{ en: '/benchmarks/', zh: '/zh/benchmarks/' }}
+  jsonLd={jsonLd}
+>
+  <div id="bench-root">
+    <header class="flex flex-wrap items-end justify-between gap-4">
+      <div>
+        <h1 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-50">
+          {s.benchmarks}
+        </h1>
+        <p class="mt-2 max-w-3xl text-slate-600 dark:text-slate-400">{s.benchmarksIntro}</p>
+        <p class="mt-2 text-sm text-slate-500">
+          {items.length} entries · {s.lastUpdated} 2026-10-04
+        </p>
+      </div>
+      <label class="relative w-full max-w-sm">
+        <span class="sr-only">Search benchmarks</span>
+        <input
+          id="bench-search"
+          type="search"
+          placeholder="Search benchmarks…"
+          class="w-full rounded-lg border border-slate-300 bg-white py-2 pl-9 pr-3 text-sm
+            placeholder:text-slate-400 focus:border-indigo-500 focus:outline-none focus:ring-2
+            focus:ring-indigo-200 dark:border-slate-700 dark:bg-slate-900 dark:focus:ring-indigo-900"
+        />
+        <svg
+          class="pointer-events-none absolute left-3 top-2.5 h-4 w-4 text-slate-400"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </label>
+    </header>
+
+    <div class="mt-6 flex flex-wrap gap-2">
+      <button
+        type="button"
+        data-filter-cat="all"
+        aria-pressed="true"
+        class="filter-chip badge badge-cat cursor-pointer">All ({items.length})</button
+      >
+      {
+        benchmarkCategoryKeys.map((k) => (
+          <button
+            type="button"
+            data-filter-cat={k}
+            aria-pressed="false"
+            class="filter-chip badge badge-neutral cursor-pointer"
+          >
+            {benchmarkCategories[k].en} ({counts[k]})
+          </button>
+        ))
+      }
+    </div>
+
+    <div id="bench-grid" class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        items.map((b) => (
+          <BenchmarkCard locale={locale} benchmark={b} href={benchmarkUrl('en', b.id)} />
+        ))
+      }
+    </div>
+
+    <p id="bench-empty" class="mt-10 hidden rounded-xl border border-dashed border-slate-300 p-10 text-center text-slate-500 dark:border-slate-700">
+      No benchmarks match that filter.
+    </p>
+  </div>
+
+  <style>
+    .filter-chip[aria-pressed='true'] {
+      background-color: var(--color-indigo-600);
+      color: #fff;
+    }
+  </style>
+
+  <script>
+    function initBenchFilter() {
+      const root = document.getElementById('bench-root');
+      if (!root || root.dataset.bound === '1') return;
+      root.dataset.bound = '1';
+
+      const input = root.querySelector('#bench-search');
+      const cards = Array.from(root.querySelectorAll('a[href^="/benchmarks/"]'));
+      const chips = Array.from(root.querySelectorAll('[data-filter-cat]'));
+      const empty = root.querySelector('#bench-empty');
+      let activeCat = 'all';
+
+      function apply() {
+        const q = (input && input.value ? input.value : '').trim().toLowerCase();
+        let visible = 0;
+        for (const card of cards) {
+          const cat = card.dataset.cat;
+          const matchCat = activeCat === 'all' || cat === activeCat;
+          const matchQ = !q || card.textContent.toLowerCase().includes(q);
+          const show = matchCat && matchQ;
+          card.style.display = show ? '' : 'none';
+          if (show) visible++;
+        }
+        if (empty) empty.style.display = visible === 0 ? '' : 'none';
+      }
+
+      chips.forEach((chip) => {
+        chip.addEventListener('click', () => {
+          activeCat = chip.dataset.filterCat;
+          chips.forEach((c) => c.setAttribute('aria-pressed', String(c === chip)));
+          apply();
+        });
+      });
+
+      if (input) input.addEventListener('input', apply);
+      apply();
+    }
+    initBenchFilter();
+    document.addEventListener('astro:after-swap', initBenchFilter);
+  </script>
+</BaseLayout>

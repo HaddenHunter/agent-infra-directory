@@ -1,0 +1,16 @@
+{
+  "name": "Toolathlon",
+  "category": "general",
+  "description": "The Tool Decathlon: long-horizon tasks across 32 apps and 604 tools.",
+  "descriptionZh": "工具十项全能：跨 32 个应用、604 个工具的长程任务基准。",
+  "frontier": "Best 38.6% (Claude-4.5-Sonnet); best open-source 20.1% (DeepSeek-V3.2-Exp)",
+  "frontierZh": "最高 38.6%（Claude-4.5-Sonnet）；开源最佳 20.1%（DeepSeek-V3.2-Exp）",
+  "credibility": "Shows how far agents are from long-horizon work: 108 hand-crafted tasks averaging about 20 turns each, spanning 32 applications and 604 tools, and no system reaches 40%. The best open-source result is roughly half the best closed result, which is the widest such gap in this list.",
+  "credibilityZh": "显示 Agent 距离长程任务有多远：108 个手工任务平均约 20 轮交互，跨 32 个应用与 604 个工具，没有任何系统达到 40%。开源最佳约为闭源最佳的一半，是本清单中该差距最大的一个。",
+  "verification": "verified",
+  "sourceName": "Toolathlon (arXiv:2510.25726)",
+  "sourceUrl": "https://arxiv.org/abs/2510.25726",
+  "lastUpdated": "2026-10-04",
+  "keyFact": "Toolathlon spans 108 hand-crafted tasks averaging about 20 turns across 32 applications and 604 tools, and the best model reaches only 38.6% (Claude-4.5-Sonnet) with the best open-source model at 20.1%.",
+  "keyFactZh": "Toolathlon 覆盖 32 个应用、604 个工具、108 个手工任务，平均约 20 轮交互，最佳模型仅达 38.6%（Claude-4.5-Sonnet），开源最佳为 20.1%。"
+}

@@ -1,0 +1,16 @@
+{
+  "name": "GAIA2",
+  "category": "general",
+  "description": "GAIA successor testing agents in dynamic, asynchronous environments.",
+  "descriptionZh": "GAIA 的继任基准，在动态、异步环境中考察 Agent。",
+  "frontier": "GPT-5 (high) 42.1% pass@1; best open model Kimi-K2 at 20.1% pass@1",
+  "frontierZh": "GPT-5（high）42.1% pass@1；开源最佳 Kimi-K2 为 20.1% pass@1",
+  "credibility": "From Meta Superintelligence Labs, accepted as an ICLR 2026 Oral, running 1,120 scenarios on an asynchronous testbed. Its specific finding is that time-sensitive tasks are where the strongest model fails — a different failure mode from GAIA's static multi-step questions.",
+  "credibilityZh": "由 Meta Superintelligence Labs 发布，被 ICLR 2026 接收为 Oral，在异步测试平台上运行 1,120 个场景。其具体发现是：最强模型恰恰在时间敏感任务上失败——这与 GAIA 静态多步问题的失效模式不同。",
+  "verification": "verified",
+  "sourceName": "GAIA2 (arXiv:2602.11964)",
+  "sourceUrl": "https://arxiv.org/abs/2602.11964",
+  "lastUpdated": "2026-10-04",
+  "keyFact": "GAIA2, published 12 February 2026 and accepted as an ICLR 2026 Oral, tests agents in asynchronous dynamic environments across 1,120 scenarios, where GPT-5 (high) reaches 42.1% pass@1 and the best open model Kimi-K2 reaches 20.1%.",
+  "keyFactZh": "2026 年 2 月 12 日发布、被 ICLR 2026 接收为 Oral 的 GAIA2，在异步动态环境的 1,120 个场景中考察 Agent，其中 GPT-5（high）为 42.1% pass@1，开源最佳 Kimi-K2 为 20.1%。"
+}

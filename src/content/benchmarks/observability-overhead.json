@@ -1,0 +1,18 @@
+{
+  "name": "Observability instrumentation overhead",
+  "category": "infra",
+  "description": "Measured runtime overhead added by LLM/agent observability tools.",
+  "descriptionZh": "实测各 LLM/Agent 可观测工具带来的运行时开销。",
+  "frontier": "LangSmith near 0%, Laminar 5%, AgentOps 12%, Langfuse 15%",
+  "frontierZh": "LangSmith 近 0%、Laminar 5%、AgentOps 12%、Langfuse 15%",
+  "credibility": "A single benchmark on one multi-agent travel-planning system, replaying 100 identical queries against an uninstrumented baseline. Overhead of this kind depends heavily on whether reporting is synchronous or asynchronous and on sampling rates, so treat the ordering as directional rather than as fixed constants.",
+  "credibilityZh": "来自单一基准：在一个多 Agent 旅行规划系统上重放 100 条相同查询并与无埋点基线对比。此类开销高度依赖上报是同步还是异步以及采样率，因此排序有参考意义，但不宜当作固定常数。",
+  "verification": "single-source",
+  "sourceName": "AIMultiple agent monitoring benchmark",
+  "sourceUrl": "https://aimultiple.com/es/agentic-monitoring",
+  "lastUpdated": "2026-10-04",
+  "keyFact": "In an AIMultiple benchmark updated 11 August 2026, instrumentation overhead measured near 0% for LangSmith, 5% for Laminar, 12% for AgentOps and 15% for Langfuse on a multi-agent travel-planning workload.",
+  "keyFactZh": "AIMultiple 于 2026 年 8 月 11 日更新的基准显示，在多 Agent 旅行规划负载上，埋点开销为 LangSmith 近 0%、Laminar 5%、AgentOps 12%、Langfuse 15%。",
+  "caveat": "One benchmark, one workload. Overhead varies with synchronous versus asynchronous reporting and sampling, so do not treat these as universal constants.",
+  "caveatZh": "单一基准、单一负载。开销随同步/异步上报与采样率变化，不应视为通用常数。"
+}

@@ -1,0 +1,18 @@
+{
+  "name": "MCP-Atlas",
+  "category": "mcp",
+  "description": "Scale AI benchmark for MCP servers: 1,000 tasks across 36 servers and 220 tools.",
+  "descriptionZh": "Scale AI 面向 MCP Server 的基准：1,000 个任务、36 个服务器、220 个工具。",
+  "frontier": "Scale's own paper reports a top of 62.3% (Claude Opus 4.5); third-party aggregators list 88.1% for Muse Spark 1.1",
+  "frontierZh": "Scale 官方论文最高为 62.3%（Claude Opus 4.5）；第三方聚合站列出 Muse Spark 1.1 为 88.1%",
+  "credibility": "Two very different number systems circulate. Scale's official leaderboard tops out around 62%, while aggregator sites show 85-88% from vendor self-reports. BenchLM, one such aggregator, labels 40 of 42 rows as vendor-reported and only 2 as independently evaluated.",
+  "credibilityZh": "存在两套差异极大的数字体系。Scale 官方榜单最高约 62%，而聚合站基于厂商自报给出 85-88%。以 BenchLM 为例，其 42 行中 40 行标注为厂商自报、仅 2 行为独立评测。",
+  "verification": "verified",
+  "sourceName": "Scale AI MCP-Atlas leaderboard",
+  "sourceUrl": "https://labs.scale.com/leaderboard/mcp_atlas",
+  "lastUpdated": "2026-10-04",
+  "keyFact": "Scale AI's MCP-Atlas benchmark spans 1,000 tasks across 36 MCP servers and 220 tools, and its official leaderboard tops out at 62.3% while third-party aggregators quote 85-88% figures that are largely vendor self-reported.",
+  "keyFactZh": "Scale AI 的 MCP-Atlas 跨 36 个 MCP Server 与 220 个工具、共 1,000 个任务，其官方榜单最高为 62.3%，而第三方聚合站引用的 85-88% 大多属厂商自报。",
+  "debunks": "Quoting a single 85-88% MCP leaderboard number as if it were the benchmark's authoritative result.",
+  "debunksZh": "把某个 85-88% 的 MCP 榜单数字当作该基准的权威结果来引用。"
+}

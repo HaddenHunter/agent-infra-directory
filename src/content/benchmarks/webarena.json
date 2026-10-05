@@ -1,0 +1,17 @@
+{
+  "name": "WebArena",
+  "category": "web",
+  "description": "End-to-end browser tasks in self-hosted replicas of real websites.",
+  "descriptionZh": "在自建的真实网站复刻环境中执行端到端浏览器任务。",
+  "frontier": "OpAgent 71.6% (Jan 2026); WebTactix 74.3% (Feb 2026)",
+  "frontierZh": "OpAgent 71.6%（2026-01）；WebTactix 74.3%（2026-02）",
+  "humanBaseline": "78.24% (original paper)",
+  "credibility": "Considered credible: the remaining gap to the 78.24% human baseline is a real capability gap rather than an artefact. Progress has been steep — from about 15% in 2023 to 74.3% in early 2026.",
+  "credibilityZh": "可信度较高：与 78.24% 人类基线之间的剩余差距是真实能力差而非假象。进展很快——从 2023 年的约 15% 升到 2026 年初的 74.3%。",
+  "verification": "verified",
+  "sourceName": "WebArena leaderboard / Stanford HAI AI Index 2026",
+  "sourceUrl": "https://leaderboard.steel.dev/leaderboards/webarena",
+  "lastUpdated": "2026-10-04",
+  "keyFact": "WebArena success rose from about 15% in 2023 to 74.3% in early 2026, leaving roughly four percentage points between the best agent and the 78.24% human baseline.",
+  "keyFactZh": "WebArena 的成功率从 2023 年的约 15% 升至 2026 年初的 74.3%，最强 Agent 与 78.24% 的人类基线之间仅剩约四个百分点。"
+}

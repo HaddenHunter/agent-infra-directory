@@ -1,0 +1,18 @@
+{
+  "name": "SWE-bench Pro",
+  "category": "coding",
+  "description": "Repository-level engineering tasks designed to resist contamination.",
+  "descriptionZh": "仓库级工程任务基准，以抗污染为设计目标。",
+  "frontier": "23.3% at release (GPT-5, Sept 2025); public set later reached 59.1-61.5%, commercial set 51.5% (Sept 2026)",
+  "frontierZh": "发布时 23.3%（GPT-5，2025-09）；公开集后续达 59.1-61.5%，商业集 51.5%（2026-09）",
+  "credibility": "The anti-contamination design makes it more trustworthy than Verified. Be careful with one widely repeated misstatement: Scale's paper says most top models exceed 70% on Verified while the best models score only about 23% on Pro — it does not say that 80% of models drop to 23%.",
+  "credibilityZh": "抗污染设计使其比 Verified 更可信。但要注意一条广为流传的误读：Scale 论文说的是「多数顶尖模型在 Verified 上超过 70%，而最好的模型在 Pro 上仅约 23%」——并不是「80% 的模型掉到 23%」。",
+  "verification": "verified",
+  "sourceName": "Scale AI SWE-Bench Pro leaderboard",
+  "sourceUrl": "https://labs.scale.com/leaderboard/swe_bench_pro_public_v2",
+  "lastUpdated": "2026-10-04",
+  "keyFact": "SWE-bench Pro was published in September 2025 with a best score of 23.3% (GPT-5) against most top models exceeding 70% on SWE-bench Verified, which is the origin of the frequently misquoted '80% of models fall to 23%' claim.",
+  "keyFactZh": "SWE-bench Pro 于 2025 年 9 月发布，最高分为 23.3%（GPT-5），而多数顶尖模型在 SWE-bench Verified 上超过 70%——这正是「80% 的模型掉到 23%」这一误传的来源。",
+  "debunks": "The claim that about 80% of models scoring well on SWE-bench Verified drop to roughly 23% on Pro.",
+  "debunksZh": "「约 80% 的模型在 SWE-bench Verified 上得分不错，到 Pro 上掉到约 23%」这一说法。"
+}

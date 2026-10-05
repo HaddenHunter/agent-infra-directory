@@ -1,0 +1,144 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { faqSchema } from '../../lib/schema';
+import { t, type Locale } from '../../i18n/ui';
+import {
+  benchmarkCategories,
+  benchmarkMarkdownUrl,
+  benchmarkUrl,
+} from '../../lib/benchmarks';
+import { verificationLabels, verificationBadge, type Verification } from '../../lib/news';
+
+export async function getStaticPaths() {
+  const benchmarks = await getCollection('benchmarks');
+  return benchmarks.map((b) => ({ params: { slug: b.id }, props: { benchmark: b } }));
+}
+
+const { benchmark } = Astro.props as {
+  benchmark: Awaited<ReturnType<typeof getCollection<'benchmarks'>>>[number];
+};
+const locale: Locale = 'en';
+const s = t(locale);
+const d = benchmark.data;
+
+const name = d.name;
+const description = d.description;
+const frontier = d.frontier;
+const credibility = d.credibility;
+const catLabel = benchmarkCategories[d.category].en;
+const vLabel = verificationLabels[d.verification as Verification].en;
+const vClass = verificationBadge[d.verification as Verification];
+
+const qas = [
+  { q: `What does ${name} measure?`, a: description },
+  { q: `What is the 2026 frontier for ${name}?`, a: frontier },
+  { q: `Is ${name} credible?`, a: credibility },
+];
+if (d.debunks) {
+  qas.push({ q: `Is the commonly cited claim about ${name} accurate?`, a: d.debunks });
+}
+---
+
+<BaseLayout
+  locale={locale}
+  title={`${name} — ${catLabel}`}
+  description={description}
+  path={benchmarkUrl('en', benchmark.id)}
+  alternates={{ en: benchmarkUrl('en', benchmark.id), zh: benchmarkUrl('zh', benchmark.id) }}
+  jsonLd={faqSchema(qas)}
+  ogType="article"
+>
+  <nav class="text-sm text-slate-500 dark:text-slate-400">
+    <a class="hover:text-slate-900 dark:hover:text-slate-100" href="/">{s.home}</a>
+    <span class="mx-1">/</span>
+    <a class="hover:text-slate-900 dark:hover:text-slate-100" href="/benchmarks/">
+      {s.benchmarks}
+    </a>
+  </nav>
+
+  <header class="mt-3">
+    <h1 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-50">{name}</h1>
+    <div class="mt-3 flex flex-wrap items-center gap-2">
+      <span class="badge badge-cat">
+        {d.category === 'contested' ? s.contested : catLabel}
+      </span>
+      <span class={`badge ${vClass}`}>{vLabel}</span>
+      <span class="badge badge-neutral">{s.lastUpdated} {d.lastUpdated}</span>
+    </div>
+    <p class="mt-4 text-lg text-slate-600 dark:text-slate-400">{description}</p>
+  </header>
+
+  <blockquote class="key-fact mt-6">
+    <p class="text-[15px] leading-relaxed">{d.keyFact}</p>
+  </blockquote>
+
+  {
+    d.debunks && (
+      <p class="alert-caveat mt-4">
+        <strong>{s.contested}: </strong>
+        {d.debunks}
+      </p>
+    )
+  }
+
+  <section class="mt-8">
+    <h2 class="section-title">{s.facts}</h2>
+    <table class="facts-table mt-3">
+      <tbody>
+        <tr>
+          <th>{s.frontier}</th>
+          <td>{frontier}</td>
+        </tr>
+        {
+          d.humanBaseline && (
+            <tr>
+              <th>{s.humanBaseline}</th>
+              <td>{d.humanBaseline}</td>
+            </tr>
+          )
+        }
+        <tr>
+          <th>{s.credibility}</th>
+          <td>{credibility}</td>
+        </tr>
+        <tr>
+          <th>{s.verification}</th>
+          <td>{vLabel}</td>
+        </tr>
+        <tr>
+          <th>{s.newsSource}</th>
+          <td>
+            <a class="underline hover:text-indigo-600" href={d.sourceUrl} rel="nofollow noopener">
+              {d.sourceName}
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="mt-4 text-sm">
+      <a
+        class="btn btn-ghost"
+        href={benchmarkMarkdownUrl(locale, benchmark.id)}
+        data-astro-prefetch="false"
+        rel="nofollow">{s.markdownVersion}</a
+      >
+    </p>
+  </section>
+
+  <section class="mt-10">
+    <h2 class="section-title">FAQ</h2>
+    <div class="mt-4 space-y-3">
+      {
+        qas.map(({ q, a }) => (
+          <details class="card !p-0">
+            <summary class="cursor-pointer px-4 py-3 font-medium text-slate-900 dark:text-slate-100">
+              {q}
+            </summary>
+            <p class="px-4 pb-4 text-sm text-slate-600 dark:text-slate-400">{a}</p>
+          </details>
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>

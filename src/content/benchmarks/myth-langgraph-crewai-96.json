@@ -1,0 +1,18 @@
+{
+  "name": "\"LangGraph + CrewAI hybrid reaches 96.1%\" — unverifiable claim",
+  "category": "contested",
+  "description": "A widely circulated framework statistic that has no traceable source.",
+  "descriptionZh": "一条广泛流传但无法追溯来源的框架统计数字。",
+  "frontier": "No source located",
+  "frontierZh": "未找到任何来源",
+  "credibility": "Searches found no IEEE study, no 96.1% figure and no '34% higher task specification' metric. The claim also points the opposite way from the published evidence: the ACM Arena benchmark, which holds the model constant, found traditional frameworks gain no correctness advantage from more orchestration code, and other comparisons put complex-task success around 54-62%.",
+  "credibilityZh": "检索未发现任何 IEEE 研究、没有 96.1% 这一数字、也没有「任务规格高 34%」这项指标。该说法还与已发表证据方向相反：固定模型的 ACM Arena 基准发现传统框架增加编排代码并未带来正确性优势，其他对比中复杂任务成功率约在 54-62%。",
+  "verification": "disputed",
+  "sourceName": "Correction: ACM CAIS '26 Arena benchmark",
+  "sourceUrl": "https://dlnext.acm.org/doi/10.1145/3786335.3813233",
+  "lastUpdated": "2026-10-04",
+  "keyFact": "As of October 2026 no source could be located for the claim that an IEEE study found a LangGraph plus CrewAI hybrid reaching 96.1% success on complex multi-agent coordination, and published framework comparisons put such tasks at roughly 54-62%.",
+  "keyFactZh": "截至 2026 年 10 月，无法为「某 IEEE 研究显示 LangGraph + CrewAI 混合架构在复杂多 Agent 协同中达 96.1% 成功率」这一说法找到任何来源；而已发表的框架对比中，此类任务约在 54-62%。",
+  "debunks": "The claim that an IEEE study showed a LangGraph + CrewAI hybrid at 96.1% success, with CrewAI scoring 34% higher on task specification.",
+  "debunksZh": "「某 IEEE 研究显示 LangGraph + CrewAI 混合架构成功率达 96.1%，且 CrewAI 单独使用时任务规格得分高 34%」这一说法。"
+}

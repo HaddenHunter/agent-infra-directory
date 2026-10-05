@@ -1,0 +1,18 @@
+{
+  "name": "AgentPerf",
+  "category": "infra",
+  "description": "Artificial Analysis benchmark for agentic AI infrastructure, built from real coding-agent trajectories.",
+  "descriptionZh": "Artificial Analysis 面向 Agentic AI 基础设施的基准，基于真实编码 Agent 轨迹构建。",
+  "frontier": "NVIDIA GB300 NVL72 at 91,507 agents/MW under a 20 tok/s SLO, up to 20x HGX H200",
+  "frontierZh": "在 20 tok/s SLO 下，NVIDIA GB300 NVL72 达 91,507 agents/MW，最高为 HGX H200 的 20 倍",
+  "credibility": "This is an infrastructure benchmark, not a model benchmark: it measures how many agents a power budget can sustain. Two caveats matter — the benchmark was developed together with NVIDIA (so the NVIDIA lead is expected), and the result is highly sensitive to the chosen SLO, e.g. about 61,400 agents/MW for GB300 versus about 2,600 for H200 at 60 tok/s.",
+  "credibilityZh": "这是基础设施基准而非模型基准：衡量的是单位电力预算能支撑多少 Agent。两点需注意——该基准与 NVIDIA 合作开发（因此 NVIDIA 领先属预期），且结果对所选 SLO 高度敏感，例如 60 tok/s 时 GB300 约 61,400 agents/MW，而 H200 约 2,600。",
+  "verification": "verified",
+  "sourceName": "Artificial Analysis hardware benchmarks",
+  "sourceUrl": "https://artificialanalysis.ai/benchmarks/hardware",
+  "lastUpdated": "2026-10-04",
+  "keyFact": "AgentPerf, published by Artificial Analysis with NVIDIA on 12 June 2026, reported 91,507 agents/MW for NVIDIA's GB300 NVL72 at a 20 tok/s SLO — up to 20x the HGX H200 — but the figure drops to about 61,400 versus 2,600 at a 60 tok/s SLO.",
+  "keyFactZh": "Artificial Analysis 与 NVIDIA 于 2026 年 6 月 12 日发布的 AgentPerf 显示，NVIDIA GB300 NVL72 在 20 tok/s SLO 下达 91,507 agents/MW，最高为 HGX H200 的 20 倍；但在 60 tok/s SLO 下变为约 61,400 对 2,600。",
+  "debunks": "Quoting 'up to 20x' without stating the SLO, which changes the ratio by roughly 5x.",
+  "debunksZh": "只引用「最高 20 倍」而不说明 SLO——不同 SLO 下该比值相差约 5 倍。"
+}

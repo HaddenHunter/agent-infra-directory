@@ -1,0 +1,17 @@
+{
+  "name": "OSWorld",
+  "category": "os",
+  "description": "Benchmark for agents operating a real desktop environment end to end.",
+  "descriptionZh": "考察 Agent 端到端操作真实桌面环境的基准。",
+  "frontier": "Claude Sonnet 4.6 at 72.5% (Feb 2026); GPT-5.4 at 75.0% (Jun 2026)",
+  "frontierZh": "Claude Sonnet 4.6 为 72.5%（2026-02）；GPT-5.4 为 75.0%（2026-06）",
+  "humanBaseline": "72.36% (original paper)",
+  "credibility": "One of the more credible agent benchmarks: the human baseline of 72.36% is a genuine reference point rather than a saturated ceiling, so the gap still reflects real capability. Note that 72.36% is not a skilled-user maximum.",
+  "credibilityZh": "属于较可信的 Agent 基准：72.36% 的人类基线是真实的参照点而非饱和上限，因此差距仍反映真实能力。需注意 72.36% 并非熟练用户的满分。",
+  "verification": "verified",
+  "sourceName": "OSWorld",
+  "sourceUrl": "http://osworld-v1.xlang.ai/",
+  "lastUpdated": "2026-10-04",
+  "keyFact": "Agents crossed the OSWorld human baseline of 72.36% in February 2026 when Claude Sonnet 4.6 reached 72.5%, and GPT-5.4 reached 75.0% by June 2026 — one of the few agent benchmarks where the human reference line has been overtaken.",
+  "keyFactZh": "2026 年 2 月 Claude Sonnet 4.6 以 72.5% 越过 OSWorld 的 72.36% 人类基线，到 2026 年 6 月 GPT-5.4 达到 75.0%——这是少数「人类参照线已被超越」的 Agent 基准之一。"
+}

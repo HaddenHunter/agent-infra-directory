@@ -1,0 +1,16 @@
+{
+  "name": "OfficeQA Pro",
+  "category": "general",
+  "description": "Enterprise multi-document grounded reasoning over US Treasury bulletins.",
+  "descriptionZh": "面向企业级多文档落地推理，语料为美国财政部公报。",
+  "frontier": "Frontier models under 5% from parametric knowledge alone; average 34.1% when given the documents",
+  "frontierZh": "前沿模型仅凭参数知识不足 5%；给定文档后平均仅 34.1%",
+  "credibility": "A clean measurement of the difference between knowing and looking it up: 89,000 pages and 26M+ numeric values with 133 questions. Even with the documents in hand, frontier models average 34.1%, which is the number that matters for enterprise RAG planning.",
+  "credibilityZh": "它清晰量化了「知道」与「查得到」的差距：语料 89,000 页、2,600 万+ 数值，共 133 道题。即便把文档递给模型，前沿模型平均也仅 34.1%——对企业 RAG 规划而言，这个数字才是关键。",
+  "verification": "verified",
+  "sourceName": "Databricks AI Research (arXiv:2603.08655)",
+  "sourceUrl": "https://arxiv.org/abs/2603.08655",
+  "lastUpdated": "2026-10-04",
+  "keyFact": "OfficeQA Pro, published by Databricks AI Research on 9 March 2026, found frontier models answer under 5% of questions correctly from parametric knowledge alone and average just 34.1% when given the 89,000-page source corpus.",
+  "keyFactZh": "Databricks AI Research 于 2026 年 3 月 9 日发布的 OfficeQA Pro 发现，前沿模型仅凭参数知识答题的正确率不足 5%，即便提供 89,000 页原始语料，平均也只有 34.1%。"
+}

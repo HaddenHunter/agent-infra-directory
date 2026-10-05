@@ -1,0 +1,18 @@
+{
+  "name": "\"Only 5 of 12 MCP servers exceed 80% reliability\" — unverifiable figures",
+  "category": "contested",
+  "description": "A specific MCP reliability table whose numbers cannot be traced to any test.",
+  "descriptionZh": "一张具体的 MCP 可靠性表格，其数字无法追溯到任何实测。",
+  "frontier": "No source located for the quoted numbers",
+  "frontierZh": "所引数字未找到任何来源",
+  "credibility": "The shape of the claim maps onto a real blog post that reviewed twelve MCP servers — but none of the quoted figures appear in it. That review reported a 4 keep / 6 cut / 2 watch split with uptimes like Vercel 100%, Ahrefs 96%, Gmail 97%. Other real MCP tests exist (a 36-server grading exercise where about a third scored D or F; a 100-server stress test with a 320ms median latency and 71% median pass rate), and none contain the 10%, 4%, 491ms or 9-of-12 figures.",
+  "credibilityZh": "该说法的「形态」能对应到一篇真实博客——它确实评测了 12 个 MCP Server——但所引数字一个都没出现其中。那篇评测的结论是 4 个保留 / 6 个淘汰 / 2 个观察，可用率为 Vercel 100%、Ahrefs 96%、Gmail 97%。其他真实 MCP 测试也存在（36 个服务器评级中约三分之一得 D/F；100 个服务器压测中位延迟 320ms、中位通过率 71%），但其中都没有 10%、4%、491ms 或 9/12 这些数字。",
+  "verification": "disputed",
+  "sourceName": "Correction: real 12-server MCP review",
+  "sourceUrl": "https://aisuffer.com/blog/claude-mcp-review/",
+  "lastUpdated": "2026-10-04",
+  "keyFact": "As of October 2026 no source could be located for the claim that only 5 of 12 MCP servers exceed 80% reliability with mcp-sqlite at 10% and mcp-git at 4%, a 491ms average latency and 9 of 12 scoring 90+ on efficiency.",
+  "keyFactZh": "截至 2026 年 10 月，无法为「12 个 MCP Server 中仅 5 个达到 80% 以上可靠性、mcp-sqlite 仅 10%、mcp-git 仅 4%、平均延迟 491ms、12 个中 9 个效率得分 90+」这一说法找到任何来源。",
+  "debunks": "The claim that a test of 12 MCP servers found only 5 above 80% reliability, 5 below 50% (mcp-sqlite 10%, mcp-git 4%), 491ms average latency and 9 of 12 scoring 90+ on efficiency.",
+  "debunksZh": "「对 12 个 MCP Server 的实测显示仅 5 个可靠性超过 80%、5 个低于 50%（mcp-sqlite 10%、mcp-git 4%）、平均延迟 491ms、12 个中 9 个效率得分 90+」这一说法。"
+}

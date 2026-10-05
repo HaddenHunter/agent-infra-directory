@@ -1,0 +1,16 @@
+{
+  "name": "ClawsBench",
+  "category": "safety",
+  "description": "Measures task success and unsafe behaviour together across models and harnesses.",
+  "descriptionZh": "同时衡量任务成功率与不安全行为率，跨模型与 harness 测试。",
+  "frontier": "Task success 39-64%; unsafe behaviour rate 7-33% (6 models x 4 harnesses x 33 conditions)",
+  "frontierZh": "任务成功率 39-64%；不安全行为率 7-33%（6 模型 × 4 harness × 33 种条件）",
+  "credibility": "The framing is the point: capability and safety are reported side by side, so a high success rate is not automatically good news. A system at 64% success with 33% unsafe behaviour is not deployable, and this benchmark makes that arithmetic visible.",
+  "credibilityZh": "关键在于它的呈现方式：能力与安全并排报告，因此高成功率并不自动是好消息。一个 64% 成功率却伴随 33% 不安全行为的系统不可部署——这个基准把这道算术摆在了明面上。",
+  "verification": "verified",
+  "sourceName": "ClawsBench (arXiv:2604.05172)",
+  "sourceUrl": "https://arxiv.org/abs/2604.05172",
+  "lastUpdated": "2026-10-04",
+  "keyFact": "ClawsBench, first posted 6 April 2026, tested 6 models across 4 agent harnesses and 33 conditions and found task success rates of 39-64% alongside unsafe behaviour rates of 7-33%.",
+  "keyFactZh": "2026 年 4 月 6 日首次发布的 ClawsBench，在 6 个模型、4 个 Agent harness、33 种条件下测试，得出任务成功率 39-64%、不安全行为率 7-33%。"
+}

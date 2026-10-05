@@ -34,6 +34,7 @@ const switchPath = alts[otherLocale] ?? (otherLocale === 'zh' ? '/zh/' : '/');
 const graph = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 const toolsIndex = locale === 'en' ? '/tools/' : '/zh/tools/';
 const newsIndex = locale === 'en' ? '/news/' : '/zh/news/';
+const benchIndex = locale === 'en' ? '/benchmarks/' : '/zh/benchmarks/';
 const home = locale === 'en' ? '/' : '/zh/';
 ---
 
@@ -143,6 +144,7 @@ const home = locale === 'en' ? '/' : '/zh/';
             {locale === 'zh' ? '全部工具' : 'All tools'}
           </a>
           <a href={newsIndex} class="btn btn-ghost hidden sm:inline-flex">{strings.news}</a>
+          <a href={benchIndex} class="btn btn-ghost hidden lg:inline-flex">{strings.benchmarks}</a>
           <a href={switchPath} class="btn btn-ghost">{strings.readIn}</a>
           <button
             id="theme-toggle"

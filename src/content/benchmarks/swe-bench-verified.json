@@ -1,0 +1,16 @@
+{
+  "name": "SWE-bench Verified",
+  "category": "coding",
+  "description": "Real GitHub issue resolution; the benchmark OpenAI publicly stopped reporting.",
+  "descriptionZh": "真实 GitHub Issue 修复基准；OpenAI 已公开宣布停止报送。",
+  "frontier": "About 80% at the end of 2025 (Claude Opus 4.5, 80.9%); 95%+ by late 2026",
+  "frontierZh": "2025 年底约 80%（Claude Opus 4.5 为 80.9%）；到 2026 年后期已达 95%+",
+  "credibility": "OpenAI published 'Why we no longer evaluate SWE-bench Verified' on 23 February 2026, citing both design flaws in the tests and training-data contamination — models could reproduce gold patches verbatim. On the subset of tasks models often fail, at least 59.4% have flawed tests. This is the clearest case of a benchmark being retired for cause.",
+  "credibilityZh": "OpenAI 于 2026 年 2 月 23 日发布《为何我们不再评估 SWE-bench Verified》，同时给出测试设计缺陷与训练数据污染两项理由——模型可逐字复现金标准补丁。在模型常解不出的子集中，至少 59.4% 存在测试缺陷。这是基准因自身问题被退役的最清晰案例。",
+  "verification": "verified",
+  "sourceName": "OpenAI",
+  "sourceUrl": "https://openai.com/zh-Hans-CN/index/why-we-no-longer-evaluate-swe-bench-verified/",
+  "lastUpdated": "2026-10-04",
+  "keyFact": "OpenAI stopped reporting SWE-bench Verified on 23 February 2026 because of confirmed contamination and flawed tests; the widely cited 80-88% range describes late 2025 to mid 2026, and by late 2026 the frontier had passed 95%.",
+  "keyFactZh": "OpenAI 因确认存在污染与测试缺陷，于 2026 年 2 月 23 日起停止报送 SWE-bench Verified；流传的 80-88% 区间描述的是 2025 年底至 2026 年中，而到 2026 年后期前沿已超过 95%。"
+}

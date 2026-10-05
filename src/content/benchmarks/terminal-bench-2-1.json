@@ -1,0 +1,16 @@
+{
+  "name": "Terminal-Bench 2.1",
+  "category": "general",
+  "description": "Command-line agent tasks; version 2.1 is a validated refresh of 2.0.",
+  "descriptionZh": "命令行 Agent 任务基准；2.1 版是对 2.0 的校验后刷新。",
+  "frontier": "Mid-2026 range roughly 80-89% (GLM-5.2 81.0%, Codex CLI 83.4%, Fable 5 88.0%); top published figures reached 90.6-92.8% by Sep 2026",
+  "frontierZh": "2026 年中约 80-89%（GLM-5.2 81.0%、Codex CLI 83.4%、Fable 5 88.0%）；到 2026 年 9 月公开最高已到 90.6-92.8%",
+  "credibility": "A benchmark that openly repairs itself: version 2.1 fixed 28 of the 89 tasks from 2.0. That is the honest version of benchmark maintenance, and it also means scores from 2.0 and 2.1 are not comparable.",
+  "credibilityZh": "这是一个公开自我修复的基准：2.1 版修复了 2.0 的 89 个任务中的 28 个。这是基准维护的诚实做法，但也意味着 2.0 与 2.1 的分数不可直接比较。",
+  "verification": "verified",
+  "sourceName": "Terminal-Bench score ledger",
+  "sourceUrl": "https://evals.report/benchmarks/terminal-bench?tab=scores",
+  "lastUpdated": "2026-10-04",
+  "keyFact": "Terminal-Bench 2.1, released 6 May 2026, fixed 28 of the 89 tasks from version 2.0; the mid-2026 frontier sat around 80-89% and rose to roughly 90.6-92.8% by September 2026, so a figure of about 81% describes a specific mid-year snapshot rather than the current frontier.",
+  "keyFactZh": "2026 年 5 月 6 日发布的 Terminal-Bench 2.1 修复了 2.0 版 89 个任务中的 28 个；2026 年中前沿约 80-89%，到 2026 年 9 月升至约 90.6-92.8%，因此「约 81%」只对应某一时点而非当前前沿。"
+}

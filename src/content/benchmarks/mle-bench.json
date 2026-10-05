@@ -1,0 +1,16 @@
+{
+  "name": "MLE-bench",
+  "category": "coding",
+  "description": "Machine-learning engineering tasks derived from real Kaggle competitions.",
+  "descriptionZh": "取自真实 Kaggle 竞赛的机器学习工程任务基准。",
+  "frontier": "16.9% in Oct 2024 (o1-preview + AIDE) to 64.4% in Feb 2026 (Gemini 3 with retrieval and agent scaffolding)",
+  "frontierZh": "2024 年 10 月为 16.9%（o1-preview + AIDE），2026 年 2 月升至 64.4%（Gemini 3 配合检索与 Agent 脚手架）",
+  "credibility": "The 64.4% figure is achieved with retrieval and agent scaffolding, so it measures the system rather than the model. Note that MLE-bench Lite is a separate, higher-scoring configuration and should not be quoted interchangeably.",
+  "credibilityZh": "64.4% 是在检索与 Agent 脚手架加持下取得的，衡量的是整个系统而非模型本身。另需注意 MLE-bench Lite 是另一套口径，分数更高，不可混用。",
+  "verification": "verified",
+  "sourceName": "MLE-bench (OpenAI paper) / reporting",
+  "sourceUrl": "https://aiwiki.ai/wiki/mle_bench",
+  "lastUpdated": "2026-10-04",
+  "keyFact": "MLE-bench scores rose from 16.9% in October 2024 with o1-preview plus AIDE to 64.4% in February 2026 with Gemini 3 using retrieval and agent scaffolding — a system-level figure, not a bare-model one.",
+  "keyFactZh": "MLE-bench 分数从 2024 年 10 月 o1-preview + AIDE 的 16.9%，升至 2026 年 2 月 Gemini 3 配合检索与 Agent 脚手架的 64.4%——这是系统级数字，而非裸模型成绩。"
+}

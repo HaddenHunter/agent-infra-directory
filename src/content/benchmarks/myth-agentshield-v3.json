@@ -1,0 +1,18 @@
+{
+  "name": "\"AgentShield Bench v3\" — does not exist",
+  "category": "contested",
+  "description": "A named security benchmark with a version number that cannot be found anywhere.",
+  "descriptionZh": "一个带版本号的安全基准名称，在任何地方都查不到。",
+  "frontier": "Not found",
+  "frontierZh": "未找到",
+  "credibility": "No benchmark called AgentShield Bench, in v3 or any other version, could be located. The name collides with two unrelated things: AgentShield, a scanner that audits Claude Code configurations (not a benchmark), and AgentShield-G, a paper on graph-structured guardrail models. Real agent security benchmarks that do exist include Agent Security Bench (ICLR 2025) and AgentSecBench — different names, different authors.",
+  "credibilityZh": "查不到任何名为 AgentShield Bench（无论 v3 还是其他版本）的基准。该名称与两件无关事物撞名：AgentShield（审计 Claude Code 配置的扫描器，不是基准）与 AgentShield-G（图结构护栏模型论文）。真实存在的 Agent 安全基准包括 Agent Security Bench（ICLR 2025）与 AgentSecBench——名称与作者都不同。",
+  "verification": "disputed",
+  "sourceName": "Correction: the actual AgentShield is a config scanner",
+  "sourceUrl": "https://www.freshcrate.ai/projects/agentshield",
+  "lastUpdated": "2026-10-04",
+  "keyFact": "As of October 2026 no benchmark named AgentShield Bench v3 could be found; the closest real security benchmarks for agents are Agent Security Bench (ICLR 2025) and AgentSecBench.",
+  "keyFactZh": "截至 2026 年 10 月，查不到任何名为 AgentShield Bench v3 的基准；真实存在的 Agent 安全基准是 Agent Security Bench（ICLR 2025）与 AgentSecBench。",
+  "debunks": "The claim that a benchmark called AgentShield Bench v3 evaluates agent goal integrity, goal-hijacking resistance and autonomous threat resistance.",
+  "debunksZh": "「一个名为 AgentShield Bench v3 的基准用于评估 Agent 目标完整性、目标劫持抵抗力与自主威胁抵抗能力」这一说法。"
+}

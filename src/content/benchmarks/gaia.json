@@ -1,0 +1,17 @@
+{
+  "name": "GAIA",
+  "category": "general",
+  "description": "General-purpose assistant benchmark of real-world questions requiring multi-step reasoning and tool use.",
+  "descriptionZh": "通用助手基准，用需要多步推理与工具调用的真实问题考察 Agent。",
+  "frontier": "L1 82.07% / L2 72.68% / L3 65.39% (HAL Generalist + Claude Sonnet 4.5, May 2026; overall 74.55%)",
+  "frontierZh": "L1 82.07% / L2 72.68% / L3 65.39%（HAL Generalist + Claude Sonnet 4.5，2026 年 5 月；整体 74.55%）",
+  "humanBaseline": "92% (original paper)",
+  "credibility": "Scaffolding dominates the score: the same model scores about 44% when called bare and about 74% inside Princeton's HAL harness — roughly a 30-point gap. Treat GAIA numbers as a property of the harness plus model, not the model alone.",
+  "credibilityZh": "分数主要由脚手架决定：同一模型裸调用约 44%，放进 Princeton HAL 框架则约 74%——差距约 30 分。因此 GAIA 分数是「脚手架 + 模型」的组合属性，不能只看模型。",
+  "verification": "verified",
+  "sourceName": "GAIA leaderboard / HAL analysis",
+  "sourceUrl": "https://awesomeagents.ai/leaderboards/gaia-benchmark-leaderboard/",
+  "lastUpdated": "2026-10-04",
+  "keyFact": "As of May 2026 the GAIA leaderboard showed L1 82.07%, L2 72.68% and L3 65.39% for a HAL-scaffolded Claude Sonnet 4.5, against a human baseline of 92% — but the same model scores roughly 44% without the harness, a 30-point scaffolding gap.",
+  "keyFactZh": "截至 2026 年 5 月，GAIA 榜单显示搭配 HAL 脚手架的 Claude Sonnet 4.5 取得 L1 82.07%、L2 72.68%、L3 65.39%，而人类基线为 92%；但同一模型脱离该框架仅约 44%，脚手架带来约 30 分差距。"
+}

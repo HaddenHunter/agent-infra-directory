@@ -25,6 +25,10 @@ export const GET: APIRoute = async () => {
   lines.push(
     `- ${SITE_URL}/compare/langgraph-vs-crewai/: LangGraph vs CrewAI comparison`,
     '',
+    '## Benchmarks',
+    `- ${SITE_URL}/benchmarks/: what each agent benchmark measures, its 2026 frontier, human baseline and credibility caveats`,
+    `- ${SITE_URL}/benchmarks/myth-langgraph-crewai-96: a widely circulated framework statistic that has no traceable source`,
+    '',
     '## Dynamic pages (updated as events happen)',
     `- ${SITE_URL}/news.md: agent-related launches, funding, security incidents and framework changes, each with a date anchor, a source link and a verification status`,
     `- ${SITE_URL}/news/: the same digest as an HTML page with filters`,

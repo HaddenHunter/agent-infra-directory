@@ -1,0 +1,16 @@
+{
+  "name": "HarnessRisk",
+  "category": "safety",
+  "description": "Splits agent harness security into six lifecycle stages and tests 128 sandbox cases.",
+  "descriptionZh": "把 Agent harness 的安全责任拆为六个生命周期阶段，并构造 128 个沙箱用例测试。",
+  "frontier": "Attack success rate 12.6%-80.9%; utility 75.0%-97.6% across 14 model-harness configurations",
+  "frontierZh": "在 14 种 model-harness 配置下，攻击成功率 12.6%-80.9%，任务可用性 75.0%-97.6%",
+  "credibility": "Valuable because it tests the harness rather than the model: six stages (configuration, capability extension, runtime operation, state persistence, action control, incident recovery), 128 sandbox cases, three harnesses crossed with six models for 14 configurations. The spread of 12.6% to 80.9% attack success is the headline — the same model inside a different harness is a different security posture.",
+  "credibilityZh": "价值在于它测的是 harness 而非模型：六个阶段（配置、能力扩展、运行时操作、状态持久化、动作控制、事件恢复）、128 个沙箱用例、3 个 harness 与 6 个模型交叉共 14 种配置。12.6% 到 80.9% 的攻击成功率区间是核心结论——同一模型放进不同 harness，就是不同的安全姿态。",
+  "verification": "verified",
+  "sourceName": "HarnessRisk (arXiv:2608.17597)",
+  "sourceUrl": "https://arxiv.org/abs/2608.17597",
+  "lastUpdated": "2026-10-04",
+  "keyFact": "HarnessRisk, published 18 August 2026, evaluates agent harness security across six lifecycle stages and 128 sandbox cases in 14 model-harness configurations, finding attack success rates from 12.6% to 80.9%.",
+  "keyFactZh": "2026 年 8 月 18 日发布的 HarnessRisk，在 6 个生命周期阶段、128 个沙箱用例、14 种 model-harness 配置下评估 Agent harness 安全性，攻击成功率区间为 12.6% 至 80.9%。"
+}

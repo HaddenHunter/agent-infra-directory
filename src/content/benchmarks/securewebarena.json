@@ -1,0 +1,16 @@
+{
+  "name": "SecureWebArena",
+  "category": "safety",
+  "description": "First holistic security benchmark for web agents, built on six real web environments.",
+  "descriptionZh": "首个面向 Web Agent 的整体安全基准，构建于六个真实 Web 环境之上。",
+  "frontier": "6 real web environments, 2,970 adversarial trajectories, 6 attack vector categories",
+  "frontierZh": "6 个真实 Web 环境、2,970 条对抗轨迹、6 类攻击向量",
+  "credibility": "Fills a specific gap: browser agents had capability benchmarks (WebArena) long before anyone measured how easily they can be steered by adversarial page content. Accepted to ACL 2026 Findings.",
+  "credibilityZh": "填补了一个明确空白：浏览器 Agent 早就有能力基准（WebArena），但「它们多容易被页面上的对抗内容操纵」长期无人测量。已被 ACL 2026 Findings 接收。",
+  "verification": "verified",
+  "sourceName": "SecureWebArena (arXiv:2510.10073, ACL 2026 Findings)",
+  "sourceUrl": "https://arxiv.org/abs/2510.10073",
+  "lastUpdated": "2026-10-04",
+  "keyFact": "SecureWebArena is the first holistic security benchmark for LVLM-based web agents, spanning six real web environments and 2,970 adversarial trajectories, and was accepted to ACL 2026 Findings.",
+  "keyFactZh": "SecureWebArena 是首个面向 LVLM Web Agent 的整体安全基准，覆盖 6 个真实 Web 环境与 2,970 条对抗轨迹，已被 ACL 2026 Findings 接收。"
+}

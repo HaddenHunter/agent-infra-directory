@@ -1,0 +1,16 @@
+{
+  "name": "Arena (agent framework benchmark)",
+  "category": "infra",
+  "description": "ACM CAIS '26 benchmark comparing agent frameworks under a fixed model.",
+  "descriptionZh": "ACM CAIS '26 论文中的基准，在固定模型条件下对比各 Agent 框架。",
+  "frontier": "Six frameworks compared under one model; no framework gained a correctness advantage as complexity grew",
+  "frontierZh": "同一模型下对比六个框架；随复杂度上升，没有任何框架获得正确性优势",
+  "credibility": "The most useful framework comparison published so far because the model is held constant: Claude Agent SDK, LangChain, LangGraph, AWS Strands, CrewAI and Google ADK were all pointed at the same MCP tool server across six metrics. The finding — every framework performs similarly on simple tasks, but traditional frameworks then need 2-4x more scenario-specific orchestration code without a correctness benefit — reframes framework choice as an engineering-effort question rather than a capability question.",
+  "credibilityZh": "这是目前最有用的框架对比，因为它固定了模型：Claude Agent SDK、LangChain、LangGraph、AWS Strands、CrewAI 与 Google ADK 指向同一个 MCP 工具服务器，按六项指标比较。结论——简单任务上各框架表现相近，但随复杂度上升，传统框架需要多出 2-4 倍的场景专用编排代码却无正确性收益——把「选框架」从能力问题变成了工程投入问题。",
+  "verification": "verified",
+  "sourceName": "ACM CAIS '26 (DOI 10.1145/3786335.3813233)",
+  "sourceUrl": "https://dlnext.acm.org/doi/10.1145/3786335.3813233",
+  "lastUpdated": "2026-10-04",
+  "keyFact": "An ACM CAIS '26 benchmark published 26 May 2026 fixed Claude Sonnet 4.5 across six agent frameworks pointed at one MCP tool server and found that as task complexity grows, traditional frameworks require 2-4x more scenario-specific orchestration code without gaining any correctness advantage.",
+  "keyFactZh": "ACM CAIS '26 于 2026 年 5 月 26 日发表的基准，把 Claude Sonnet 4.5 固定在六个 Agent 框架之上并指向同一 MCP 工具服务器，发现随任务复杂度上升，传统框架需要多出 2-4 倍的场景专用编排代码，却未获得任何正确性优势。"
+}

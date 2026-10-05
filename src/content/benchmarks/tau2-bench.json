@@ -1,0 +1,16 @@
+{
+  "name": "tau2-bench",
+  "category": "general",
+  "description": "Multi-turn customer-service benchmark measuring reliability across repetitions, not just best-case success.",
+  "descriptionZh": "多轮客服场景基准，衡量多次重复下的可靠率，而非仅看最好成绩。",
+  "frontier": "Telecom domain up to 99.3% (pass^1, reported Feb 2026)",
+  "frontierZh": "Telecom 领域最高 99.3%（pass^1，2026-02 报告）",
+  "credibility": "The top of the Telecom leaderboard is saturated — the top three sit within 0.3 points. More useful is the pass^k metric, which asks whether an agent succeeds k times in a row and therefore approximates production reliability better than a single-run score. The 99.3% figure is vendor-reported rather than independently reproduced.",
+  "credibilityZh": "Telecom 榜首已接近饱和——前三名差距不足 0.3 分。更有价值的是 pass^k 指标：它考察 Agent 能否连续 k 次成功，比单次成绩更接近生产可靠性。99.3% 属厂商自报，未经独立复现。",
+  "verification": "verified",
+  "sourceName": "tau2-bench score ledger",
+  "sourceUrl": "https://evals.report/benchmarks/tau2-bench?tab=scores",
+  "lastUpdated": "2026-10-04",
+  "keyFact": "On tau2-bench's Telecom domain the top reported score reached 99.3% pass^1 by February 2026, but the metric that maps better to production is pass^k — succeeding k times in a row — not the single-run number.",
+  "keyFactZh": "截至 2026 年 2 月，tau2-bench 的 Telecom 领域最高报告分数达到 99.3% pass^1；但更贴近生产的是 pass^k（连续 k 次成功），而非单次成绩。"
+}

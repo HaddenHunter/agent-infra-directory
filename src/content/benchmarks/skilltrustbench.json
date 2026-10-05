@@ -1,0 +1,16 @@
+{
+  "name": "SkillTrustBench",
+  "category": "safety",
+  "description": "Security benchmark for agent skills, distilled from real skill marketplaces.",
+  "descriptionZh": "面向 Agent Skill 的安全基准，用例提炼自真实技能市场。",
+  "frontier": "5,520 evaluation cases across 9 attack categories (T01-T09) and 5 dependency layers",
+  "frontierZh": "5,520 个评测用例，覆盖 9 类攻击（T01-T09）与 5 个依赖层",
+  "credibility": "Notable for scale of provenance: the cases were distilled from 62,652 real skills taken from major skill marketplaces, so it tests the threats that actually ship rather than hand-invented ones. Published June 2026 by Tencent Zhuque Lab with CUHK-Shenzhen.",
+  "credibilityZh": "其价值在于来源规模：用例提炼自主流技能市场中 62,652 个真实 Skill，因此测的是真实发布出来的威胁，而非凭空设计的攻击。2026 年 6 月由腾讯朱雀实验室与香港中文大学（深圳）联合发布。",
+  "verification": "verified",
+  "sourceName": "Tencent Zhuque Lab / CUHK-Shenzhen",
+  "sourceUrl": "https://matrix.tencent.com/skilltrustbench/",
+  "lastUpdated": "2026-10-04",
+  "keyFact": "SkillTrustBench, released in June 2026 by Tencent Zhuque Lab and CUHK-Shenzhen, distilled 5,520 evaluation cases covering nine attack categories from 62,652 real skills found in mainstream skill marketplaces.",
+  "keyFactZh": "腾讯朱雀实验室与香港中文大学（深圳）于 2026 年 6 月发布的 SkillTrustBench，从主流技能市场的 62,652 个真实 Skill 中提炼出 5,520 个评测用例，覆盖九类攻击。"
+}

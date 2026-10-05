@@ -1,0 +1,480 @@
+[
+  {
+    "title": "Ringg’s AI agents resolve up to 65% of customer calls with OpenAI",
+    "link": "https://openai.com/index/ringg",
+    "publishedAt": "Wed, 23 Sep 2026 12:00:00 GMT",
+    "excerpt": "Using GPT-5.6, Ringg powers multilingual agents across voice, chat, WhatsApp, and web for 90% less cost vs. GPT-4.1.",
+    "source": "OpenAI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-05"
+  },
+  {
+    "title": "Parallel cut research time and cost in half with GPT‑6 Astra",
+    "link": "https://openai.com/index/parallel-cuts-time-and-cost-with-astra",
+    "publishedAt": "Tue, 22 Sep 2026 12:00:00 GMT",
+    "excerpt": "GPT‑6 Astra allowed Parallel’s agents to research and synthesize labor-market data in half the time and at half the cost vs. prior models.",
+    "source": "OpenAI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-05"
+  },
+  {
+    "title": "V7 cuts costs 78% while boosting accuracy with GPT-5.6 Luna",
+    "link": "https://openai.com/index/v7",
+    "publishedAt": "Mon, 21 Sep 2026 00:00:00 GMT",
+    "excerpt": "Using GPT-5.6, V7 turns scattered company files into context agents can use to complete complex, source-linked work.",
+    "source": "OpenAI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-05"
+  },
+  {
+    "title": "Reimagining advertising with AI",
+    "link": "https://openai.com/index/reimagining-advertising-with-ai",
+    "publishedAt": "Wed, 16 Sep 2026 13:00:00 GMT",
+    "excerpt": "Explore new AI-powered advertising experiences from OpenAI, including Sponsored Agents, tools for marketers, and integrations with HubSpot and Shopify.",
+    "source": "OpenAI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-05"
+  },
+  {
+    "title": "Hex turns complex analysis into visual reports with GPT‑6 Astra",
+    "link": "https://openai.com/index/hex-gpt-6-astra",
+    "publishedAt": "Wed, 16 Sep 2026 12:00:00 GMT",
+    "excerpt": "GPT-6 Astra helps Hex’s data agents turn answers into interactive visualizations that employees are proud to share.",
+    "source": "OpenAI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-05"
+  },
+  {
+    "title": "All the AI agents that can live in your text messages",
+    "link": "https://techcrunch.com/2026/10/03/all-the-ai-agents-that-can-live-in-your-text-messages/",
+    "publishedAt": "Sat, 03 Oct 2026 14:00:00 +0000",
+    "excerpt": "We created a list of the most notable AI agents that can live in your text messages, from general assistants to agents designed for families, travel, and work.",
+    "source": "TechCrunch AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-05"
+  },
+  {
+    "title": "Apple says it&#8217;s tightening macOS &#8216;Full Disk Access&#8217; controls due to new risks from AI agents",
+    "link": "https://techcrunch.com/2026/10/02/apple-says-its-tightening-macos-full-disk-access-controls-due-to-new-risks-from-ai-agents/",
+    "publishedAt": "Fri, 02 Oct 2026 18:11:27 +0000",
+    "excerpt": "Apple says it will add new controls around macOS’s Full Disk Access permission, warning that increasingly capable AI agents make broad access to users’ files, messages, mail, and browsing history riskier.",
+    "source": "TechCrunch AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-05"
+  },
+  {
+    "title": "Meta open sources code to let you make Muse AI gadgets",
+    "link": "https://www.theverge.com/tech/1004330/meta-muse-ai-gadgets-home-link",
+    "publishedAt": "2026-10-02T17:08:37-04:00",
+    "excerpt": "Meta now lets you make your own Muse gadgets that feature the company's new AI agent with code that the company open sourced. The company suggests projects like loading Muse on a color E Ink display to show reminders, adding it to an HDMI stick so you can display Muse on a big screen, or [&#8230;]",
+    "source": "The Verge AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-05"
+  },
+  {
+    "title": "Apple will limit Mac disk access as AI agents ‘substantially’ increase risk",
+    "link": "https://www.theverge.com/tech/1004295/apple-limit-mac-disk-access-ai-agents",
+    "publishedAt": "2026-10-02T16:08:40-04:00",
+    "excerpt": "Apple will add new limits for \"full disk access\" on Mac in response to risks posed by AI agents, as reported earlier by TechCrunch. In an update on Friday, Apple says it's rolling out new controls to \"ensure that users who genuinely wish to grant an app this extraordinary level of access can only do [&#8230;]",
+    "source": "The Verge AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-05"
+  },
+  {
+    "title": "OpenAI’s Dot agent is enterprise software that can also order your dinner",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/1004096/openai-chatgpt-dots-hands-on-agent",
+    "publishedAt": "2026-10-02T14:00:00-04:00",
+    "excerpt": "It's a tale as old as last week: OpenAI's new agent platform, called Dots, is full of cute little guys who can do your bidding. But unlike the ultra-approachable Meta Muse, Dots feel very much like using workplace software that happens to be able to order you a burrito - emphasis on work. OpenAI announced [&#8230;]",
+    "source": "The Verge AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-05"
+  },
+  {
+    "title": "NVIDIA DGX Spark 64GB Gives Developers More Ways to Build and Scale Local AI",
+    "link": "https://blogs.nvidia.com/blog/local-ai-dgx-spark-64gb-sync/",
+    "publishedAt": "Fri, 02 Oct 2026 13:00:39 +0000",
+    "excerpt": "Local AI is becoming more useful by the token. As AI agents move from experiments into everyday development, increasingly capable open models are shrinking to fit on more devices, giving builders more to run locally. Coming this month, NVIDIA DGX Spark will be available with 64GB of unified memory from top manufacturer partners — Acer, [&#8230;]",
+    "source": "NVIDIA Blog",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-05"
+  },
+  {
+    "title": "From Training to Production, NVIDIA and CoreWeave Close the Loop on Agentic AI",
+    "link": "https://blogs.nvidia.com/blog/coreweave-agentic-ai-vera-rubin/",
+    "publishedAt": "Wed, 30 Sep 2026 15:00:00 +0000",
+    "excerpt": "Building on nearly a decade of co-engineering, CoreWeave has built NVIDIA compute, networking and software into a cloud purpose-built for AI that’s still returning on investment across multiple generations of deployment. Now, CoreWeave is bringing the next generation of NVIDIA infrastructure to production. At CoreWeave Fully Connected, running this week in San Francisco, CoreWeave announced [&#823",
+    "source": "NVIDIA Blog",
+    "matchedKeywords": [
+      "agent",
+      "agentic"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-05"
+  },
+  {
+    "title": "NVIDIA Isaac ROS 5.0 Advances Agentic, Open Source Robotics Development",
+    "link": "https://blogs.nvidia.com/blog/isaac-ros-5-0-agentic-open-source-robotics/",
+    "publishedAt": "Tue, 22 Sep 2026 12:00:41 +0000",
+    "excerpt": "To build and deploy sophisticated robotics applications that can perceive, reason and act in dynamic environments, developers need new physical AI models and tools. The ROS open framework is a project from Open Robotics that helps humans build robots. NVIDIA Isaac ROS 5.0 — a collection of GPU-accelerated packages built on ROS, released today at [&#8230;]",
+    "source": "NVIDIA Blog",
+    "matchedKeywords": [
+      "agent",
+      "agentic"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-05"
+  },
+  {
+    "title": "AI Security Is an Engineering Problem — How to Solve It at Every Layer of the Agent Stack",
+    "link": "https://blogs.nvidia.com/blog/ai-security-agent-stack/",
+    "publishedAt": "Mon, 21 Sep 2026 14:51:34 +0000",
+    "excerpt": "AI security is an engineering problem. That means defined security requirements, enforceable controls, named owners and evidence that protections work. As AI becomes more capable, the industry must accelerate security engineering, broaden access to defensive tools and share what works faster. Technology Changes, Security Fundamentals Endure The internet and cloud computing changed how software ope",
+    "source": "NVIDIA Blog",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-05"
+  },
+  {
+    "title": "Fast Models, Slow Evidence: A Paired and Self-Audited Evaluation of System-1 Decision Models for LLM Agent Harnesses",
+    "link": "https://arxiv.org/abs/2610.02267",
+    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.02267v1 Announce Type: new Abstract: Agent harnesses make many small, typed decisions per task: which model to call, which tool to use, whether retrieved text is relevant, whether an input carries an injection. System-1 decision models answer such questions in a single forward pass with class probabilities, promising large cost and latency savings over LLM calls. We present a paired eva",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent",
+      "harness"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-05"
+  },
+  {
+    "title": "Choosing Before Acting: Comparative Value Estimation for Long-Horizon Tool-Use Agents",
+    "link": "https://arxiv.org/abs/2610.02330",
+    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.02330v1 Announce Type: new Abstract: Large language models (LLMs) rely on long-horizon tool invocation sequences for complex tasks, where each invocation can alter the task state and condition subsequent decisions. In long-horizon tool use, final-outcome rewards provide weak credit assignment over long interaction traces. Step-level rewards can offer more targeted feedback, but obtainin",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent",
+      "tool use",
+      "tool-use"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-05"
+  },
+  {
+    "title": "DeReAct: Decomposed Reasoning and Acting for Reliable AI Agents",
+    "link": "https://arxiv.org/abs/2610.02351",
+    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.02351v1 Announce Type: new Abstract: ReAct-based agents typically rely on a single LLM policy to propose actions, interact with the environment, and decide when a task is complete. This coupling makes action authorization and completion control difficult to enforce independently, allowing errors to propagate and unsupported completion claims to terminate execution. We introduce DeReAct,",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-05"
+  },
+  {
+    "title": "When Terminal-Agent Training Stalls: Demystifying Data Generation and Verification Challenge",
+    "link": "https://arxiv.org/abs/2610.02405",
+    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.02405v1 Announce Type: new Abstract: Using a frontier model like Claude Opus as a meta-agent to generate terminal tasks and verifiers for RL training is increasingly common. Yet a runnable Docker image and executable test suite do not guarantee a faithful end-to-end pipeline for terminal agent training. We present a meta-agent pipeline motivated by this gap, diagnosing three classes of ",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-05"
+  },
+  {
+    "title": "MEA: A Reward-Driven Multi-Agent System for Faithful Model Explanations",
+    "link": "https://arxiv.org/abs/2610.02480",
+    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.02480v1 Announce Type: new Abstract: Recent years have seen the employment of a plethora of machine learning (ML) models in high-stakes domains, but they remain largely opaque to the practitioners who act on their predictions. While post-hoc explanation methods offer a lens into this model behavior, wielding them effectively demands expertise most domain experts lack: navigating high-di",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent",
+      "multi-agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-05"
+  },
+  {
+    "title": "What Does a Token Cost? A Mixture-of-Agents Measurement of Sufficient Per-Token Compute",
+    "link": "https://arxiv.org/abs/2610.02491",
+    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.02491v1 Announce Type: new Abstract: Large language models spend the same amount of computation on every token they generate, regardless of how difficult each token is to produce. Methods such as speculative decoding and model routing are built on the premise that much of this computation is unnecessary, yet the computation an individual token actually requires has not been measured. We",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-05"
+  },
+  {
+    "title": "Learning What to Investigate Next: Meta-Reasoning for Long-Horizon Research Agents",
+    "link": "https://arxiv.org/abs/2610.02525",
+    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.02525v1 Announce Type: new Abstract: Long-horizon research agents must decide both how to investigate and what to investigate next as evidence accumulates. This is hard to learn because such decisions are sparse in long execution traces, and their consequences may emerge several investigations later. We introduce Meta-reasoning for Iterative Research Agents (MIRA), a hierarchical archit",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-05"
+  },
+  {
+    "title": "How To Train Your World Model: Fine-tuning vs RAG for LM-based World Modeling",
+    "link": "https://arxiv.org/abs/2610.02542",
+    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.02542v1 Announce Type: new Abstract: World models (WMs) simulate the transition dynamics of environments, enabling agents to plan over the consequences of their actions. In text-based environments, fine-tuning a Language Model (LM) to serve as a WM has emerged as a dominant paradigm. However, despite the widespread success of non-parametric approaches such as Retrieval Augmented Generat",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-05"
+  },
+  {
+    "title": "Open-Endedness Bench: Measuring Epistemic Process from Agent Records",
+    "link": "https://arxiv.org/abs/2610.02588",
+    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.02588v1 Announce Type: new Abstract: Agents are increasingly given open-ended research tasks: discovering an empirical law from self-designed experiments, improving a heuristic whose optimum nobody knows, or beating a standing record. Their execution logs record every step of this research, yet the runs are still judged by their outcome score. That score alone does not establish whether",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-05"
+  },
+  {
+    "title": "VERSE: Verified Self-Evolving Optimizer for Agent Harnesses",
+    "link": "https://arxiv.org/abs/2610.02616",
+    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.02616v1 Announce Type: new Abstract: Harness evolution improves an LLM agent's prompts, tools, and workflow, while the optimizer's own tools and procedures often remain fixed. We study whether an optimizer can improve another agent more effectively by also improving how it diagnoses failures, develops edits, and tests their effects. Two observations guide our design. In a controlled stu",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent",
+      "harness"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-05"
+  },
+  {
+    "title": "Lost in the Request: How Communication Variation Disrupts Retrieval and Action in Email Agents",
+    "link": "https://arxiv.org/abs/2610.02627",
+    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.02627v1 Announce Type: new Abstract: An email assistant should not complete less work simply because a user phrases the same request differently. Yet most benchmarks test each task with only one canonical request, leaving this form of robustness largely unmeasured. We test whether email assistants remain reliable when the requested information, available evidence, and expected outcome s",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-05"
+  },
+  {
+    "title": "Batched Speech Decisions Without Decoding: Single-Token Supervision Lets a Frozen LLM Hear Beyond the Transcript",
+    "link": "https://arxiv.org/abs/2610.02638",
+    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.02638v1 Announce Type: new Abstract: Full-duplex voice agents make many small, closed decisions, which current systems answer by slow autoregressive decoding. We propose DuplexJev, which feeds ASR-encoder hidden states through a small connector into a frozen LLM and reads each question as a single-token distribution over its options. Nothing is decoded, and an 8-GPU node answers 80 deci",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-05"
+  },
+  {
+    "title": "Coherence-Driven Belief Formation and Population Dynamics of Contagion in LLM Agents",
+    "link": "https://arxiv.org/abs/2610.02654",
+    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.02654v1 Announce Type: new Abstract: Models of social contagion usually assume how individuals adopt beliefs and derive population behavior from it. We instead empirically measure belief adoption in language model agents, quantifying the probability an agent adopts a claim given how many peers endorse it. We find this adoption kernel to be sigmoid, a characteristic of complex contagion,",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-05"
+  },
+  {
+    "title": "A GHOST in Long-Horizon Agents: Governance Hazard from Overlooked Safety Constraints across Turns",
+    "link": "https://arxiv.org/abs/2610.02664",
+    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.02664v1 Announce Type: new Abstract: Long-horizon agents are now playing an increasingly significant role in assisting humans with complex problem-solving. However, it is exactly their extended interaction history that introduces an underexplored execution-safety concern. Under benign interaction conditions, an agent may execute an action that violates a safety constraint specified many",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-05"
+  },
+  {
+    "title": "Decoupling Memory from Context: Structured Memory for Token-Efficient Test-Time Continual Learning",
+    "link": "https://arxiv.org/abs/2610.02687",
+    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.02687v1 Announce Type: new Abstract: Large language models (LLMs) are increasingly deployed in enterprise, scientific, and medical applications, where agents must incorporate domain-specific knowledge and adapt from experience. Context engineering offers a practical alternative to weight updates by improving model behavior through instructions, strategies, and evidence supplied at infer",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-05"
+  },
+  {
+    "title": "Ego2World: Compiling Egocentric Cooking Videos into Executable Worlds for Belief-State Planning",
+    "link": "https://arxiv.org/abs/2610.02715",
+    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.02715v1 Announce Type: new Abstract: Egocentric videos capture how people carry out everyday activities, yet testing an agent requires evaluating the consequences of actions it chooses itself. We introduce Ego2World, a benchmark that turns annotated cooking activities into executable planning environments under partial observation. Its compiler links source steps and objects to symbolic",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-05"
+  },
+  {
+    "title": "Scaling Trajectories for Complex Tasks through Recursive Self-Rewrite",
+    "link": "https://arxiv.org/abs/2610.02826",
+    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.02826v1 Announce Type: new Abstract: Successful trajectories on difficult tasks provide valuable supervision for model improvement, but specialized harnesses introduce interventions that may be unavailable during deployment. We propose Recursive Self-Rewrite (RSR), a framework that uses one base model, Qwen-3.8-27B, to discover successful solutions under diverse harnesses and reconstruc",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "harness"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-05"
+  },
+  {
+    "title": "Harness-Aware Distillation for Small Language Model Agents",
+    "link": "https://arxiv.org/abs/2610.02858",
+    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.02858v1 Announce Type: new Abstract: Language model agents are deployed with a harness, the software around the model that manages its context, tools, and feedback. When such an agent is distilled into a smaller one, the harness stays in place, so the student mainly needs the teacher-specific abilities that the harness cannot provide, such as acting correctly on harness information. Sta",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent",
+      "harness"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-05"
+  },
+  {
+    "title": "PsyEvo: A Personalized Counseling Agent That Self-Evolves at Test Time",
+    "link": "https://arxiv.org/abs/2610.02885",
+    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.02885v1 Announce Type: new Abstract: Mental health disorders affect a substantial proportion of the global population, yet a persistent shortage of trained practitioners leaves the majority without adequate care. Large language model (LLM)-based counselors present a promising direction for delivering scalable conversational psychological support. Offline model training alone leaves limi",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-05"
+  },
+  {
+    "title": "Interpreting at Write Time: A Policy Ablation for Multi-Goal Agent Memory",
+    "link": "https://arxiv.org/abs/2610.02897",
+    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.02897v1 Announce Type: new Abstract: A long-running assistant cannot keep everything it has seen, so it summarises. Summarising is not neutral: what is kept is chosen against some notion of what the record is for, and that choice is made once, before anyone knows which of the user's standing goals will ask. Goals rarely disagree about what happened. They disagree about which parts of it",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-05"
+  },
+  {
+    "title": "HASTE: Evolving Agent Harnesses Against Emerging Attacks Using Sparse Evidence",
+    "link": "https://arxiv.org/abs/2610.02920",
+    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.02920v1 Announce Type: new Abstract: Agent harnesses play a critical role in defenses by enforcing safety constraints to prevent unsafe actions. However, rapidly emerging attacks outpace manual harness adaptation, motivating automated harness evolution. Yet the signals available for harness evolution are often sparse, such as brief descriptions or a few attack examples in threat reports",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent",
+      "harness"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-05"
+  },
+  {
+    "title": "Positive-Unlabeled Learning for Agent Safety False Alarm Auditing",
+    "link": "https://arxiv.org/abs/2610.02925",
+    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.02925v1 Announce Type: new Abstract: Safety monitors help safeguard language-model agents interacting with external tools and environments, but conservative monitoring can generate many false alarms, consuming extensive review resources and weakening trust in alerts. Because false and genuine alarms often remain interleaved in native monitor scores, obtaining a reliable cutoff still req",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-05"
+  },
+  {
+    "title": "When to Compile a Computer-Use Agent? Measuring Payback and Making Compilation Decisions for Token Efficiency",
+    "link": "https://arxiv.org/abs/2610.02932",
+    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.02932v1 Announce Type: new Abstract: Compiling GUI procedures that agents execute repeatedly into programs can reduce their token costs. However, measuring payback and deciding when to compile have two challenges. First, compilation costs are uncertain because attempts can require repair and still fail to produce a usable program. Second, future reuse is unknown because tasks may stop a",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-05"
+  },
+  {
+    "title": "Continual Graph Memory for Mathematical Research Agents",
+    "link": "https://arxiv.org/abs/2610.02945",
+    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.02945v1 Announce Type: new Abstract: Using frontier agent harnesses to tackle mathematical research problems has emerged as an effective means of advancing mathematics. However, solving frontier problems in mathematics may require a massive number of agents working in parallel for extended periods to construct proofs, thereby generating an enormous volume of intermediate proof results. ",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent",
+      "harness"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-05"
+  },
+  {
+    "title": "DyadMem: A Long-Term Memory Benchmark of How Agents Work with Users",
+    "link": "https://arxiv.org/abs/2610.03020",
+    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.03020v1 Announce Type: new Abstract: Long-term agents must remember not only what is true about a user, but also how a particular agent should work with that user as their shared history evolves. Existing benchmarks primarily supervise user facts and preferences or experience reusable across users, leaving this relationship-specific agent memory implicit. Additionally, most prior works ",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-05"
+  }
+]
