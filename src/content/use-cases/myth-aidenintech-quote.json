@@ -1,0 +1,21 @@
+{
+  "title": "Unverified: the reviewer 'AidenInTech' and the 'ChatGPT looks things up, Muse hands things over' line",
+  "titleZh": "未证实：评测者「AidenInTech」与那句「ChatGPT 适合查询，Muse 适合托付」",
+  "scenario": "content",
+  "product": "Meta Muse",
+  "summary": "A quoted verdict attributes to a reviewer named AidenInTech, after a week of using Muse, the formulation that ChatGPT is for looking things up while Muse is for handing things over.",
+  "summaryZh": "一条被引用的结论称：评测者 AidenInTech 在使用 Muse 一周后给出「ChatGPT 适合查询，Muse 适合托付」的分工总结。",
+  "background": "The line is memorable and gets reused in comparisons, which makes attribution important — an unsourced quote is indistinguishable from an invented one.",
+  "backgroundZh": "这句话很好记、常被用在各类对比里，因此出处就变得重要——没有出处的引语与编造的引语无法区分。",
+  "actions": [],
+  "outcome": "Neither the reviewer nor the quotation could be located. Plenty of genuine Muse-versus-ChatGPT hands-on comparisons exist, from CNN to independent writers, but none is by this name.",
+  "outcomeZh": "既找不到这位评测者，也找不到该引语的出处。Muse 与 ChatGPT 的真实实测对比确实很多（CNN 及多位独立作者都有），但没有一个出自此名。",
+  "verification": "unverified",
+  "sourceName": "n/a — no source located",
+  "sourceUrl": "https://www.cnn.com/2026/09/23/tech/meta-muse-ai-agent-review",
+  "sourceDate": "2026-09-23",
+  "keyFact": "The widely quoted verdict that 'ChatGPT is for looking things up, Muse is for handing things over', attributed to a reviewer named AidenInTech, could not be traced to any source; the URL given here is one of the genuine Muse reviews that does exist, and is not by that author.",
+  "keyFactZh": "被广泛引用的「ChatGPT 适合查询，Muse 适合托付」一说不署可查出处，其所谓作者 AidenInTech 也查无此人；此处链接指向的是一篇确实存在的 Muse 实测，但作者并非该名。",
+  "debunks": "Original claim: a reviewer named AidenInTech used Muse for a week and concluded that ChatGPT is for looking things up and Muse is for handing things over. Reality: neither the person nor the quote can be found.",
+  "debunksZh": "原说法：评测者 AidenInTech 用了一周 Muse，得出结论「ChatGPT 适合查询，Muse 适合托付」。实情：人与引语均查无实据。"
+}

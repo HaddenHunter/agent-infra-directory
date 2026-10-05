@@ -1,0 +1,24 @@
+{
+  "title": "A 64-year-old crawfish restaurant owner runs marketing and a daily ops report with Tencent WorkBuddy",
+  "titleZh": "64 岁小龙虾店主用腾讯 WorkBuddy 做营销文案与每日经营日报",
+  "scenario": "business",
+  "product": "Tencent WorkBuddy",
+  "summary": "Dai Qinghua, 64, has run a crawfish restaurant in Maba town, Xuyi, Jiangsu for 15 years. With his son's help he connected Tencent WorkBuddy to the restaurant's WeChat Work: it now writes WeChat Moments marketing copy, suggests new crawfish flavours, generates a daily store-manager operations report, and syncs live Jiangsu crawfish wholesale prices.",
+  "summaryZh": "64 岁的戴庆华在江苏盱眙马坝镇经营龙虾馆 15 年。在儿子的帮助下，他把腾讯 WorkBuddy 接入龙虾馆的企业微信：由 AI 负责撰写朋友圈营销文案、提供龙虾新口味研发建议、每日自动生成「店长经营日报」，并实时同步江苏小龙虾批发行情。",
+  "background": "A small restaurant owner has no marketing or analyst function. The work that gets done is the work that fits between cooking and serving — which is why an assistant embedded in a tool he already uses matters more than a standalone app.",
+  "backgroundZh": "小餐饮店主没有市场部也没有分析师。能被完成的，只有夹在备菜与上菜之间能做完的事——这也是「嵌在他本来就在用的工具里」比独立 App 更重要的原因。",
+  "actions": [
+    { "label": "Setup", "labelZh": "接入方式", "value": "Connected to the restaurant's WeChat Work, with his son's help" },
+    { "label": "Marketing", "labelZh": "营销", "value": "WeChat Moments copywriting and new flavour suggestions" },
+    { "label": "Reporting", "labelZh": "报表", "value": "Daily store-manager operations report" },
+    { "label": "Market data", "labelZh": "行情", "value": "Live Jiangsu crawfish wholesale prices" }
+  ],
+  "outcome": "Marketing, reporting and market pricing now run without a dedicated hire.",
+  "outcomeZh": "营销、报表与行情跟踪不再需要专门雇人。",
+  "verification": "verified",
+  "sourceName": "Yangzi Evening News / Ziniu News",
+  "sourceUrl": "https://www.yzwb.net/news/ch/202603/t20260319_333186.html",
+  "sourceDate": "2026-03-19",
+  "keyFact": "As reported in March 2026, a 64-year-old crawfish restaurant owner in Xuyi, Jiangsu, uses Tencent WorkBuddy connected to WeChat Work to write marketing copy, generate a daily operations report and sync live wholesale prices.",
+  "keyFactZh": "据 2026 年 3 月报道，江苏盱眙一位 64 岁小龙虾店主把腾讯 WorkBuddy 接入企业微信，用于撰写营销文案、生成每日经营日报并同步实时批发行情。"
+}

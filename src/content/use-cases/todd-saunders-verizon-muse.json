@@ -1,0 +1,24 @@
+{
+  "title": "A photograph of a tangled utility pole became a real Verizon work order",
+  "titleZh": "一张电线杆缠绕电线的照片，变成了一张真实的 Verizon 工单",
+  "scenario": "bills",
+  "product": "Meta Muse",
+  "summary": "Todd Saunders posted a photo of tangled wires on his neighbourhood utility pole to Muse. Rather than returning advice, Muse opened Verizon's website, filled in the required verification details and submitted a cleanup request, producing service ticket NJC603CC0E with Verizon due to make contact within 24-72 hours.",
+  "summaryZh": "Todd Saunders 给 Muse 发了一张邻居家电线杆上缠绕电线的照片。Muse 没有只给建议，而是打开 Verizon 官网、填写所需的验证信息、提交清理请求，并生成工单 NJC603CC0E，Verizon 将在 24-72 小时内联系他。",
+  "background": "A neighbourhood infrastructure problem that is nobody's job to report. The user described the odds of him sitting in a Verizon support chat window to handle it himself as zero: it is low-urgency, low-reward, and therefore never gets done.",
+  "backgroundZh": "一个「谁都不负责上报」的社区基础设施问题。用户自述：他坐在 Verizon 客服对话框里亲自处理这件事的概率是 0%——因为它不紧急、回报也低，所以永远会被拖着。",
+  "actions": [
+    { "label": "Input", "labelZh": "输入", "value": "A single photo of the tangled wires" },
+    { "label": "Chosen route", "labelZh": "Agent 选择的路径", "value": "Open Verizon's website rather than return advice" },
+    { "label": "Form filling", "labelZh": "填表", "value": "Completed the required verification information" },
+    { "label": "Output", "labelZh": "产出", "value": "Service ticket NJC603CC0E; Verizon to contact within 24-72 hours" }
+  ],
+  "outcome": "A real service ticket was created with a reference number, and the utility committed to a follow-up window. The user never entered the support flow himself.",
+  "outcomeZh": "生成了带工单号的真实服务请求，公用事业公司承诺了回访时限。用户本人从未进入过客服流程。",
+  "verification": "verified",
+  "sourceName": "Todd Saunders on X, reported by Benzinga",
+  "sourceUrl": "https://www.benzinga.com/markets/tech/26/09/62041013/alexandr-wang-meta-muse-neighborhood-problem-ai-use-case",
+  "sourceDate": "2026-09-29",
+  "keyFact": "On 28 September 2026, a user's photo of tangled utility wires was turned by Meta's Muse into Verizon service ticket NJC603CC0E, with a 24-72 hour follow-up window — a case Meta AI chief Alexandr Wang publicly praised the same day.",
+  "keyFactZh": "2026 年 9 月 28 日，用户拍下的一张电线杆缠绕电线照片被 Meta 的 Muse 转成了 Verizon 服务工单 NJC603CC0E，并给出 24-72 小时的回访窗口——Meta AI 负责人 Alexandr Wang 当日公开称赞了该案例。"
+}

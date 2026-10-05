@@ -1,0 +1,21 @@
+{
+  "title": "Unverified: the 'New York user Alex' medical-appointment story",
+  "titleZh": "未证实：「纽约用户 Alex」的医疗预约故事",
+  "scenario": "medical",
+  "product": "Meta Muse",
+  "summary": "A widely circulated case describes a New York user called Alex who sent his insurance information, specialist needs and time preferences to Muse, received a doctor list with phone numbers and Google Maps locations, and got a first-choice appointment the next day without filling a form or making a call.",
+  "summaryZh": "流传较广的一个案例称：纽约用户 Alex 把健保信息、专科需求与时段偏好发给 Muse，收到一份附电话与 Google Maps 位置的医生名单，并在次日拿到第一顺位医生的预约，全程未填表、未打电话。",
+  "background": "This story is frequently cited because it is exactly the scenario ordinary users ask about. It appears in listicles and social posts as evidence that consumer agents can handle medical admin end to end.",
+  "backgroundZh": "这个故事被频繁引用，因为它正是普通用户最关心的场景。它出现在各类榜单与社交帖子中，被当作「消费级 Agent 能端到端处理医疗事务」的证据。",
+  "actions": [],
+  "outcome": "No such case could be traced. The verifiable source is a New York Times hands-on test by reporter Eli Tan, who is based in San Francisco — not a New York user, and not named Alex.",
+  "outcomeZh": "无法追溯到该案例。可核实的来源是《纽约时报》记者 Eli Tan 的实测，他常驻旧金山——并非纽约用户，也不叫 Alex。",
+  "verification": "disputed",
+  "sourceName": "The New York Times (the actual source, for comparison)",
+  "sourceUrl": "https://www.nytimes.com/2026/09/22/technology/meta-muse-ai-agent.html",
+  "sourceDate": "2026-09-22",
+  "keyFact": "The widely repeated story of a New York user named Alex who had Muse book a specialist appointment is not supported by any source; the verifiable case is a New York Times test by San Francisco-based reporter Eli Tan, which recorded a call to a dental insurer and a $44.99 subscription refund instead.",
+  "keyFactZh": "被广泛转述的「纽约用户 Alex 让 Muse 预约专科医生」这一故事没有来源支撑；可核实的案例是常驻旧金山的《纽约时报》记者 Eli Tan 的实测，其中记录的是致电牙科保险公司与退款 $44.99。",
+  "debunks": "Original claim: a New York user named Alex used Muse to obtain a first-choice specialist appointment with no forms or calls, and to cancel a previous tenant's bank mail. Reality: the verifiable account is a San Francisco-based New York Times reporter; the doctor list with Google Maps links, the next-day appointment and the previous-tenant bank mail do not appear in it.",
+  "debunksZh": "原说法：纽约用户 Alex 用 Muse 拿到第一顺位专科预约，全程未填表未打电话，并处理了前租客的银行信件。实情：可核实的是常驻旧金山的《纽约时报》记者的实测；「附 Google Maps 的医生名单」「次日预约」「前租客银行信」在原文中均不存在。"
+}

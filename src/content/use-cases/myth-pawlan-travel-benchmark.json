@@ -1,0 +1,21 @@
+{
+  "title": "Misattributed: a16z's David Pawlan on travel as a benchmark — he called it a gimmick",
+  "titleZh": "被曲解：a16z 的 David Pawlan 论旅行基准——他称其为噱头",
+  "scenario": "travel",
+  "product": "n/a — analyst commentary",
+  "summary": "Analyst commentary is often quoted as saying that travel is a good benchmark for agents because mistakes are real but usually recoverable. The real on-record position is the opposite: in an a16z podcast in September 2026, David Pawlan called travel the most-hyped but least-discussed use case and a gimmick, arguing that finance is the underrated area for agents.",
+  "summaryZh": "有分析评论被引述为「旅行是检验 Agent 的好基准，因为出错的代价真实但通常可挽回」。但有据可查的真实表态恰恰相反：在 2026 年 9 月的 a16z 播客中，David Pawlan 称旅行是最被炒作、最少被认真讨论的用例，是「噱头（gimmick）」，并认为被低估的是金融/财务场景。",
+  "background": "Attribution errors in analyst commentary are harder to spot than in user stories, because the named person really exists and the format sounds plausible. Here the source is a podcast, not an essay, and the position is inverted.",
+  "backgroundZh": "分析师评论的归属错误比用户故事更难识别：因为这个人确实存在，格式也听起来合理。此处真实的载体是播客而非文章，且立场正好相反。",
+  "actions": [],
+  "outcome": "David Pawlan is real — he created the Assistant Benchmark and appeared on The a16z Show on 24 September 2026 with Anish Acharya. But no essay or post of his asserting travel as a good benchmark exists, and the podcast position is the inverse.",
+  "outcomeZh": "David Pawlan 确有其人——他是 Assistant Benchmark 的作者，并于 2026 年 9 月 24 日与 Anish Acharya 一同出现在 The a16z Show。但不存在他主张「旅行是好基准」的署名文章或帖子，且播客中的立场恰好相反。",
+  "verification": "disputed",
+  "sourceName": "The a16z Show (Anish Acharya & David Pawlan)",
+  "sourceUrl": "https://podcasts.apple.com/ec/podcast/the-personal-agent-race-is-here-anish-acharya-david-pawlan/id842818711?i=1000792176970",
+  "sourceDate": "2026-09-29",
+  "keyFact": "David Pawlan of a16z is widely quoted saying travel is a good benchmark for agents, but on the a16z podcast of September 2026 he called travel a gimmick and named finance as the underrated area — and no essay of his making the quoted claim exists.",
+  "keyFactZh": "a16z 的 David Pawlan 被广泛引述为「旅行是检验 Agent 的好基准」，但在 2026 年 9 月的 a16z 播客中，他称旅行是噱头、并认为被低估的是金融场景；且不存在他署名的主张该观点的文章。",
+  "debunks": "Original claim: a16z's David Pawlan wrote that travel is a good benchmark for agents because mistakes are real but usually recoverable. Reality: it was a podcast appearance, not an essay, and his stated position was that travel is a gimmick and finance is undervalued.",
+  "debunksZh": "原说法：a16z 的 David Pawlan 撰文称旅行是检验 Agent 的好基准，因为出错代价真实但通常可挽回。实情：那是播客露面而非文章，且他的实际表态是旅行属噱头、金融被低估。"
+}

@@ -1,0 +1,26 @@
+{
+  "title": "A reporter handed Meta's Muse his life for a week — it called his dental insurer and found duplicate subscriptions",
+  "titleZh": "记者把生活交给 Meta Muse 一周：它致电牙科保险公司，还查出两份重复订阅",
+  "scenario": "medical",
+  "product": "Meta Muse",
+  "summary": "New York Times reporter Eli Tan spent a week delegating personal admin to Meta's Muse. The agent called his dental insurer Anthem Dental, gave the member number, answered security questions and navigated to a human representative. Separately, it found two duplicate subscriptions in his purchase history and refunded $44.99.",
+  "summaryZh": "《纽约时报》记者 Eli Tan 用一周时间把个人事务交给 Meta 的 Muse。该 Agent 致电他的牙科保险公司 Anthem Dental，报出会员号、回答安全问题并转接到人工代表。另外，它从他的消费记录中发现两份重复订阅，并退款 $44.99。",
+  "background": "Insurance phone trees and forgotten subscriptions are the classic low-urgency admin that never gets done. The test was whether an agent could absorb that entire category of errand rather than just assist with it.",
+  "backgroundZh": "保险电话树和早已遗忘的订阅，是典型的「不紧急所以永远不做」的杂事。这次实测要回答的是：Agent 能否整类接手这类事务，而不只是打打下手。",
+  "actions": [
+    { "label": "Phone call", "labelZh": "致电", "value": "Called Anthem Dental, gave the member number, answered security questions" },
+    { "label": "Escalation", "labelZh": "转接", "value": "Reached a human representative on the user's behalf" },
+    { "label": "Discovery", "labelZh": "主动发现", "value": "Found two duplicate subscriptions in purchase history" },
+    { "label": "Remedy", "labelZh": "处理结果", "value": "$44.99 refunded" }
+  ],
+  "outcome": "According to the reporter, the experience was striking enough that he titled the piece 'I Gave My Life Over to Meta's A.I. Agent and Was Blown Away'.",
+  "outcomeZh": "据该记者自述，体验之强烈让他给文章起名「我把生活交给了 Meta 的 AI Agent，结果被震撼到了」。",
+  "verification": "verified",
+  "sourceName": "The New York Times (Eli Tan)",
+  "sourceUrl": "https://www.nytimes.com/2026/09/22/technology/meta-muse-ai-agent.html",
+  "sourceDate": "2026-09-22",
+  "caveat": "This is one journalist's week-long personal test, not a measured evaluation. A widely circulated rewrite of this story renames the user 'Alex', moves him to New York, and adds a doctor list with Google Maps links and a next-day appointment — none of which appear in the original.",
+  "caveatZh": "这是一位记者为期一周的个人实测，并非量化评测。网络流传的改写版把用户改名为「Alex」、搬到纽约，并添加了「医生名单 + Google Maps 位置」和「次日拿到预约」等情节——这些在原文中均不存在。",
+  "keyFact": "As of 22 September 2026, a New York Times reporter's week-long test of Meta's Muse recorded the agent calling his dental insurer, answering security questions and reaching a human representative, and separately finding duplicate subscriptions worth a $44.99 refund.",
+  "keyFactZh": "截至 2026 年 9 月 22 日，《纽约时报》记者对 Meta Muse 为期一周的实测记录显示：该 Agent 致电其牙科保险公司、回答安全问题并转接人工，另外还查出两份重复订阅、退款 $44.99。"
+}

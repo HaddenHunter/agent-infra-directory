@@ -147,4 +147,45 @@ const events = defineCollection({
   }),
 });
 
-export const collections = { tools, comparisons, benchmarks, events };
+/**
+ * useCases：面向普通人的真实使用案例。用户故事类内容最易出现"张冠李戴"，
+ * 因此每条必须带可追溯来源与 sourceDate；查无实据的一律进 disputed。
+ */
+const useCases = defineCollection({
+  loader: glob({ pattern: '**/*.json', base: './src/content/use-cases' }),
+  schema: z.object({
+    title: z.string(),
+    titleZh: z.string(),
+    scenario: z.enum([
+      'medical',
+      'travel',
+      'bills',
+      'family',
+      'business',
+      'content',
+      'life-admin',
+    ]),
+    product: z.string(),
+    summary: z.string(),
+    summaryZh: z.string(),
+    background: z.string(),
+    backgroundZh: z.string(),
+    actions: z
+      .array(z.object({ label: z.string(), labelZh: z.string(), value: z.string() }))
+      .default([]),
+    outcome: z.string(),
+    outcomeZh: z.string(),
+    verification: z.enum(['verified', 'single-source', 'unverified', 'disputed']),
+    sourceName: z.string(),
+    sourceUrl: z.string().url(),
+    sourceDate: z.string(),
+    caveat: z.string().optional(),
+    caveatZh: z.string().optional(),
+    keyFact: z.string(),
+    keyFactZh: z.string(),
+    debunks: z.string().optional(),
+    debunksZh: z.string().optional(),
+  }),
+});
+
+export const collections = { tools, comparisons, benchmarks, events, useCases };

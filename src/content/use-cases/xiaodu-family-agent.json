@@ -1,0 +1,25 @@
+{
+  "title": "Baidu's Xiaodu family agent: recognise the child, adjust the lamp, dispatch the vacuum",
+  "titleZh": "百度小度家庭智能体：识别孩子、调节护眼灯、调度扫地机器人",
+  "scenario": "family",
+  "product": "Xiaodu (Baidu)",
+  "summary": "In a 2026 Baidu AI developer conference demonstration, Xiaodu's family agent chain ran end to end: when a child comes home, a Xiaodu camera recognises the family member and pushes a safety notification to the parent; when the child sits at the desk, the system infers a study scenario from the environment and adjusts an eye-care lamp to the right brightness; when the floor is soiled, the camera triggers a robot vacuum to clean it.",
+  "summaryZh": "在 2026 年百度 AI 开发者大会的演示中，小度家庭智能体完成了端到端联动：孩子放学回家时，小度摄像机识别家庭成员身份并向家长推送安全通知；孩子走到书桌时，系统通过环境感知判断「学习场景」并把护眼灯调至合适亮度；地面出现污渍时，摄像机调度扫地机器人前往清扫。",
+  "background": "Home automation has historically been command-driven: you speak, one device acts. This demo is about chained inference across devices with no explicit command — the house reacting to a situation rather than a request.",
+  "backgroundZh": "过往的家居自动化是指令驱动的：你说一句、一个设备动作。这个演示的重点是跨设备链式推断、无需显式指令——房子对「情境」做出反应，而不是对「命令」。",
+  "actions": [
+    { "label": "Arrival", "labelZh": "回家", "value": "Camera recognises the family member, pushes a safety notification to the parent" },
+    { "label": "Study", "labelZh": "学习场景", "value": "Infers the scenario, adjusts the eye-care lamp to the appropriate brightness" },
+    { "label": "Spill", "labelZh": "污渍", "value": "Camera detects the soiled floor and dispatches a robot vacuum" }
+  ],
+  "outcome": "Three separate device classes were coordinated without an explicit user command in each step. Note this is a vendor demonstration rather than an independently measured deployment.",
+  "outcomeZh": "三类设备在每一步都没有显式用户指令的情况下完成协同。需注意这是厂商演示，而非独立测量的实际部署。",
+  "verification": "verified",
+  "sourceName": "Sohu / Sina Finance",
+  "sourceUrl": "https://m.sohu.com/a/1022215851_121885030/",
+  "sourceDate": "2026-05-13",
+  "caveat": "A staged conference demonstration by the vendor, not a measured field deployment. Reproduce-bility and false-positive rates in real homes are not published.",
+  "caveatZh": "这是厂商在大会上的舞台演示，并非实测部署；真实家庭环境下的可复现性与误报率均未公开。",
+  "keyFact": "Baidu's Xiaodu family agent, demonstrated in 2026, chains recognition, inference and actuation across devices — recognising a child's arrival, adjusting an eye-care lamp for a detected study scenario, and dispatching a robot vacuum on detecting a spill.",
+  "keyFactZh": "百度小度家庭智能体在 2026 年的演示中跨设备完成识别、推断与执行：识别孩子到家、检测「学习场景」后调节护眼灯、发现污渍后调度扫地机器人。"
+}

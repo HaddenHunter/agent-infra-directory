@@ -1,0 +1,25 @@
+{
+  "title": "Fambot: a nightly digest that turns a family's inboxes into one plan",
+  "titleZh": "Fambot：每晚一份摘要，把全家的收件箱汇总成一份计划",
+  "scenario": "family",
+  "product": "Fambot",
+  "summary": "Fambot, launched in public beta on 1 September 2026 by founders from Uber, Instagram and Google, positions itself as an AI chief of staff for families. It connects email, calendars and WhatsApp groups, then produces a daily plan; parents can reply directly to amend it. It raised $3.5M pre-seed and is free during beta, with pricing expected to land near the cost of a Netflix subscription.",
+  "summaryZh": "Fambot 于 2026 年 9 月 1 日公测，创始团队来自 Uber、Instagram 与 Google，定位为家庭的 AI 首席助理。它连接邮箱、日历与 WhatsApp 群组，生成每日计划；家长可直接回复消息修改。公司完成 $350 万 pre-seed 融资，公测期免费，最终定价预计接近一份 Netflix 订阅。",
+  "background": "Family logistics are spread across school emails, sports schedules, group chats and calendars, and the coordinating work falls on one person. Fambot deliberately does not compete as a general assistant — it only does this one job.",
+  "backgroundZh": "家庭事务散落在学校邮件、体育活动日程、群聊和日历里，而协调工作往往落在一个人身上。Fambot 刻意不做通用助手，只做这一件事。",
+  "actions": [
+    { "label": "Inputs", "labelZh": "接入数据源", "value": "Email, calendars, WhatsApp groups" },
+    { "label": "Output", "labelZh": "产出", "value": "A daily plan digest covering upcoming events and to-dos" },
+    { "label": "Interaction", "labelZh": "交互方式", "value": "Parents reply to the message to confirm or amend the calendar" }
+  ],
+  "outcome": "A single nightly artefact replaces the job of trawling five inboxes and chats. Funding and launch facts are confirmed; independent long-run evaluations are not yet available.",
+  "outcomeZh": "每晚一份摘要，替代了翻遍五个收件箱与群聊的工作。融资与发布信息已确认，但尚无独立的长期评测。",
+  "verification": "verified",
+  "sourceName": "TechCrunch / Tech Company News",
+  "sourceUrl": "https://www.techcompanynews.com/fambot-raises-3-5m-in-pre-seed-funding-round/",
+  "sourceDate": "2026-09-01",
+  "caveat": "Sources differ on whether the digest arrives in the evening or the morning. Fambot is a US product; it is unrelated to Baidu's Xiaodu family agent.",
+  "caveatZh": "各来源对摘要是「晚间推送」还是「早晨推送」表述不一。Fambot 是美国产品，与百度小度家庭智能体无关。",
+  "keyFact": "Fambot, in public beta since 1 September 2026 with $3.5M pre-seed funding, connects a family's email, calendars and WhatsApp groups into a single daily plan and is free during beta, with planned pricing around the cost of a Netflix subscription.",
+  "keyFactZh": "Fambot 自 2026 年 9 月 1 日公测，完成 $350 万 pre-seed 融资，把家庭的邮箱、日历与 WhatsApp 群组汇总为一份每日计划；公测期免费，计划定价约一份 Netflix 订阅的价格。"
+}

@@ -1,0 +1,26 @@
+{
+  "title": "A Beijing tech lead bought a flat in 36 hours, leaning on OpenClaw's memory",
+  "titleZh": "北京一位技术主管靠 OpenClaw 的记忆能力，36 小时买下一套房",
+  "scenario": "life-admin",
+  "product": "OpenClaw",
+  "summary": "A Beijing internet company technical lead started by asking OpenClaw to look into listings and signed and paid a deposit by the early hours of the next day — 36 hours end to end. Reported coverage says the agent compared large numbers of agents within two hours, picked one, analysed historical floor prices in the background and worked out the hidden transaction taxes, with the user citing OpenClaw's persistent memory of every detail as the deciding factor.",
+  "summaryZh": "北京某互联网公司技术主管从向 OpenClaw 说「帮我查查」开始，到第二天凌晨签约付定金，全程 36 小时。报道称该 Agent 在 2 小时内自主对比大量中介并选定一位，在后台实时分析、摸清历史最低成交价并算清隐形税费；用户本人把「能记住所有细节」的持久记忆能力视为关键。",
+  "background": "Buying property is a high-stakes, long-horizon task with dozens of details that must persist across days of conversation — the exact thing a stateless chatbot loses. OpenClaw runs self-hosted, so all of that context stays on the user's own infrastructure.",
+  "backgroundZh": "买房是高风险、长周期任务，几十个细节必须跨天保持——这正是无状态聊天机器人会丢的东西。OpenClaw 可完全自托管，因此这些上下文留在用户自己的基础设施上。",
+  "actions": [
+    { "label": "Initiation", "labelZh": "起点", "value": "A single request to look into listings" },
+    { "label": "Agent selection", "labelZh": "选中介", "value": "Compared a large set of agents within ~2 hours and selected one" },
+    { "label": "Analysis", "labelZh": "分析", "value": "Traced historical floor transaction prices and computed hidden taxes" },
+    { "label": "Enabler", "labelZh": "关键能力", "value": "Persistent memory of all prior details across the process" }
+  ],
+  "outcome": "Contract signed and deposit paid within 36 hours. The reported figures come largely from the subject's own account.",
+  "outcomeZh": "36 小时内完成签约并支付定金。相关数字主要来自当事人自述。",
+  "verification": "verified",
+  "sourceName": "Yangzi Evening News / CCTV News investigation",
+  "sourceUrl": "https://finance.sina.com.cn/jjxw/2026-03-29/doc-inhssfpy3488670.shtml",
+  "sourceDate": "2026-03-29",
+  "caveat": "Several specifics — including the claim of a fully hands-off process and the source of the historical price data — are single-party claims that have not been independently verified.",
+  "caveatZh": "部分细节（如「全程无需人工干预」以及历史成交价的数据来源）属单方陈述，未获独立证实。",
+  "keyFact": "In March 2026 a Beijing technical lead used the self-hosted agent runtime OpenClaw to go from an initial request to signing and paying a deposit on a flat in 36 hours, citing its persistent memory of every detail as the decisive capability.",
+  "keyFactZh": "2026 年 3 月，北京一位技术主管用可自托管的 Agent 运行时 OpenClaw，从一句查询到签约付定金买下一套房，全程 36 小时，并把「能记住所有细节」的持久记忆视为决定性能力。"
+}

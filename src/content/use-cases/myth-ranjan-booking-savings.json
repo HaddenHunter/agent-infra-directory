@@ -1,0 +1,21 @@
+{
+  "title": "Unverified: the user 'Ranjan' who saved $80 on a hotel booking",
+  "titleZh": "未证实：省下 80 美元酒店房费的用户「Ranjan」",
+  "scenario": "travel",
+  "product": "Instinct",
+  "summary": "A circulated case describes a user named Ranjan who had a Hilton booking on Booking.com; a family discount code email from his uncle had been missed, and Instinct proactively scanned the mailbox, told him the existing booking could be $80 cheaper with a 24-hour cancellation window, and after he approved, cancelled and rebooked.",
+  "summaryZh": "流传的案例称：用户 Ranjan 在 Booking.com 上有希尔顿预订，叔叔发来的家族折扣码邮件被漏看；Instinct 主动扫描邮箱，告知现有预订用该折扣码可便宜 $80 且还有 24 小时取消窗口，经其批准后取消并重新预订。",
+  "background": "This case is used to illustrate proactivity: the value is that the user never even thought to look. That is a meaningful product claim, which is exactly why it needs a source.",
+  "backgroundZh": "该案例被用来展示「主动性」：价值在于用户压根没想到要去查。这是个有分量的产品主张，也正因如此才更需要来源。",
+  "actions": [],
+  "outcome": "No source could be found for this story. Instinct itself is real — a proactively scanning personal assistant founded by Noah Shinn, covered by Fortune and Fox News in late September 2026 — but the named user, the $80 figure and the booking details are untraceable.",
+  "outcomeZh": "未能找到该故事的任何来源。Instinct 产品本身真实——由 Noah Shinn 创立、以主动扫描为卖点的个人助理，Fortune 与 Fox News 在 2026 年 9 月下旬均有报道——但具名用户、$80 数字与预订细节均无从追溯。",
+  "verification": "unverified",
+  "sourceName": "Instinct (product coverage; not this story)",
+  "sourceUrl": "https://www.fortune.com/2026/09/30/noah-shinn-instinct-ai-assistant-meta-muse-alexandr-wang-tech-series-c-ai-agent-mark-zuckerberg/",
+  "sourceDate": "2026-09-30",
+  "keyFact": "The story of a user named Ranjan saving $80 on a Hilton booking through Instinct has no traceable source, although the Instinct product and its proactive email-scanning design are independently documented as of September 2026.",
+  "keyFactZh": "「用户 Ranjan 通过 Instinct 在希尔顿预订上省下 $80」这一故事没有可追溯来源；不过截至 2026 年 9 月，Instinct 产品及其主动扫描邮箱的设计确实有独立报道。",
+  "debunks": "Original claim: Instinct detected a missed family discount code email and rebooked a Booking.com Hilton reservation to save $80 within a 24-hour cancellation window. Reality: no source could be located for this user story.",
+  "debunksZh": "原说法：Instinct 发现被漏看的家族折扣码邮件，在 24 小时取消窗口内重新预订 Booking.com 的希尔顿订单，省下 $80。实情：该用户故事找不到任何来源。"
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Bill-negotiation agents: the one personal-agent category with repeatable public cases",
+  "titleZh": "账单谈判 Agent：唯一有可重复公开案例的个人 Agent 品类",
+  "scenario": "bills",
+  "product": "Pine AI and similar",
+  "summary": "A cluster of products — Pine AI, Rocket Money, BillCutterz, TuMango — call a user's ISP, cable or phone provider and negotiate the recurring bill down. Published user stories include a customer who reports saving $300 a year on an Xfinity bill while upgrading to 1Gbps, and a recorded call that moved an internet bill from $324 to $284 per month.",
+  "summaryZh": "Pine AI、Rocket Money、BillCutterz、TuMango 等一批产品会致电用户的宽带、有线电视或电信运营商，协商降低周期性账单。公开案例包括：一位用户称在升级到 1Gbps 的同时每年省下 Xfinity 账单 $300；另有一段录音显示网络账单从每月 $324 谈到 $284。",
+  "background": "Unlike travel or shopping, bill negotiation has a clear success metric (the delta on a recurring charge), a defined counterparty (the retention desk) and a recoverable failure mode. That is why it has the densest public evidence of any personal-agent use case.",
+  "backgroundZh": "与旅行或购物不同，账单谈判有明确的成功指标（周期性费用的差额）、确定的对手方（运营商挽留部门）和可挽回的失败模式。这也是它在所有个人 Agent 用例中公开证据最密集的原因。",
+  "actions": [
+    { "label": "Trigger", "labelZh": "触发", "value": "User connects the account and authorises a call" },
+    { "label": "Action", "labelZh": "动作", "value": "Agent calls the provider's retention desk and negotiates" },
+    { "label": "Reported outcome", "labelZh": "报告结果", "value": "e.g. $324 → $284 per month; another user reports $300/year saved on Xfinity with a 1Gbps upgrade" }
+  ],
+  "outcome": "Recurring cost reduction with a measurable delta. Savings figures are vendor- or user-reported.",
+  "outcomeZh": "带来可度量的周期性成本下降。但节省金额为厂商或用户自报。",
+  "verification": "single-source",
+  "sourceName": "Pine AI and third-party reviews",
+  "sourceUrl": "https://awesomeagents.ai/guides/how-to-use-ai-to-negotiate-bills/",
+  "sourceDate": "2026-08-11",
+  "caveat": "Savings amounts and success rates are largely self-reported by vendors or individual users and have not been independently audited. Treat the category as real and the specific figures as unverified.",
+  "caveatZh": "节省金额与成功率多由厂商或个人用户自报，未经独立审计。品类本身真实，但具体数字应视为未经核实。",
+  "keyFact": "As of August 2026, AI bill-negotiation agents are the personal-agent category with the most repeatable public user stories, including a documented internet bill reduction from $324 to $284 per month — though the figures remain vendor- and user-reported rather than independently audited.",
+  "keyFactZh": "截至 2026 年 8 月，AI 账单谈判 Agent 是公开用户案例最可重复的个人 Agent 品类，其中包括一段把网络账单从每月 $324 谈至 $284 的记录——但相关数字仍属厂商与用户自报，未经独立审计。"
+}
