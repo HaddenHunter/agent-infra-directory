@@ -1,0 +1,26 @@
+{
+  "name": "HarnessRisk",
+  "arxivId": "2608.17597",
+  "tier": "frontier",
+  "category": "safety",
+  "publishedDate": "2026-08-18",
+  "titleZh": "HarnessRisk：面向智能体外壳安全的全生命周期基准",
+  "summary": "Organises harness safety into six operational phases and pairs a benign user objective with a risky condition across 128 sandboxed cases.",
+  "summaryZh": "把外壳安全拆成六个运行阶段，用 128 个沙箱用例，把「正常用户目标」与「风险条件」成对摆在一起。",
+  "keyFact": "HarnessRisk (Bai et al., arXiv:2608.17597, 2026-08-18) splits agent-harness safety into six phases — harness configuration, capability extension, runtime operation, state persistence, action control and incident recovery — across 128 sandboxed cases.",
+  "keyFactZh": "HarnessRisk（Bai 等，arXiv:2608.17597，2026-08-18）把智能体外壳安全拆成六个阶段——配置、能力扩展、运行时、状态持久化、动作控制、事故恢复——共 128 个沙箱用例。",
+  "whyItMatters": "It moves the question from \"is the model safe\" to \"is the thing wrapping the model safe\", which is where most real incidents actually live.",
+  "whyItMattersZh": "它把问题从「模型安不安全」挪到了「包着模型的那层壳安不安全」——真实事故大多发生在这里。",
+  "addedDate": "2026-10-06",
+  "title": "HarnessRisk: A Lifecycle-Oriented Benchmark for Agent Harness Safety",
+  "authors": [
+    "Yajing Bai",
+    "Jinhao Duan",
+    "Jie Peng",
+    "Xianfeng Wu",
+    "Sijia Liu",
+    "Song Wang",
+    "Tianlong Chen"
+  ],
+  "updatedDate": "2026-08-18"
+}

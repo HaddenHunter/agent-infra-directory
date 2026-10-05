@@ -1,0 +1,26 @@
+{
+  "name": "CodeAct",
+  "arxivId": "2402.01030",
+  "tier": "landmark",
+  "category": "tool-use",
+  "publishedDate": "2024-02-01",
+  "titleZh": "可执行代码动作能造出更好的 LLM 智能体",
+  "summary": "Replaces JSON or fixed-format action strings with executable Python, so an agent can compose tools and revise its own earlier actions.",
+  "summaryZh": "用可执行的 Python 取代 JSON 或固定格式的动作串，让智能体能自由组合工具、并回头修改自己先前的动作。",
+  "keyFact": "CodeAct (Wang et al., arXiv:2402.01030, 2024-02-01) unified an agent's actions as executable Python and reported up to 20% higher success rate than JSON- or text-formatted action baselines, across an analysis of 17 LLMs.",
+  "keyFactZh": "CodeAct（Wang 等，arXiv:2402.01030，2024-02-01）把智能体动作统一为可执行 Python，在 17 个模型的分析中报告成功率比 JSON／文本格式的动作基线最高提升 20%。",
+  "whyItMatters": "It is why \"code as actions\" has largely displaced fixed tool schemas in coding and data agents.",
+  "whyItMattersZh": "这就是为什么在编码与数据类 Agent 里，「用代码当动作」已经基本取代了固定工具 schema。",
+  "addedDate": "2026-10-06",
+  "title": "Executable Code Actions Elicit Better LLM Agents",
+  "authors": [
+    "Xingyao Wang",
+    "Yangyi Chen",
+    "Lifan Yuan",
+    "Yizhe Zhang",
+    "Yunzhu Li",
+    "Hao Peng",
+    "Heng Ji"
+  ],
+  "updatedDate": "2024-06-07"
+}

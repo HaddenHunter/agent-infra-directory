@@ -1,0 +1,148 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { faqSchema } from '../../../lib/schema';
+import { t, type Locale } from '../../../i18n/ui';
+import {
+  arxivUrl,
+  paperCategories,
+  paperMarkdownUrl,
+  paperTiers,
+  paperUrl,
+} from '../../../lib/papers';
+
+export async function getStaticPaths() {
+  const papers = await getCollection('papers');
+  return papers.map((p) => ({ params: { slug: p.id }, props: { paper: p } }));
+}
+
+const { paper } = Astro.props as {
+  paper: Awaited<ReturnType<typeof getCollection<'papers'>>>[number];
+};
+const locale: Locale = 'zh';
+const s = t(locale);
+const d = paper.data;
+
+const catLabel = paperCategories[d.category].zh;
+const tierLabel = paperTiers[d.tier].zh;
+
+const qas = [
+  { q: `${d.name} 提出了什么？`, a: d.summaryZh },
+  { q: `${d.name} 为什么重要？`, a: d.whyItMattersZh },
+  {
+    q: `${d.name} 什么时候发表的？`,
+    a: `首次提交于 ${d.publishedDate}，最新修订 ${d.updatedDate}。`,
+  },
+];
+
+const source = {
+  '@context': 'https://schema.org',
+  '@type': 'ScholarlyArticle',
+  name: d.title,
+  headline: d.title,
+  author: d.authors.map((name) => ({ '@type': 'Person', name })),
+  datePublished: d.publishedDate,
+  dateModified: d.updatedDate,
+  url: arxivUrl(d.arxivId),
+  identifier: `arXiv:${d.arxivId}`,
+  sameAs: arxivUrl(d.arxivId),
+  inLanguage: 'en',
+};
+---
+
+<BaseLayout
+  locale={locale}
+  title={`${d.name} — ${catLabel}`}
+  description={d.summaryZh}
+  path={paperUrl('zh', paper.id)}
+  alternates={{ en: paperUrl('en', paper.id), zh: paperUrl('zh', paper.id) }}
+  jsonLd={[source, faqSchema(qas)]}
+  ogType="article"
+>
+  <nav class="text-sm text-slate-500 dark:text-slate-400">
+    <a class="hover:text-slate-900 dark:hover:text-slate-100" href="/zh/">{s.home}</a>
+    <span class="mx-1">/</span>
+    <a class="hover:text-slate-900 dark:hover:text-slate-100" href="/zh/papers/">{s.papers}</a>
+  </nav>
+
+  <header class="mt-3">
+    <h1 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-50">
+      {d.name}
+    </h1>
+    <p class="mt-2 text-lg text-slate-600 dark:text-slate-400">{d.titleZh}</p>
+    <p class="mt-1 text-sm text-slate-500 dark:text-slate-500">{d.title}</p>
+    <div class="mt-3 flex flex-wrap items-center gap-2">
+      <span class={`badge ${d.tier === 'landmark' ? 'badge-cat' : 'badge-open'}`}>
+        {tierLabel}
+      </span>
+      <span class="badge badge-neutral">{catLabel}</span>
+      <span class="badge badge-neutral tabular-nums">{s.firstPosted} {d.publishedDate}</span>
+    </div>
+  </header>
+
+  <blockquote class="key-fact mt-6">
+    <p class="text-[15px] leading-relaxed">{d.keyFactZh}</p>
+  </blockquote>
+
+  <section class="mt-8">
+    <h2 class="section-title">{s.facts}</h2>
+    <table class="facts-table mt-3">
+      <tbody>
+        <tr>
+          <th>{s.firstPosted}</th>
+          <td class="tabular-nums">{d.publishedDate}</td>
+        </tr>
+        <tr>
+          <th>{s.latestRevision}</th>
+          <td class="tabular-nums">{d.updatedDate}</td>
+        </tr>
+        <tr>
+          <th>{s.authors}</th>
+          <td>{d.authors.join('、')}</td>
+        </tr>
+        <tr>
+          <th>arXiv</th>
+          <td>
+            <a
+              class="underline hover:text-indigo-600"
+              href={arxivUrl(d.arxivId)}
+              rel="nofollow noopener">{d.arxivId}</a
+            >
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="mt-4 flex flex-wrap gap-2">
+      <a class="btn btn-ghost" href={arxivUrl(d.arxivId)} rel="nofollow noopener">
+        {s.readOnArxiv} ↗
+      </a>
+      <a
+        class="btn btn-ghost"
+        href={paperMarkdownUrl(locale, paper.id)}
+        data-astro-prefetch="false"
+        rel="nofollow">{s.markdownVersion}</a
+      >
+    </p>
+  </section>
+
+  <section class="mt-8">
+    <h2 class="section-title">{s.whyItMatters}</h2>
+    <p class="mt-3 text-slate-700 dark:text-slate-300">{d.whyItMattersZh}</p>
+  </section>
+
+  <section class="mt-10">
+    <h2 class="section-title">FAQ</h2>
+    <div class="mt-4 space-y-3">
+      {
+        qas.map(({ q, a }) => (
+          <details class="card !p-0">
+            <summary class="cursor-pointer px-4 py-3 font-medium text-slate-900 dark:text-slate-100">
+              {q}
+            </summary>
+            <p class="px-4 pb-4 text-sm text-slate-600 dark:text-slate-400">{a}</p>
+          </details>
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>

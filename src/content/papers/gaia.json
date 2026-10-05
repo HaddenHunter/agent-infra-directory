@@ -1,0 +1,25 @@
+{
+  "name": "GAIA",
+  "arxivId": "2311.12983",
+  "tier": "landmark",
+  "category": "evaluation",
+  "publishedDate": "2023-11-21",
+  "titleZh": "GAIA：通用 AI 助手基准",
+  "summary": "466 real-world questions that are easy for humans but demand reasoning, multi-modality, browsing and tool use in combination.",
+  "summaryZh": "466 个真实世界问题，对人类容易，但要求同时具备推理、多模态、网页浏览与工具使用能力。",
+  "keyFact": "GAIA (Mialon et al., arXiv:2311.12983, 2023-11-21) released 466 questions and reported human respondents at 92% against 15% for GPT-4 equipped with plugins.",
+  "keyFactZh": "GAIA（Mialon 等，arXiv:2311.12983，2023-11-21）发布 466 道题，报告人类正确率为 92%，而接入插件的 GPT-4 为 15%。",
+  "whyItMatters": "Its framing inverted the usual benchmarking treadmill: it asks for human-level robustness on easy-looking questions rather than superhuman feats.",
+  "whyItMattersZh": "它的取向与常见的基准军备竞赛相反：要的是人类在简单问题上的那种稳健，而不是超越人类的壮举。",
+  "addedDate": "2026-10-06",
+  "title": "GAIA: a benchmark for General AI Assistants",
+  "authors": [
+    "Grégoire Mialon",
+    "Clémentine Fourrier",
+    "Craig Swift",
+    "Thomas Wolf",
+    "Yann LeCun",
+    "Thomas Scialom"
+  ],
+  "updatedDate": "2023-11-21"
+}

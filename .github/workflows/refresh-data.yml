@@ -52,6 +52,13 @@ jobs:
           set -o pipefail
           npm run fetch:news 2>&1 | tee /tmp/news-refresh.log
 
+      # 论文标题与作者只会在 arXiv 修订时变化，但 updatedDate 需要跟着走，
+      # 否则 sitemap 里的 lastmod 会停在旧值。
+      - name: Refresh paper metadata
+        run: |
+          set -o pipefail
+          npm run fetch:papers 2>&1 | tee /tmp/papers-refresh.log
+
       # 刷新后的数据若违反 schema（例如 category 拼错），这里会先失败，
       # 不至于把一个构建不过的 PR 递到人面前。
       - name: Verify the site still builds
@@ -73,6 +80,15 @@ jobs:
             echo "> \`stars\` / \`archived\` / \`lastPush\` 由 GitHub API 回填，只覆盖这三个字段，"
             echo "> 手写的 license、description、keyFact 不会被改动。上面若出现 license 冲突，"
             echo "> 需要人工判断以谁为准。"
+            echo
+            echo "### 论文元数据（机器可验证）"
+            echo
+            echo '```'
+            tail -n 30 /tmp/papers-refresh.log
+            echo '```'
+            echo
+            echo "> 标题、作者、首次提交与最新修订取自 arXiv API。若上面出现「标题不一致」，"
+            echo "> 多半是 arXiv 上论文改过标题，需要人工确认。"
             echo
             echo "### 新闻候选（**不会**自动发布）"
             echo
@@ -110,8 +126,8 @@ jobs:
           # 固定分支名：每次刷新都更新同一个 PR，而不是每天攒一个新的。
           BRANCH="automated/data-refresh"
           git checkout -B "$BRANCH"
-          git add src/content/tools content-inbox
-          git commit -m "chore: refresh tool metadata and news candidates"
+          git add src/content/tools src/content/papers content-inbox
+          git commit -m "chore: refresh tool, paper and news metadata"
           git push --force-with-lease -u origin "$BRANCH"
 
           if gh pr view "$BRANCH" --json number >/dev/null 2>&1; then

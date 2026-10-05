@@ -70,6 +70,14 @@ export const ui = {
     ecoManaged: 'Managed / SaaS',
     ecoNote:
       'Counts come from the published dataset. GitHub star counts are left out of these charts because they only exist for a subset of entries, which would make any total misleading.',
+    papers: 'Papers',
+    papersIntro:
+      'Landmark and frontier papers on LLM agents — the ones that introduced a loop, a benchmark or a failure mode the field now takes for granted. Titles, authors and dates are pulled from the arXiv API, never typed by hand; the judgement is written by a person.',
+    authors: 'Authors',
+    firstPosted: 'First posted',
+    latestRevision: 'Latest revision',
+    arxiv: 'arXiv',
+    readOnArxiv: 'Read on arXiv',
   },
 
   zh: {
@@ -123,6 +131,14 @@ export const ui = {
     ecoManaged: '托管 / SaaS',
     ecoNote:
       '数字来自已发布数据集。GitHub 星标未纳入图表，因为它只覆盖部分条目，求总和会得出误导性的结论。',
+    papers: '前沿论文',
+    papersIntro:
+      '关于 LLM 智能体的里程碑与前沿论文——那些提出了某种循环、某个基准或某种失败模式的文章。标题、作者与日期全部取自 arXiv API，绝不手写；判断部分由人写。',
+    authors: '作者',
+    firstPosted: '首次提交',
+    latestRevision: '最新修订',
+    arxiv: 'arXiv',
+    readOnArxiv: '在 arXiv 阅读',
   },
 } as const;
 

@@ -1,0 +1,30 @@
+{
+  "name": "SecureWebArena",
+  "arxivId": "2510.10073",
+  "tier": "frontier",
+  "category": "safety",
+  "publishedDate": "2025-10-11",
+  "titleZh": "SecureWebArena：面向 LVLM 网页智能体的整体安全评测基准",
+  "summary": "A holistic security benchmark for vision-language web agents, built on six simulated but realistic web environments to cover attack surfaces narrower benchmarks miss.",
+  "summaryZh": "面向视觉语言网页智能体的整体安全基准，基于六个模拟但真实的网页环境，覆盖以往窄口径基准漏掉的攻击面。",
+  "keyFact": "SecureWebArena (Ying et al., arXiv:2510.10073, first posted 2025-10-11, revised 2026-04-14) presents itself as the first holistic security benchmark for LVLM-based web agents, spanning six simulated web environments rather than the single attack family earlier work covered.",
+  "keyFactZh": "SecureWebArena（Ying 等，arXiv:2510.10073，2025-10-11 首次提交，2026-04-14 修订）自称是首个面向 LVLM 网页智能体的整体安全基准，覆盖六个模拟网页环境，而此前工作多只盯单一攻击类型。",
+  "whyItMatters": "Most agent security work tests prompt injection in isolation; this one varies the environment, which is closer to how deployments actually get attacked.",
+  "whyItMattersZh": "多数 Agent 安全研究只单独测提示注入；这个基准换的是环境变量，更接近真实部署被攻击的方式。",
+  "addedDate": "2026-10-06",
+  "title": "SecureWebArena: A Holistic Security Evaluation Benchmark for LVLM-based Web Agents",
+  "authors": [
+    "Zonghao Ying",
+    "Yangguang Shao",
+    "Jianle Gan",
+    "Gan Xu",
+    "Wenxin Zhang",
+    "Quanchen Zou",
+    "Junzheng Shi",
+    "Zhenfei Yin",
+    "Mingchuan Zhang",
+    "Aishan Liu",
+    "Xianglong Liu"
+  ],
+  "updatedDate": "2026-04-14"
+}

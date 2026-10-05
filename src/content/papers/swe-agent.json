@@ -1,0 +1,26 @@
+{
+  "name": "SWE-agent",
+  "arxivId": "2405.15793",
+  "tier": "landmark",
+  "category": "tool-use",
+  "publishedDate": "2024-05-06",
+  "titleZh": "SWE-agent：智能体-计算机接口如何实现自动化软件工程",
+  "summary": "Argues that an agent needs purpose-built interfaces rather than raw shell access, and designs an agent-computer interface around that claim.",
+  "summaryZh": "主张智能体需要专门设计的接口，而不是裸露的 shell 访问，并据此设计了「智能体-计算机接口」（ACI）。",
+  "keyFact": "SWE-agent (Yang et al., arXiv:2405.15793, 2024-05-06) reported 12.5% pass@1 on SWE-bench and 87.7% on HumanEvalFix by designing a custom agent-computer interface, far above non-interactive baselines.",
+  "keyFactZh": "SWE-agent（Yang 等，arXiv:2405.15793，2024-05-06）通过设计专门的智能体-计算机接口，在 SWE-bench 上取得 12.5% pass@1、在 HumanEvalFix 上 87.7%，远高于非交互式基线。",
+  "whyItMatters": "The lesson generalises: for agents, the interface you expose matters as much as the model you choose.",
+  "whyItMattersZh": "这个结论可以推广：对智能体来说，你暴露给它的接口和选哪个模型同样重要。",
+  "addedDate": "2026-10-06",
+  "title": "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering",
+  "authors": [
+    "John Yang",
+    "Carlos E. Jimenez",
+    "Alexander Wettig",
+    "Kilian Lieret",
+    "Shunyu Yao",
+    "Karthik Narasimhan",
+    "Ofir Press"
+  ],
+  "updatedDate": "2024-11-11"
+}

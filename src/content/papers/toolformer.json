@@ -1,0 +1,27 @@
+{
+  "name": "Toolformer",
+  "arxivId": "2302.04761",
+  "tier": "landmark",
+  "category": "tool-use",
+  "publishedDate": "2023-02-09",
+  "titleZh": "Toolformer：语言模型可以自学使用工具",
+  "summary": "Trains a model to decide which API to call, when, with what arguments, and how to fold the result back into generation, self-supervised from a handful of demonstrations per API.",
+  "summaryZh": "训练模型自己决定调哪个 API、什么时候调、传什么参数、结果怎么用回生成，全程自监督，每个 API 只要几个示例。",
+  "keyFact": "Toolformer (Schick et al., arXiv:2302.04761, 2023-02-09) showed a model can teach itself to call APIs such as a calculator, search engines, a translation system and a calendar, improving zero-shot performance without giving up its core language-modelling ability.",
+  "keyFactZh": "Toolformer（Schick 等，arXiv:2302.04761，2023-02-09）证明模型可以自学调用 API——计算器、搜索引擎、翻译系统、日历等——在提升零样本表现的同时不损害核心语言建模能力。",
+  "whyItMatters": "It reframed tool use from an orchestration problem into a training problem, which is why \"does the model call tools natively\" is now a model-selection question.",
+  "whyItMattersZh": "它把工具调用从「编排问题」重新定义成了「训练问题」——这也是为什么「模型是否原生会调工具」如今成了选型问题。",
+  "addedDate": "2026-10-06",
+  "title": "Toolformer: Language Models Can Teach Themselves to Use Tools",
+  "authors": [
+    "Timo Schick",
+    "Jane Dwivedi-Yu",
+    "Roberto Dessì",
+    "Roberta Raileanu",
+    "Maria Lomeli",
+    "Luke Zettlemoyer",
+    "Nicola Cancedda",
+    "Thomas Scialom"
+  ],
+  "updatedDate": "2023-02-09"
+}

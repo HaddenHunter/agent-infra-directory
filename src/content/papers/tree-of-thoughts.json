@@ -1,0 +1,26 @@
+{
+  "name": "Tree of Thoughts",
+  "arxivId": "2305.10601",
+  "tier": "landmark",
+  "category": "reasoning",
+  "publishedDate": "2023-05-17",
+  "titleZh": "思维树：用大模型做审慎的问题求解",
+  "summary": "Generalises chain-of-thought into search over several reasoning paths, with self-evaluation and backtracking.",
+  "summaryZh": "把思维链推广成对多条推理路径的搜索，允许自评与回溯。",
+  "keyFact": "Tree of Thoughts (Yao et al., arXiv:2305.10601, 2023-05-17) let a model explore and backtrack across multiple reasoning paths; on Game of 24 it lifted GPT-4 from 4% with chain-of-thought prompting to 74% success.",
+  "keyFactZh": "思维树（Yao 等，arXiv:2305.10601，2023-05-17）让模型在多条推理路径上探索并回溯；在 Game of 24 任务上把 GPT-4 的成绩从思维链提示的 4% 提升到 74%。",
+  "whyItMatters": "The clearest evidence that inference-time search, not just a bigger model, buys reasoning gains.",
+  "whyItMattersZh": "它最清楚地证明了：推理能力不只靠更大的模型，推理时的搜索同样能换来提升。",
+  "addedDate": "2026-10-06",
+  "title": "Tree of Thoughts: Deliberate Problem Solving with Large Language Models",
+  "authors": [
+    "Shunyu Yao",
+    "Dian Yu",
+    "Jeffrey Zhao",
+    "Izhak Shafran",
+    "Thomas L. Griffiths",
+    "Yuan Cao",
+    "Karthik Narasimhan"
+  ],
+  "updatedDate": "2023-12-03"
+}

@@ -189,4 +189,44 @@ const useCases = defineCollection({
   }),
 });
 
-export const collections = { tools, comparisons, benchmarks, events, useCases };
+/**
+ * papers：里程碑与前沿论文。
+ *
+ * title / authors / publishedDate / updatedDate 四个字段由 scripts/fetch-papers.mjs
+ * 从 arXiv 官方 API 回填，**不要手写**——arXiv 编号、作者、日期是最容易被凭记忆
+ * 写错的东西。人只负责写判断（keyFact / whyItMatters / summary）。
+ */
+const papers = defineCollection({
+  loader: glob({ pattern: '**/*.json', base: './src/content/papers' }),
+  schema: z.object({
+    /** 短名，如 ReAct、τ-bench */
+    name: z.string(),
+    arxivId: z.string(),
+    tier: z.enum(['landmark', 'frontier']),
+    category: z.enum([
+      'reasoning',
+      'tool-use',
+      'multi-agent',
+      'environment',
+      'evaluation',
+      'safety',
+    ]),
+    /** ↓ 以下四个由 fetch-papers.mjs 回填 */
+    title: z.string(),
+    authors: z.array(z.string()),
+    publishedDate: z.string(),
+    updatedDate: z.string(),
+    /** 中文标题（人工译；论文原名保存在 title） */
+    titleZh: z.string(),
+    summary: z.string(),
+    summaryZh: z.string(),
+    /** 可引用的核心判断句：主张 + 数字 + 日期 + 实体 */
+    keyFact: z.string(),
+    keyFactZh: z.string(),
+    whyItMatters: z.string(),
+    whyItMattersZh: z.string(),
+    addedDate: z.string(),
+  }),
+});
+
+export const collections = { tools, comparisons, benchmarks, events, useCases, papers };

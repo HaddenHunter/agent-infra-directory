@@ -1,0 +1,23 @@
+{
+  "name": "τ-bench",
+  "arxivId": "2406.12045",
+  "tier": "landmark",
+  "category": "evaluation",
+  "publishedDate": "2024-06-17",
+  "titleZh": "τ-bench：真实业务域中的工具-智能体-用户交互基准",
+  "summary": "Simulates a user talking to an agent that holds domain APIs and written policy rules, then checks the resulting database state against the annotated goal.",
+  "summaryZh": "模拟用户与智能体的多轮对话，智能体手握领域 API 与书面规则，最后对照标注的目标状态检查数据库，判断任务是否真的完成。",
+  "keyFact": "τ-bench (Yao et al., arXiv:2406.12045, 2024-06-17) introduced the pass^k metric for reliability across trials and found that even state-of-the-art function-calling agents succeed on under 50% of tasks, with pass^8 below 25% in retail.",
+  "keyFactZh": "τ-bench（Yao 等，arXiv:2406.12045，2024-06-17）提出用 pass^k 衡量多次试验中的可靠性，并发现即使最先进的函数调用智能体任务成功率也不到 50%，零售域的 pass^8 低于 25%。",
+  "whyItMatters": "pass^k exposed the real problem with agents: not that they fail, but that they fail inconsistently.",
+  "whyItMattersZh": "pass^k 揭示了 Agent 真正的问题：不是会失败，而是失败得不稳定。",
+  "addedDate": "2026-10-06",
+  "title": "$τ$-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains",
+  "authors": [
+    "Shunyu Yao",
+    "Noah Shinn",
+    "Pedram Razavi",
+    "Karthik Narasimhan"
+  ],
+  "updatedDate": "2024-06-17"
+}

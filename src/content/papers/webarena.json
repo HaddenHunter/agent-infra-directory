@@ -1,0 +1,31 @@
+{
+  "name": "WebArena",
+  "arxivId": "2307.13854",
+  "tier": "landmark",
+  "category": "environment",
+  "publishedDate": "2023-07-25",
+  "titleZh": "WebArena：用于构建自主智能体的真实网页环境",
+  "summary": "Four self-hosted fully functional websites (e-commerce, forum, software development, CMS) plus tools and manuals, with long-horizon task benchmarks.",
+  "summaryZh": "四个自托管、功能完整的网站（电商、论坛、协同开发、内容管理），外加地图类工具与用户手册，配一套长程任务基准。",
+  "keyFact": "WebArena (Zhou et al., arXiv:2307.13854, 2023-07-25) reported that its best GPT-4 agent completed 14.41% of tasks end to end, against 78.24% human performance.",
+  "keyFactZh": "WebArena（Zhou 等，arXiv:2307.13854，2023-07-25）报告其最好的 GPT-4 智能体端到端完成率为 14.41%，而人类为 78.24%。",
+  "whyItMatters": "The 14.41%-versus-78.24% gap is still the number to quote when someone claims web agents are solved.",
+  "whyItMattersZh": "当有人宣称网页智能体已经解决时，14.41% 对 78.24% 这个差距仍然是最该引用的数字。",
+  "addedDate": "2026-10-06",
+  "title": "WebArena: A Realistic Web Environment for Building Autonomous Agents",
+  "authors": [
+    "Shuyan Zhou",
+    "Frank F. Xu",
+    "Hao Zhu",
+    "Xuhui Zhou",
+    "Robert Lo",
+    "Abishek Sridhar",
+    "Xianyi Cheng",
+    "Tianyue Ou",
+    "Yonatan Bisk",
+    "Daniel Fried",
+    "Uri Alon",
+    "Graham Neubig"
+  ],
+  "updatedDate": "2024-04-16"
+}

@@ -1,0 +1,25 @@
+{
+  "name": "Generative Agents",
+  "arxivId": "2304.03442",
+  "tier": "landmark",
+  "category": "multi-agent",
+  "publishedDate": "2023-04-07",
+  "titleZh": "生成式智能体：人类行为的交互式模拟",
+  "summary": "An architecture of observation, planning and reflection that lets twenty-five agents in a Sims-like sandbox produce believable individual and emergent social behaviour.",
+  "summaryZh": "用「观察—规划—反思」三层架构，让 25 个智能体在类《模拟人生》沙盒里涌现出可信的个体行为与社会行为。",
+  "keyFact": "Generative Agents (Park et al., arXiv:2304.03442, 2023-04-07) populated a sandbox town with twenty-five agents whose behaviour came from memory, reflection and planning, and its ablations showed all three components are needed for believable behaviour.",
+  "keyFactZh": "Generative Agents（Park 等，arXiv:2304.03442，2023-04-07）在沙盒小镇里放了 25 个智能体，行为由记忆、反思与规划驱动；消融实验显示这三个组件缺一不可。",
+  "whyItMatters": "It is the reference architecture for memory in agents — the design later memory layers either adopt or argue against.",
+  "whyItMattersZh": "它是智能体记忆的参考架构——后来的记忆层要么沿用这套设计，要么明确反对它。",
+  "addedDate": "2026-10-06",
+  "title": "Generative Agents: Interactive Simulacra of Human Behavior",
+  "authors": [
+    "Joon Sung Park",
+    "Joseph C. O'Brien",
+    "Carrie J. Cai",
+    "Meredith Ringel Morris",
+    "Percy Liang",
+    "Michael S. Bernstein"
+  ],
+  "updatedDate": "2023-08-06"
+}

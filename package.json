@@ -13,6 +13,7 @@
     "check": "astro check",
     "fetch:github": "node scripts/fetch-github.mjs",
     "fetch:news": "node scripts/fetch-news.mjs",
+    "fetch:papers": "node scripts/fetch-papers.mjs",
     "ping:indexnow": "node scripts/ping-indexnow.mjs"
   },
   "dependencies": {

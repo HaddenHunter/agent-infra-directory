@@ -1,0 +1,26 @@
+{
+  "name": "ReAct",
+  "arxivId": "2210.03629",
+  "tier": "landmark",
+  "category": "reasoning",
+  "publishedDate": "2022-10-06",
+  "titleZh": "ReAct：让语言模型在推理与行动之间协同",
+  "summary": "Interleaves reasoning traces with task actions so the model can plan, act, read the result and revise, instead of doing only one of the two.",
+  "summaryZh": "让模型把推理轨迹与任务动作交替输出：先想、再做、看结果、再修正，而不是只做其中一件事。",
+  "keyFact": "ReAct (Yao et al., arXiv:2210.03629, first posted 2022-10-06) made interleaved reasoning-and-acting the default shape of an LLM agent loop. On the ALFWorld and WebShop interactive benchmarks it beat imitation and reinforcement learning baselines by 34 and 10 absolute success-rate points respectively, using only one or two in-context examples.",
+  "keyFactZh": "ReAct（Yao 等，arXiv:2210.03629，2022-10-06 首次提交）确立了「推理与行动交替」这一 LLM 智能体循环的基本形态。在 ALFWorld 与 WebShop 两个交互式基准上，它仅用一两个上下文示例，就把成功率比模仿学习和强化学习基线分别高出 34 与 10 个百分点（绝对值）。",
+  "whyItMatters": "Every \"reason → act → observe\" loop in today's agent runtimes descends from this. When you pick a framework, this is the baseline behaviour you can assume it already implements.",
+  "whyItMattersZh": "今天所有 Agent 运行时里的「思考 → 行动 → 观察」循环都源自这里。选框架时，这是你可以默认它已经具备的行为基线。",
+  "addedDate": "2026-10-06",
+  "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+  "authors": [
+    "Shunyu Yao",
+    "Jeffrey Zhao",
+    "Dian Yu",
+    "Nan Du",
+    "Izhak Shafran",
+    "Karthik Narasimhan",
+    "Yuan Cao"
+  ],
+  "updatedDate": "2023-03-10"
+}

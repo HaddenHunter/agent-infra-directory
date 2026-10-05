@@ -1,0 +1,25 @@
+{
+  "name": "Reflexion",
+  "arxivId": "2303.11366",
+  "tier": "landmark",
+  "category": "reasoning",
+  "publishedDate": "2023-03-20",
+  "titleZh": "Reflexion：用语言反馈强化语言智能体",
+  "summary": "The agent writes a verbal self-critique after each attempt and keeps it in an episodic memory buffer, improving on the next try with no weight updates at all.",
+  "summaryZh": "智能体每次尝试后写下自我批评，存进情景记忆缓冲区，下一次做得更好——完全不更新模型权重。",
+  "keyFact": "Reflexion (Shinn et al., arXiv:2303.11366, 2023-03-20) reinforced agents through linguistic feedback rather than weight updates, and reported 91% pass@1 on HumanEval against the 80% scored by the GPT-4 baseline it compared with.",
+  "keyFactZh": "Reflexion（Shinn 等，arXiv:2303.11366，2023-03-20）用语言反馈而非权重更新来强化智能体，论文报告在 HumanEval 上取得 91% pass@1，而它对照的 GPT-4 基线为 80%。",
+  "whyItMatters": "This is why \"reflection\" and \"episodic memory\" are standard parts of an agent stack, and why prompt architecture can sometimes buy reliability that would otherwise require fine-tuning.",
+  "whyItMattersZh": "这正是「反思」与「情景记忆」成为 Agent 标配组件的原因，也说明有时靠提示架构就能换来本来需要微调才能得到的可靠性。",
+  "addedDate": "2026-10-06",
+  "title": "Reflexion: Language Agents with Verbal Reinforcement Learning",
+  "authors": [
+    "Noah Shinn",
+    "Federico Cassano",
+    "Edward Berman",
+    "Ashwin Gopinath",
+    "Karthik Narasimhan",
+    "Shunyu Yao"
+  ],
+  "updatedDate": "2023-10-10"
+}

@@ -1,0 +1,27 @@
+{
+  "name": "Voyager",
+  "arxivId": "2305.16291",
+  "tier": "landmark",
+  "category": "environment",
+  "publishedDate": "2023-05-25",
+  "titleZh": "Voyager：大模型驱动的开放式具身智能体",
+  "summary": "An embodied Minecraft agent built from an automatic curriculum, a growing library of executable skills and iterative self-verification, running entirely on black-box GPT-4 calls.",
+  "summaryZh": "一个具身 Minecraft 智能体：自动课程表 + 持续增长的技能代码库 + 迭代自校验，全程只通过黑盒调用 GPT-4。",
+  "keyFact": "Voyager (Wang et al., arXiv:2305.16291, 2023-05-25) reported 3.3× more unique items, 2.3× longer travel and up to 15.3× faster tech-tree progress than the prior state of the art, with no parameter fine-tuning.",
+  "keyFactZh": "Voyager（Wang 等，arXiv:2305.16291，2023-05-25）报告称相比此前最优方案，取得 3.3 倍独特物品、2.3 倍行进距离、科技树推进最高快 15.3 倍，且完全没有微调模型参数。",
+  "whyItMatters": "The durable idea is the skill library: executable code as reusable memory, which generalises well beyond Minecraft.",
+  "whyItMattersZh": "真正留下来的思路是「技能库」：把可执行代码当作可复用的记忆，这个做法远不局限于 Minecraft。",
+  "addedDate": "2026-10-06",
+  "title": "Voyager: An Open-Ended Embodied Agent with Large Language Models",
+  "authors": [
+    "Guanzhi Wang",
+    "Yuqi Xie",
+    "Yunfan Jiang",
+    "Ajay Mandlekar",
+    "Chaowei Xiao",
+    "Yuke Zhu",
+    "Linxi Fan",
+    "Anima Anandkumar"
+  ],
+  "updatedDate": "2023-10-19"
+}

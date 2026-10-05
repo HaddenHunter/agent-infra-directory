@@ -55,6 +55,13 @@ function collectLastmod() {
     bump('/news/', data.eventDate);
     bump('/zh/news/', data.eventDate);
   }
+  for (const { slug, data } of entries('src/content/papers')) {
+    const d = data.updatedDate || data.publishedDate;
+    bump(`/papers/${slug}/`, d);
+    bump(`/zh/papers/${slug}/`, d);
+    bump('/papers/', d);
+    bump('/zh/papers/', d);
+  }
   return dates;
 }
 

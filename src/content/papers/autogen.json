@@ -1,0 +1,33 @@
+{
+  "name": "AutoGen",
+  "arxivId": "2308.08155",
+  "tier": "landmark",
+  "category": "multi-agent",
+  "publishedDate": "2023-08-16",
+  "titleZh": "AutoGen：以多智能体对话构建下一代 LLM 应用",
+  "summary": "A framework for building applications out of conversable agents, where interaction patterns can be programmed in natural language or in code.",
+  "summaryZh": "一个用「可对话智能体」搭建应用的框架，交互模式既可以用自然语言、也可以用代码来编排。",
+  "keyFact": "AutoGen (Wu et al., arXiv:2308.08155, 2023-08-16) treated multi-agent conversation as the programming model for LLM applications, with agents mixing LLMs, human input and tools.",
+  "keyFactZh": "AutoGen（Wu 等，arXiv:2308.08155，2023-08-16）把「多智能体对话」当作 LLM 应用的编程模型，智能体可混合使用模型、人类输入与工具。",
+  "whyItMatters": "Most multi-agent products today are variations on this conversation-pattern idea.",
+  "whyItMattersZh": "今天大多数「多智能体」产品，本质都是这套对话编排思路的变体。",
+  "addedDate": "2026-10-06",
+  "title": "AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation",
+  "authors": [
+    "Qingyun Wu",
+    "Gagan Bansal",
+    "Jieyu Zhang",
+    "Yiran Wu",
+    "Beibin Li",
+    "Erkang Zhu",
+    "Li Jiang",
+    "Xiaoyun Zhang",
+    "Shaokun Zhang",
+    "Jiale Liu",
+    "Ahmed Hassan Awadallah",
+    "Ryen W White",
+    "Doug Burger",
+    "Chi Wang"
+  ],
+  "updatedDate": "2023-10-03"
+}

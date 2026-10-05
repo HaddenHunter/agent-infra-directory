@@ -1,0 +1,31 @@
+{
+  "name": "MLE-bench",
+  "arxivId": "2410.07095",
+  "tier": "landmark",
+  "category": "evaluation",
+  "publishedDate": "2024-10-09",
+  "titleZh": "MLE-bench：评测机器学习工程中的 AI 智能体",
+  "summary": "75 Kaggle competitions with human medal thresholds taken from public leaderboards, used to score agents on real ML engineering work.",
+  "summaryZh": "75 场 Kaggle 竞赛，以公开排行榜上的人类奖牌线为基线，用来给智能体在真实机器学习工程上打分。",
+  "keyFact": "MLE-bench (Chan et al., arXiv:2410.07095, 2024-10-09) curated 75 Kaggle competitions and found the best setup, o1-preview with AIDE scaffolding, reached at least Kaggle bronze level in 16.9% of them.",
+  "keyFactZh": "MLE-bench（Chan 等，arXiv:2410.07095，2024-10-09）整理 75 场 Kaggle 竞赛，发现最佳组合（o1-preview 配 AIDE 脚手架）在其中 16.9% 的竞赛里达到至少铜牌水平。",
+  "whyItMatters": "Medal thresholds give an interpretable yardstick that a bare percentage never does.",
+  "whyItMattersZh": "用奖牌线作标尺，比一个光秃秃的百分比更容易理解。",
+  "addedDate": "2026-10-06",
+  "title": "MLE-bench: Evaluating Machine Learning Agents on Machine Learning Engineering",
+  "authors": [
+    "Jun Shern Chan",
+    "Neil Chowdhury",
+    "Oliver Jaffe",
+    "James Aung",
+    "Dane Sherburn",
+    "Evan Mays",
+    "Giulio Starace",
+    "Kevin Liu",
+    "Leon Maksin",
+    "Tejal Patwardhan",
+    "Lilian Weng",
+    "Aleksander Mądry"
+  ],
+  "updatedDate": "2025-02-26"
+}

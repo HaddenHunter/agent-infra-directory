@@ -1,0 +1,32 @@
+{
+  "name": "OfficeQA Pro",
+  "arxivId": "2603.08655",
+  "tier": "frontier",
+  "category": "evaluation",
+  "publishedDate": "2026-03-09",
+  "titleZh": "OfficeQA Pro：面向端到端有据推理的企业级基准",
+  "summary": "133 questions over U.S. Treasury Bulletins spanning nearly a century, requiring parsing, retrieval and analytical reasoning across text and tables.",
+  "summaryZh": "133 道题，取材于跨越近一个世纪的美国财政部公报，要求在文本与表格之间完成解析、检索与分析推理。",
+  "keyFact": "OfficeQA Pro (Opsahl-Ong et al., arXiv:2603.08655, 2026-03-09) builds on a corpus of 89,000 pages and more than 26 million numerical values; the paper reports frontier models below 5% accuracy from parametric knowledge alone and below 12% with web access.",
+  "keyFactZh": "OfficeQA Pro（Opsahl-Ong 等，arXiv:2603.08655，2026-03-09）基于 89,000 页、逾 2,600 万个数值的语料；论文报告前沿模型仅靠参数知识正确率不足 5%，即便联网也不足 12%。",
+  "whyItMatters": "It isolates the gap between being able to read documents and being able to answer from them on long-tail enterprise data.",
+  "whyItMattersZh": "它把「能读文档」与「能根据文档作答」之间的差距，在长尾企业数据上单独隔离了出来。",
+  "addedDate": "2026-10-06",
+  "title": "OfficeQA Pro: An Enterprise Benchmark for End-to-End Grounded Reasoning",
+  "authors": [
+    "Krista Opsahl-Ong",
+    "Arnav Singhvi",
+    "Jasmine Collins",
+    "Ivan Zhou",
+    "Cindy Wang",
+    "Ashutosh Baheti",
+    "Owen Oertell",
+    "Jacob Portes",
+    "Sam Havens",
+    "Erich Elsen",
+    "Michael Bendersky",
+    "Matei Zaharia",
+    "Xing Chen"
+  ],
+  "updatedDate": "2026-03-09"
+}

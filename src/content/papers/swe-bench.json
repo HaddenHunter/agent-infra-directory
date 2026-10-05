@@ -1,0 +1,26 @@
+{
+  "name": "SWE-bench",
+  "arxivId": "2310.06770",
+  "tier": "landmark",
+  "category": "evaluation",
+  "publishedDate": "2023-10-10",
+  "titleZh": "SWE-bench：语言模型能解决真实的 GitHub issue 吗？",
+  "summary": "2,294 issues from 12 popular Python repositories, each requiring a real code edit that is scored by running the project's own tests.",
+  "summaryZh": "2,294 个来自 12 个热门 Python 仓库的真实 issue，每个都要求真实改代码，并用项目自己的测试来判分。",
+  "keyFact": "SWE-bench (Jimenez et al., arXiv:2310.06770, 2023-10-10) drew 2,294 issues from 12 Python repositories; in the paper's own evaluation the best model tested, Claude 2, resolved 1.96%.",
+  "keyFactZh": "SWE-bench（Jimenez 等，arXiv:2310.06770，2023-10-10）从 12 个 Python 仓库取了 2,294 个 issue；在论文自己的评测中，被测最好的模型 Claude 2 只解决了 1.96%。",
+  "whyItMatters": "It became the reference point for coding agents, and the reason \"SWE-bench score\" is now shorthand in every agent launch.",
+  "whyItMattersZh": "它成了编码智能体的参照系，也是「SWE-bench 分数」成为每次 Agent 发布必备口径的原因。",
+  "addedDate": "2026-10-06",
+  "title": "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?",
+  "authors": [
+    "Carlos E. Jimenez",
+    "John Yang",
+    "Alexander Wettig",
+    "Shunyu Yao",
+    "Kexin Pei",
+    "Ofir Press",
+    "Karthik Narasimhan"
+  ],
+  "updatedDate": "2024-11-11"
+}
