@@ -1,6 +1,8 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import EcosystemChart from '../../components/EcosystemChart.astro';
+import ParticleBackdrop from '../../components/ParticleBackdrop.astro';
 import { categories, categoryKeys, t, SITE_URL, type CategoryKey } from '../../i18n/ui';
 
 const locale = 'zh' as const;
@@ -39,6 +41,8 @@ const jsonLd = [
       class="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-indigo-500/10 blur-3xl"
     >
     </div>
+    <ParticleBackdrop class="z-0" />
+    <div class="relative z-10">
     <p class="inline-flex items-center gap-2 rounded-full border border-indigo-200 bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700 dark:border-indigo-900 dark:bg-indigo-950/60 dark:text-indigo-300">
       {tools.length} 个工具 · {categoryKeys.length} 个分类 · 逐条核验
     </p>
@@ -83,7 +87,10 @@ const jsonLd = [
         </dd>
       </div>
     </dl>
+    </div>
   </section>
+
+  <EcosystemChart locale={locale} />
 
   <section class="mt-14">
     <div class="flex items-end justify-between gap-4">

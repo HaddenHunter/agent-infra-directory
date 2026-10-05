@@ -60,7 +60,18 @@ export const ui = {
     humanBaseline: 'Human baseline',
     credibility: 'Credibility',
     contested: 'Contested claim',
+    ecoTitle: 'Ecosystem distribution',
+    ecoIntro:
+      'How the entries in this directory break down by category, license and hosting model. Every figure is computed from the published dataset.',
+    ecoLicense: 'License openness',
+    ecoHosting: 'Hosting model',
+    ecoOpen: 'Open / source-available',
+    ecoProprietary: 'Proprietary / no assertion',
+    ecoManaged: 'Managed / SaaS',
+    ecoNote:
+      'Counts come from the published dataset. GitHub star counts are left out of these charts because they only exist for a subset of entries, which would make any total misleading.',
   },
+
   zh: {
     siteName: 'AI Agent 基础设施目录',
     tagline: '帮开发者做选型决策的参考源，而非工具大全。',
@@ -102,6 +113,16 @@ export const ui = {
     humanBaseline: '人类基线',
     credibility: '可信度',
     contested: '常见的错误说法',
+    ecoTitle: '生态分布',
+    ecoIntro:
+      '本目录收录条目在分类、许可证与部署形态上的分布。所有数字均由已发布数据集计算得出。',
+    ecoLicense: '许可证开放度',
+    ecoHosting: '部署形态',
+    ecoOpen: '开源 / 源码可见',
+    ecoProprietary: '专有 / 未声明',
+    ecoManaged: '托管 / SaaS',
+    ecoNote:
+      '数字来自已发布数据集。GitHub 星标未纳入图表，因为它只覆盖部分条目，求总和会得出误导性的结论。',
   },
 } as const;
 

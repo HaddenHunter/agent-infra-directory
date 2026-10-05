@@ -1,0 +1,176 @@
+---
+import { getCollection } from 'astro:content';
+import { categories, categoryKeys, t, type CategoryKey, type Locale } from '../i18n/ui';
+
+export interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const s = t(locale);
+
+const tools = await getCollection('tools');
+const total = tools.length;
+
+/** 分类分布：条形长度按各分类的最大值归一化，而不是占比 —— 短条才看得清。 */
+const rows = categoryKeys
+  .map((key: CategoryKey) => ({
+    key,
+    label: categories[key][locale],
+    count: tools.filter((x) => x.data.category === key).length,
+  }))
+  .sort((a, b) => b.count - a.count);
+const peak = Math.max(1, ...rows.map((r) => r.count));
+
+/** 开源判定与全站一致：非 proprietary / noassertion 即视为开源或源码可见。 */
+const byLicense = (x: (typeof tools)[number]) =>
+  !/proprietary|noassertion/i.test(x.data.license);
+const openCount = tools.filter(byLicense).length;
+const closedCount = total - openCount;
+
+const selfCount = tools.filter((x) => x.data.selfHosted).length;
+const managedCount = total - selfCount;
+
+const share = (n: number) => (total ? Math.round((n / total) * 100) : 0);
+const openShare = share(openCount);
+const selfShare = share(selfCount);
+
+/** 数据口径说明用的日期：取条目中最新的核验日期。 */
+const asOf =
+  tools
+    .map((x) => x.data.updatedDate)
+    .sort()
+    .at(-1) ?? '';
+
+// 环形图：用 stroke-dasharray 画开口弧，零 JS。
+const R = 54;
+const CIRC = 2 * Math.PI * R;
+const arc = (openShare / 100) * CIRC;
+---
+
+<section class="mt-14">
+  <h2 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-100">
+    {s.ecoTitle}
+  </h2>
+  <p class="mt-2 max-w-3xl text-sm text-slate-600 dark:text-slate-400">{s.ecoIntro}</p>
+
+  <div class="mt-6 grid gap-5 lg:grid-cols-3">
+    <div class="card lg:col-span-2">
+      <h3 class="section-title">{s.allCategories}</h3>
+      <ul class="mt-4 space-y-3">
+        {
+          rows.map((r) => (
+            <li>
+              <a href={`/${locale === 'zh' ? 'zh/' : ''}categories/${r.key}/`} class="group block">
+                <div class="flex items-baseline justify-between gap-3 text-sm">
+                  <span class="text-slate-700 group-hover:text-indigo-600 dark:text-slate-300 dark:group-hover:text-indigo-400">
+                    {r.label}
+                  </span>
+                  <span class="tabular-nums font-medium text-slate-900 dark:text-slate-100">
+                    {r.count}
+                    <span class="ml-1 text-xs font-normal text-slate-400">
+                      {share(r.count)}%
+                    </span>
+                  </span>
+                </div>
+                <div class="mt-1.5 h-2 overflow-hidden rounded-full bg-slate-100 dark:bg-slate-800">
+                  <div
+                    class="h-full rounded-full bg-indigo-500 transition-[width] duration-500 dark:bg-indigo-400"
+                    style={`width:${Math.max(2, (r.count / peak) * 100).toFixed(1)}%`}
+                  />
+                </div>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <p class="mt-5 text-xs leading-relaxed text-slate-500 dark:text-slate-400">
+        {s.ecoNote} {asOf && `${s.lastUpdated}: ${asOf}`}
+      </p>
+    </div>
+
+    <div class="card flex flex-col gap-6">
+      <div>
+        <h3 class="section-title">{s.ecoLicense}</h3>
+        <div class="mt-4 flex items-center gap-5">
+          <svg viewBox="0 0 140 140" class="h-28 w-28 shrink-0" role="img" aria-label={`${s.ecoOpen}: ${openCount} / ${total}`}>
+            <circle
+              cx="70"
+              cy="70"
+              r={R}
+              fill="none"
+              stroke-width="14"
+              class="stroke-slate-100 dark:stroke-slate-800"
+            />
+            <circle
+              cx="70"
+              cy="70"
+              r={R}
+              fill="none"
+              stroke-width="14"
+              stroke-linecap="round"
+              stroke-dasharray={`${arc.toFixed(2)} ${(CIRC - arc).toFixed(2)}`}
+              transform="rotate(-90 70 70)"
+              class="stroke-emerald-500"
+            />
+            <text
+              x="70"
+              y="68"
+              text-anchor="middle"
+              font-size="26"
+              font-weight="600"
+              class="fill-slate-900 dark:fill-slate-100">{openShare}%</text
+            >
+            <text
+              x="70"
+              y="86"
+              text-anchor="middle"
+              font-size="11"
+              class="fill-slate-500 dark:fill-slate-400">{openCount} / {total}</text
+            >
+          </svg>
+          <ul class="space-y-2 text-sm">
+            <li class="flex items-center gap-2">
+              <span class="h-2.5 w-2.5 shrink-0 rounded-sm bg-emerald-500"></span>
+              <span class="text-slate-600 dark:text-slate-400">{s.ecoOpen}</span>
+              <span class="tabular-nums ml-auto font-medium text-slate-900 dark:text-slate-100"
+                >{openCount}</span
+              >
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="h-2.5 w-2.5 shrink-0 rounded-sm bg-slate-300 dark:bg-slate-700"></span>
+              <span class="text-slate-600 dark:text-slate-400">{s.ecoProprietary}</span>
+              <span class="tabular-nums ml-auto font-medium text-slate-900 dark:text-slate-100"
+                >{closedCount}</span
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="section-title">{s.ecoHosting}</h3>
+        <div class="mt-4 flex h-3 overflow-hidden rounded-full">
+          <div class="bg-indigo-500 dark:bg-indigo-400" style={`width:${selfShare}%`}></div>
+          <div class="bg-slate-300 dark:bg-slate-700" style={`width:${100 - selfShare}%`}></div>
+        </div>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li class="flex items-center gap-2">
+            <span class="h-2.5 w-2.5 shrink-0 rounded-sm bg-indigo-500 dark:bg-indigo-400"></span>
+            <span class="text-slate-600 dark:text-slate-400">{s.selfHosted}</span>
+            <span class="tabular-nums ml-auto font-medium text-slate-900 dark:text-slate-100"
+              >{selfCount}</span
+            >
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="h-2.5 w-2.5 shrink-0 rounded-sm bg-slate-300 dark:bg-slate-700"></span>
+            <span class="text-slate-600 dark:text-slate-400">{s.ecoManaged}</span>
+            <span class="tabular-nums ml-auto font-medium text-slate-900 dark:text-slate-100"
+              >{managedCount}</span
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

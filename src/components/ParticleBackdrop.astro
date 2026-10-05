@@ -1,0 +1,108 @@
+---
+export interface Props {
+  /** 附加到 canvas 的类名，用于在父容器内定位。 */
+  class?: string;
+}
+
+const { class: className = '' } = Astro.props;
+---
+
+<canvas
+  class:list={['pointer-events-none absolute inset-0 h-full w-full', className]}
+  data-particle-backdrop
+  aria-hidden="true"></canvas>
+
+<style>
+  /* 左侧压暗，保证 Hero 文字始终可读；右侧留给粒子。 */
+  canvas[data-particle-backdrop] {
+    opacity: 0.5;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 55%, black 100%);
+    mask-image: linear-gradient(to right, transparent 0%, black 55%, black 100%);
+  }
+  :global(.dark) canvas[data-particle-backdrop] {
+    opacity: 0.6;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    canvas[data-particle-backdrop] {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  let dispose: (() => void) | undefined;
+  let boundCanvas: HTMLCanvasElement | null = null;
+
+  async function mount() {
+    const canvas = document.querySelector<HTMLCanvasElement>('canvas[data-particle-backdrop]');
+    // 同一个 canvas 已经挂载过就不再重复初始化（首帧与 astro:page-load 会撞车）
+    if (!canvas || canvas === boundCanvas) return;
+    boundCanvas = canvas;
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    // 动态导入：粒子库单独分包，不拖慢首屏，也不参与任何可索引内容。
+    let lib: typeof import('particulus');
+    try {
+      lib = await import('particulus');
+    } catch {
+      return;
+    }
+
+    const { ParticleField, spiral, star, circle, breathe } = lib;
+
+    let field;
+    try {
+      field = new ParticleField(canvas, {
+        count: 800,
+        particle: { size: 1.6, sizeJitter: 0.7, color: '#818cf8' },
+        // 不指定 distance，用库按密度反推的默认半径——这是实测观感最好的一档。
+        // 注意：库会在连线数触顶时打印一条截断警告。实测这条警告无法消除：
+        // 形变过程中粒子会短暂挤成一团，产生大量长度趋近于零的连线，一瞬就顶满上限。
+        // maxLinks 因此只是安全阀，限制每帧最多画多少条，而不是用来消除警告的。
+        links: { color: 'rgba(129,140,248,0.35)', width: 0.6, maxLinks: 10000 },
+        autoResize: true,
+        // 尊重系统「减少动态效果」设置
+        reducedMotion: 'respect',
+      });
+    } catch {
+      return;
+    }
+
+    const shapes = [spiral({ turns: 3 }), star({ points: 6, innerRatio: 0.5 }), circle({ thickness: 0.3 })];
+    let index = 0;
+    let timer: number | undefined;
+    let stopped = false;
+
+    const step = async () => {
+      if (stopped) return;
+      try {
+        await field.morphTo(shapes[index % shapes.length], {
+          duration: 1600,
+          behavior: breathe({ amplitude: 2.5, speed: 0.4 }),
+        });
+      } catch {
+        return;
+      }
+      index += 1;
+      timer = window.setTimeout(step, 3400);
+    };
+    void step();
+
+    dispose = () => {
+      stopped = true;
+      if (timer !== undefined) clearTimeout(timer);
+      field.dispose();
+      boundCanvas = null;
+    };
+  }
+
+  document.addEventListener('astro:page-load', mount);
+  document.addEventListener('astro:before-swap', () => {
+    dispose?.();
+    dispose = undefined;
+  });
+
+  // 兜底：若脚本执行晚于首次 astro:page-load，事件不会再触发
+  void mount();
+</script>
