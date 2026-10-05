@@ -12,7 +12,8 @@
     "preview": "astro preview",
     "check": "astro check",
     "fetch:github": "node scripts/fetch-github.mjs",
-    "fetch:news": "node scripts/fetch-news.mjs"
+    "fetch:news": "node scripts/fetch-news.mjs",
+    "ping:indexnow": "node scripts/ping-indexnow.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",

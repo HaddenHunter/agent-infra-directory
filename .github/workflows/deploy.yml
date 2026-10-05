@@ -46,3 +46,10 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+
+      # 部署完成之后再推，保证 IndexNow 去取 key 文件时它已经在线。
+      # 脚本零依赖（只用 node 自带的 fetch），用 runner 预装的 node 即可。
+      - uses: actions/checkout@v4
+
+      - name: Notify IndexNow (Bing / Yandex)
+        run: node scripts/ping-indexnow.mjs
