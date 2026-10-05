@@ -1,0 +1,19 @@
+{
+  "name": "Nutanix MCP Server",
+  "category": "mcp",
+  "description": "Open-source MCP server exposing Nutanix Cloud Platform via the Prism v4 API.",
+  "descriptionZh": "开源 MCP Server，通过 Prism v4 API 暴露 Nutanix Cloud Platform 能力。",
+  "license": "Apache-2.0",
+  "github": "https://github.com/nutanix/ntnx-api-mcp-server",
+  "language": "Python",
+  "selfHosted": true,
+  "keyFact": "Nutanix released an open-source MCP server for its Cloud Platform on 10 August 2026, letting agents drive infrastructure through the Prism v4 API; it ships with READ_ONLY_MODE defaulting to true and is offered as a technology preview.",
+  "keyFactZh": "Nutanix 于 2026 年 8 月 10 日发布面向其云平台的开源 MCP Server，让 Agent 通过 Prism v4 API 操作基础设施；它默认将 READ_ONLY_MODE 置为 true，并以技术预览形式提供。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "caveat": "Technology preview at verification time; it was not independently confirmed as production-ready.",
+  "caveatZh": "核验时为技术预览版本，尚无法独立确认其可用于生产环境。",
+  "stars": 23,
+  "starsAsOf": "2026-10-04",
+  "lastPush": "2026-08-10"
+}

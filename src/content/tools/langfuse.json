@@ -1,0 +1,19 @@
+{
+  "name": "Langfuse",
+  "category": "observability",
+  "description": "Open-source LLM observability and evaluation, acquired by ClickHouse in 2026.",
+  "descriptionZh": "开源 LLM 可观测与评测平台，2026 年被 ClickHouse 收购。",
+  "license": "MIT (core; ee/ is commercial)",
+  "github": "https://github.com/langfuse/langfuse",
+  "selfHosted": true,
+  "keyFact": "Langfuse is an open-core LLM observability and evaluation platform whose repository is MIT-licensed except for the ee/ directory; ClickHouse acquired it in January 2026 and committed to keeping the MIT product open, with Cloud and self-hosted running the same codebase on ClickHouse.",
+  "keyFactZh": "Langfuse 是 open-core 的 LLM 可观测与评测平台，除 ee/ 目录外整仓为 MIT 许可；ClickHouse 于 2026 年 1 月将其收购，并承诺 MIT 产品继续开源，Cloud 与自托管运行同一套基于 ClickHouse 的代码库。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "caveat": "Enterprise features (RBAC, audit logs) live in the separately licensed ee/ directory.",
+  "caveatZh": "企业功能（RBAC、审计日志）位于单独授权许可的 ee/ 目录。",
+  "stars": 35358,
+  "starsAsOf": "2026-10-04",
+  "language": "TypeScript",
+  "lastPush": "2026-10-03"
+}

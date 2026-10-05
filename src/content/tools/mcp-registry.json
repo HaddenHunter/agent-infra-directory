@@ -1,0 +1,19 @@
+{
+  "name": "Official MCP Registry",
+  "category": "mcp",
+  "description": "The authoritative registry for publicly available MCP servers.",
+  "descriptionZh": "公开可用 MCP 服务器的权威注册中心。",
+  "license": "NOASSERTION (see repository)",
+  "github": "https://github.com/modelcontextprotocol/registry",
+  "selfHosted": true,
+  "keyFact": "The official MCP Registry, live at registry.modelcontextprotocol.io since its preview on 8 September 2025, is a metaregistry that stores server.json metadata rather than code; it validates namespace ownership via reverse-DNS or GitHub OIDC and exposes a REST API such as GET /v0/servers.",
+  "keyFactZh": "官方 MCP Registry 自 2025 年 9 月 8 日 preview 起在 registry.modelcontextprotocol.io 上线，是一个只存 server.json 元数据、不托管代码的元注册中心；它通过反向 DNS 或 GitHub OIDC 校验命名空间归属，并暴露 GET /v0/servers 等 REST API。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "caveat": "GitHub reports the repository license as NOASSERTION; the exact SPDX license could not be confirmed at verification time.",
+  "caveatZh": "GitHub 将该仓库的许可证标为 NOASSERTION；核验时未能确认其确切 SPDX 许可。",
+  "stars": 7314,
+  "starsAsOf": "2026-10-04",
+  "language": "Go",
+  "lastPush": "2026-09-30"
+}

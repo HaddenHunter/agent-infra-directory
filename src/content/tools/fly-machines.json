@@ -1,0 +1,19 @@
+{
+  "name": "Fly.io Machines",
+  "category": "sandbox",
+  "description": "Firecracker microVMs with suspend/resume across 18+ regions.",
+  "descriptionZh": "可 suspend/resume、覆盖 18+ 区域的 Firecracker microVM。",
+  "license": "Proprietary (platform); flyctl CLI is Apache-2.0",
+  "github": "https://github.com/superfly/flyctl",
+  "selfHosted": false,
+  "keyFact": "Fly.io Machines are hardware-virtualized Firecracker microVMs that boot in under a second and can suspend and resume, spanning more than 18 regions; Fly also ships Sprites, a persistent checkpoint/restore product aimed at agents.",
+  "keyFactZh": "Fly.io Machines 是硬件虚拟化的 Firecracker microVM，启动低于 1 秒并支持挂起/恢复，覆盖 18 个以上区域；Fly 另提供面向 Agent 的持久化 checkpoint/restore 产品 Sprites。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "caveat": "Managed-only; the platform is proprietary and flyctl (the CLI) is Apache-2.0.",
+  "caveatZh": "仅托管，平台为专有，flyctl（CLI）为 Apache-2.0。",
+  "stars": 1717,
+  "starsAsOf": "2026-10-04",
+  "language": "Go",
+  "lastPush": "2026-10-02"
+}

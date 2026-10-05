@@ -1,0 +1,16 @@
+{
+  "name": "K8E",
+  "category": "sandbox",
+  "description": "A k3s-derived Kubernetes distribution, repositioned in 2026 as an agent sandbox matrix.",
+  "descriptionZh": "由 k3s 派生的 Kubernetes 发行版，2026 年转型为 Agent 沙箱矩阵。",
+  "license": "Apache-2.0",
+  "github": "https://github.com/xiaods/k8e",
+  "language": "Go",
+  "selfHosted": true,
+  "keyFact": "K8E originally stood for Kubernetes Easy Engine — a k3s-derived lightweight Kubernetes distribution — and in 2026 repositioned itself as an open-source agentic AI sandbox matrix offering a sub-100MB single binary (its build script caps the binary at 81MB), pluggable gVisor/Kata/Firecracker isolation and an E2B-compatible API.",
+  "keyFactZh": "K8E 原意是 Kubernetes Easy Engine——一个由 k3s 派生的轻量 Kubernetes 发行版——2026 年转型为开源的 Agentic AI 沙箱矩阵：单二进制体积低于 100MB（其构建脚本将二进制上限设为 81MB），支持可插拔的 gVisor/Kata/Firecracker 隔离与 E2B 兼容 API。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "caveat": "Its lineage matters when evaluating maturity: the project began as a Kubernetes distribution, and the agent-sandbox positioning is a 2026 rebrand rather than a from-scratch agent-native design.",
+  "caveatZh": "评估成熟度时需注意其出身：该项目最初是 Kubernetes 发行版，Agent 沙箱定位是 2026 年的重新定位，而非从零设计的 Agent 原生方案。"
+}

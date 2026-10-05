@@ -1,0 +1,19 @@
+{
+  "name": "MCP Reference Servers",
+  "category": "mcp",
+  "description": "The official reference MCP server collection maintained by the MCP steering group.",
+  "descriptionZh": "由 MCP steering group 维护的官方参考 MCP 服务器集合。",
+  "license": "MIT (new contributions under Apache-2.0)",
+  "github": "https://github.com/modelcontextprotocol/servers",
+  "selfHosted": true,
+  "keyFact": "The modelcontextprotocol/servers repository is the official set of reference MCP implementations, now trimmed to about seven servers (Everything, Fetch, Filesystem, Git, Memory, Sequential Thinking, Time) with the rest moved to servers-archived; the README directs users to registry.modelcontextprotocol.io for discovery, and it is mid-transition from MIT to Apache-2.0 for new contributions.",
+  "keyFactZh": "modelcontextprotocol/servers 是官方参考 MCP 实现集合，现已精简至约 7 个服务器（Everything、Fetch、Filesystem、Git、Memory、Sequential Thinking、Time），其余移入 servers-archived；README 引导用户改用 registry.modelcontextprotocol.io 发现服务器，且新贡献正从 MIT 过渡到 Apache-2.0。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "caveat": "Repository is mid-transition between MIT and Apache-2.0; check per-file licensing before commercial reuse.",
+  "caveatZh": "仓库正处于 MIT 与 Apache-2.0 的过渡期；商用前请逐文件核对许可。",
+  "stars": 90998,
+  "starsAsOf": "2026-10-04",
+  "language": "TypeScript",
+  "lastPush": "2026-10-04"
+}

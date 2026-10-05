@@ -1,0 +1,210 @@
+---
+import { ClientRouter } from 'astro:transitions';
+import { SITE_URL, t, type Locale, locales } from '../i18n/ui';
+import '../styles/global.css';
+
+export interface Props {
+  locale: Locale;
+  title: string;
+  description: string;
+  /** 不含域名的路径，如 /tools/langgraph/ */
+  path: string;
+  /** 各语言的对应路径，用于 hreflang */
+  alternates?: Partial<Record<Locale, string>>;
+  /** JSON-LD 图谱，object 或 array */
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
+  ogType?: string;
+}
+
+const {
+  locale,
+  title,
+  description,
+  path,
+  alternates,
+  jsonLd,
+  ogType = 'website',
+} = Astro.props;
+
+const strings = t(locale);
+const canonical = new URL(path, SITE_URL).href;
+const alts = alternates ?? { [locale]: path };
+const otherLocale: Locale = locale === 'en' ? 'zh' : 'en';
+const switchPath = alts[otherLocale] ?? (otherLocale === 'zh' ? '/zh/' : '/');
+const graph = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
+const toolsIndex = locale === 'en' ? '/tools/' : '/zh/tools/';
+const home = locale === 'en' ? '/' : '/zh/';
+---
+
+<!doctype html>
+<html lang={locale === 'zh' ? 'zh-CN' : 'en'}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    {
+      locales.map((l) =>
+        alts[l] ? (
+          <link
+            rel="alternate"
+            hreflang={l === 'zh' ? 'zh-CN' : 'en'}
+            href={new URL(alts[l]!, SITE_URL).href}
+          />
+        ) : null
+      )
+    }
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href={new URL(alts.en ?? path, SITE_URL).href}
+    />
+
+    <meta property="og:type" content={ogType} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content={strings.siteName} />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    {
+      graph.map((node) => (
+        <script type="application/ld+json" set:html={JSON.stringify(node)} />
+      ))
+    }
+
+    {/* 主题初始化：内联执行，避免暗色模式闪白 */}
+    <script is:inline>
+      (function () {
+        try {
+          var saved = localStorage.getItem('theme');
+          var dark = saved
+            ? saved === 'dark'
+            : window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (dark) document.documentElement.classList.add('dark');
+        } catch (e) {}
+      })();
+    </script>
+
+    <ClientRouter />
+  </head>
+  <body class="min-h-screen">
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:absolute focus:left-3 focus:top-3 focus:z-50 focus:rounded focus:bg-white focus:px-3 focus:py-2 focus:shadow"
+      >Skip to content</a
+    >
+
+    <header
+      class="sticky top-0 z-40 border-b border-slate-200/80 bg-white/80 backdrop-blur
+        dark:border-slate-800/80 dark:bg-slate-950/80"
+    >
+      <div class="mx-auto flex max-w-6xl items-center gap-3 px-4 py-3">
+        <a href={home} class="flex shrink-0 items-center gap-2 font-semibold text-slate-900 dark:text-slate-100">
+          <span
+            class="grid h-7 w-7 place-items-center rounded-lg bg-indigo-600 text-sm font-bold text-white"
+            >A</span
+          >
+          <span class="hidden sm:inline">{strings.siteName}</span>
+        </a>
+
+        <form action={toolsIndex} method="get" class="ml-auto hidden flex-1 justify-end md:flex">
+          <label class="relative w-full max-w-xs">
+            <span class="sr-only">Search tools</span>
+            <input
+              type="search"
+              name="q"
+              placeholder={locale === 'zh' ? '搜索工具、许可证、语言…' : 'Search tools, license, language…'}
+              class="w-full rounded-lg border border-slate-300 bg-white py-1.5 pl-9 pr-3 text-sm
+                placeholder:text-slate-400 focus:border-indigo-500 focus:outline-none
+                focus:ring-2 focus:ring-indigo-200
+                dark:border-slate-700 dark:bg-slate-900 dark:focus:ring-indigo-900"
+            />
+            <svg
+              class="pointer-events-none absolute left-2.5 top-2 h-4 w-4 text-slate-400"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </label>
+        </form>
+
+        <nav class="ml-auto flex shrink-0 items-center gap-2 md:ml-0">
+          <a href={toolsIndex} class="btn btn-ghost hidden sm:inline-flex">
+            {locale === 'zh' ? '全部工具' : 'All tools'}
+          </a>
+          <a href={switchPath} class="btn btn-ghost">{strings.readIn}</a>
+          <button
+            id="theme-toggle"
+            type="button"
+            class="btn btn-ghost !px-2"
+            aria-label="Toggle dark mode"
+          >
+            <svg class="h-4 w-4 dark:hidden" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path>
+            </svg>
+            <svg class="hidden h-4 w-4 dark:block" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+            </svg>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="mx-auto max-w-6xl px-4 py-10">
+      <slot />
+    </main>
+
+    <footer class="mt-20 border-t border-slate-200 py-10 text-sm text-slate-500 dark:border-slate-800 dark:text-slate-400">
+      <div class="mx-auto flex max-w-6xl flex-col gap-3 px-4 sm:flex-row sm:items-center sm:justify-between">
+        <p>{strings.tagline}</p>
+        <nav class="flex flex-wrap gap-4">
+          <a
+            data-astro-prefetch="false"
+            class="hover:text-slate-900 dark:hover:text-slate-100"
+            href="/llms.txt">llms.txt</a
+          >
+          <a
+            data-astro-prefetch="false"
+            class="hover:text-slate-900 dark:hover:text-slate-100"
+            href="/sitemap-index.xml">sitemap</a
+          >
+          <a class="hover:text-slate-900 dark:hover:text-slate-100" href={toolsIndex}>
+            {locale === 'zh' ? '全部工具' : 'All tools'}
+          </a>
+        </nav>
+      </div>
+      <p class="mx-auto mt-4 max-w-6xl px-4 text-xs">
+        {
+          locale === 'zh'
+            ? '每条记录均标注核验日期；星标为时点数据，由 GitHub API 自动回填。存在争议的事实以「注意」形式显式标注。'
+            : 'Every entry carries a verification date; star counts are point-in-time and auto-populated from the GitHub API. Disputed facts are flagged explicitly as caveats.'
+        }
+      </p>
+    </footer>
+
+    <script>
+      function initTheme() {
+        const btn = document.getElementById('theme-toggle');
+        if (!btn || btn.dataset.bound === '1') return;
+        btn.dataset.bound = '1';
+        btn.addEventListener('click', () => {
+          const isDark = document.documentElement.classList.toggle('dark');
+          try {
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+          } catch (e) {}
+        });
+      }
+      initTheme();
+      document.addEventListener('astro:after-swap', initTheme);
+    </script>
+  </body>
+</html>

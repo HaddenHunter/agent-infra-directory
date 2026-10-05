@@ -1,0 +1,15 @@
+{
+  "name": "Glama MCP Directory",
+  "category": "mcp",
+  "description": "Third-party MCP server directory with quality grading and an online inspector.",
+  "descriptionZh": "第三方 MCP 服务器目录，提供质量分级与在线 inspector。",
+  "license": "Proprietary (directory); synced source list is MIT",
+  "language": "N/A (directory)",
+  "selfHosted": false,
+  "keyFact": "Glama runs a third-party directory of MCP servers that mirrors the community-maintained punkpeye/awesome-mcp-servers list and adds A–F quality grading plus an online inspector; it is independent of the official registry at registry.modelcontextprotocol.io.",
+  "keyFactZh": "Glama 运营一个第三方 MCP 服务器目录，同步社区维护的 punkpeye/awesome-mcp-servers 清单，并额外提供 A–F 质量分级与在线 inspector；它与官方 registry.modelcontextprotocol.io 相互独立。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "caveat": "A discovery directory rather than a runtime tool; its grading methodology is not published in detail, so treat rankings as indicative rather than authoritative.",
+  "caveatZh": "它是发现型目录而非运行时工具；其分级方法未详细公开，因此评级仅供参考，不宜当作权威结论。"
+}

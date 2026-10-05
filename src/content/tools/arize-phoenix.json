@@ -1,0 +1,19 @@
+{
+  "name": "Arize Phoenix",
+  "category": "observability",
+  "description": "OpenTelemetry-based LLM tracing and evaluation, licensed under ELv2.",
+  "descriptionZh": "基于 OpenTelemetry 的 LLM 追踪与评测，采用 ELv2 许可。",
+  "license": "Elastic License 2.0 (ELv2)",
+  "github": "https://github.com/Arize-ai/phoenix",
+  "selfHosted": true,
+  "keyFact": "Arize Phoenix is a self-hostable LLM tracing and evaluation tool first released on 26 April 2023, built on OpenTelemetry and OpenInference; it is licensed under Elastic License 2.0 rather than Apache-2.0 or MIT, which permits free self-hosting but forbids reselling it as a competing hosted service.",
+  "keyFactZh": "Arize Phoenix 是 2023 年 4 月 26 日首次发布的可自托管 LLM 追踪与评测工具，构建于 OpenTelemetry 与 OpenInference 之上；其许可为 Elastic License 2.0（而非 Apache-2.0 或 MIT），允许免费自托管，但禁止将其作为竞争性托管服务转售。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "caveat": "Sometimes mislabelled as Apache-2.0; the actual license is Elastic License 2.0, which is source-available rather than OSI open source.",
+  "caveatZh": "常被误标为 Apache-2.0，实际许可为 Elastic License 2.0，属 source-available 而非 OSI 开源。",
+  "stars": 11703,
+  "starsAsOf": "2026-10-04",
+  "language": "Python",
+  "lastPush": "2026-10-04"
+}

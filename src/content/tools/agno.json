@@ -1,0 +1,17 @@
+{
+  "name": "Agno",
+  "category": "runtime",
+  "description": "Agent framework with an AgentOS runtime and control plane, formerly Phidata.",
+  "descriptionZh": "带 AgentOS 运行时与控制面的 Agent 框架，前身为 Phidata。",
+  "license": "Apache-2.0",
+  "github": "https://github.com/agno-agi/agno",
+  "language": "Python",
+  "selfHosted": true,
+  "keyFact": "Agno (renamed from Phidata in January 2025) is an Apache-2.0 Python agent framework; it switched from MPL-2.0 to Apache-2.0 in February 2026 and since its 2.0 release ships AgentOS, a FastAPI-based runtime with a control-plane UI, JWT RBAC, human-in-the-loop and audit logging.",
+  "keyFactZh": "Agno（2025 年 1 月由 Phidata 更名）是 Apache-2.0 许可的 Python Agent 框架；它于 2026 年 2 月从 MPL-2.0 转为 Apache-2.0，自 2.0 起提供 AgentOS——基于 FastAPI 的运行时，含控制面 UI、JWT RBAC、human-in-the-loop 与审计日志。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "stars": 42545,
+  "starsAsOf": "2026-10-04",
+  "lastPush": "2026-10-03"
+}

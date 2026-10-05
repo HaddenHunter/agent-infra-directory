@@ -1,0 +1,19 @@
+{
+  "name": "Helicone",
+  "category": "observability",
+  "description": "Apache-2.0 LLM observability proxy, now reported to be in maintenance mode.",
+  "descriptionZh": "Apache-2.0 的 LLM 可观测代理，据报道已进入维护模式。",
+  "license": "Apache-2.0",
+  "github": "https://github.com/Helicone/helicone",
+  "selfHosted": true,
+  "keyFact": "Helicone is an Apache-2.0 LLM observability platform known for one-line integration by changing the API base URL; its backend runs on Cloudflare Workers with ClickHouse and Kafka and the vendor reported over 2 billion handled calls, but multiple sources report it entered maintenance mode after an acquisition by Mintlify in March 2026.",
+  "keyFactZh": "Helicone 是 Apache-2.0 的 LLM 可观测平台，以「改一行 baseURL」的接入方式著称；其后端由 Cloudflare Workers + ClickHouse + Kafka 构成，厂商称已处理 20 亿+ 调用，但多方报道称其在 2026 年 3 月被 Mintlify 收购后进入维护模式。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "caveat": "Reported to be in maintenance mode following a March 2026 acquisition; verify current activity before adopting for new production use.",
+  "caveatZh": "据报道在 2026 年 3 月被收购后进入维护模式；用于新生产项目前请先确认其当前活跃度。",
+  "stars": 6199,
+  "starsAsOf": "2026-10-04",
+  "language": "TypeScript",
+  "lastPush": "2026-09-16"
+}

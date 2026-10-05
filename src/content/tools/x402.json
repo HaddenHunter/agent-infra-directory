@@ -1,0 +1,15 @@
+{
+  "name": "x402",
+  "category": "payment",
+  "description": "Open payment protocol reviving HTTP 402, now governed by the Linux Foundation.",
+  "descriptionZh": "复活 HTTP 402 的开放支付协议，现由 Linux Foundation 治理。",
+  "license": "Open specification (Linux Foundation)",
+  "language": "N/A (protocol)",
+  "selfHosted": true,
+  "keyFact": "x402 revives the HTTP 402 status code to let agents pay per request in stablecoins or cards; created by Coinbase, it moved to vendor-neutral governance when the Linux Foundation announced the x402 Foundation's operational launch on 14 July 2026 with 40 members including AWS, Google, Visa, Mastercard and Stripe.",
+  "keyFactZh": "x402 复活 HTTP 402 状态码，让 Agent 可用稳定币或银行卡按请求付费；它由 Coinbase 创建，后转入厂商中立治理——Linux Foundation 于 2026 年 7 月 14 日宣布 x402 Foundation 正式运营，成员达 40 家，包括 AWS、Google、Visa、Mastercard 与 Stripe。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "caveat": "Foundation dates vary by source: an intent was announced around April 2026, while the operational launch was 14 July 2026.",
+  "caveatZh": "基金会时间点来源不一：约 2026 年 4 月宣布成立意向，2026 年 7 月 14 日为首日正式运营。"
+}

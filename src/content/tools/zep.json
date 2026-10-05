@@ -1,0 +1,16 @@
+{
+  "name": "Zep",
+  "category": "memory",
+  "description": "Agent memory platform built on Graphiti, a temporal knowledge graph engine.",
+  "descriptionZh": "基于 Graphiti 时间知识图谱引擎构建的 Agent 记忆平台。",
+  "license": "Apache-2.0 (Graphiti core); Zep Cloud proprietary",
+  "github": "https://github.com/getzep/graphiti",
+  "language": "Python",
+  "selfHosted": true,
+  "keyFact": "Zep is an open-core agent memory platform whose open-source core is Graphiti, an Apache-2.0 temporal knowledge graph engine that tracks both when an event happened and when a fact became invalid; the architecture is described in arXiv:2501.13956, which reports 94.8% on Deep Memory Retrieval versus 93.4% for MemGPT.",
+  "keyFactZh": "Zep 是 open-core 的 Agent 记忆平台，其开源核心是 Graphiti——一个 Apache-2.0 的时间知识图谱引擎，同时记录「事件何时发生」与「事实何时失效」；其架构见论文 arXiv:2501.13956，该论文报告在 Deep Memory Retrieval 上取得 94.8%，高于 MemGPT 的 93.4%。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "caveat": "Only Graphiti (the graph engine) is Apache-2.0; the managed Zep Cloud platform is proprietary. Benchmark figures are the vendor's own published results and have not been independently reproduced here.",
+  "caveatZh": "仅 Graphiti（图引擎）为 Apache-2.0，托管的 Zep Cloud 平台为专有。基准数字来自厂商自行发表的论文，本站未独立复现。"
+}

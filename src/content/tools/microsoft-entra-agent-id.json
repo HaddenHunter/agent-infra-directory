@@ -1,0 +1,13 @@
+{
+  "name": "Microsoft Entra Agent ID",
+  "category": "identity",
+  "description": "Agent identity objects inside the Microsoft Entra suite, tied to Agent 365.",
+  "descriptionZh": "Microsoft Entra 套件内的 Agent 身份对象，与 Agent 365 绑定。",
+  "license": "Proprietary (Microsoft)",
+  "language": "N/A (platform)",
+  "selfHosted": false,
+  "keyFact": "Microsoft Entra Agent ID introduces four object types — agent identity blueprint, blueprint principal, agent identity and agent user — into Microsoft Entra, and ties into Conditional Access, ID Protection and lifecycle governance; licensing requires Microsoft 365 E7 or Microsoft Agent 365.",
+  "keyFactZh": "Microsoft Entra Agent ID 在 Microsoft Entra 中引入四类对象——代理标识蓝图、蓝图主体、代理标识与代理用户，并接入条件访问、ID Protection 与生命周期治理；其许可需 Microsoft 365 E7 或 Microsoft Agent 365。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04"
+}

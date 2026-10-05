@@ -1,0 +1,16 @@
+{
+  "name": "OpenMHP",
+  "category": "mcp",
+  "description": "An MCP server giving agents safe control of laboratory instruments.",
+  "descriptionZh": "让 Agent 安全操控实验室仪器的 MCP 服务器。",
+  "license": "Apache-2.0",
+  "github": "https://github.com/kushalsinha/openmhp",
+  "language": "TypeScript",
+  "selfHosted": true,
+  "keyFact": "OpenMHP (Open Model Hardware Protocol) is an Apache-2.0 MCP server that connects AI agents to laboratory instruments — microscopes, liquid handlers, robotic arms — bridging to OPC UA, ROS 2, SiLA 2, MADSci and PyLabRobot; it is distinct from Anthropic's Model Hardware Standard (MHS), with which it is frequently confused.",
+  "keyFactZh": "OpenMHP（Open Model Hardware Protocol）是 Apache-2.0 的 MCP 服务器，把 AI Agent 连接到实验室仪器（显微镜、液体处理器、机械臂），底层可对接 OPC UA、ROS 2、SiLA 2、MADSci 与 PyLabRobot；它与人容易混淆的 Anthropic Model Hardware Standard（MHS）是两个不同项目。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "caveat": "Very new and low-visibility: the domain was registered in September 2026 and independent third-party coverage is essentially absent. Included for completeness with an explicit maturity warning.",
+  "caveatZh": "非常新且可见度低：域名于 2026 年 9 月才注册，几乎缺乏独立的第三方报道。为完整性收录，但明确标注成熟度风险。"
+}

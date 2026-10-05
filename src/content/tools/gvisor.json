@@ -1,0 +1,19 @@
+{
+  "name": "gVisor",
+  "category": "sandbox",
+  "description": "Google's user-space application kernel for workload isolation, delivered as the runsc OCI runtime.",
+  "descriptionZh": "Google 的用户态应用内核隔离方案，以 runsc 这一 OCI runtime 交付。",
+  "license": "Apache-2.0",
+  "github": "https://github.com/google/gvisor",
+  "language": "Go",
+  "selfHosted": true,
+  "keyFact": "gVisor is Google's Apache-2.0 sandbox that implements a user-space application kernel (Sentry plus Gofer) and ships as the runsc OCI runtime; it is neither a hypervisor nor a syscall filter, and is used by Google Cloud Run and GKE Sandbox.",
+  "keyFactZh": "gVisor 是 Google 以 Apache-2.0 开源的隔离方案，实现了用户态应用内核（Sentry + Gofer），以 runsc 这一 OCI runtime 形式交付；它既非 hypervisor 也非 syscall filter，被 Google Cloud Run 与 GKE Sandbox 采用。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "caveat": "The commonly quoted '200-500ms cold start' has no official published figure; observed numbers range widely (roughly 100ms to multiple seconds) depending on platform and configuration.",
+  "caveatZh": "常被引用的“200-500ms 冷启动”并无官方定值；实测数字随平台与配置差异极大（约 100ms 到数秒不等）。",
+  "stars": 19501,
+  "starsAsOf": "2026-10-04",
+  "lastPush": "2026-10-04"
+}

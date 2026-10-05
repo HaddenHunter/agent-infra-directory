@@ -1,0 +1,17 @@
+{
+  "name": "Stripe Agent Toolkit",
+  "category": "payment",
+  "description": "Stripe's open-source toolkit for giving agents payment and billing tools.",
+  "descriptionZh": "Stripe 的开源工具包，为 Agent 提供支付与计费工具。",
+  "license": "MIT",
+  "github": "https://github.com/stripe/ai",
+  "language": "TypeScript, Python",
+  "selfHosted": true,
+  "keyFact": "Stripe Agent Toolkit was released in November 2024 and is MIT-licensed; it ships as @stripe/agent-toolkit and integrates with LangChain, the Vercel AI SDK and MCP, and Stripe also exposes a remote MCP server at mcp.stripe.com authorized via OAuth.",
+  "keyFactZh": "Stripe Agent Toolkit 于 2024 年 11 月发布，采用 MIT 许可；以 @stripe/agent-toolkit 形式提供并集成 LangChain、Vercel AI SDK 与 MCP，此外 Stripe 还通过 OAuth 授权提供远端 MCP 服务器 mcp.stripe.com。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "stars": 1853,
+  "starsAsOf": "2026-10-04",
+  "lastPush": "2026-10-04"
+}

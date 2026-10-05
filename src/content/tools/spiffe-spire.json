@@ -1,0 +1,17 @@
+{
+  "name": "SPIFFE / SPIRE",
+  "category": "identity",
+  "description": "CNCF-graduated workload identity standard and its reference implementation.",
+  "descriptionZh": "CNCF 毕业级工作负载身份标准及其参考实现。",
+  "license": "Apache-2.0",
+  "github": "https://github.com/spiffe/spire",
+  "selfHosted": true,
+  "keyFact": "SPIFFE is the CNCF Graduated specification (graduated 23 August 2022) for cryptographic workload identity and SPIRE is its reference implementation; together they issue X.509-SVID and JWT-SVID credentials through a Workload API without pre-shared secrets, using node and workload attestation.",
+  "keyFactZh": "SPIFFE 是 CNCF 毕业级（2022 年 8 月 23 日毕业）的加密工作负载身份规范，SPIRE 是其参考实现；二者通过 Workload API 签发 X.509-SVID 与 JWT-SVID 凭据，无需预共享密钥，依赖节点与工作负载 attestation。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "stars": 2569,
+  "starsAsOf": "2026-10-04",
+  "language": "Go",
+  "lastPush": "2026-10-02"
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Agent Identity Protocol (AIP)",
+  "category": "identity",
+  "description": "An IETF Internet-Draft proposing agentic authentication and policy enforcement, submitted with NVIDIA involvement.",
+  "descriptionZh": "一份提出 Agent 认证与策略强制的 IETF 草案，有 NVIDIA 参与署名。",
+  "license": "IETF Internet-Draft (individual submission)",
+  "language": "N/A (specification)",
+  "selfHosted": false,
+  "keyFact": "AIP is an individual IETF Internet-Draft (draft-aip-agent-identity-protocol) last revised 16 March 2026 with NVIDIA-affiliated authorship; it defines a two-layer model of agent identity registration plus signature verification and policy enforcement. It is not an IETF-endorsed standard.",
+  "keyFactZh": "AIP 是一份个人提交的 IETF Internet-Draft（draft-aip-agent-identity-protocol），最后修订于 2026 年 3 月 16 日，署名作者含 NVIDIA 人员；它定义了“Agent 身份注册 + 签名验证与策略强制”的两层模型。它并非 IETF 背书的标准。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "caveat": "Individual drafts have no formal IETF standing. The name 'AIP' is congested: other unrelated drafts use the same acronym.",
+  "caveatZh": "个人草案不具备 IETF 正式地位。且 “AIP” 这一缩写拥挤，另有无关草案使用同名。"
+}

@@ -1,0 +1,17 @@
+{
+  "name": "LlamaIndex",
+  "category": "runtime",
+  "description": "Data framework for LLM apps with agent workflows and 300+ integrations.",
+  "descriptionZh": "面向 LLM 应用的数据框架，含 Agent 工作流与 300+ 集成。",
+  "license": "MIT",
+  "github": "https://github.com/run-llama/llama_index",
+  "language": "Python",
+  "selfHosted": true,
+  "keyFact": "LlamaIndex is an MIT-licensed Python data framework for LLM applications that started as GPT Index in November 2022; its core is llama-index-core with 300+ integration packages, and the company's commercial focus has shifted to LlamaParse while the open-source framework continues to be maintained.",
+  "keyFactZh": "LlamaIndex 是 MIT 许可的 Python LLM 数据框架，2022 年 11 月以 GPT Index 之名起步；其核心为 llama-index-core，附带 300+ 集成包，公司商业重心已转向 LlamaParse，开源框架仍在维护。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "stars": 52405,
+  "starsAsOf": "2026-10-04",
+  "lastPush": "2026-10-01"
+}

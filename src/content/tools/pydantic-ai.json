@@ -1,0 +1,14 @@
+{
+  "name": "Pydantic AI",
+  "category": "runtime",
+  "description": "Type-safe Python agent framework that validates LLM output with Pydantic.",
+  "descriptionZh": "类型安全的 Python Agent 框架，用 Pydantic 校验 LLM 输出。",
+  "license": "MIT",
+  "github": "https://github.com/pydantic/pydantic-ai",
+  "language": "Python",
+  "selfHosted": true,
+  "keyFact": "Pydantic AI is an MIT-licensed Python agent framework from the Pydantic team that validates model output against Pydantic models and can automatically retry when validation fails, bringing the library's type-safety guarantees to agent structured output.",
+  "keyFactZh": "Pydantic AI 是 Pydantic 团队以 MIT 许可开源的 Python Agent 框架，会用 Pydantic 模型校验模型输出，并在校验失败时自动重试，把该库的类型安全保证带入 Agent 的结构化输出。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04"
+}

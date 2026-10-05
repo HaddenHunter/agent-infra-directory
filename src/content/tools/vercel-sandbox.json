@@ -1,0 +1,19 @@
+{
+  "name": "Vercel Sandbox",
+  "category": "sandbox",
+  "description": "Ephemeral Firecracker microVMs on Vercel, one per sandbox.",
+  "descriptionZh": "Vercel 上的临时 Firecracker microVM，每个沙箱一个。",
+  "license": "Proprietary (platform); @vercel/sandbox SDK is Apache-2.0",
+  "github": "https://github.com/vercel/sandbox",
+  "language": "TypeScript",
+  "selfHosted": false,
+  "keyFact": "Vercel Sandbox gives each sandbox its own Firecracker microVM with a dedicated kernel, filesystem and network, starting in milliseconds; it runs on the same Hive infrastructure that powers Vercel's 2M+ daily builds and defaults to a 5-minute timeout with Active CPU billing.",
+  "keyFactZh": "Vercel Sandbox 为每个沙箱提供独立的 Firecracker microVM（专属内核、文件系统与网络），毫秒级启动；它运行在支撑 Vercel 每日 200 万+ 构建的 Hive 基础设施上，默认超时 5 分钟并按 Active CPU 计费。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "caveat": "Managed-only; the platform is proprietary (the @vercel/sandbox SDK is Apache-2.0).",
+  "caveatZh": "仅托管，平台为专有（@vercel/sandbox SDK 为 Apache-2.0）。",
+  "stars": 208,
+  "starsAsOf": "2026-10-04",
+  "lastPush": "2026-09-30"
+}

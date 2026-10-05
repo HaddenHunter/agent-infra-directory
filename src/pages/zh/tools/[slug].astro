@@ -1,0 +1,28 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ToolDetail from '../../../components/ToolDetail.astro';
+import { toolSchema } from '../../../lib/schema';
+import { toolUrl, categories, type Locale } from '../../../i18n/ui';
+
+export async function getStaticPaths() {
+  const tools = await getCollection('tools');
+  return tools.map((tool) => ({ params: { slug: tool.id }, props: { tool } }));
+}
+
+const { tool } = Astro.props as { tool: Awaited<ReturnType<typeof getCollection<'tools'>>>[number] };
+const locale: Locale = 'zh';
+const d = tool.data;
+---
+
+<BaseLayout
+  locale={locale}
+  title={`${d.name} — ${categories[d.category].zh}`}
+  description={d.descriptionZh}
+  path={toolUrl(locale, tool.id)}
+  alternates={{ en: toolUrl('en', tool.id), zh: toolUrl('zh', tool.id) }}
+  jsonLd={toolSchema(locale, tool)}
+  ogType="article"
+>
+  <ToolDetail locale={locale} tool={tool} />
+</BaseLayout>

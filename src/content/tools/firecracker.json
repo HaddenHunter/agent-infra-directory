@@ -1,0 +1,17 @@
+{
+  "name": "Firecracker",
+  "category": "sandbox",
+  "description": "AWS's open-source microVM monitor powering Lambda and Fargate.",
+  "descriptionZh": "AWS 开源的 microVM 虚拟机监控器，支撑 Lambda 与 Fargate。",
+  "license": "Apache-2.0",
+  "github": "https://github.com/firecracker-microvm/firecracker",
+  "language": "Rust",
+  "selfHosted": true,
+  "keyFact": "Firecracker is AWS's Apache-2.0 open-source microVM monitor (Rust) that underpins AWS Lambda and Fargate; it boots a microVM in about 125ms and uses under 5 MiB of memory overhead per VM.",
+  "keyFactZh": "Firecracker 是 AWS 以 Apache-2.0 开源的 microVM 监控器（Rust），是 AWS Lambda 与 Fargate 的底层；其 microVM 启动约 125ms，每个 VM 内存开销低于 5 MiB。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "stars": 37138,
+  "starsAsOf": "2026-10-04",
+  "lastPush": "2026-10-02"
+}

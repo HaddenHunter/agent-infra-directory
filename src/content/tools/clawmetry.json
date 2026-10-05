@@ -1,0 +1,19 @@
+{
+  "name": "ClawMetry",
+  "category": "observability",
+  "description": "Local-first observability dashboard for coding-agent runtimes such as OpenClaw.",
+  "descriptionZh": "面向 OpenClaw 等编码 Agent 运行时的 local-first 可观测仪表盘。",
+  "license": "MIT (core); clawmetry-pro is closed-source",
+  "github": "https://github.com/vivekchand/clawmetry",
+  "language": "Python",
+  "selfHosted": true,
+  "keyFact": "ClawMetry is an MIT-licensed, zero-config observability dashboard that reads the session files coding agents already write and serves a timeline, tool-call replay and token/cost breakdown at localhost:8900; only 3 of its 31 supported runtimes (OpenClaw, NVIDIA NemoClaw, Goose) are covered by the open-source package, with the other 28 handled by the closed-source clawmetry-pro companion.",
+  "keyFactZh": "ClawMetry 是 MIT 许可、零配置的可观测仪表盘，读取编码 Agent 已经写下的会话文件，在 localhost:8900 呈现时间线、工具调用回放与 token/成本明细；其声称支持的 31 个运行时中仅 3 个（OpenClaw、NVIDIA NemoClaw、Goose）由开源包覆盖，其余 28 个依赖闭源的 clawmetry-pro 组件。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "caveat": "Open-core split: the free MIT package covers only OpenClaw, NemoClaw and Goose; Claude Code, Codex, Cursor and others require the paid closed-source companion. New project (first released 2026), tightly coupled to the OpenClaw ecosystem.",
+  "caveatZh": "Open-core 拆分：免费 MIT 包仅覆盖 OpenClaw、NemoClaw 与 Goose；Claude Code、Codex、Cursor 等需付费闭源组件。项目很新（2026 年首发），且与 OpenClaw 生态强绑定。",
+  "stars": 424,
+  "starsAsOf": "2026-10-04",
+  "lastPush": "2026-10-04"
+}

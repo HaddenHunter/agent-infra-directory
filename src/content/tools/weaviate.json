@@ -1,0 +1,17 @@
+{
+  "name": "Weaviate",
+  "category": "memory",
+  "description": "Open-source vector database storing objects and vectors with hybrid search.",
+  "descriptionZh": "同时存储对象与向量、支持混合检索的开源向量数据库。",
+  "license": "BSD-3-Clause",
+  "github": "https://github.com/weaviate/weaviate",
+  "selfHosted": true,
+  "keyFact": "Weaviate is a BSD-3-Clause vector database written in Go and initiated by Bob van Luijt in 2016; it stores objects and vectors together and supports hybrid (vector plus keyword) retrieval, with a managed Weaviate Cloud offered by the company formerly named SeMI Technologies.",
+  "keyFactZh": "Weaviate 是用 Go 编写的 BSD-3-Clause 向量数据库，2016 年由 Bob van Luijt 发起；它把对象与向量一并存储并支持混合（向量 + 关键词）检索，其原名为 SeMI Technologies 的母公司另提供托管的 Weaviate Cloud。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "stars": 16864,
+  "starsAsOf": "2026-10-04",
+  "language": "Go",
+  "lastPush": "2026-10-02"
+}

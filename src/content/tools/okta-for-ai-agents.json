@@ -1,0 +1,15 @@
+{
+  "name": "Okta for AI Agents",
+  "category": "identity",
+  "description": "Okta's agent identity and governance offering, GA in April 2026.",
+  "descriptionZh": "Okta 的 Agent 身份与治理方案，2026 年 4 月 GA。",
+  "license": "Proprietary (managed service)",
+  "language": "N/A (managed service)",
+  "selfHosted": false,
+  "keyFact": "Okta for AI Agents was announced on 16 March 2026 and reached GA on 30 April 2026, providing agent registration and discovery, shadow-agent detection and unified revocation; its Cross App Access (XAA) is an OAuth extension protocol that MCP lists as Enterprise Managed Auth, and Okta is a featured IdP for Claude Enterprise.",
+  "keyFactZh": "Okta for AI Agents 于 2026 年 3 月 16 日宣布、2026 年 4 月 30 日 GA，提供 Agent 注册与发现、影子 Agent 检测与统一撤销；其 Cross App Access（XAA）是 OAuth 的扩展协议，被 MCP 列为 Enterprise Managed Auth，Okta 亦为 Claude Enterprise 的 featured IdP。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "caveat": "Proprietary managed service; no self-hosted or open-source option.",
+  "caveatZh": "专有托管服务，无自托管或开源选项。"
+}

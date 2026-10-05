@@ -1,0 +1,19 @@
+{
+  "name": "AGNTCY Agent Identity",
+  "category": "identity",
+  "description": "Linux Foundation-hosted identity service for agents, MCP servers and multi-agent systems.",
+  "descriptionZh": "Linux Foundation 托管、面向 Agent / MCP Server / 多 Agent 系统的身份服务。",
+  "license": "Apache-2.0",
+  "github": "https://github.com/agntcy/identity-service",
+  "language": "Go",
+  "selfHosted": true,
+  "keyFact": "AGNTCY Agent Identity is an Apache-2.0 service that verifies, registers and issues identities (badges) for MCP servers, A2A agents and OASF entities; AGNTCY was open-sourced by Cisco in March 2025 and donated to the Linux Foundation on 29 July 2025.",
+  "keyFactZh": "AGNTCY Agent Identity 是 Apache-2.0 许可的服务，为 MCP Server、A2A Agent 与 OASF 实体验证、注册并签发身份（badge）；AGNTCY 由 Cisco 于 2025 年 3 月开源，并于 2025 年 7 月 29 日捐赠给 Linux Foundation。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "caveat": "Adoption is light despite heavyweight governance: roughly 2,000 GitHub stars across the whole AGNTCY org as of June 2026.",
+  "caveatZh": "治理阵容虽强但采用度偏低：截至 2026 年 6 月，整个 AGNTCY 组织在 GitHub 上合计约 2,000 星标。",
+  "stars": 67,
+  "starsAsOf": "2026-10-04",
+  "lastPush": "2026-09-29"
+}

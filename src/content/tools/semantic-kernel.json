@@ -1,0 +1,19 @@
+{
+  "name": "Microsoft Semantic Kernel",
+  "category": "runtime",
+  "description": "Microsoft's enterprise SDK for LLM orchestration, now in maintenance mode.",
+  "descriptionZh": "微软的企业级 LLM 编排 SDK，现已进入维护模式。",
+  "license": "MIT",
+  "github": "https://github.com/microsoft/semantic-kernel",
+  "language": "C# / .NET, Python, Java",
+  "selfHosted": true,
+  "keyFact": "Semantic Kernel, first released on 17 March 2023 and used inside Microsoft 365 Copilot, has been merged with AutoGen into Microsoft Agent Framework; Microsoft committed to at least one year of critical fixes on Semantic Kernel v1.x after MAF's 1.0 GA, with all new features going to MAF.",
+  "keyFactZh": "Semantic Kernel 于 2023 年 3 月 17 日首发，并在 Microsoft 365 Copilot 内部使用，现与 AutoGen 合并为 Microsoft Agent Framework；微软承诺在 MAF 1.0 GA 后至少一年内继续为 Semantic Kernel v1.x 提供关键修复，所有新功能均进入 MAF。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "caveat": "In maintenance mode following the merge into Microsoft Agent Framework; only critical fixes are expected.",
+  "caveatZh": "在并入 Microsoft Agent Framework 后处于维护模式，预计仅提供关键修复。",
+  "stars": 28624,
+  "starsAsOf": "2026-10-04",
+  "lastPush": "2026-10-01"
+}

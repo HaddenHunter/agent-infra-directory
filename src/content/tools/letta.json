@@ -1,0 +1,17 @@
+{
+  "name": "Letta",
+  "category": "memory",
+  "description": "Open-source framework for stateful agents, formerly MemGPT.",
+  "descriptionZh": "面向有状态 Agent 的开源框架，前身为 MemGPT。",
+  "license": "Apache-2.0",
+  "github": "https://github.com/letta-ai/letta",
+  "language": "Python",
+  "selfHosted": true,
+  "keyFact": "Letta is the open-source stateful-agent framework renamed from MemGPT in September 2024; MemGPT originated as a paper (arXiv:2310.08560) from the UC Berkeley Sky Computing Lab and Letta Inc. is led by its original authors.",
+  "keyFactZh": "Letta 是 2024 年 9 月由 MemGPT 更名而来的开源有状态 Agent 框架；MemGPT 源自 UC Berkeley Sky Computing Lab 的论文（arXiv:2310.08560），Letta Inc. 由其原始作者领导。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "stars": 25025,
+  "starsAsOf": "2026-10-04",
+  "lastPush": "2026-09-10"
+}

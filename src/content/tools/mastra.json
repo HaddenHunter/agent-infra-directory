@@ -1,0 +1,16 @@
+{
+  "name": "Mastra",
+  "category": "runtime",
+  "description": "TypeScript agent framework with workflows, RAG and eval primitives.",
+  "descriptionZh": "TypeScript Agent 框架，内置工作流、RAG 与评测原语。",
+  "license": "Apache-2.0 (core); ee/ under Mastra Enterprise License",
+  "github": "https://github.com/mastra-ai/mastra",
+  "language": "TypeScript",
+  "selfHosted": true,
+  "keyFact": "Mastra is a TypeScript agent framework whose core is Apache-2.0, but whose ee/ directory ships under the separate Mastra Enterprise License, so it is not a purely Apache-2.0 project.",
+  "keyFactZh": "Mastra 是 TypeScript Agent 框架，其核心为 Apache-2.0，但 ee/ 目录采用单独的 Mastra Enterprise License，因此并非纯 Apache-2.0 项目。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "caveat": "Mixed licensing: production commercial use of the ee/ enterprise directory requires a Mastra license. GitHub reports the repository license as NOASSERTION for this reason.",
+  "caveatZh": "许可混合：若生产环境商用 ee/ 企业目录，需获得 Mastra 授权。正因如此，GitHub 将该仓库许可证标记为 NOASSERTION。"
+}

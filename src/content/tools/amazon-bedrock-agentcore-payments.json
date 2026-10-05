@@ -1,0 +1,13 @@
+{
+  "name": "Amazon Bedrock AgentCore Payments",
+  "category": "payment",
+  "description": "Managed micropayments capability within Amazon Bedrock AgentCore, GA in August 2026.",
+  "descriptionZh": "Amazon Bedrock AgentCore 内的托管微支付能力，2026 年 8 月 GA。",
+  "license": "Proprietary (AWS)",
+  "language": "N/A (managed service)",
+  "selfHosted": false,
+  "keyFact": "Amazon Bedrock AgentCore Payments reached general availability on 18 August 2026, giving agents managed micropayments (often under $1) via Coinbase and Stripe/Privy wallets with x402 support; GA added the Machine Payment Protocol (MPP) co-drafted by Stripe and Tempo, plus payment sessions with spend caps.",
+  "keyFactZh": "Amazon Bedrock AgentCore Payments 于 2026 年 8 月 18 日正式 GA，通过 Coinbase 与 Stripe/Privy 钱包为 Agent 提供托管微支付（常低于 1 美元）并支持 x402；GA 时新增了由 Stripe 与 Tempo 共同起草的 Machine Payment Protocol（MPP），以及带花费上限的支付会话。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04"
+}

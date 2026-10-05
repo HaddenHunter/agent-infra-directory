@@ -1,0 +1,19 @@
+{
+  "name": "Daytona",
+  "category": "sandbox",
+  "description": "Agent sandboxes with independent kernel per sandbox and sub-90ms snapshot resume.",
+  "descriptionZh": "每个沙箱拥有独立内核、快照恢复冷启动低于 90ms 的 Agent 沙箱。",
+  "license": "AGPL-3.0",
+  "github": "https://github.com/daytonaio/daytona",
+  "selfHosted": true,
+  "keyFact": "Daytona is an AGPL-3.0 sandbox platform where each sandbox gets its own kernel, filesystem and network stack, with snapshot-based resume in under 90ms; it is OCI/Docker-compatible with SDKs for Python, TypeScript, Ruby, Go and Java, and the project has disclosed CVEs including a path-traversal issue (GO-2026-5367) and a cross-tenant data exposure.",
+  "keyFactZh": "Daytona 是 AGPL-3.0 的沙箱平台，每个沙箱拥有独立内核、文件系统与网络栈，基于快照的恢复冷启动低于 90ms；它兼容 OCI/Docker，提供 Python、TypeScript、Ruby、Go、Java SDK，且官方披露过多个 CVE（含路径穿越 GO-2026-5367 与跨租户数据泄露）。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "caveat": "AGPL-3.0 has strong copyleft implications for hosted derivatives; the project has publicly disclosed several security CVEs.",
+  "caveatZh": "AGPL-3.0 对托管衍生服务有较强的 copyleft 约束；项目曾公开披露多个安全 CVE。",
+  "stars": 71667,
+  "starsAsOf": "2026-10-04",
+  "archived": true,
+  "lastPush": "2026-07-24"
+}

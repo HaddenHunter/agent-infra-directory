@@ -1,0 +1,19 @@
+{
+  "name": "Coinbase AgentKit",
+  "category": "payment",
+  "description": "Framework-agnostic toolkit giving agents on-chain wallet actions.",
+  "descriptionZh": "框架无关的工具包，为 Agent 提供链上钱包操作能力。",
+  "license": "Apache-2.0",
+  "github": "https://github.com/coinbase/agentkit",
+  "language": "TypeScript, Python",
+  "selfHosted": true,
+  "keyFact": "Coinbase AgentKit launched in November 2024 and is wallet- and framework-agnostic (CDP, Viem, Privy, ZeroDev), exposing 50+ on-chain actions in TypeScript and 30+ in Python; it integrates with LangChain, the Vercel AI SDK and MCP, and requires a CDP API key.",
+  "keyFactZh": "Coinbase AgentKit 于 2024 年 11 月上线，与钱包和框架解耦（支持 CDP、Viem、Privy、ZeroDev），在 TypeScript 中提供 50+ 链上动作、Python 中提供 30+；它集成 LangChain、Vercel AI SDK 与 MCP，需要 CDP API Key。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "caveat": "GitHub's license detector reports NOASSERTION even though the package metadata states Apache-2.0; verify before redistribution.",
+  "caveatZh": "尽管包元数据标注 Apache-2.0，GitHub 的许可证检测结果为 NOASSERTION；再分发前请自行核实。",
+  "stars": 1322,
+  "starsAsOf": "2026-10-04",
+  "lastPush": "2026-09-03"
+}

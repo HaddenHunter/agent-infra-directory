@@ -1,0 +1,15 @@
+{
+  "name": "PEDIGREE",
+  "category": "identity",
+  "description": "An IETF Internet-Draft extending SPIFFE with per-agent delegation and scope reduction.",
+  "descriptionZh": "一份扩展 SPIFFE 的 IETF 草案，增加逐 Agent 委托与权限范围递减。",
+  "license": "IETF Internet-Draft (individual submission)",
+  "language": "N/A (specification)",
+  "selfHosted": false,
+  "keyFact": "PEDIGREE (Per-Agent Delegation Identity with Governance-Enforced Execution) is an individual IETF Internet-Draft published 25 April 2026 under the WIMSE working group; it extends the SPIFFE workload identity model with hop-by-hop encrypted delegation, monotonic scope reduction and two-layer authority enforcement.",
+  "keyFactZh": "PEDIGREE（Per-Agent Delegation Identity with Governance-Enforced Execution）是 2026 年 4 月 25 日发布的个人 IETF 草案，归属 WIMSE 工作组；它在 SPIFFE 工作负载身份模型之上增加了逐跳加密委托、单调递减的权限范围与双层权限强制。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "caveat": "A single-author, early-stage Internet-Draft with no formal IETF standing — it is not a standard or a finished project, and maturity claims should be discounted accordingly.",
+  "caveatZh": "单人作者的早期 Internet-Draft，不具备 IETF 正式地位——既非标准也非成熟项目，评估时应对其成熟度打折。"
+}

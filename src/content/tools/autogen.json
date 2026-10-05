@@ -1,0 +1,19 @@
+{
+  "name": "Microsoft AutoGen",
+  "category": "runtime",
+  "description": "Microsoft's pioneering multi-agent conversation framework, now in maintenance mode.",
+  "descriptionZh": "微软的多 Agent 对话框架先驱，现已进入维护模式。",
+  "license": "MIT (code) / CC-BY-4.0 (docs)",
+  "github": "https://github.com/microsoft/autogen",
+  "language": "Python, .NET",
+  "selfHosted": true,
+  "keyFact": "Microsoft AutoGen entered maintenance mode on 2 October 2025: it receives only bug and security fixes with no new features, and Microsoft directs new projects to Microsoft Agent Framework, which reached 1.0 GA in April 2026; the community fork AG2 continues independently under Apache-2.0.",
+  "keyFactZh": "Microsoft AutoGen 于 2025 年 10 月 2 日进入维护模式：仅接收缺陷与安全修复、不再新增功能，微软引导新项目转向 2026 年 4 月 GA 的 Microsoft Agent Framework；社区分支 AG2 则以 Apache-2.0 独立演进。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "caveat": "Maintenance mode since October 2025 — no new features. Not a starting point for new projects.",
+  "caveatZh": "自 2025 年 10 月起处于维护模式，不再新增功能；不建议新项目采用。",
+  "stars": 61251,
+  "starsAsOf": "2026-10-04",
+  "lastPush": "2026-04-15"
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Microsoft Agent Framework",
+  "category": "runtime",
+  "description": "The unified successor that merges AutoGen and Semantic Kernel; reached 1.0 GA in April 2026.",
+  "descriptionZh": "合并 AutoGen 与 Semantic Kernel 的统一框架；2026 年 4 月达到 1.0 GA。",
+  "license": "MIT",
+  "github": "https://github.com/microsoft/agent-framework",
+  "language": "Python, .NET",
+  "selfHosted": true,
+  "keyFact": "Microsoft Agent Framework reached 1.0 GA in April 2026 and is the merger of Microsoft's AutoGen and Semantic Kernel projects, both of which then moved into maintenance mode.",
+  "keyFactZh": "Microsoft Agent Framework 于 2026 年 4 月达到 1.0 GA，是微软 AutoGen 与 Semantic Kernel 两个项目的合并体，二者随后进入维护模式。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "stars": 13937,
+  "starsAsOf": "2026-10-04",
+  "lastPush": "2026-10-03"
+}

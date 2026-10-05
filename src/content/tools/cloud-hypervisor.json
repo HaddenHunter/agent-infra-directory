@@ -1,0 +1,17 @@
+{
+  "name": "Cloud Hypervisor",
+  "category": "sandbox",
+  "description": "KVM-based Rust VMM built on rust-vmm, dual-licensed Apache-2.0 / MIT.",
+  "descriptionZh": "基于 rust-vmm 的 KVM Rust VMM，Apache-2.0 / MIT 双许可。",
+  "license": "Apache-2.0 OR MIT",
+  "github": "https://github.com/cloud-hypervisor/cloud-hypervisor",
+  "selfHosted": true,
+  "keyFact": "Cloud Hypervisor is a KVM-based virtual machine monitor written in Rust on top of the rust-vmm crates, dual-licensed Apache-2.0 OR MIT; it targets cloud workloads with CPU/memory/device hotplug, Windows and Linux guests, and vhost-user device offload, all with a deliberately small attack surface.",
+  "keyFactZh": "Cloud Hypervisor 是基于 KVM、用 Rust 编写在 rust-vmm crate 之上的虚拟机监控器，采用 Apache-2.0 OR MIT 双许可；它面向云负载，支持 CPU/内存/设备热插拔、Windows 与 Linux guest 以及 vhost-user 设备卸载，并刻意保持极小的攻击面。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "stars": 6285,
+  "starsAsOf": "2026-10-04",
+  "language": "Rust",
+  "lastPush": "2026-10-04"
+}

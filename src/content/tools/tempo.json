@@ -1,0 +1,16 @@
+{
+  "name": "Tempo",
+  "category": "payment",
+  "description": "A payments-first EVM Layer 1 incubated by Stripe and Paradigm.",
+  "descriptionZh": "由 Stripe 与 Paradigm 孵化的支付优先 EVM Layer 1。",
+  "license": "Apache-2.0 OR MIT",
+  "github": "https://github.com/tempoxyz/tempo",
+  "language": "Rust",
+  "selfHosted": true,
+  "keyFact": "Tempo is a payments-first, EVM-compatible Layer 1 incubated by Stripe and Paradigm that launched mainnet on 18 March 2026; it has no native volatile token — gas is paid in USD-denominated TIP-20 stablecoins — and it co-drafted the Machine Payments Protocol (MPP) with Stripe, with node code dual-licensed Apache-2.0 OR MIT.",
+  "keyFactZh": "Tempo 是由 Stripe 与 Paradigm 孵化的支付优先、EVM 兼容 Layer 1，于 2026 年 3 月 18 日上线主网；它没有原生波动性代币——gas 以美元计价的 TIP-20 稳定币支付——并与 Stripe 共同起草了 Machine Payments Protocol（MPP），节点代码采用 Apache-2.0 OR MIT 双许可。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "caveat": "Tempo is a blockchain network, not a 'protocol' — the protocol in this space is MPP. Reported testnet throughput (~20,000 TPS) is an engineering figure, not observed mainnet load, and on-chain value remains small.",
+  "caveatZh": "Tempo 是一条区块链网络而非「协议」——该领域真正的协议是 MPP。其测试网吞吐（约 20,000 TPS）属工程数据而非主网实测负载，且链上沉淀资金规模仍然有限。"
+}

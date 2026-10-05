@@ -1,0 +1,13 @@
+{
+  "name": "Grafana Agent Observability",
+  "category": "observability",
+  "description": "Grafana Cloud's agent observability built on OpenTelemetry gen_ai spans.",
+  "descriptionZh": "Grafana Cloud 基于 OpenTelemetry gen_ai span 的 Agent 可观测能力。",
+  "license": "Proprietary (Grafana Cloud)",
+  "language": "N/A (SaaS)",
+  "selfHosted": false,
+  "keyFact": "Grafana Cloud offers Agent Observability for evaluating and improving production AI agents, consuming OpenTelemetry gen_ai.* spans so it fits an existing Tempo/Prometheus stack; the exact product name is 'Agent Observability', not 'Grafana AI Observability'.",
+  "keyFactZh": "Grafana Cloud 提供 Agent Observability，用于评测与改进生产环境的 AI Agent，它消费 OpenTelemetry 的 gen_ai.* span，可融入现有的 Tempo/Prometheus 技术栈；其官方产品名是 Agent Observability，而非 “Grafana AI Observability”。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04"
+}

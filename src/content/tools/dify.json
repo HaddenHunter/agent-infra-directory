@@ -1,0 +1,19 @@
+{
+  "name": "Dify",
+  "category": "runtime",
+  "description": "Open-source LLM app platform with built-in RAG, workflows and agents.",
+  "descriptionZh": "开源 LLM 应用平台，内置 RAG、工作流与 Agent。",
+  "license": "Dify Open Source License (modified Apache-2.0)",
+  "github": "https://github.com/langgenius/dify",
+  "language": "TypeScript, Python",
+  "selfHosted": true,
+  "keyFact": "Dify is an open-source LLM application platform open-sourced by LangGenius in May 2023, bundling RAG, visual workflows, agents and 50+ tools; it is not OSI open source — it ships under the 'Dify Open Source License', a modified Apache-2.0 that forbids unauthorized multi-tenant SaaS and requires keeping the logo.",
+  "keyFactZh": "Dify 是 LangGenius 于 2023 年 5 月开源的大模型应用平台，内置 RAG、可视化工作流、Agent 与 50+ 工具；它并非 OSI 开源——采用「Dify Open Source License」（修改版 Apache-2.0），禁止未经授权的多租户 SaaS 并要求保留 Logo。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "caveat": "License is a modified Apache-2.0 and is not OSI-approved; GitHub reports it as NOASSERTION. Commercial multi-tenant use requires a commercial license.",
+  "caveatZh": "许可证为修改版 Apache-2.0，未经 OSI 认证（GitHub 标注 NOASSERTION）；商用多租户需另行获得商业许可。",
+  "stars": 157815,
+  "starsAsOf": "2026-10-04",
+  "lastPush": "2026-10-04"
+}

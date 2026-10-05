@@ -1,0 +1,17 @@
+{
+  "name": "Qdrant",
+  "category": "memory",
+  "description": "Rust vector search engine with HNSW and payload filtering, used for agent memory.",
+  "descriptionZh": "基于 HNSW 与载荷过滤的 Rust 向量检索引擎，可作 Agent 记忆层。",
+  "license": "Apache-2.0",
+  "github": "https://github.com/qdrant/qdrant",
+  "selfHosted": true,
+  "keyFact": "Qdrant is an Apache-2.0 vector search engine written in Rust, founded in Berlin in 2021 by Andre Zayarni and Andrey Vasnetsov; it combines HNSW indexing with payload filtering and is offered as Qdrant Cloud, Hybrid and Private deployments.",
+  "keyFactZh": "Qdrant 是用 Rust 编写的 Apache-2.0 向量检索引擎，2021 年由 Andre Zayarni 与 Andrey Vasnetsov 在柏林创立；它结合 HNSW 索引与载荷过滤，提供 Qdrant Cloud、Hybrid 与 Private 三种部署形态。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "stars": 34923,
+  "starsAsOf": "2026-10-04",
+  "language": "Rust",
+  "lastPush": "2026-10-04"
+}

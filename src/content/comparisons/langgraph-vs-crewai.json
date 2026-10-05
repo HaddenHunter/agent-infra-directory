@@ -1,0 +1,52 @@
+{
+  "title": "LangGraph vs CrewAI",
+  "titleZh": "LangGraph 对比 CrewAI",
+  "toolA": "langgraph",
+  "toolB": "crewai",
+  "summary": "LangGraph models an agent as an explicit graph/state machine and treats durable execution and human-in-the-loop as first-class primitives; CrewAI models a system as a crew of role-playing agents. Both are MIT-licensed Python projects.",
+  "summaryZh": "LangGraph 把 Agent 建模为显式的图/状态机，并把持久化执行与 human-in-the-loop 作为一等原语；CrewAI 则把系统建模为一组扮演角色的 Agent 团队（crew）。两者都是 MIT 许可的 Python 项目。",
+  "dimensions": [
+    {
+      "label": "Programming model",
+      "labelZh": "编程模型",
+      "valueA": "Explicit graph / state machine",
+      "valueB": "Role-based agent crews"
+    },
+    {
+      "label": "License",
+      "labelZh": "许可证",
+      "valueA": "MIT",
+      "valueB": "MIT"
+    },
+    {
+      "label": "Primary language",
+      "labelZh": "主要语言",
+      "valueA": "Python",
+      "valueB": "Python"
+    },
+    {
+      "label": "Durable execution",
+      "labelZh": "持久化执行",
+      "valueA": "First-class primitive",
+      "valueB": "Not verified here"
+    },
+    {
+      "label": "Human-in-the-loop",
+      "labelZh": "Human-in-the-loop",
+      "valueA": "First-class primitive",
+      "valueB": "Not verified here"
+    },
+    {
+      "label": "GitHub stars",
+      "labelZh": "GitHub 星标",
+      "valueA": "Not disclosed (commonly confused with langchain monorepo)",
+      "valueB": "~57,000 (2026-08)"
+    },
+    {
+      "label": "Self-hosted",
+      "labelZh": "可自托管",
+      "valueA": "Yes",
+      "valueB": "Yes"
+    }
+  ]
+}

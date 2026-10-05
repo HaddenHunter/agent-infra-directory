@@ -1,0 +1,15 @@
+{
+  "name": "OAuth 2.1 + MCP Authorization",
+  "category": "identity",
+  "description": "The open authorization stack MCP servers are expected to implement.",
+  "descriptionZh": "MCP Server 被要求实现的开放授权技术栈。",
+  "license": "Open standard (IETF / MCP specification)",
+  "language": "N/A (specification)",
+  "selfHosted": false,
+  "keyFact": "The current MCP specification (version 2026-07-28) treats MCP servers as OAuth 2.1 resource servers, requiring PKCE (S256) and the RFC 8707 resource parameter, and the 2026 revision added RFC 9207 issuer validation and a shift toward Client ID Metadata Documents; note that OAuth 2.1 is still an IETF Internet-Draft, while RFC 9728 (OAuth 2.0 Protected Resource Metadata, using /.well-known/oauth-protected-resource) is a published Standards Track RFC.",
+  "keyFactZh": "当前 MCP 规范（版本 2026-07-28）将 MCP Server 视为 OAuth 2.1 资源服务器，强制使用 PKCE(S256) 与 RFC 8707 resource 参数，2026 版新增 RFC 9207 issuer 校验并转向 Client ID Metadata Documents；需注意 OAuth 2.1 目前仍是 IETF Internet-Draft，而 RFC 9728（OAuth 2.0 Protected Resource Metadata，路径 /.well-known/oauth-protected-resource）已是正式 Standards Track RFC。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "caveat": "OAuth 2.1 has not yet become an RFC; it remains an Internet-Draft referenced by the MCP specification.",
+  "caveatZh": "OAuth 2.1 尚未成为 RFC，目前仍是被 MCP 规范引用的 Internet-Draft。"
+}

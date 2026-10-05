@@ -1,0 +1,17 @@
+{
+  "name": "Weights & Biases Weave",
+  "category": "observability",
+  "description": "W&B's agent tracing and evaluation toolkit, SDK under Apache-2.0.",
+  "descriptionZh": "W&B 的 Agent 追踪与评测工具包，SDK 为 Apache-2.0。",
+  "license": "Apache-2.0 (SDK); hosted platform proprietary",
+  "github": "https://github.com/wandb/weave",
+  "selfHosted": true,
+  "keyFact": "Weave is Weights & Biases' Apache-2.0 toolkit for tracing and evaluating AI agents, offering guardrails, a playground and leaderboards; W&B itself has been acquired by CoreWeave, and a self-hosted W&B Server is published separately.",
+  "keyFactZh": "Weave 是 Weights & Biases 以 Apache-2.0 开源的 AI Agent 追踪与评测工具包，提供 guardrails、playground 与 leaderboards；W&B 已被 CoreWeave 收购，另有单独发布的自托管 W&B Server。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "stars": 1135,
+  "starsAsOf": "2026-10-04",
+  "language": "Python",
+  "lastPush": "2026-10-03"
+}

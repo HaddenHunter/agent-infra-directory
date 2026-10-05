@@ -1,0 +1,15 @@
+{
+  "name": "Deno Sandbox",
+  "category": "sandbox",
+  "description": "Deno's managed microVM sandboxes with credential and egress controls.",
+  "descriptionZh": "Deno 的托管 microVM 沙箱，含凭据与出站网络控制。",
+  "license": "Proprietary (platform); @deno/sandbox SDK is MIT",
+  "language": "TypeScript (SDK)",
+  "selfHosted": false,
+  "keyFact": "Deno Sandbox, announced by Ryan Dahl on 3 February 2026, runs lightweight Firecracker microVMs that start in under a second; secrets are never placed in the environment — placeholders are substituted at the outbound host — and network egress is restricted through an allowlist proxy.",
+  "keyFactZh": "Deno Sandbox 由 Ryan Dahl 于 2026 年 2 月 3 日发布，运行轻量级 Firecracker microVM、启动低于 1 秒；密钥不进入环境变量（以占位符在出站主机处替换），出站网络通过 allowlist 代理限制。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "caveat": "Managed-only; the platform is proprietary and the SDK is MIT.",
+  "caveatZh": "仅托管，平台为专有，SDK 为 MIT。"
+}

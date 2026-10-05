@@ -1,0 +1,15 @@
+{
+  "name": "Auth0 for AI Agents",
+  "category": "identity",
+  "description": "Auth0's agent auth suite: user login, delegated authorization and token vault.",
+  "descriptionZh": "Auth0 的 Agent 认证套件：用户登录、委托授权与 Token Vault。",
+  "license": "Proprietary (managed service)",
+  "language": "N/A (managed service)",
+  "selfHosted": false,
+  "keyFact": "Auth0 for AI Agents (formerly Auth for GenAI) handles user authentication, delegated authorization, asynchronous authorization via CIBA push/SMS confirmation and RAG authorization; its Token Vault calls third-party APIs on the user's behalf, and Auth0 FGA adds document-level fine-grained authorization, with integration into Amazon Bedrock AgentCore.",
+  "keyFactZh": "Auth0 for AI Agents（原 Auth for GenAI）处理用户认证、委托授权、基于 CIBA 推送/短信确认的异步授权以及 RAG 授权；其 Token Vault 可代表用户调用第三方 API，Auth0 FGA 提供文档级细粒度授权，并已与 Amazon Bedrock AgentCore 集成。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "caveat": "Proprietary managed service; no self-hosted or open-source option.",
+  "caveatZh": "专有托管服务，无自托管或开源选项。"
+}

@@ -1,0 +1,19 @@
+{
+  "name": "microsandbox",
+  "category": "sandbox",
+  "description": "Self-hosted, local-first microVM sandboxes with OCI image compatibility.",
+  "descriptionZh": "自托管、local-first 的 microVM 沙箱，兼容 OCI 镜像。",
+  "license": "Apache-2.0",
+  "github": "https://github.com/superradcompany/microsandbox",
+  "selfHosted": true,
+  "keyFact": "microsandbox is an Apache-2.0, local-first microVM runtime that gives each workload its own guest Linux kernel and starts in under 100-200ms, with OCI image compatibility and SDKs for Rust, Python, TypeScript and Go; it runs on Linux via KVM, Apple Silicon and Windows via WHP.",
+  "keyFactZh": "microsandbox 是 Apache-2.0、local-first 的 microVM 运行时，为每个工作负载提供独立 guest Linux 内核，启动低于 100-200ms，兼容 OCI 镜像并提供 Rust、Python、TypeScript、Go SDK；在 Linux 上走 KVM，Apple Silicon 与 Windows 上走 WHP。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "caveat": "Labelled beta/experimental at verification time.",
+  "caveatZh": "核验时标注为 beta/experimental 阶段。",
+  "stars": 8555,
+  "starsAsOf": "2026-10-04",
+  "language": "Rust",
+  "lastPush": "2026-10-04"
+}

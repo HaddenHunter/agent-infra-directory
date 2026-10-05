@@ -1,0 +1,19 @@
+{
+  "name": "n8n",
+  "category": "runtime",
+  "description": "Workflow automation platform with 400+ integrations and agent nodes.",
+  "descriptionZh": "工作流自动化平台，含 400+ 集成与 Agent 节点。",
+  "license": "Sustainable Use License (fair-code, source-available)",
+  "github": "https://github.com/n8n-io/n8n",
+  "language": "TypeScript",
+  "selfHosted": true,
+  "keyFact": "n8n is a fair-code, source-available workflow automation platform founded in Berlin in 2019; it offers 400+ integrations plus inline JavaScript/Python code nodes and MCP support, and its Community Edition is free to self-host without an execution cap.",
+  "keyFactZh": "n8n 是 2019 年创立于柏林的 fair-code、source-available 工作流自动化平台；提供 400+ 集成、内联 JavaScript/Python 代码节点与 MCP 支持，其社区版可免费自托管且无执行次数上限。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "caveat": "Source-available under the Sustainable Use License, not OSI-approved open source; enterprise features are separately licensed.",
+  "caveatZh": "采用 Sustainable Use License 的 source-available 模式，非 OSI 认证的开源许可；企业功能需单独授权。",
+  "stars": 206625,
+  "starsAsOf": "2026-10-04",
+  "lastPush": "2026-10-04"
+}

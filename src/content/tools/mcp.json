@@ -1,0 +1,19 @@
+{
+  "name": "Model Context Protocol (MCP)",
+  "category": "mcp",
+  "description": "Anthropic's open tool/context protocol, now hosted by the Linux Foundation's Agentic AI Foundation.",
+  "descriptionZh": "Anthropic 开源的工具与上下文协议，现由 Linux Foundation 旗下 Agentic AI Foundation 托管。",
+  "license": "MIT",
+  "github": "https://github.com/modelcontextprotocol/modelcontextprotocol",
+  "language": "Multiple (Python, TypeScript, ...)",
+  "selfHosted": true,
+  "keyFact": "Anthropic donated the Model Context Protocol to the Agentic AI Foundation (a Linux Foundation directed fund) on 9 December 2025, when it reported 97M+ monthly SDK downloads across Python and TypeScript and more than 10,000 active public MCP servers; the foundation was co-founded by Anthropic, Block and OpenAI.",
+  "keyFactZh": "Anthropic 于 2025 年 12 月 9 日将 Model Context Protocol 捐赠给 Agentic AI Foundation（Linux Foundation 旗下的定向基金），当时官方数据为 Python 与 TypeScript 合计月均 9700 万+ SDK 下载量、超过 10,000 个活跃公共 MCP Server；该基金会由 Anthropic、Block 与 OpenAI 联合创立。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "caveat": "Sponsorship is often misstated: OpenAI is a co-founder of the foundation, not merely a sponsor; Google, Microsoft, AWS, Cloudflare and Bloomberg are supporters. The 97M download figure is a December 2025 snapshot and has since grown.",
+  "caveatZh": "赞助方关系常被误述：OpenAI 是基金会的联合创始方而非单纯赞助商；Google、Microsoft、AWS、Cloudflare 与 Bloomberg 为支持方。9700 万下载量为 2025 年 12 月的时点数据，此后已有增长。",
+  "stars": 9376,
+  "starsAsOf": "2026-10-04",
+  "lastPush": "2026-10-03"
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Haystack",
+  "category": "runtime",
+  "description": "deepset's production LLM framework; v3 adds agent loops and tool execution.",
+  "descriptionZh": "deepset 的生产级 LLM 框架；3.0 起加入 Agent 循环与工具执行。",
+  "license": "Apache-2.0",
+  "github": "https://github.com/deepset-ai/haystack",
+  "language": "Python",
+  "selfHosted": true,
+  "keyFact": "Haystack is deepset's Apache-2.0 LLM framework first released in 2020; version 3.0 moved agent orchestration (tool-execution loop, state and streaming) into the core haystack-ai package and removed ToolInvoker, while enterprise security features stay in deepset's commercial platform.",
+  "keyFactZh": "Haystack 是 deepset 于 2020 年首次发布的 Apache-2.0 LLM 框架；3.0 版把 Agent 编排（工具执行循环、状态与流式）并入核心 haystack-ai 包并移除了 ToolInvoker，其企业级安全能力则保留在 deepset 商业平台中。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "stars": 26646,
+  "starsAsOf": "2026-10-04",
+  "lastPush": "2026-10-02"
+}

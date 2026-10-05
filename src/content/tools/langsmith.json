@@ -1,0 +1,15 @@
+{
+  "name": "LangSmith",
+  "category": "observability",
+  "description": "LangChain's proprietary tracing, evaluation and monitoring platform.",
+  "descriptionZh": "LangChain 出品的专有追踪、评测与监控平台。",
+  "license": "Proprietary (platform); LangChain SDKs are MIT",
+  "language": "N/A (managed platform)",
+  "selfHosted": false,
+  "keyFact": "LangSmith is LangChain's proprietary platform for tracing, evaluation and monitoring of LLM applications, generally available since February 2024; self-hosting is an Enterprise-only option, and in 2026 it introduced SmithDB, a Rust-based data layer the vendor says delivers a P50 latency of 92ms.",
+  "keyFactZh": "LangSmith 是 LangChain 的专有平台，用于 LLM 应用的追踪、评测与监控，自 2024 年 2 月 GA；自托管仅限 Enterprise 版，2026 年推出基于 Rust 的数据层 SmithDB，厂商称其 P50 延迟为 92ms。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "caveat": "Proprietary SaaS; self-hosting is limited to Enterprise agreements. The underlying LangChain/LangGraph SDKs are separately MIT-licensed.",
+  "caveatZh": "专有 SaaS；自托管仅限 Enterprise 合约。底层的 LangChain/LangGraph SDK 另为 MIT 许可。"
+}

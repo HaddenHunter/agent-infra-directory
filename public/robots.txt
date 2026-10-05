@@ -1,0 +1,40 @@
+# ---------------------------------------------------------------------------
+# AI training crawlers (决定模型是否"知道"本站存在)
+# ---------------------------------------------------------------------------
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# ---------------------------------------------------------------------------
+# AI retrieval crawlers (决定模型回答时能否实时引用本站页面)
+# ---------------------------------------------------------------------------
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# ---------------------------------------------------------------------------
+# 常规
+# ---------------------------------------------------------------------------
+User-agent: *
+Allow: /
+
+Disallow: /admin/
+Disallow: /api/
+
+Sitemap: https://agent.c8.fit/sitemap-index.xml

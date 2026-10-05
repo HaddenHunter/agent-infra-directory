@@ -1,0 +1,17 @@
+{
+  "name": "Langflow",
+  "category": "runtime",
+  "description": "Visual canvas for building LangChain-based agents, exportable as an API or MCP server.",
+  "descriptionZh": "可视化画布构建 LangChain 系 Agent，可导出为 API 或 MCP Server。",
+  "license": "MIT",
+  "github": "https://github.com/langflow-ai/langflow",
+  "language": "Python",
+  "selfHosted": true,
+  "keyFact": "Langflow is an MIT-licensed visual builder for LangChain-based agents, sponsored by DataStax (acquired by IBM in May 2025); every node on the canvas can be opened and edited as Python, and a flow can be exported as an OpenAI-compatible API or an MCP server.",
+  "keyFactZh": "Langflow 是 MIT 许可的可视化构建工具，用于搭建基于 LangChain 的 Agent，由 DataStax 赞助（DataStax 已于 2025 年 5 月被 IBM 收购）；画布上的每个节点都可展开编辑为 Python，并可一键导出为 OpenAI 兼容 API 或 MCP Server。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "stars": 155496,
+  "starsAsOf": "2026-10-04",
+  "lastPush": "2026-10-04"
+}

@@ -1,0 +1,105 @@
+---
+import { getCollection, getEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { faqSchema } from '../../lib/schema';
+import { toolUrl, type Locale } from '../../i18n/ui';
+
+export async function getStaticPaths() {
+  const comparisons = await getCollection('comparisons');
+  return comparisons.map((c) => ({ params: { slug: c.id }, props: { comparison: c } }));
+}
+
+const { comparison } = Astro.props as {
+  comparison: Awaited<ReturnType<typeof getCollection<'comparisons'>>>[number];
+};
+const locale: Locale = 'en';
+
+const toolA = await getEntry('tools', comparison.data.toolA);
+const toolB = await getEntry('tools', comparison.data.toolB);
+if (!toolA || !toolB) {
+  throw new Error(`Comparison ${comparison.id} references a missing tool`);
+}
+
+const nameA = toolA.data.name;
+const nameB = toolB.data.name;
+
+const qas = [
+  { q: `${nameA} vs ${nameB}: what is the main difference?`, a: comparison.data.summary },
+  ...comparison.data.dimensions.map((dim) => ({
+    q: `How do ${nameA} and ${nameB} compare on ${dim.label}?`,
+    a: `${nameA}: ${dim.valueA}. ${nameB}: ${dim.valueB}.`,
+  })),
+];
+---
+
+<BaseLayout
+  locale={locale}
+  title={comparison.data.title}
+  description={comparison.data.summary}
+  path={`/compare/${comparison.id}/`}
+  alternates={{ en: `/compare/${comparison.id}/`, zh: `/zh/compare/${comparison.id}/` }}
+  jsonLd={faqSchema(qas)}
+>
+  <nav class="text-sm text-slate-500 dark:text-slate-400">
+    <a class="hover:text-slate-900 dark:hover:text-slate-100" href="/">Home</a>
+    <span class="mx-1">/</span><span>Comparisons</span>
+  </nav>
+
+  <header class="mt-3">
+    <h1 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-50">
+      {comparison.data.title}
+    </h1>
+    <p class="mt-3 max-w-3xl text-lg text-slate-600 dark:text-slate-400">
+      {comparison.data.summary}
+    </p>
+  </header>
+
+  <div class="mt-8 overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-800">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-50 dark:bg-slate-900">
+        <tr>
+          <th class="w-40 px-4 py-3 text-left font-medium text-slate-500 dark:text-slate-400"></th>
+          <th class="px-4 py-3 text-left font-semibold text-slate-900 dark:text-slate-100">
+            <a class="hover:text-indigo-600 dark:hover:text-indigo-400" href={toolUrl(locale, toolA.id)}
+              >{nameA}</a
+            >
+          </th>
+          <th class="px-4 py-3 text-left font-semibold text-slate-900 dark:text-slate-100">
+            <a class="hover:text-indigo-600 dark:hover:text-indigo-400" href={toolUrl(locale, toolB.id)}
+              >{nameB}</a
+            >
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          comparison.data.dimensions.map((dim) => (
+            <tr class="border-t border-slate-200 dark:border-slate-800">
+              <th class="bg-slate-50/60 px-4 py-3 text-left align-top font-medium text-slate-500 dark:bg-slate-900/40 dark:text-slate-400">
+                {dim.label}
+              </th>
+              <td class="px-4 py-3 align-top text-slate-700 dark:text-slate-300">{dim.valueA}</td>
+              <td class="px-4 py-3 align-top text-slate-700 dark:text-slate-300">{dim.valueB}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </div>
+
+  <section class="mt-12">
+    <h2 class="text-xl font-semibold tracking-tight text-slate-900 dark:text-slate-100">FAQ</h2>
+    <div class="mt-4 space-y-3">
+      {
+        qas.map(({ q, a }) => (
+          <details class="card !p-0" open={q === qas[0].q}>
+            <summary class="cursor-pointer px-4 py-3 font-medium text-slate-900 dark:text-slate-100">
+              {q}
+            </summary>
+            <p class="px-4 pb-4 text-sm text-slate-600 dark:text-slate-400">{a}</p>
+          </details>
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>

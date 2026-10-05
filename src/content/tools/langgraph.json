@@ -1,0 +1,19 @@
+{
+  "name": "LangGraph",
+  "category": "runtime",
+  "description": "Graph-based agent runtime by the LangChain team with native durable execution and human-in-the-loop.",
+  "descriptionZh": "LangChain 团队出品的图结构 Agent 运行时，原生支持持久化执行与 human-in-the-loop。",
+  "license": "MIT",
+  "github": "https://github.com/langchain-ai/langgraph",
+  "language": "Python",
+  "selfHosted": true,
+  "keyFact": "LangGraph is an MIT-licensed, graph-based agent runtime from the LangChain team; unlike most orchestration frameworks it treats durable execution and human-in-the-loop as first-class primitives rather than add-ons.",
+  "keyFactZh": "LangGraph 是 LangChain 团队出品的 MIT 许可、基于图结构的 Agent 运行时；与多数编排框架不同，它把持久化执行（durable execution）和 human-in-the-loop 当作一等原语，而非外挂能力。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "caveat": "Star counts circulating for LangGraph (e.g. 147k) are frequently confused with the langchain-ai/langchain monorepo (~136k). LangGraph itself is in the tens of thousands; no verified star figure is published here.",
+  "caveatZh": "网络上流传的 LangGraph 星标数（如 147k）常与 langchain-ai/langchain 主仓库（约 136k）混淆。LangGraph 自身为数万量级；此处不给出未经核实的星标数字。",
+  "stars": 42699,
+  "starsAsOf": "2026-10-04",
+  "lastPush": "2026-10-04"
+}

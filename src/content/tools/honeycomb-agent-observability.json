@@ -1,0 +1,15 @@
+{
+  "name": "Honeycomb Agent Observability",
+  "category": "observability",
+  "description": "Honeycomb's agent observability with Agent Timeline, built on OTel GenAI conventions.",
+  "descriptionZh": "Honeycomb 的 Agent 可观测能力，含 Agent Timeline，基于 OTel GenAI 语义约定。",
+  "license": "Proprietary (SaaS)",
+  "language": "N/A (SaaS)",
+  "selfHosted": false,
+  "keyFact": "Honeycomb launched Agent Observability on 12 May 2026, introducing Agent Timeline for tracing agentic workflows without a proprietary SDK, based on OpenTelemetry GenAI semantic conventions v1.40.0.",
+  "keyFactZh": "Honeycomb 于 2026 年 5 月 12 日发布 Agent Observability，推出用于追踪 Agentic 工作流的 Agent Timeline，无需专有 SDK，基于 OpenTelemetry GenAI 语义约定 v1.40.0。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "caveat": "Agent Timeline was in Early Access at launch.",
+  "caveatZh": "Agent Timeline 发布时处于 Early Access 阶段。"
+}

@@ -1,0 +1,17 @@
+{
+  "name": "smolagents",
+  "category": "runtime",
+  "description": "Hugging Face's minimal agent library built around CodeAgent.",
+  "descriptionZh": "Hugging Face 的极简 Agent 库，以 CodeAgent 为核心。",
+  "license": "Apache-2.0",
+  "github": "https://github.com/huggingface/smolagents",
+  "language": "Python",
+  "selfHosted": true,
+  "keyFact": "smolagents is Hugging Face's Apache-2.0 agent library whose core logic is roughly 1,000 lines; its defining feature is the CodeAgent, which writes its actions as executable code rather than JSON tool calls, and it can execute them in E2B, Modal or Docker sandboxes.",
+  "keyFactZh": "smolagents 是 Hugging Face 以 Apache-2.0 开源的 Agent 库，核心逻辑约 1,000 行；其标志性设计是 CodeAgent——把动作写成可执行代码而非 JSON 工具调用，并可在 E2B、Modal 或 Docker 沙箱中执行。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "stars": 29667,
+  "starsAsOf": "2026-10-04",
+  "lastPush": "2026-09-30"
+}

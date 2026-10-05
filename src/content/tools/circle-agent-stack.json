@@ -1,0 +1,13 @@
+{
+  "name": "Circle Agent Stack",
+  "category": "payment",
+  "description": "Circle's full-stack platform for the agentic economy, native to USDC and x402.",
+  "descriptionZh": "Circle 面向 Agent 经济的全栈平台，原生基于 USDC 与 x402。",
+  "license": "Proprietary (Circle)",
+  "language": "N/A (platform)",
+  "selfHosted": false,
+  "keyFact": "Circle launched Circle Agent Stack on 11 May 2026 as a full-stack platform for the agentic economy; it bundles Agent Wallets, Agent Marketplace, Circle CLI, Nanopayments and Circle Skills, and is natively built on USDC and x402, with Nanopayments supporting payments as small as 0.000001 USDC.",
+  "keyFactZh": "Circle 于 2026 年 5 月 11 日推出 Circle Agent Stack，作为面向 Agent 经济的全栈平台；它包含 Agent Wallets、Agent Marketplace、Circle CLI、Nanopayments 与 Circle Skills，原生构建于 USDC 与 x402 之上，其中 Nanopayments 支持低至 0.000001 USDC 的支付。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04"
+}

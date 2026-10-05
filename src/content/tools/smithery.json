@@ -1,0 +1,19 @@
+{
+  "name": "Smithery",
+  "category": "mcp",
+  "description": "MCP server registry and gateway with managed OAuth and persistence.",
+  "descriptionZh": "MCP 服务器注册表与网关，提供托管 OAuth 与持久连接。",
+  "license": "Proprietary (service); CLI is AGPL-3.0",
+  "github": "https://github.com/smithery-ai/cli",
+  "language": "TypeScript (CLI)",
+  "selfHosted": false,
+  "keyFact": "Smithery is a registry and gateway for MCP servers and agent skills that handles hosted OAuth and persistent connections; the service itself is proprietary, while its CLI at smithery-ai/cli is AGPL-3.0.",
+  "keyFactZh": "Smithery 是 MCP 服务器与 Agent skills 的注册表兼网关，提供托管 OAuth 与持久连接；服务本身为专有，其 CLI（smithery-ai/cli）为 AGPL-3.0。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "caveat": "A claim that Smithery was acquired by Arcade.dev in August 2026 had only a single source and is unverified.",
+  "caveatZh": "关于 Smithery 于 2026 年 8 月被 Arcade.dev 收购的说法仅有单一来源，未获证实。",
+  "stars": 840,
+  "starsAsOf": "2026-10-04",
+  "lastPush": "2026-05-31"
+}

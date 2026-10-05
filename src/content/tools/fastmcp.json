@@ -1,0 +1,17 @@
+{
+  "name": "FastMCP",
+  "category": "mcp",
+  "description": "Pythonic framework for building MCP servers and clients.",
+  "descriptionZh": "用于构建 MCP 服务器与客户端的 Pythonic 框架。",
+  "license": "Apache-2.0",
+  "github": "https://github.com/PrefectHQ/fastmcp",
+  "selfHosted": true,
+  "keyFact": "FastMCP is an Apache-2.0 Python framework for building MCP servers and clients, created by Prefect CEO Jeremiah Lowin; FastMCP 1.0 was incorporated into the official MCP Python SDK in 2024, and the project moved from jlowin/fastmcp to the PrefectHQ organization.",
+  "keyFactZh": "FastMCP 是 Apache-2.0 的 Python 框架，用于构建 MCP 服务器与客户端，由 Prefect CEO Jeremiah Lowin 创建；FastMCP 1.0 于 2024 年被并入官方 MCP Python SDK，仓库也已从 jlowin/fastmcp 迁移至 PrefectHQ 组织。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "stars": 27969,
+  "starsAsOf": "2026-10-04",
+  "language": "Python",
+  "lastPush": "2026-10-04"
+}

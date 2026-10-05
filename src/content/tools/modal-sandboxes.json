@@ -1,0 +1,15 @@
+{
+  "name": "Modal Sandboxes",
+  "category": "sandbox",
+  "description": "Managed container-based sandboxes on Modal, isolated with gVisor.",
+  "descriptionZh": "Modal 平台上的托管容器沙箱，采用 gVisor 隔离。",
+  "license": "Proprietary (platform); modal-client SDK is Apache-2.0",
+  "language": "Python (SDK)",
+  "selfHosted": false,
+  "keyFact": "Modal Sandboxes isolate agent code using gVisor plus Linux namespaces rather than hardware-level microVMs, and support GPU-backed containers with per-second billing; the platform is proprietary, while the modal-client SDK is Apache-2.0.",
+  "keyFactZh": "Modal Sandboxes 使用 gVisor 加 Linux namespaces（而非硬件级 microVM）隔离 Agent 代码，支持带 GPU 的容器并按秒计费；平台本身为专有，modal-client SDK 以 Apache-2.0 开源。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "caveat": "Managed-only: no self-hosted option. Isolation is gVisor-based, which is weaker than hardware virtualization.",
+  "caveatZh": "仅托管、无自托管选项；隔离基于 gVisor，强度低于硬件虚拟化。"
+}

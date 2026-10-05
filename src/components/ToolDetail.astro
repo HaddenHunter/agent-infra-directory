@@ -1,0 +1,160 @@
+---
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import { categories, t, toolMarkdownUrl, type Locale } from '../i18n/ui';
+import { licenseKind, licenseLabels, licenseBadgeClass } from '../lib/license';
+import ToolCard from './ToolCard.astro';
+
+export interface Props {
+  locale: Locale;
+  tool: CollectionEntry<'tools'>;
+}
+
+const { locale, tool } = Astro.props;
+const s = t(locale);
+const d = tool.data;
+
+const name = d.name;
+const description = locale === 'zh' ? d.descriptionZh : d.description;
+const keyFact = locale === 'zh' ? d.keyFactZh : d.keyFact;
+const caveat = locale === 'zh' ? d.caveatZh : d.caveat;
+const categoryLabel = categories[d.category][locale];
+const kind = licenseKind(d.license);
+
+const related = (await getCollection('tools'))
+  .filter((x) => x.data.category === d.category && x.id !== tool.id)
+  .sort((a, b) => (b.data.stars ?? 0) - (a.data.stars ?? 0))
+  .slice(0, 3);
+---
+
+<article>
+  <nav class="text-sm text-slate-500 dark:text-slate-400" aria-label="Breadcrumb">
+    <a class="hover:text-slate-900 dark:hover:text-slate-100" href={locale === 'en' ? '/' : '/zh/'}
+      >{s.home}</a
+    >
+    <span class="mx-1">/</span>
+    <a
+      class="hover:text-slate-900 dark:hover:text-slate-100"
+      href={locale === 'en' ? `/categories/${d.category}/` : `/zh/categories/${d.category}/`}
+      >{categoryLabel}</a
+    >
+  </nav>
+
+  <header class="mt-3">
+    <h1 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-50">{name}</h1>
+    <div class="mt-3 flex flex-wrap items-center gap-2">
+      <span class="badge badge-cat">{categoryLabel}</span>
+      <span class={`badge ${licenseBadgeClass[kind]}`}>{licenseLabels[kind][locale]} · {d.license}</span>
+      {
+        d.stars !== undefined && (
+          <span class="badge badge-neutral">
+            ★ {d.stars.toLocaleString('en-US')}
+            {d.starsAsOf ? <span class="opacity-70">（{d.starsAsOf}）</span> : null}
+          </span>
+        )
+      }
+      {
+        d.selfHosted ? (
+          <span class="badge badge-neutral">{locale === 'zh' ? '可自托管' : 'Self-hosted'}</span>
+        ) : (
+          <span class="badge badge-neutral">{locale === 'zh' ? '仅托管' : 'Managed only'}</span>
+        )
+      }
+      {d.archived && <span class="badge badge-danger">{locale === 'zh' ? '已归档' : 'Archived'}</span>}
+    </div>
+    <p class="mt-4 text-lg text-slate-600 dark:text-slate-400">{description}</p>
+  </header>
+
+  <blockquote class="key-fact mt-6">
+    <p class="text-[15px] leading-relaxed">{keyFact}</p>
+  </blockquote>
+
+  {
+    (caveat || d.archived) && (
+      <p class="alert-caveat mt-4">
+        <strong>{locale === 'zh' ? '注意：' : 'Caveat: '}</strong>
+        {caveat ?? (locale === 'zh' ? '该仓库已归档，不再维护。' : 'This repository is archived and no longer maintained.')}
+      </p>
+    )
+  }
+
+  <section class="mt-8">
+    <h2 class="section-title">{s.facts}</h2>
+    <table class="facts-table mt-3">
+      <tbody>
+        <tr>
+          <th>{s.category}</th>
+          <td>{categoryLabel}</td>
+        </tr>
+        <tr>
+          <th>{s.license}</th>
+          <td>{d.license}</td>
+        </tr>
+        <tr>
+          <th>{s.language}</th>
+          <td>{d.language ?? '—'}</td>
+        </tr>
+        <tr>
+          <th>{s.selfHosted}</th>
+          <td>{d.selfHosted ? s.yes : s.no}</td>
+        </tr>
+        {
+          d.stars !== undefined && (
+            <tr>
+              <th>{s.stars}</th>
+              <td>
+                {d.stars.toLocaleString('en-US')}
+                {d.starsAsOf ? ` (${d.starsAsOf})` : ''}
+              </td>
+            </tr>
+          )
+        }
+        {
+          d.lastPush && (
+            <tr>
+              <th>{locale === 'zh' ? '最近提交' : 'Last push'}</th>
+              <td>{d.lastPush}</td>
+            </tr>
+          )
+        }
+        <tr>
+          <th>{s.updated}</th>
+          <td>{d.updatedDate}</td>
+        </tr>
+        {
+          d.github && (
+            <tr>
+              <th>{s.source}</th>
+              <td>
+                <a class="underline hover:text-indigo-600" href={d.github} rel="nofollow noopener">
+                  {d.github}
+                </a>
+              </td>
+            </tr>
+          )
+        }
+      </tbody>
+    </table>
+    <p class="mt-4 text-sm">
+      <a
+        class="btn btn-ghost"
+        href={toolMarkdownUrl(locale, tool.id)}
+        data-astro-prefetch="false"
+        rel="nofollow">{s.markdownVersion}</a
+      >
+    </p>
+  </section>
+
+  {
+    related.length > 0 && (
+      <section class="mt-12">
+        <h2 class="section-title">{s.relatedTools}</h2>
+        <div class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {related.map((r) => (
+            <ToolCard locale={locale} tool={r} showCategory={false} />
+          ))}
+        </div>
+      </section>
+    )
+  }
+</article>

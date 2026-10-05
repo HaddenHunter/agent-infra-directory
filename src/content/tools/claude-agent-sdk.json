@@ -1,0 +1,17 @@
+{
+  "name": "Claude Agent SDK",
+  "category": "runtime",
+  "description": "Anthropic's SDK for building agents on the Claude Code harness.",
+  "descriptionZh": "Anthropic 的 SDK，用于在 Claude Code 运行时之上构建 Agent。",
+  "license": "MIT (SDK); Claude Code CLI under Anthropic commercial terms",
+  "github": "https://github.com/anthropics/claude-agent-sdk-python",
+  "language": "Python, TypeScript",
+  "selfHosted": true,
+  "keyFact": "The Claude Agent SDK was renamed from the Claude Code SDK on 29 September 2025 and ships for Python and TypeScript under MIT for the SDK code itself; the underlying Claude Code CLI remains governed by Anthropic's commercial terms.",
+  "keyFactZh": "Claude Agent SDK 于 2025 年 9 月 29 日由 Claude Code SDK 更名而来，提供 Python 与 TypeScript 版本，SDK 代码本身为 MIT 许可；其底层的 Claude Code CLI 仍受 Anthropic 商业条款约束。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "stars": 8215,
+  "starsAsOf": "2026-10-04",
+  "lastPush": "2026-10-03"
+}

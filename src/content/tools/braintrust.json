@@ -1,0 +1,19 @@
+{
+  "name": "Braintrust",
+  "category": "observability",
+  "description": "Eval-first AI observability platform with an open-source autoevals library.",
+  "descriptionZh": "以评测为先的 AI 可观测平台，附开源 autoevals 库。",
+  "license": "Proprietary (platform); autoevals is MIT",
+  "github": "https://github.com/braintrustdata/autoevals",
+  "language": "TypeScript (SDK)",
+  "selfHosted": false,
+  "keyFact": "Braintrust is an eval-first AI observability platform whose own storage engine Brainstore is proprietary and written in Rust; its open-source autoevals library is MIT-licensed, and the company raised an $80M Series B in February 2026 at a reported ~$800M valuation.",
+  "keyFactZh": "Braintrust 是以评测为先的 AI 可观测平台，其自研存储引擎 Brainstore 为专有（Rust 编写）；开源的 autoevals 库采用 MIT 许可，公司于 2026 年 2 月完成 8000 万美元 B 轮融资，估值据报约 8 亿美元。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "caveat": "Self-hosting availability is unclear: sources conflict on whether it is a general option or enterprise-only.",
+  "caveatZh": "自托管能力不明确：来源对它是通用选项还是仅企业版存在冲突。",
+  "stars": 1044,
+  "starsAsOf": "2026-10-04",
+  "lastPush": "2026-10-02"
+}

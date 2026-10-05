@@ -1,0 +1,20 @@
+{
+  "name": "Flowise",
+  "category": "runtime",
+  "description": "Visual agent builder acquired by Workday; the repository has been archived.",
+  "descriptionZh": "被 Workday 收购的可视化 Agent 构建器；仓库已归档停更。",
+  "license": "Apache-2.0",
+  "github": "https://github.com/FlowiseAI/Flowise",
+  "language": "TypeScript",
+  "selfHosted": true,
+  "keyFact": "Flowise is an Apache-2.0 visual agent builder acquired by Workday in August 2025; development stopped on 29 July 2026 and the GitHub repository was archived, so the code remains self-hostable but receives no security patches, and Flowise Cloud was set to shut down on 30 November 2026.",
+  "keyFactZh": "Flowise 是 Apache-2.0 的可视化 Agent 构建器，2025 年 8 月被 Workday 收购；2026 年 7 月 29 日停止开发、GitHub 仓库已归档，代码仍可自托管但不再获得安全补丁，Flowise Cloud 计划于 2026 年 11 月 30 日关停。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "caveat": "End-of-life: repository archived August 2026, no further development or security patches. Listed here as a caution, not a recommendation.",
+  "caveatZh": "已终止维护：仓库于 2026 年 8 月归档，不再开发、不再提供安全补丁。此处列出仅为风险提示，并非推荐。",
+  "stars": 55489,
+  "starsAsOf": "2026-10-04",
+  "archived": true,
+  "lastPush": "2026-08-13"
+}

@@ -1,0 +1,19 @@
+{
+  "name": "E2B",
+  "category": "sandbox",
+  "description": "Open-source Firecracker microVM sandboxes for AI agent code execution.",
+  "descriptionZh": "面向 AI Agent 代码执行的开源 Firecracker microVM 沙箱。",
+  "license": "Apache-2.0",
+  "github": "https://github.com/e2b-dev/E2B",
+  "selfHosted": true,
+  "keyFact": "E2B runs each agent session in its own Firecracker microVM with a dedicated guest kernel, reporting roughly 150-200ms warm and 300-500ms cold start; its core runtime is Apache-2.0 and can be self-hosted via E2B Embed or Terraform on AWS/GCP, alongside the vendor's managed cloud.",
+  "keyFactZh": "E2B 为每个 Agent 会话启动独立的 Firecracker microVM（专属 guest 内核），官方给出的启动时间为热启动约 150-200ms、冷启动约 300-500ms；其核心运行时以 Apache-2.0 开源，可通过 E2B Embed 或 Terraform 自托管到 AWS/GCP，同时也提供官方托管云。",
+  "addedDate": "2026-10-04",
+  "updatedDate": "2026-10-04",
+  "caveat": "The runtime is Apache-2.0 while the Python SDK package is published under MIT; most teams use the managed cloud rather than self-hosting.",
+  "caveatZh": "运行时为 Apache-2.0，而 Python SDK 包标注为 MIT；多数团队使用其托管云而非自托管。",
+  "stars": 14150,
+  "starsAsOf": "2026-10-04",
+  "language": "Python",
+  "lastPush": "2026-10-02"
+}
