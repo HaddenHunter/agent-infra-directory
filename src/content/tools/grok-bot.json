@@ -1,0 +1,15 @@
+{
+  "name": "Grok Bot",
+  "category": "personal-agent",
+  "description": "Always-on managed personal agent from SpaceXAI, formerly xAI.",
+  "descriptionZh": "来自 SpaceXAI（原 xAI）的常驻托管个人智能体。",
+  "license": "Proprietary (managed service)",
+  "language": "N/A (managed service)",
+  "selfHosted": false,
+  "keyFact": "Grok Bot, released in beta on 11 August 2026, gives each bot its own computer in the cloud and has no self-hosted option; its vendor is SpaceXAI, the name xAI took after being folded into SpaceX as a subsidiary.",
+  "keyFactZh": "Grok Bot 于 2026 年 8 月 11 日发布 beta，为每个 Bot 提供云端专属电脑，且没有自托管选项；其厂商为 SpaceXAI——这是 xAI 并入 SpaceX 成为子公司后采用的新名称。",
+  "addedDate": "2026-10-05",
+  "updatedDate": "2026-10-05",
+  "caveat": "Vendor naming is easy to get wrong: xAI was folded into SpaceX and renamed SpaceXAI, and sources differ on whether this completed in May or July 2026. Access is bundled with SuperGrok, Cursor Pro+/Ultra and Cursor Teams plans.",
+  "caveatZh": "厂商名称容易写错：xAI 已并入 SpaceX 并更名为 SpaceXAI，各来源对完成时间（2026 年 5 月或 7 月）说法不一。使用权限随 SuperGrok、Cursor Pro+/Ultra 与 Cursor Teams 套餐提供。"
+}

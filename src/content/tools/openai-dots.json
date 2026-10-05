@@ -1,0 +1,15 @@
+{
+  "name": "OpenAI dots",
+  "category": "personal-agent",
+  "description": "OpenAI's managed personal agent with its own always-on cloud computer.",
+  "descriptionZh": "OpenAI 的托管个人智能体，拥有常驻云电脑。",
+  "license": "Proprietary (managed service)",
+  "language": "N/A (managed service)",
+  "selfHosted": false,
+  "keyFact": "OpenAI's dots, announced at DevDay on 29 September 2026, runs each agent in its own cloud computer around the clock, connects to more than 4,000 apps and is reachable from ChatGPT, Slack and Microsoft Teams; Pro tiers cost $100, $200 and $500 per month and Business Premium is $125 per seat per month.",
+  "keyFactZh": "OpenAI 于 2026 年 9 月 29 日 DevDay 发布的 dots，让每个 Agent 在自有云电脑中 7×24 小时运行，可连接 4,000+ 应用，并通过 ChatGPT、Slack 与 Microsoft Teams 触达；Pro 档为每月 $100/$200/$500，Business Premium 为 $125/座/月。",
+  "addedDate": "2026-10-05",
+  "updatedDate": "2026-10-05",
+  "caveat": "Managed only: no self-hosted option. An enterprise tier called specialist dots adds independent identity and credentials.",
+  "caveatZh": "仅托管，无自托管选项。企业版 specialist dots 额外提供独立身份与凭证。"
+}

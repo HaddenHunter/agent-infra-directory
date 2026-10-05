@@ -11,6 +11,7 @@ const tools = defineCollection({
   schema: z.object({
     name: z.string(),
     category: z.enum([
+      'personal-agent',
       'runtime',
       'sandbox',
       'observability',

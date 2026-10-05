@@ -2,8 +2,9 @@ export const locales = ['en', 'zh'] as const;
 export type Locale = (typeof locales)[number];
 export const defaultLocale: Locale = 'en';
 
-/** 七个一级分类。key 同时是路由 slug。 */
+/** 八个一级分类。key 同时是路由 slug。 */
 export const categories = {
+  'personal-agent': { en: 'Personal Agents', zh: '个人智能体' },
   runtime: { en: 'Runtime & Orchestration', zh: '运行时与编排' },
   sandbox: { en: 'Execution Sandbox', zh: '执行沙箱与安全' },
   observability: { en: 'Observability', zh: '可观测性与调试' },

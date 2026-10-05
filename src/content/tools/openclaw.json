@@ -1,0 +1,16 @@
+{
+  "name": "OpenClaw",
+  "category": "personal-agent",
+  "description": "Self-hosted open-source personal agent runtime with a skill marketplace.",
+  "descriptionZh": "可自托管、开源的个人智能体运行时，带技能市场。",
+  "license": "MIT",
+  "github": "https://github.com/openclaw/openclaw",
+  "language": "TypeScript",
+  "selfHosted": true,
+  "keyFact": "OpenClaw is an MIT-licensed, self-hosted personal agent runtime with no hosted tier: state, memory and credentials stay on the user's own machine behind a local gateway. Its creator Peter Steinberger joined OpenAI in February 2026 as an acqui-hire, and the project is now governed by the independent OpenClaw Foundation.",
+  "keyFactZh": "OpenClaw 是 MIT 许可、可自托管且没有托管版的自托管个人智能体运行时：状态、记忆与凭证都留在用户本机，由本地 Gateway 管理。其创建者 Peter Steinberger 于 2026 年 2 月以 acqui-hire 形式加入 OpenAI，项目现由独立的 OpenClaw Foundation 治理。",
+  "addedDate": "2026-10-05",
+  "updatedDate": "2026-10-05",
+  "caveat": "Third-party sites report star counts between roughly 346,000 and 400,000 with no agreed figure. A site calling itself OpenClaw Cloud / getopenclaw.ai presents itself as official, which contradicts the project's stated position of having no hosted tier.",
+  "caveatZh": "第三方站点给出的星标在约 34.6 万至 40 万之间，无一致口径。另有自称官方的 OpenClaw Cloud / getopenclaw.ai 站点，与项目方「不提供托管版」的公开表述相矛盾。"
+}

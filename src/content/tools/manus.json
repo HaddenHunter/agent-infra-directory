@@ -1,0 +1,15 @@
+{
+  "name": "Manus",
+  "category": "personal-agent",
+  "description": "Managed general-purpose agent service from Singapore's Butterfly Effect.",
+  "descriptionZh": "新加坡 Butterfly Effect 出品的托管通用智能体服务。",
+  "license": "Proprietary (managed service)",
+  "language": "N/A (managed service)",
+  "selfHosted": false,
+  "keyFact": "Manus is a proprietary managed agent service from Butterfly Effect Pte. Ltd. in Singapore, priced on credits from $20 to $200 per month; it remains independent because Meta's roughly $2B acquisition, announced in December 2025, was blocked by China's NDRC in April 2026 and Meta severed data access in June 2026.",
+  "keyFactZh": "Manus 是新加坡 Butterfly Effect Pte. Ltd. 的专有托管智能体服务，按积分计费，价格区间为每月 $20 至 $200；它保持独立——Meta 于 2025 年 12 月宣布的约 20 亿美元收购已于 2026 年 4 月被中国发改委叫停，Meta 于 2026 年 6 月切断数据访问。",
+  "addedDate": "2026-10-05",
+  "updatedDate": "2026-10-05",
+  "caveat": "It is frequently described as a Meta product; that acquisition was blocked. Manus 2.0 and a standalone personal-agent app called Cue were released on 28 September 2026.",
+  "caveatZh": "它常被描述为 Meta 旗下产品，但那笔收购已被叫停。Manus 2.0 与独立个人 Agent 应用 Cue 于 2026 年 9 月 28 日发布。"
+}

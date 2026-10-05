@@ -1,0 +1,15 @@
+{
+  "name": "Meta Muse",
+  "category": "personal-agent",
+  "description": "Meta's consumer personal agent running on a per-user secure VM.",
+  "descriptionZh": "Meta 的消费级个人智能体，运行在每用户专属的安全 VM 上。",
+  "license": "Proprietary (managed service)",
+  "language": "N/A (managed service)",
+  "selfHosted": false,
+  "keyFact": "Meta launched Muse on 8 September 2026 for US users across iOS, Android, web and WhatsApp; each user gets a dedicated Muse Secure VM with its own browser, plus a separate Sentinel permission broker, and pricing is free with paid tiers at $20 and $100 per month.",
+  "keyFactZh": "Meta 于 2026 年 9 月 8 日面向美国用户在 iOS、Android、网页与 WhatsApp 上线 Muse；每个用户拥有专属的 Muse Secure VM 及其内置浏览器，另有独立的 Sentinel 权限代理，定价为免费，付费档为每月 $20 与 $100。",
+  "addedDate": "2026-10-05",
+  "updatedDate": "2026-10-05",
+  "caveat": "Multiple safety incidents were reported within weeks of launch, including a Marketplace order that exposed a user's home address. It defaults to training on user interactions unless opted out.",
+  "caveatZh": "上线数周内即有多起安全事件被报道，包括一次经 Marketplace 订单暴露用户住址；且默认使用用户交互数据训练模型，除非主动退出。"
+}
