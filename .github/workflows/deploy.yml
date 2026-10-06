@@ -28,6 +28,14 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      # OG 图在构建期由 sharp(librsvg) 栅格化 SVG 生成，文字要依赖系统字体。
+      # runner 镜像不保证带 CJK 字体，缺了会让中文 OG 图变成空白卡片，
+      # 所以这里显式装上：dejavu 覆盖拉丁，noto-cjk 覆盖中文。
+      - name: Install fonts for OG image rendering
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq fonts-dejavu-core fonts-noto-cjk
+
       - name: Build
         run: npm run build
 

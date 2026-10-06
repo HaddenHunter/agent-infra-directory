@@ -107,6 +107,9 @@ const benchmarks = defineCollection({
     /** 归类到「常见错误说法」时，写明被纠正的原说法 */
     debunks: z.string().optional(),
     debunksZh: z.string().optional(),
+    /** 主体成立、但某个细节常被说错时的提示；由 /myths/ 汇总展示 */
+    caveat: z.string().optional(),
+    caveatZh: z.string().optional(),
   }),
 });
 

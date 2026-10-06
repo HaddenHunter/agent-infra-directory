@@ -4,10 +4,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import EcosystemChart from '../components/EcosystemChart.astro';
 import ParticleBackdrop from '../components/ParticleBackdrop.astro';
 import { categories, categoryKeys, t, SITE_URL, type CategoryKey } from '../i18n/ui';
+import { collectMyths } from '../lib/myths';
 
 const locale = 'en' as const;
 const s = t(locale);
-const tools = await getCollection('tools');
+const [tools, benchmarks, useCases, events] = await Promise.all([
+  getCollection('tools'),
+  getCollection('benchmarks'),
+  getCollection('useCases'),
+  getCollection('events'),
+]);
+const mythCount = collectMyths(locale, { benchmarks, useCases, events }).claims.length;
 const byCat = (k: CategoryKey) =>
   tools
     .filter((x) => x.data.category === k)
@@ -150,5 +157,10 @@ const jsonLd = [
         than silently repeated.
       </li>
     </ul>
+    <p class="mt-4 text-sm">
+      <a class="text-indigo-600 hover:underline dark:text-indigo-400" href="/myths/">
+        See the {mythCount} claims that did not survive checking →
+      </a>
+    </p>
   </section>
 </BaseLayout>

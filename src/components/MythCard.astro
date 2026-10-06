@@ -1,0 +1,61 @@
+---
+import type { Locale } from '../i18n/ui';
+import type { MythEntry } from '../lib/myths';
+import { verificationBadge, verificationLabels } from '../lib/news';
+
+export interface Props {
+  locale: Locale;
+  item: MythEntry;
+}
+
+const { locale, item } = Astro.props;
+const zh = locale === 'zh';
+const vLabel = verificationLabels[item.verification][locale];
+const vClass = verificationBadge[item.verification];
+/** flags 组的纠正是「原文判断句」本身，再重复一次没有信息量 */
+const showKeyFact = item.keyFact !== item.correction;
+---
+
+<article id={item.id} class="card scroll-mt-24">
+  <div class="flex flex-wrap items-center gap-2">
+    <span class="badge badge-neutral">{item.kindLabel}</span>
+    <span class={`badge ${vClass}`}>{vLabel}</span>
+    <time datetime={item.date} class="ml-auto text-xs tabular-nums text-slate-500 dark:text-slate-400">
+      {item.date}
+    </time>
+  </div>
+
+  <h3 class="mt-3 font-semibold leading-snug text-slate-900 dark:text-slate-100">
+    {item.title}
+  </h3>
+
+  <p class="alert-caveat mt-3">
+    <strong>{zh ? '常见说法：' : 'The claim: '}</strong>
+    {item.claim}
+  </p>
+
+  <p class="mt-3 text-sm text-slate-700 dark:text-slate-300">
+    <strong class="text-slate-900 dark:text-slate-100">{zh ? '核对结果：' : 'What the checking found: '}</strong>
+    {item.correction}
+  </p>
+
+  {
+    showKeyFact && (
+      <blockquote class="key-fact mt-3 !p-3 text-sm">
+        <p>{item.keyFact}</p>
+      </blockquote>
+    )
+  }
+
+  <p class="mt-3 text-xs text-slate-500 dark:text-slate-400">
+    {zh ? '来源' : 'Source'}：
+    <a class="underline hover:text-indigo-600" href={item.sourceUrl} rel="nofollow noopener">
+      {item.sourceName}
+    </a>
+    {item.href && (
+      <a class="ml-3 underline hover:text-indigo-600" href={item.href}>
+        {zh ? '查看完整条目 →' : 'Full entry →'}
+      </a>
+    )}
+  </p>
+</article>

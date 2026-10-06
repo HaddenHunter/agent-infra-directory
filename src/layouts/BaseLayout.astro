@@ -1,6 +1,7 @@
 ---
 import { ClientRouter } from 'astro:transitions';
 import { SITE_URL, t, type Locale, locales } from '../i18n/ui';
+import { ogImageUrl } from '../lib/og';
 import '../styles/global.css';
 
 export interface Props {
@@ -37,6 +38,7 @@ const newsIndex = locale === 'en' ? '/news/' : '/zh/news/';
 const benchIndex = locale === 'en' ? '/benchmarks/' : '/zh/benchmarks/';
 const papersIndex = locale === 'en' ? '/papers/' : '/zh/papers/';
 const home = locale === 'en' ? '/' : '/zh/';
+const ogImage = new URL(ogImageUrl(path), SITE_URL).href;
 ---
 
 <!doctype html>
@@ -66,12 +68,26 @@ const home = locale === 'en' ? '/' : '/zh/';
       href={new URL(alts.en ?? path, SITE_URL).href}
     />
 
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title={`${strings.siteName} — ${strings.news}`}
+      href={locale === 'zh' ? '/zh/rss.xml' : '/rss.xml'}
+    />
+
     <meta property="og:type" content={ogType} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:site_name" content={strings.siteName} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={title} />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
 
     {
       graph.map((node) => (
@@ -183,6 +199,19 @@ const home = locale === 'en' ? '/' : '/zh/';
             class="hover:text-slate-900 dark:hover:text-slate-100"
             href="/sitemap-index.xml">sitemap</a
           >
+          <a
+            data-astro-prefetch="false"
+            class="hover:text-slate-900 dark:hover:text-slate-100"
+            href={locale === 'zh' ? '/zh/rss.xml' : '/rss.xml'}>RSS</a
+          >
+          <a
+            data-astro-prefetch="false"
+            class="hover:text-slate-900 dark:hover:text-slate-100"
+            href="/data/tools.json">dataset</a
+          >
+          <a class="hover:text-slate-900 dark:hover:text-slate-100" href={locale === 'zh' ? '/zh/myths/' : '/myths/'}>
+            {locale === 'zh' ? '误传核查' : 'Myths'}
+          </a>
           <a class="hover:text-slate-900 dark:hover:text-slate-100" href={toolsIndex}>
             {locale === 'zh' ? '全部工具' : 'All tools'}
           </a>

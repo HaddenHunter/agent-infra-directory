@@ -1,0 +1,80 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import MythCard from '../../../components/MythCard.astro';
+import { t, SITE_URL, type Locale } from '../../../i18n/ui';
+import { collectMyths } from '../../../lib/myths';
+
+const locale: Locale = 'zh';
+const s = t(locale);
+
+const [benchmarks, useCases, events] = await Promise.all([
+  getCollection('benchmarks'),
+  getCollection('useCases'),
+  getCollection('events'),
+]);
+const { claims, flags } = collectMyths(locale, { benchmarks, useCases, events });
+
+const total = claims.length + flags.length;
+const latest = [...claims, ...flags].reduce((m, i) => (i.date > m ? i.date : m), '');
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: `经不起核对的常见说法 — ${s.siteName}`,
+  url: `${SITE_URL}/zh/myths/`,
+  numberOfItems: total,
+  inLanguage: 'zh',
+};
+---
+
+<BaseLayout
+  locale={locale}
+  title={`经不起核对的常见说法 — ${s.siteName}`}
+  description="关于 AI Agent 的常见说法——数字、案例与细节——没有可追溯来源，或与已发表证据方向相反。每条都写明流传版本、核对结果与依据来源。"
+  path="/zh/myths/"
+  alternates={{ en: '/myths/', zh: '/zh/myths/' }}
+  jsonLd={jsonLd}
+>
+  <nav class="text-sm text-slate-500 dark:text-slate-400">
+    <a class="hover:text-slate-900 dark:hover:text-slate-100" href="/zh/">{s.home}</a>
+    <span class="mx-1">/</span>
+    <span>误传核查</span>
+  </nav>
+
+  <header class="mt-3">
+    <h1 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-50">
+      经不起核对的常见说法
+    </h1>
+    <p class="mt-2 max-w-3xl text-slate-600 dark:text-slate-400">
+      关于 AI Agent 的常见数字、案例与细节中，找不到可追溯来源、或与已发表证据方向相反的那些。
+      每条都写明它在流传中长什么样、核对之后是什么、以及依据的来源。
+    </p>
+    <p class="mt-2 text-sm text-slate-500 dark:text-slate-400">
+      {total} 条 · {s.lastUpdated} {latest}
+    </p>
+  </header>
+
+  <section class="mt-10">
+    <h2 class="section-title">
+      我们无法为其背书的说法
+      <span class="ml-2 text-sm font-normal text-slate-500 dark:text-slate-400">{claims.length}</span>
+    </h2>
+    <div class="mt-4 grid gap-4 lg:grid-cols-2">
+      {claims.map((item) => <MythCard locale={locale} item={item} />)}
+    </div>
+  </section>
+
+  <section class="mt-12">
+    <h2 class="section-title">
+      主体成立、但细节常被说错
+      <span class="ml-2 text-sm font-normal text-slate-500 dark:text-slate-400">{flags.length}</span>
+    </h2>
+    <p class="mt-2 max-w-3xl text-sm text-slate-600 dark:text-slate-400">
+      这些条目的主体事实站得住，但常被一并转述的某个数字或细节不成立。条目自身的可引用判断句即为更正后的版本。
+    </p>
+    <div class="mt-4 grid gap-4 lg:grid-cols-2">
+      {flags.map((item) => <MythCard locale={locale} item={item} />)}
+    </div>
+  </section>
+</BaseLayout>

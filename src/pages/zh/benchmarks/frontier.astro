@@ -1,0 +1,131 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { t, SITE_URL, type Locale } from '../../../i18n/ui';
+import {
+  benchmarkCategories,
+  benchmarkCategoryKeys,
+  benchmarkUrl,
+} from '../../../lib/benchmarks';
+import { verificationBadge, verificationLabels, type Verification } from '../../../lib/news';
+
+const locale: Locale = 'zh';
+const s = t(locale);
+
+const all = await getCollection('benchmarks');
+// contested 条目报不出前沿水平（它们纠正的正是被误传的数字），单列在 /zh/myths/
+const listed = all.filter((b) => b.data.category !== 'contested');
+const contested = all.filter((b) => b.data.category === 'contested');
+
+const groups = benchmarkCategoryKeys
+  .filter((k) => k !== 'contested' && listed.some((b) => b.data.category === k))
+  .map((k) => ({
+    key: k,
+    items: listed
+      .filter((b) => b.data.category === k)
+      .sort((a, b) => a.data.name.localeCompare(b.data.name)),
+  }));
+
+const latest = listed.reduce(
+  (m, b) => (b.data.lastUpdated > m ? b.data.lastUpdated : m),
+  ''
+);
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: `2026 年 Agent 基准前沿一览 — ${s.siteName}`,
+  url: `${SITE_URL}/zh/benchmarks/frontier/`,
+  numberOfItems: listed.length,
+  itemListElement: listed.map((b, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: b.data.name,
+    url: `${SITE_URL}${benchmarkUrl('zh', b.id)}`,
+  })),
+};
+---
+
+<BaseLayout
+  locale={locale}
+  title={`2026 年 Agent 基准前沿一览 — ${s.siteName}`}
+  description="每个 Agent 基准当前的前沿水平，以及已公布的人类基线，并标明该数字的可信度状态。"
+  path="/zh/benchmarks/frontier/"
+  alternates={{ en: '/benchmarks/frontier/', zh: '/zh/benchmarks/frontier/' }}
+  jsonLd={jsonLd}
+>
+  <nav class="text-sm text-slate-500 dark:text-slate-400">
+    <a class="hover:text-slate-900 dark:hover:text-slate-100" href="/zh/">{s.home}</a>
+    <span class="mx-1">/</span>
+    <a class="hover:text-slate-900 dark:hover:text-slate-100" href="/zh/benchmarks/">{s.benchmarks}</a>
+    <span class="mx-1">/</span>
+    <span>2026 前沿</span>
+  </nav>
+
+  <header class="mt-3">
+    <h1 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-50">
+      2026 年 Agent 基准前沿一览
+    </h1>
+    <p class="mt-2 max-w-3xl text-slate-600 dark:text-slate-400">
+      各基准当前的前沿水平，以及已公布的人类基线。数字均带条目自身的更新日期，每行可点进完整条目，
+      其中写明了该数字背后的可信度提示。
+    </p>
+    <p class="mt-2 text-sm text-slate-500 dark:text-slate-400">
+      {listed.length} 个基准 · {s.lastUpdated} {latest}
+    </p>
+  </header>
+
+  {
+    groups.map((group) => (
+      <section class="mt-10">
+        <h2 class="section-title">
+          {benchmarkCategories[group.key][locale]}
+          <span class="ml-2 text-sm font-normal text-slate-500 dark:text-slate-400">
+            {group.items.length}
+          </span>
+        </h2>
+        <div class="mt-3 overflow-x-auto">
+          <table class="w-full min-w-[44rem] border-collapse text-sm">
+            <thead>
+              <tr class="border-b border-slate-200 text-left text-xs uppercase tracking-wide text-slate-500 dark:border-slate-800 dark:text-slate-400">
+                <th class="py-2 pr-4 font-medium">基准</th>
+                <th class="py-2 pr-4 font-medium">{s.frontier}</th>
+                <th class="py-2 pr-4 font-medium">{s.humanBaseline}</th>
+                <th class="py-2 font-medium">{s.verification}</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+              {group.items.map((b) => (
+                <tr class="align-top">
+                  <td class="py-3 pr-4">
+                    <a
+                      class="font-medium text-indigo-600 hover:underline dark:text-indigo-400"
+                      href={benchmarkUrl(locale, b.id)}
+                    >
+                      {b.data.name}
+                    </a>
+                  </td>
+                  <td class="py-3 pr-4 text-slate-700 dark:text-slate-300">{b.data.frontierZh}</td>
+                  <td class="py-3 pr-4 text-slate-700 dark:text-slate-300">
+                    {b.data.humanBaseline ?? '—'}
+                  </td>
+                  <td class="py-3">
+                    <span class={`badge ${verificationBadge[b.data.verification as Verification]}`}>
+                      {verificationLabels[b.data.verification as Verification][locale]}
+                    </span>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+    ))
+  }
+
+  <aside class="alert-caveat mt-10">
+    <strong>未列入本页：{contested.length} 条被纠正的说法。</strong>
+    这些条目报不出前沿水平——它们的存在是为了纠正某个没有来源支撑、却被广泛重复的数字。
+    <a class="underline" href="/zh/myths/">查看误传核查 →</a>
+  </aside>
+</BaseLayout>
