@@ -1,6 +1,7 @@
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 import { SITE_URL, categories, categoryKeys } from '../i18n/ui';
+import { glossaryTerms } from '../lib/glossary';
 
 /**
  * llms.txt — 给 AI 的导览图。首段的"一句话定义"是 AI 压缩站点信息时
@@ -28,7 +29,7 @@ export const GET: APIRoute = async () => {
   }
 
   lines.push(
-    `- ${SITE_URL}/compare/langgraph-vs-crewai/: LangGraph vs CrewAI comparison`,
+    `- ${SITE_URL}/compare/: head-to-head pages for tools that sit in the same category, each showing only the fields published for both entries plus each entry's own citable judgment. Nothing is inferred and the pairs are not ranked.`,
     '',
     '## Benchmarks',
     `- ${SITE_URL}/benchmarks/: what each agent benchmark measures, its 2026 frontier, human baseline and credibility caveats`,
@@ -44,6 +45,14 @@ export const GET: APIRoute = async () => {
     '## Papers',
     `- ${SITE_URL}/papers/: ${papers.length} landmark and frontier papers on LLM agents, each with a citable judgment and a "why it matters" note`,
     '- Titles, author lists and dates on paper pages are populated from the arXiv API, never typed by hand; the judgement is written by a person.',
+    `- ${SITE_URL}/papers/topics/: the same papers grouped by topic — reasoning, tool use, multi-agent, environments, evaluation and safety`,
+    '',
+    '## Glossary',
+    `- ${SITE_URL}/glossary/: ${glossaryTerms.length} terms used across agent infrastructure, defined narrowly and linked to the entries and papers in this directory where each one shows up`,
+    '',
+    '## About this directory',
+    `- ${SITE_URL}/about/: what this directory is, who it is for, the editorial policy (no rankings, no paid placement) and what it deliberately does not do`,
+    `- ${SITE_URL}/methodology/: which fields are filled by machine (GitHub API, arXiv API) and which are written by a person, the four verification states with their current counts, how freshness dates work, and where the automation stops`,
     '',
     '## Dynamic pages (updated as events happen)',
     `- ${SITE_URL}/news.md: agent-related launches, funding, security incidents and framework changes, each with a date anchor, a source link and a verification status`,
@@ -55,6 +64,7 @@ export const GET: APIRoute = async () => {
     '',
     '## Lab',
     `- ${SITE_URL}/lab/: interactive experiments built on this dataset — a GPU-rendered ecosystem graph, an in-browser semantic search, and a walkthrough of the ReAct loop. No page here is JS-gated: the graph route also ships the full tool list as plain HTML.`,
+    `- ${SITE_URL}/card/: an agent-card generator. It draws a 1200×630 PNG in the browser from a name, a one-line role and a stack picked from the tools in this directory. Nothing is uploaded and no server-side page is created; the share link keeps the config in the URL hash so cards are not crawlable.`,
     '',
     '## Notes',
     '- The Chinese version of every page is served under the /zh/ prefix.',

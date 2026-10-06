@@ -1,0 +1,181 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { faqSchema } from '../lib/schema';
+import { categories, toolUrl, type Locale } from '../i18n/ui';
+import { derivedDimensions, derivedFaq, type ComparisonView } from '../lib/comparisons';
+
+export interface Props {
+  locale: Locale;
+  view: ComparisonView;
+  toolA: CollectionEntry<'tools'>;
+  toolB: CollectionEntry<'tools'>;
+}
+
+const { locale, view, toolA, toolB } = Astro.props;
+const zh = locale === 'zh';
+
+const nameA = toolA.data.name;
+const nameB = toolB.data.name;
+const title = zh ? view.titleZh : view.title;
+const summary = zh ? view.summaryZh : view.summary;
+const categoryLabel = categories[toolA.data.category][locale];
+
+const dimensions =
+  view.editorial && view.dimensions ? view.dimensions : derivedDimensions(toolA, toolB, locale);
+
+const keyFactA = zh ? toolA.data.keyFactZh : toolA.data.keyFact;
+const keyFactB = zh ? toolB.data.keyFactZh : toolB.data.keyFact;
+const caveatA = zh ? toolA.data.caveatZh : toolA.data.caveat;
+const caveatB = zh ? toolB.data.caveatZh : toolB.data.caveat;
+
+const qas =
+  view.editorial && view.dimensions
+    ? [
+        {
+          q: zh
+            ? `${nameA} 与 ${nameB} 的核心区别是什么？`
+            : `${nameA} vs ${nameB}: what is the main difference?`,
+          a: summary,
+        },
+        ...view.dimensions.map((dim) => ({
+          q: zh
+            ? `${nameA} 和 ${nameB} 在「${dim.labelZh}」上如何对比？`
+            : `How do ${nameA} and ${nameB} compare on ${dim.label}?`,
+          a: zh
+            ? `${nameA}：${dim.valueA}。${nameB}：${dim.valueB}。`
+            : `${nameA}: ${dim.valueA}. ${nameB}: ${dim.valueB}.`,
+        })),
+      ]
+    : derivedFaq(toolA, toolB, locale);
+
+const path = zh ? `/zh/compare/${view.slug}/` : `/compare/${view.slug}/`;
+const indexUrl = zh ? '/zh/compare/' : '/compare/';
+---
+
+<BaseLayout
+  locale={locale}
+  title={`${title} — ${zh ? '对比' : 'comparison'}`}
+  description={summary}
+  path={path}
+  alternates={{ en: `/compare/${view.slug}/`, zh: `/zh/compare/${view.slug}/` }}
+  jsonLd={faqSchema(qas)}
+  ogType="article"
+>
+  <nav class="text-sm text-slate-500 dark:text-slate-400" aria-label="Breadcrumb">
+    <a class="hover:text-slate-900 dark:hover:text-slate-100" href={zh ? '/zh/' : '/'}>
+      {zh ? '首页' : 'Home'}
+    </a>
+    <span class="mx-1">/</span>
+    <a class="hover:text-slate-900 dark:hover:text-slate-100" href={indexUrl}>
+      {zh ? '工具对比' : 'Comparisons'}
+    </a>
+  </nav>
+
+  <header class="mt-3">
+    <div class="flex flex-wrap items-center gap-2">
+      <span class="badge badge-cat">{categoryLabel}</span>
+      <span class:list={['badge', view.editorial ? 'badge-open' : 'badge-neutral']}>
+        {view.editorial ? (zh ? '编辑对比' : 'Editorial comparison') : zh ? '数据对比' : 'Data comparison'}
+      </span>
+    </div>
+    <h1 class="mt-3 text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-50">
+      {title}
+    </h1>
+    <p class="mt-3 max-w-3xl text-lg text-slate-600 dark:text-slate-400">{summary}</p>
+  </header>
+
+  <div class="mt-8 overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-800">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-50 dark:bg-slate-900">
+        <tr>
+          <th class="w-40 px-4 py-3 text-left font-medium text-slate-500 dark:text-slate-400"></th>
+          <th class="px-4 py-3 text-left font-semibold text-slate-900 dark:text-slate-100">
+            <a class="hover:text-indigo-600 dark:hover:text-indigo-400" href={toolUrl(locale, toolA.id)}
+              >{nameA}</a
+            >
+          </th>
+          <th class="px-4 py-3 text-left font-semibold text-slate-900 dark:text-slate-100">
+            <a class="hover:text-indigo-600 dark:hover:text-indigo-400" href={toolUrl(locale, toolB.id)}
+              >{nameB}</a
+            >
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          dimensions.map((dim) => (
+            <tr class="border-t border-slate-200 dark:border-slate-800">
+              <th class="bg-slate-50/60 px-4 py-3 text-left align-top font-medium text-slate-500 dark:bg-slate-900/40 dark:text-slate-400">
+                {zh ? dim.labelZh : dim.label}
+              </th>
+              <td class="px-4 py-3 align-top text-slate-700 dark:text-slate-300">{dim.valueA}</td>
+              <td class="px-4 py-3 align-top text-slate-700 dark:text-slate-300">{dim.valueB}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </div>
+
+  <section class="mt-12">
+    <h2 class="text-xl font-semibold tracking-tight text-slate-900 dark:text-slate-100">
+      {zh ? '各自的判断句' : 'What each entry claims'}
+    </h2>
+    <div class="mt-4 grid gap-4 md:grid-cols-2">
+      {
+        [
+          { tool: toolA, fact: keyFactA, caveat: caveatA },
+          { tool: toolB, fact: keyFactB, caveat: caveatB },
+        ].map(({ tool, fact, caveat }) => (
+          <div class="card">
+            <a
+              class="font-semibold text-slate-900 hover:text-indigo-600 dark:text-slate-100 dark:hover:text-indigo-400"
+              href={toolUrl(locale, tool.id)}
+            >
+              {tool.data.name}
+            </a>
+            <blockquote class="key-fact mt-3 !p-3 text-sm">
+              <p>{fact}</p>
+            </blockquote>
+            {caveat && (
+              <p class="alert-caveat mt-3">
+                <strong>{zh ? '注意：' : 'Caveat: '}</strong>
+                {caveat}
+              </p>
+            )}
+            <p class="mt-3 text-xs text-slate-500 dark:text-slate-400">
+              {zh ? '核验日期' : 'Last verified'} {tool.data.updatedDate}
+            </p>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  {
+    !view.editorial && (
+      <p class="mt-8 rounded-lg bg-slate-50 p-4 text-xs leading-relaxed text-slate-600 dark:bg-slate-900/60 dark:text-slate-400">
+        {zh
+          ? '本页是数据对比：表中每一行都直接取自这两个条目在本站已发布的字段，本站没有在此新增任何判断，也没有为它们排序。字段的原始出处见各自的工具页与公开数据集 /data/tools.json。'
+          : 'This is a data comparison. Every row above is taken from the two entries as published in this directory — no new judgement was added here and the two are not ranked against each other. Raw fields are traceable via each tool page and the published dataset at /data/tools.json.'}
+      </p>
+    )
+  }
+
+  <section class="mt-12">
+    <h2 class="text-xl font-semibold tracking-tight text-slate-900 dark:text-slate-100">FAQ</h2>
+    <div class="mt-4 space-y-3">
+      {
+        qas.map(({ q, a }) => (
+          <details class="card !p-0" open={q === qas[0].q}>
+            <summary class="cursor-pointer px-4 py-3 font-medium text-slate-900 dark:text-slate-100">
+              {q}
+            </summary>
+            <p class="px-4 pb-4 text-sm text-slate-600 dark:text-slate-400">{a}</p>
+          </details>
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>

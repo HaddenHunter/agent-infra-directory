@@ -11,11 +11,19 @@ import {
 export interface Props {
   locale: Locale;
   event: CollectionEntry<'events'>;
+  /** 传入时标题变成指向详情页的链接；详情页自己不需要传 */
+  detailHref?: string;
+  /** 详情页把标题升成 h1：卡片在列表里是 h3，独立成页时 h3 会让页面没有一级标题 */
+  titleTag?: 'h1' | 'h3';
 }
 
-const { locale, event } = Astro.props;
+const { locale, event, detailHref, titleTag = 'h3' } = Astro.props;
+const Title = titleTag;
 const d = event.data;
 const s = t(locale);
+const zh = locale === 'zh';
+/** 中文用全角冒号，英文用半角——英文页面出现「：」是排版事故 */
+const colon = zh ? '：' : ': ';
 
 const title = locale === 'zh' ? d.titleZh : d.title;
 const summary = locale === 'zh' ? d.summaryZh : d.summary;
@@ -44,9 +52,22 @@ const searchBlob = [d.title, d.titleZh, d.summary, d.summaryZh, d.sourceName, ..
     <span class={`badge ${vClass}`}>{vLabel}</span>
   </div>
 
-  <h3 class="mt-3 text-lg font-semibold leading-snug text-slate-900 dark:text-slate-100">
-    {title}
-  </h3>
+  <Title
+    class:list={[
+      'mt-3 leading-snug font-semibold text-slate-900 dark:text-slate-100',
+      titleTag === 'h1' ? 'text-3xl font-bold tracking-tight dark:text-slate-50' : 'text-lg',
+    ]}
+  >
+    {
+      detailHref ? (
+        <a class="hover:text-indigo-600 dark:hover:text-indigo-400" href={detailHref}>
+          {title}
+        </a>
+      ) : (
+        title
+      )
+    }
+  </Title>
 
   <blockquote class="key-fact mt-3 !p-3 text-sm">
     <p>{keyFact}</p>
@@ -57,7 +78,7 @@ const searchBlob = [d.title, d.titleZh, d.summary, d.summaryZh, d.sourceName, ..
   {
     why && (
       <p class="mt-3 rounded-lg bg-slate-50 p-3 text-sm text-slate-700 dark:bg-slate-950/60 dark:text-slate-300">
-        <strong class="text-slate-900 dark:text-slate-100">{s.whyItMatters}：</strong>
+        <strong class="text-slate-900 dark:text-slate-100">{s.whyItMatters}{colon}</strong>
         {why}
       </p>
     )
@@ -88,7 +109,7 @@ const searchBlob = [d.title, d.titleZh, d.summary, d.summaryZh, d.sourceName, ..
   }
 
   <p class="mt-3 text-xs text-slate-500 dark:text-slate-400">
-    {s.newsSource}：
+    {s.newsSource}{colon}
     <a class="underline hover:text-indigo-600" href={d.sourceUrl} rel="nofollow noopener">
       {d.sourceName}
     </a>

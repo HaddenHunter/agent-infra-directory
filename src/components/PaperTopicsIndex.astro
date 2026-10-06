@@ -1,0 +1,88 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { t, SITE_URL, type Locale } from '../i18n/ui';
+import {
+  paperCategories,
+  paperCategoryBlurbs,
+  paperCategoryKeys,
+  paperTopicUrl,
+  type PaperCategory,
+} from '../lib/papers';
+
+export interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const s = t(locale);
+const zh = locale === 'zh';
+
+const papers = await getCollection('papers');
+const countOf = (k: PaperCategory) => papers.filter((p) => p.data.category === k).length;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: zh ? '论文主题' : 'Paper topics',
+  url: zh ? `${SITE_URL}/zh/papers/topics/` : `${SITE_URL}/papers/topics/`,
+  numberOfItems: paperCategoryKeys.length,
+  inLanguage: zh ? 'zh-CN' : 'en',
+};
+---
+
+<BaseLayout
+  locale={locale}
+  title={`${s.topics} — ${s.papers} — ${s.siteName}`}
+  description={zh
+    ? '按主题浏览本目录收录的 Agent 论文：推理、工具使用、多智能体、交互环境、评测与安全。'
+    : 'Browse the agent papers in this directory by topic: reasoning, tool use, multi-agent, environments, evaluation and safety.'}
+  path={zh ? '/zh/papers/topics/' : '/papers/topics/'}
+  alternates={{ en: '/papers/topics/', zh: '/zh/papers/topics/' }}
+  jsonLd={jsonLd}
+>
+  <nav class="text-sm text-slate-500 dark:text-slate-400" aria-label="Breadcrumb">
+    <a class="hover:text-slate-900 dark:hover:text-slate-100" href={zh ? '/zh/' : '/'}>{s.home}</a>
+    <span class="mx-1">/</span>
+    <a class="hover:text-slate-900 dark:hover:text-slate-100" href={zh ? '/zh/papers/' : '/papers/'}>
+      {s.papers}
+    </a>
+    <span class="mx-1">/</span><span>{s.topics}</span>
+  </nav>
+
+  <header class="mt-3">
+    <h1 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-50">{s.topics}</h1>
+    <p class="mt-2 max-w-3xl text-slate-600 dark:text-slate-400">{s.papersInTopic}</p>
+  </header>
+
+  <ul class="mt-8 grid gap-4 md:grid-cols-2">
+    {
+      paperCategoryKeys.map((key) => {
+        const sample = papers
+          .filter((p) => p.data.category === key)
+          .sort((a, b) => a.data.publishedDate.localeCompare(b.data.publishedDate));
+        const latest = sample.at(-1);
+        return (
+          <li>
+            <a class="card card-interactive block h-full" href={paperTopicUrl(locale, key)}>
+              <span class="flex items-baseline justify-between gap-3">
+                <span class="font-semibold text-slate-900 dark:text-slate-100">
+                  {paperCategories[key][locale]}
+                </span>
+                <span class="text-sm tabular-nums text-slate-400">{countOf(key)}</span>
+              </span>
+              <span class="mt-2 block text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+                {paperCategoryBlurbs[key][locale]}
+              </span>
+              {latest && (
+                <span class="mt-3 block text-xs text-slate-500 dark:text-slate-400">
+                  {zh ? `最新一篇：${latest.data.name}（${latest.data.publishedDate}）` : `Latest: ${latest.data.name} (${latest.data.publishedDate})`}
+                </span>
+              )}
+            </a>
+          </li>
+        );
+      })
+    }
+  </ul>
+</BaseLayout>

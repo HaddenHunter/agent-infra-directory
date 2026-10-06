@@ -1,0 +1,641 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { categories, categoryKeys, t, type Locale } from '../i18n/ui';
+import { MAX_STACK } from '../lib/agent-card';
+
+export interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const s = t(locale);
+const zh = locale === 'zh';
+
+const tools = await getCollection('tools');
+const byCategory = categoryKeys.map((key) => ({
+  key,
+  label: categories[key][locale],
+  items: tools
+    .filter((x) => x.data.category === key)
+    .sort((a, b) => a.data.name.localeCompare(b.data.name)),
+}));
+const toolCount = tools.length;
+
+/** 传给客户端渲染器的工具表：只带 id / 名称 / 分类，够画标签就行 */
+const payload = tools.map((x) => ({ id: x.id, name: x.data.name, category: x.data.category }));
+
+const P = zh
+  ? {
+      lead: '给你的 Agent 做一张名片：填名称、定位、技术栈，导出 1200×630 的 PNG。全部在你的浏览器里完成，头像不会上传到任何服务器。',
+      localOnly: '不联网、不上传、不生成服务端页面',
+      preview: '预览',
+      previewHint: '导出尺寸 1200 × 630 px',
+      download: '下载 PNG',
+      copy: '复制分享链接',
+      reset: '重置',
+      copied: '分享链接已复制到剪贴板。',
+      copyFailed: '复制失败，请从地址栏复制。',
+      exported: '已导出',
+      needName: '请先填写名称。',
+      qrUnsupported: '二维码只支持 http(s) 这类纯 ASCII 链接，当前内容不适用，已跳过二维码。',
+      stackFull: `技术栈最多选 ${MAX_STACK} 个。`,
+      fieldsTitle: '名片内容',
+      name: '名称',
+      namePlaceholder: '例如：运维助手 Ops Bot',
+      tagline: '一句话定位',
+      taglinePlaceholder: '例如：替我看完所有告警，只在需要人决定时叫我。',
+      categoryLabel: '分类（决定主色）',
+      link: '链接',
+      linkPlaceholder: 'https://…（留空则显示本站域名，二维码也会指向本站）',
+      avatar: '头像或 Logo',
+      avatarHint: '本地读取，不上传。建议方形图。头像不进分享链接，换台机器要重新选。',
+      avatarClear: '移除头像',
+      stack: '技术栈',
+      stackHint: `从本站 ${toolCount} 个工具里选，最多 ${MAX_STACK} 个。选中的工具名会出现在名片上。`,
+      theme: '名片配色',
+      themeDark: '深色',
+      themeLight: '浅色',
+      qr: '显示二维码',
+      qrHint: '二维码内容是上面的链接字段；留空时指向本站的 /card/ 页面。',
+      fallbackTitle: '这是一个示例名片',
+      fallbackNote:
+        '名片生成器需要 JavaScript：它在你的浏览器里直接画图并导出 PNG，没有服务端可以代劳。上面这张是静态示例，打开 JavaScript 后即可编辑并导出自己的。',
+      privacy:
+        '数据流向：表单内容只存在于当前页面，头像用 FileReader 读成内存里的 data URL，导出用 canvas.toBlob。整个页面没有任何上传接口。分享链接把配置编码在 URL 的 hash 里——hash 不会发给服务器，所以也不会为每张名片生成一个可被抓取的页面。',
+    }
+  : {
+      lead: 'Make a card for your agent: name, one-line role, stack — export a 1200×630 PNG. Everything runs in your browser; an uploaded logo is never sent anywhere.',
+      localOnly: 'No network, no upload, no server-rendered page',
+      preview: 'Preview',
+      previewHint: 'Exports at 1200 × 630 px',
+      download: 'Download PNG',
+      copy: 'Copy share link',
+      reset: 'Reset',
+      copied: 'Share link copied to your clipboard.',
+      copyFailed: 'Copy failed — take the link from the address bar instead.',
+      exported: 'Exported',
+      needName: 'Give the card a name first.',
+      qrUnsupported:
+        'The QR encoder only handles plain ASCII http(s) links, so the code was skipped for this content.',
+      stackFull: `Pick at most ${MAX_STACK} stack entries.`,
+      fieldsTitle: 'Card content',
+      name: 'Name',
+      namePlaceholder: 'e.g. Ops Bot',
+      tagline: 'One-line role',
+      taglinePlaceholder: 'e.g. Reads every alert and only wakes a human when a decision is needed.',
+      categoryLabel: 'Category (sets the accent colour)',
+      link: 'Link',
+      linkPlaceholder: 'https://… (falls back to this site, and the QR follows it)',
+      avatar: 'Avatar or logo',
+      avatarHint: 'Read locally, never uploaded. A square image works best — and note the avatar is not carried by the share link, so you re-pick it on another machine.',
+      avatarClear: 'Remove avatar',
+      stack: 'Stack',
+      stackHint: `Pick from the ${toolCount} tools in this directory — up to ${MAX_STACK}. The names appear on the card.`,
+      theme: 'Card palette',
+      themeDark: 'Dark',
+      themeLight: 'Light',
+      qr: 'Show a QR code',
+      qrHint: 'The code encodes the link field above; if that is empty it points at /card/ on this site.',
+      fallbackTitle: 'This is an example card',
+      fallbackNote:
+        'The generator needs JavaScript: it draws the card and exports the PNG directly in your browser, and there is no server that could do it for you. The card above is a static example — turn JavaScript on to edit and export your own.',
+      privacy:
+        'Where the data goes: the form lives in this page only, the avatar is read into an in-memory data URL via FileReader, and the export is a canvas.toBlob. There is no upload endpoint anywhere on this page. The share link keeps the config in the URL hash — a hash is never sent to a server, so no crawlable page is created per card.',
+    };
+---
+
+<BaseLayout
+  locale={locale}
+  title={`${s.agentCard} — ${s.siteName}`}
+  description={P.lead}
+  path={zh ? '/zh/card/' : '/card/'}
+  alternates={{ en: '/card/', zh: '/zh/card/' }}
+  ogType="article"
+>
+  <nav class="text-sm text-slate-500 dark:text-slate-400">
+    <a class="hover:text-slate-900 dark:hover:text-slate-100" href={zh ? '/zh/' : '/'}>{s.home}</a>
+    <span class="mx-1">/</span><span>{s.agentCard}</span>
+  </nav>
+
+  <header class="mt-3">
+    <h1 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-50">
+      {s.agentCard}
+    </h1>
+    <p class="mt-2 max-w-3xl text-slate-600 dark:text-slate-400">{P.lead}</p>
+    <p class="mt-2 text-xs text-slate-500 dark:text-slate-400">{P.localOnly}</p>
+  </header>
+
+  <div class="mt-8 grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]" data-card-root data-ready="0">
+    <form class="space-y-6" data-card-form novalidate>
+      <h2 class="section-title">{P.fieldsTitle}</h2>
+
+      <label class="block">
+        <span class="text-sm font-medium text-slate-700 dark:text-slate-300">{P.name}</span>
+        <input
+          type="text"
+          maxlength="28"
+          data-card-field="name"
+          placeholder={P.namePlaceholder}
+          class="mt-1 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm placeholder:text-slate-400 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-200 dark:border-slate-700 dark:bg-slate-900 dark:focus:ring-indigo-900"
+        />
+      </label>
+
+      <label class="block">
+        <span class="text-sm font-medium text-slate-700 dark:text-slate-300">{P.tagline}</span>
+        <textarea
+          rows="2"
+          maxlength="90"
+          data-card-field="tagline"
+          placeholder={P.taglinePlaceholder}
+          class="mt-1 w-full resize-none rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm placeholder:text-slate-400 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-200 dark:border-slate-700 dark:bg-slate-900 dark:focus:ring-indigo-900"
+        ></textarea>
+      </label>
+
+      <div class="grid gap-4 sm:grid-cols-2">
+        <label class="block">
+          <span class="text-sm font-medium text-slate-700 dark:text-slate-300">{P.categoryLabel}</span>
+          <select
+            data-card-field="category"
+            class="mt-1 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-200 dark:border-slate-700 dark:bg-slate-900 dark:focus:ring-indigo-900"
+          >
+            {categoryKeys.map((key) => <option value={key}>{categories[key][locale]}</option>)}
+          </select>
+        </label>
+
+        <fieldset>
+          <legend class="text-sm font-medium text-slate-700 dark:text-slate-300">{P.theme}</legend>
+          <div class="mt-2 flex gap-2">
+            <label class="cursor-pointer">
+              <input
+                type="radio"
+                name="card-theme"
+                value="dark"
+                data-card-field="theme"
+                class="peer sr-only"
+                checked
+              />
+              <span
+                class="badge badge-neutral peer-checked:bg-indigo-600 peer-checked:text-white peer-focus-visible:ring-2 peer-focus-visible:ring-indigo-400"
+                >{P.themeDark}</span
+              >
+            </label>
+            <label class="cursor-pointer">
+              <input
+                type="radio"
+                name="card-theme"
+                value="light"
+                data-card-field="theme"
+                class="peer sr-only"
+              />
+              <span
+                class="badge badge-neutral peer-checked:bg-indigo-600 peer-checked:text-white peer-focus-visible:ring-2 peer-focus-visible:ring-indigo-400"
+                >{P.themeLight}</span
+              >
+            </label>
+          </div>
+        </fieldset>
+      </div>
+
+      <label class="block">
+        <span class="text-sm font-medium text-slate-700 dark:text-slate-300">{P.link}</span>
+        <input
+          type="text"
+          inputmode="url"
+          maxlength="120"
+          data-card-field="link"
+          placeholder={P.linkPlaceholder}
+          class="mt-1 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm placeholder:text-slate-400 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-200 dark:border-slate-700 dark:bg-slate-900 dark:focus:ring-indigo-900"
+        />
+      </label>
+
+      <div>
+        <span class="text-sm font-medium text-slate-700 dark:text-slate-300">{P.avatar}</span>
+        <div class="mt-1 flex flex-wrap items-center gap-3">
+          <input
+            type="file"
+            accept="image/*"
+            data-card-avatar
+            class="block w-full max-w-xs text-xs text-slate-500 file:mr-3 file:rounded-lg file:border file:border-slate-300 file:bg-white file:px-3 file:py-1.5 file:text-xs file:font-medium file:text-slate-700 dark:file:border-slate-700 dark:file:bg-slate-900 dark:file:text-slate-300"
+          />
+          <button type="button" class="btn btn-ghost hidden text-xs" data-card-avatar-clear>
+            {P.avatarClear}
+          </button>
+        </div>
+        <p class="mt-1 text-xs text-slate-500 dark:text-slate-400">{P.avatarHint}</p>
+      </div>
+
+      <fieldset>
+        <legend class="text-sm font-medium text-slate-700 dark:text-slate-300">
+          {P.stack}
+          <span class="ml-1 font-normal text-slate-400"
+            ><span data-card-stack-count>0</span>/{MAX_STACK}</span
+          >
+        </legend>
+        <p class="mt-1 text-xs text-slate-500 dark:text-slate-400">{P.stackHint}</p>
+        <div
+          class="mt-3 max-h-72 space-y-3 overflow-y-auto rounded-lg border border-slate-200 p-3 dark:border-slate-800"
+        >
+          {
+            byCategory.map((group) => (
+              <div>
+                <p class="text-xs font-semibold text-slate-500 dark:text-slate-400">
+                  {group.label}
+                </p>
+                <div class="mt-1.5 flex flex-wrap gap-1.5">
+                  {group.items.map((tool) => (
+                    <label class="cursor-pointer has-[:disabled]:cursor-not-allowed">
+                      <input type="checkbox" value={tool.id} data-card-tool class="peer sr-only" />
+                      <span class="badge badge-neutral peer-checked:bg-indigo-600 peer-checked:text-white peer-focus-visible:ring-2 peer-focus-visible:ring-indigo-400 peer-disabled:opacity-40">
+                        {tool.data.name}
+                      </span>
+                    </label>
+                  ))}
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </fieldset>
+
+      <label class="flex items-start gap-2">
+        <input type="checkbox" data-card-field="qr" checked class="mt-1" />
+        <span>
+          <span class="text-sm font-medium text-slate-700 dark:text-slate-300">{P.qr}</span>
+          <span class="block text-xs text-slate-500 dark:text-slate-400">{P.qrHint}</span>
+        </span>
+      </label>
+
+      <div class="flex flex-wrap gap-3">
+        <button type="button" class="btn border-indigo-600 bg-indigo-600 text-white hover:bg-indigo-700" data-card-download>
+          {P.download}
+        </button>
+        <button type="button" class="btn btn-ghost" data-card-copy>{P.copy}</button>
+        <button type="button" class="btn btn-ghost" data-card-reset>{P.reset}</button>
+      </div>
+      <p class="text-xs text-indigo-600 dark:text-indigo-400" data-card-status aria-live="polite"></p>
+    </form>
+
+    <div class="lg:sticky lg:top-24 lg:self-start">
+      <div class="flex items-baseline justify-between gap-2">
+        <h2 class="section-title">{P.preview}</h2>
+        <p class="text-xs text-slate-500 dark:text-slate-400">{P.previewHint}</p>
+      </div>
+
+      <canvas
+        width="1200"
+        height="630"
+        data-card-canvas
+        role="img"
+        aria-label={zh ? '名片预览' : 'Agent card preview'}
+        class="mt-3 hidden w-full rounded-xl border border-slate-200 dark:border-slate-800"
+      ></canvas>
+
+      {/* 无 JS 时的静态示例：说明这个工具需要 JS，并用一张样例名片撑住版面 */}
+      <figure
+        data-card-fallback
+        class="mt-3 overflow-hidden rounded-xl border border-slate-200 bg-gradient-to-br from-slate-900 to-slate-800 p-6 text-slate-100 dark:border-slate-800"
+      >
+        <div class="flex items-center gap-4">
+          <span class="grid h-16 w-16 shrink-0 place-items-center rounded-full bg-white/10 text-2xl font-bold text-indigo-400">
+            OB
+          </span>
+          <div class="min-w-0">
+            <p class="truncate text-2xl font-bold">Ops Bot</p>
+            <p class="mt-1 text-sm text-slate-400">
+              {zh ? '读完所有告警，只在需要人决定时叫人。' : 'Reads every alert, wakes a human only when a decision is needed.'}
+            </p>
+          </div>
+        </div>
+        <p class="mt-4 inline-flex items-center gap-2 rounded-full bg-indigo-500/20 px-3 py-1 text-xs font-medium text-indigo-300">
+          {categories.runtime[locale]}
+        </p>
+        <p class="mt-4 text-xs font-semibold text-slate-400">{P.stack}</p>
+        <p class="mt-1 flex flex-wrap gap-1.5">
+          {
+            ['LangGraph', 'E2B', 'Langfuse', 'Qdrant'].map((name) => (
+              <span class="rounded-full bg-white/10 px-3 py-1 text-xs text-slate-200">{name}</span>
+            ))
+          }
+        </p>
+        <figcaption class="mt-5 border-t border-white/10 pt-3 text-xs text-slate-400">
+          {P.fallbackNote}
+        </figcaption>
+      </figure>
+
+      <p class="mt-4 text-xs leading-relaxed text-slate-500 dark:text-slate-400">{P.privacy}</p>
+    </div>
+  </div>
+
+  <script type="application/json" data-card-tools set:html={JSON.stringify(payload)} />
+
+  <script>
+    import {
+      MAX_STACK,
+      FALLBACK_LINK,
+      buildQr,
+      cardFileName,
+      decodeConfig,
+      defaultConfig,
+      drawCard,
+      encodeConfig,
+      type CardConfig,
+      type CardTool,
+      type QrMatrix,
+    } from '../lib/agent-card';
+
+    const LABELS = { en: { stack: 'Stack', site: 'agent.c8.fit' }, zh: { stack: '技术栈', site: 'agent.c8.fit' } };
+
+    const MESSAGES = {
+      en: {
+        copied: 'Share link copied to your clipboard.',
+        copyFailed: 'Copy failed — take the link from the address bar instead.',
+        exported: 'Exported',
+        needName: 'Give the card a name first.',
+        qrUnsupported:
+          'The QR encoder only handles plain ASCII http(s) links, so the code was skipped for this content.',
+      },
+      zh: {
+        copied: '分享链接已复制到剪贴板。',
+        copyFailed: '复制失败，请从地址栏复制。',
+        exported: '已导出',
+        needName: '请先填写名称。',
+        qrUnsupported: '二维码只支持 http(s) 这类纯 ASCII 链接，当前内容不适用，已跳过二维码。',
+      },
+    };
+
+    let cleanup: (() => void) | undefined;
+    let boundRoot: HTMLElement | null = null;
+
+    async function mount() {
+      const root = document.querySelector<HTMLElement>('[data-card-root]');
+      if (!root || root === boundRoot) return;
+      boundRoot = root;
+
+      const locale = document.documentElement.lang.startsWith('zh') ? 'zh' : 'en';
+      const msg = MESSAGES[locale];
+      const labels = LABELS[locale];
+
+      const form = root.querySelector<HTMLFormElement>('[data-card-form]');
+      const canvas = root.querySelector<HTMLCanvasElement>('[data-card-canvas]');
+      const fallback = root.querySelector<HTMLElement>('[data-card-fallback]');
+      const status = root.querySelector<HTMLElement>('[data-card-status]');
+      const stackCount = root.querySelector<HTMLElement>('[data-card-stack-count]');
+      const avatarClear = root.querySelector<HTMLElement>('[data-card-avatar-clear]');
+      const payloadEl = document.querySelector<HTMLScriptElement>('[data-card-tools]');
+      const ctx = canvas?.getContext('2d');
+      if (!form || !canvas || !ctx || !payloadEl) return;
+
+      const tools = JSON.parse(payloadEl.textContent || '[]') as CardTool[];
+      const toolById = new Map(tools.map((x) => [x.id, x]));
+
+      const field = <T extends HTMLElement>(name: string) =>
+        form.querySelector<T>(`[data-card-field="${name}"]`);
+      const nameInput = field<HTMLInputElement>('name');
+      const taglineInput = field<HTMLTextAreaElement>('tagline');
+      const categoryInput = field<HTMLSelectElement>('category');
+      const linkInput = field<HTMLInputElement>('link');
+      const qrInput = field<HTMLInputElement>('qr');
+      const themeInputs = Array.from(
+        form.querySelectorAll<HTMLInputElement>('[data-card-field="theme"]')
+      );
+      const toolInputs = Array.from(form.querySelectorAll<HTMLInputElement>('[data-card-tool]'));
+      const avatarInput = form.querySelector<HTMLInputElement>('[data-card-avatar]');
+
+      /** 初始配置：优先取分享链接里的 hash，否则用默认值 */
+      const fromHash = decodeConfig(location.hash);
+      let config: CardConfig = fromHash ?? { ...defaultConfig };
+      /**
+       * 只有用户真的改过东西，才把配置写进地址栏。
+       * 否则每个访客一进 /card/ 就会看到一个 300 字符的 hash，干净链接反而没了。
+       */
+      let keepHash = fromHash !== null;
+      let avatar: HTMLImageElement | null = null;
+      let qr: QrMatrix | null = null;
+      let qrWanted: string | null = null;
+      let qrToken = 0;
+      let raf = 0;
+
+      // ---- 配置 → 表单
+      nameInput.value = config.name;
+      taglineInput.value = config.tagline;
+      categoryInput.value = config.category;
+      linkInput.value = config.link;
+      qrInput.checked = config.qr;
+      for (const input of themeInputs) input.checked = input.value === config.theme;
+      for (const input of toolInputs) input.checked = config.stack.includes(input.value);
+      syncStackCount();
+
+      function readForm() {
+        config = {
+          name: nameInput.value.slice(0, 28),
+          tagline: taglineInput.value.slice(0, 90),
+          category: categoryInput.value as CardConfig['category'],
+          link: linkInput.value.slice(0, 120),
+          theme: themeInputs.find((x) => x.checked)?.value === 'light' ? 'light' : 'dark',
+          qr: qrInput.checked,
+          stack: toolInputs
+            .filter((x) => x.checked)
+            .map((x) => x.value)
+            .slice(0, MAX_STACK),
+        };
+      }
+
+      /** 满员后直接禁用未选中的项，比事后弹提示更省事 */
+      function syncStackCount() {
+        const n = toolInputs.filter((x) => x.checked).length;
+        if (stackCount) stackCount.textContent = String(n);
+        for (const input of toolInputs) input.disabled = !input.checked && n >= MAX_STACK;
+      }
+
+      function setStatus(text: string) {
+        if (status) status.textContent = text;
+      }
+
+      /** 剪贴板 API 在非安全上下文或缺少权限时会直接拒绝，退回到临时选区 + execCommand */
+      function copyText(text: string) {
+        if (navigator.clipboard?.writeText) {
+          return navigator.clipboard.writeText(text).then(
+            () => true,
+            () => legacyCopy(text)
+          );
+        }
+        return Promise.resolve(legacyCopy(text));
+      }
+
+      function legacyCopy(text: string) {
+        try {
+          const area = document.createElement('textarea');
+          area.value = text;
+          area.setAttribute('readonly', '');
+          area.style.position = 'fixed';
+          area.style.opacity = '0';
+          document.body.appendChild(area);
+          area.select();
+          const ok = document.execCommand('copy');
+          document.body.removeChild(area);
+          return ok;
+        } catch {
+          return false;
+        }
+      }
+
+      async function syncQr() {
+        const target = (config.link.trim() || FALLBACK_LINK).trim();
+        if (!config.qr) {
+          qr = null;
+          qrWanted = null;
+          return;
+        }
+        if (qrWanted === target) return;
+        qrWanted = target;
+        const token = ++qrToken;
+        const built = await buildQr(target);
+        // 连续编辑链接会并发触发，只认最后一次的结果
+        if (token !== qrToken) return;
+        qr = built;
+        if (!built) setStatus(msg.qrUnsupported);
+        else if (status?.textContent === msg.qrUnsupported) setStatus('');
+      }
+
+      function schedule() {
+        if (raf) return;
+        raf = requestAnimationFrame(() => {
+          raf = 0;
+          void render();
+        });
+      }
+
+      async function render() {
+        await syncQr();
+        drawCard(ctx, { config, toolById, avatar, qr, locale, labels });
+        if (!keepHash) return;
+        const hash = '#c=' + encodeConfig(config);
+        if (location.hash !== hash) history.replaceState(null, '', hash);
+      }
+
+      const unbind: Array<() => void> = [];
+      const on = (
+        el: HTMLElement,
+        type: 'input' | 'change' | 'click',
+        handler: () => void
+      ) => {
+        const bound = handler as EventListener;
+        el.addEventListener(type, bound);
+        unbind.push(() => el.removeEventListener(type, bound));
+      };
+
+      const onChange = () => {
+        keepHash = true;
+        readForm();
+        syncStackCount();
+        schedule();
+      };
+
+      // 文本框用 input（边打边更新），选择类用 change
+      for (const el of [nameInput, taglineInput, linkInput]) on(el, 'input', onChange);
+      for (const el of [categoryInput, qrInput, ...themeInputs, ...toolInputs]) {
+        on(el, 'change', onChange);
+      }
+
+      if (avatarInput) {
+        on(avatarInput, 'change', () => {
+          const file = avatarInput.files?.[0];
+          if (!file) return;
+          const reader = new FileReader();
+          reader.onload = () => {
+            const img = new Image();
+            img.onload = () => {
+              avatar = img;
+              avatarClear?.classList.remove('hidden');
+              drawCard(ctx, { config, toolById, avatar, qr, locale, labels });
+            };
+            img.src = String(reader.result);
+          };
+          reader.readAsDataURL(file);
+        });
+      }
+
+      if (avatarClear) {
+        on(avatarClear, 'click', () => {
+          avatar = null;
+          if (avatarInput) avatarInput.value = '';
+          avatarClear.classList.add('hidden');
+          drawCard(ctx, { config, toolById, avatar, qr, locale, labels });
+        });
+      }
+
+      const downloadBtn = root.querySelector<HTMLElement>('[data-card-download]');
+      if (downloadBtn) {
+        on(downloadBtn, 'click', () => {
+          if (!config.name.trim()) {
+            setStatus(msg.needName);
+            nameInput.focus();
+            return;
+          }
+          canvas.toBlob((blob) => {
+            if (!blob) return;
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = cardFileName(config.name);
+            a.click();
+            // 立刻 revoke 会让部分浏览器来不及开始下载，延后释放
+            setTimeout(() => URL.revokeObjectURL(url), 10_000);
+            setStatus(`${msg.exported} · ${cardFileName(config.name)}`);
+          }, 'image/png');
+        });
+      }
+
+      const copyBtn = root.querySelector<HTMLElement>('[data-card-copy]');
+      if (copyBtn) {
+        on(copyBtn, 'click', () => {
+          const url = `${location.origin}${location.pathname}${location.hash}`;
+          void copyText(url).then((ok) => setStatus(ok ? msg.copied : msg.copyFailed));
+        });
+      }
+
+      const resetBtn = root.querySelector<HTMLElement>('[data-card-reset]');
+      if (resetBtn) {
+        on(resetBtn, 'click', () => {
+          config = { ...defaultConfig };
+          keepHash = false;
+          history.replaceState(null, '', location.pathname);
+          avatar = null;
+          if (avatarInput) avatarInput.value = '';
+          avatarClear?.classList.add('hidden');
+          nameInput.value = config.name;
+          taglineInput.value = config.tagline;
+          categoryInput.value = config.category;
+          linkInput.value = config.link;
+          qrInput.checked = config.qr;
+          for (const input of themeInputs) input.checked = input.value === config.theme;
+          for (const input of toolInputs) input.checked = false;
+          qrWanted = null;
+          syncStackCount();
+          setStatus('');
+          schedule();
+        });
+      }
+
+      // 挂载成功才切换：静态示例退场，canvas 露面，表单从此可用
+      fallback?.classList.add('hidden');
+      canvas.classList.remove('hidden');
+      root.dataset.ready = '1';
+      await render();
+
+      cleanup = () => {
+        for (const off of unbind) off();
+        if (raf) cancelAnimationFrame(raf);
+        boundRoot = null;
+      };
+    }
+
+    void mount();
+    document.addEventListener('astro:page-load', () => void mount());
+    document.addEventListener('astro:before-swap', () => {
+      cleanup?.();
+      cleanup = undefined;
+    });
+  </script>
+</BaseLayout>

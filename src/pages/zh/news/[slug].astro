@@ -1,0 +1,13 @@
+---
+import { getCollection } from 'astro:content';
+import NewsDetail from '../../../components/NewsDetail.astro';
+
+export async function getStaticPaths() {
+  const events = await getCollection('events');
+  return events.map((event) => ({ params: { slug: event.id }, props: { event } }));
+}
+
+const { event } = Astro.props as { event: Awaited<ReturnType<typeof getCollection<'events'>>>[number] };
+---
+
+<NewsDetail locale="zh" event={event} />

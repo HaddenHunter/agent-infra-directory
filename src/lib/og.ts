@@ -132,6 +132,10 @@ const KNOWN_SECTIONS = new Set([
   'myths',
   'use-cases',
   'lab',
+  'about',
+  'methodology',
+  'glossary',
+  'card',
 ]);
 
 /**

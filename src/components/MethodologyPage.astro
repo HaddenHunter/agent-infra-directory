@@ -1,0 +1,329 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { t, type Locale } from '../i18n/ui';
+import { verificationLabels, type Verification } from '../lib/news';
+
+export interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const s = t(locale);
+const zh = locale === 'zh';
+
+const [tools, papers, benchmarks, events, useCases, comparisons] = await Promise.all([
+  getCollection('tools'),
+  getCollection('papers'),
+  getCollection('benchmarks'),
+  getCollection('events'),
+  getCollection('useCases'),
+  getCollection('comparisons'),
+]);
+
+/**
+ * 核验状态的分布按当前数据现算。
+ * 写死数字的方法论页，在条目增加之后就会变成假话——这正是本站要避免的事。
+ */
+const stateKeys: Verification[] = ['verified', 'single-source', 'unverified', 'disputed'];
+const graded = [...benchmarks, ...events, ...useCases];
+const countByState = Object.fromEntries(
+  stateKeys.map((k) => [k, graded.filter((e) => e.data.verification === k).length])
+) as Record<Verification, number>;
+
+const contested = benchmarks.filter((b) => b.data.category === 'contested');
+const automatedTools = tools.filter((x) => x.data.lastPush || x.data.stars !== undefined).length;
+
+const repo = 'https://github.com/HaddenHunter/agent-infra-directory';
+const aboutPath = zh ? '/zh/about/' : '/about/';
+const mythsPath = zh ? '/zh/myths/' : '/myths/';
+const benchmarksPath = zh ? '/zh/benchmarks/' : '/benchmarks/';
+
+const P = zh
+  ? {
+      lead: '这个目录里的每句话，要么来自一个可以打开核对的一手来源，要么是被明确标注为判断的部分。这一页说明这两者如何区分，以及自动化的边界画在哪里。',
+      kindsTitle: '两类事实',
+      kindsBody: [
+        '机器可核验的字段由程序回填，人手不碰。原因是这类字段最容易凭记忆写错，而且一旦写错，读者无法从页面上看出来。',
+        '判断类字段由人写：一句话定位、可引用判断句、注意事项、分类归属、以及核验状态本身。这些字段的价值在于取舍，不在于抄录。',
+      ],
+      machineTitle: '机器回填的字段',
+      machineCols: ['字段', '来源', '更新方式'],
+      machine: [
+        ['工具的 stars / archived / lastPush', 'GitHub REST API', '每天定时任务回填，只覆盖这三个字段'],
+        ['论文的标题 / 作者 / 首次提交 / 最新修订', 'arXiv API', '每天定时任务比对，标题不一致时只报告不覆盖'],
+        ['新闻候选线索', '公开新闻源扫描', '只写入 content-inbox/，永不直接进入站点'],
+      ],
+      humanTitle: '人工撰写的字段',
+      human:
+        'description、keyFact、caveat、category、verification，以及每个工具的 license 手写值。这些字段的统一要求是具体到可以被反驳：如果一句话无法被证明是错的，它就不该出现在这里。',
+      statesTitle: '核验状态',
+      statesIntro: '基准、动态与用例三类条目都必须显式声明核验状态，没有默认值。当前分布如下：',
+      stateMeaning: {
+        verified: '结论基于已打开并阅读的一手来源。',
+        'single-source': '只有一个来源这么说，未找到独立佐证。',
+        unverified: '无法证实也无法证伪，保留在页面上而不是删掉。',
+        disputed: '与已有证据相矛盾，或属于广为流传但证据不支持的说法。',
+      } as Record<Verification, string>,
+      freshnessTitle: '时效与核验日期',
+      freshness:
+        '每条都带核验日期，sitemap 里的 lastmod 用的是内容自身的日期（核验日期、事件日期、论文修订日期），而不是构建时间——构建时间每天都在变，等于没写，搜索引擎会直接忽略。',
+      boundaryTitle: '自动化的边界',
+      boundary: [
+        '许可证冲突只报告、不自动改写。脚本发现 GitHub 的判定与手写 license 不一致时会打印出来，由人决定是否更新——许可证一旦写错，后果比数字过时严重得多。',
+        '新闻只进候选池。扫描出来的线索落在 src/content/ 之外，因此不可能被站点渲染；要收录必须人工补齐判断句与来源，再显式移入。',
+        '刷新必须能构建成功才允许提交。schema 校验失败会先让自动化流程失败，坏数据不会绕过 CI 直接部署出去。',
+      ],
+      contestedTitle: '有争议的说法怎么处理',
+      contestedBody: (n: number) =>
+        `基准条目里有一类 ${n} 条被单独归为「常见错误说法」（contested）：它们纠正的是被误传的数字，本身不是数据集，所以既不挂 Dataset 结构化数据，也不和正常基准混在一起。全站的争议项汇总在误传核查页。`,
+      absentTitle: '刻意不做的事',
+      absent: [
+        '不排名、不打分，也不给同类工具下「更好」的结论。',
+        '不给全站星标求总和——星标只覆盖部分条目，求和会得出误导性的结论。',
+        '不用构建时间充当更新时间，也不用「今天」这类无法验证的时效标记。',
+      ],
+      fixTitle: '更正流程',
+      fixBody:
+        '带着来源链接提出更正；被接受后会更新条目内容、把核验日期推到当天，并在必要时把核验状态下调为「有争议」而不是悄悄删掉原结论。涉及机器回填字段的争议会在下一次定时刷新后自动反映。',
+      fixCta: '在 GitHub 上提出更正',
+      backCta: '关于本站',
+      contestedCta: '误传核查',
+      benchmarksCta: '评测与基准',
+    }
+  : {
+      lead: 'Everything on this site is either traceable to a primary source you can open and check, or explicitly marked as a judgement. This page sets out how the two are separated, and where the automation stops.',
+      kindsTitle: 'Two kinds of facts',
+      kindsBody: [
+        'Machine-checkable fields are populated by a program and never touched by hand. These are the fields most likely to be wrong from memory — and, once wrong, the kind a reader cannot spot.',
+        'Judgement fields are written by a person: the one-line positioning, the citable judgment, the caveats, the category placement and the verification status itself. Their value is in the call being made, not in the transcription.',
+      ],
+      machineTitle: 'Fields filled by machine',
+      machineCols: ['Field', 'Source', 'How it updates'],
+      machine: [
+        ['Tool stars / archived / lastPush', 'GitHub REST API', 'Refreshed by a daily scheduled job; only these three fields are overwritten'],
+        ['Paper title / authors / first posted / latest revision', 'arXiv API', 'Compared daily; a title mismatch is reported, never silently overwritten'],
+        ['News leads', 'A public-news scan', 'Written to content-inbox/ only; never rendered by the site'],
+      ],
+      humanTitle: 'Fields written by hand',
+      human:
+        'description, keyFact, caveat, category, verification, and each tool\u2019s hand-checked license value. The rule for all of them is the same: be specific enough to be wrong. If a sentence cannot be shown to be false, it does not belong here.',
+      statesTitle: 'Verification states',
+      statesIntro:
+        'Benchmarks, news entries and use cases must each declare a verification state explicitly — there is no default. The current distribution:',
+      stateMeaning: {
+        verified: 'The claim rests on a primary source that was opened and read.',
+        'single-source': 'One source states it; no independent confirmation was found.',
+        unverified: 'Could be neither confirmed nor refuted, so it stays on the page instead of being dropped.',
+        disputed: 'Contradicted by the available evidence, or a widely repeated claim the evidence does not support.',
+      } as Record<Verification, string>,
+      freshnessTitle: 'Freshness and verification dates',
+      freshness:
+        'Every entry carries a verification date, and the lastmod values in the sitemap come from the content\u2019s own dates — verification dates, event dates, paper revision dates — rather than from build time. Build time changes every day, which tells a search engine nothing, so it gets ignored.',
+      boundaryTitle: 'Where the automation stops',
+      boundary: [
+        'License conflicts are reported, not auto-corrected. When the script finds GitHub\u2019s verdict disagreeing with the hand-written license it prints the conflict and leaves the call to a person — a wrong license is a far more expensive error than a stale number.',
+        'News only enters a candidate pool. Scanned leads land outside src/content/, so they cannot be rendered; publishing one requires a person to write its judgment and source fields and move it in explicitly.',
+        'A refresh must build before it may commit. If the schema rejects the new data, the automation fails first, so bad data cannot slip past CI and onto the site.',
+      ],
+      contestedTitle: 'How contested claims are handled',
+      contestedBody: (n: number) =>
+        `${n} benchmark entries are filed separately as contested claims — they correct a number that circulates widely rather than describing a dataset of their own, so they carry no Dataset structured data and are not mixed in with ordinary benchmarks. Every disputed item across the site is collected on the myth-check page.`,
+      absentTitle: 'Things deliberately not done',
+      absent: [
+        'No ranking, no scoring, and no "better than" verdict between tools in the same category.',
+        'No site-wide star total — stars exist for only a subset of entries, and a sum would be misleading.',
+        'No build time presented as an update time, and no unverifiable freshness markers such as "today".',
+      ],
+      fixTitle: 'Corrections',
+      fixBody:
+        'Send a correction with a source link. If accepted, the entry is updated, its verification date moves to that day, and where warranted the status is downgraded to disputed rather than the original claim being quietly deleted. Disputes over machine-filled fields resolve on the next scheduled refresh.',
+      fixCta: 'Open a correction on GitHub',
+      backCta: 'About',
+      contestedCta: 'Myth checks',
+      benchmarksCta: 'Benchmarks',
+    };
+---
+
+<BaseLayout
+  locale={locale}
+  title={`${zh ? '方法论' : 'Methodology'} — ${s.siteName}`}
+  description={P.lead}
+  path={zh ? '/zh/methodology/' : '/methodology/'}
+  alternates={{ en: '/methodology/', zh: '/zh/methodology/' }}
+>
+  <nav class="text-sm text-slate-500 dark:text-slate-400">
+    <a class="hover:text-slate-900 dark:hover:text-slate-100" href={zh ? '/zh/' : '/'}>{s.home}</a>
+    <span class="mx-1">/</span>
+    <a class="hover:text-slate-900 dark:hover:text-slate-100" href={aboutPath}>{P.backCta}</a>
+    <span class="mx-1">/</span><span>{zh ? '方法论' : 'Methodology'}</span>
+  </nav>
+
+  <header class="mt-3">
+    <h1 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-50">
+      {zh ? '方法论' : 'Methodology'}
+    </h1>
+    <p class="mt-3 max-w-3xl text-lg text-slate-600 dark:text-slate-400">{P.lead}</p>
+  </header>
+
+  <section class="mt-10">
+    <h2 class="section-title">{P.kindsTitle}</h2>
+    <ul class="mt-4 space-y-3">
+      {
+        P.kindsBody.map((line) => (
+          <li class="flex gap-3 text-slate-700 dark:text-slate-300">
+            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-indigo-500" />
+            <span>{line}</span>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <section class="mt-12">
+    <h2 class="section-title">{P.machineTitle}</h2>
+    <div class="mt-4 overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-800">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 dark:bg-slate-900">
+          <tr>
+            {
+              P.machineCols.map((c) => (
+                <th class="px-4 py-3 text-left font-medium text-slate-500 dark:text-slate-400">
+                  {c}
+                </th>
+              ))
+            }
+          </tr>
+        </thead>
+        <tbody>
+          {
+            P.machine.map((row) => (
+              <tr class="border-t border-slate-200 dark:border-slate-800">
+                <td class="px-4 py-3 align-top font-medium text-slate-900 dark:text-slate-100">
+                  {row[0]}
+                </td>
+                <td class="px-4 py-3 align-top text-slate-700 dark:text-slate-300">{row[1]}</td>
+                <td class="px-4 py-3 align-top text-slate-600 dark:text-slate-400">{row[2]}</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-3 text-xs text-slate-500 dark:text-slate-400">
+      {zh
+        ? `工具条目中已有 ${automatedTools} / ${tools.length} 条带上了至少一个机器回填字段；论文元数据共 ${papers.length} 篇。`
+        : `${automatedTools} of ${tools.length} tool entries carry at least one machine-filled field; paper metadata covers ${papers.length} papers.`}
+    </p>
+  </section>
+
+  <section class="mt-12">
+    <h2 class="section-title">{P.humanTitle}</h2>
+    <p class="mt-3 max-w-3xl text-slate-700 dark:text-slate-300">{P.human}</p>
+  </section>
+
+  <section class="mt-12">
+    <h2 class="section-title">{P.statesTitle}</h2>
+    <p class="mt-3 max-w-3xl text-slate-700 dark:text-slate-300">{P.statesIntro}</p>
+    <div class="mt-4 overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-800">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 dark:bg-slate-900">
+          <tr>
+            <th class="w-40 px-4 py-3 text-left font-medium text-slate-500 dark:text-slate-400">
+              {zh ? '状态' : 'State'}
+            </th>
+            <th class="px-4 py-3 text-left font-medium text-slate-500 dark:text-slate-400">
+              {zh ? '含义' : 'What it means'}
+            </th>
+            <th class="w-20 px-4 py-3 text-right font-medium text-slate-500 dark:text-slate-400">
+              {zh ? '条数' : 'Count'}
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            stateKeys.map((k) => (
+              <tr class="border-t border-slate-200 dark:border-slate-800">
+                <td class="px-4 py-3 align-top">
+                  <span class="badge badge-neutral">{verificationLabels[k][locale]}</span>
+                </td>
+                <td class="px-4 py-3 align-top text-slate-700 dark:text-slate-300">
+                  {P.stateMeaning[k]}
+                </td>
+                <td class="px-4 py-3 align-top text-right tabular-nums text-slate-900 dark:text-slate-100">
+                  {countByState[k]}
+                </td>
+              </tr>
+            ))
+          }
+          <tr class="border-t border-slate-200 bg-slate-50/60 dark:border-slate-800 dark:bg-slate-900/40">
+            <td class="px-4 py-3 text-slate-500 dark:text-slate-400" colspan="2">
+              {zh ? '基准 / 动态 / 用例合计' : 'Benchmarks + news + use cases'}
+            </td>
+            <td class="px-4 py-3 text-right font-semibold tabular-nums text-slate-900 dark:text-slate-100">
+              {graded.length}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="mt-12">
+    <h2 class="section-title">{P.freshnessTitle}</h2>
+    <p class="mt-3 max-w-3xl text-slate-700 dark:text-slate-300">{P.freshness}</p>
+  </section>
+
+  <section class="mt-12">
+    <h2 class="section-title">{P.boundaryTitle}</h2>
+    <ul class="mt-4 space-y-3">
+      {
+        P.boundary.map((line) => (
+          <li class="flex gap-3 text-slate-700 dark:text-slate-300">
+            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-indigo-500" />
+            <span>{line}</span>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <section class="mt-12">
+    <h2 class="section-title">{P.contestedTitle}</h2>
+    <p class="mt-3 max-w-3xl text-slate-700 dark:text-slate-300">
+      {P.contestedBody(contested.length)}
+    </p>
+    <div class="mt-4 flex flex-wrap gap-3">
+      <a class="btn btn-ghost" href={mythsPath}>{P.contestedCta}</a>
+      <a class="btn btn-ghost" href={benchmarksPath}>{P.benchmarksCta}</a>
+    </div>
+  </section>
+
+  <section class="mt-12">
+    <h2 class="section-title">{P.absentTitle}</h2>
+    <ul class="mt-4 space-y-3">
+      {
+        P.absent.map((line) => (
+          <li class="flex gap-3 text-slate-700 dark:text-slate-300">
+            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-slate-400" />
+            <span>{line}</span>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <section class="mt-12">
+    <h2 class="section-title">{P.fixTitle}</h2>
+    <p class="mt-3 max-w-3xl text-slate-700 dark:text-slate-300">{P.fixBody}</p>
+    <div class="mt-4 flex flex-wrap gap-3">
+      <a class="btn btn-ghost" href={repo} rel="noopener">{P.fixCta}</a>
+      <a class="btn btn-ghost" href={aboutPath}>{P.backCta}</a>
+    </div>
+    <p class="mt-4 text-xs text-slate-500 dark:text-slate-400">
+      {zh
+        ? `对比页共 ${comparisons.length} 组编辑型对比，另有由工具字段派生的数据型对比；后者在页面上显式标注，不引入新判断。`
+        : `${comparisons.length} editorial comparison is published alongside comparisons derived purely from tool fields; the derived ones are labelled as such on the page and add no new judgement.`}
+    </p>
+  </section>
+</BaseLayout>

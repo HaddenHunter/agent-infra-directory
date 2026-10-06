@@ -2,11 +2,13 @@ import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 import { categories, categoryKeys, locales, t, type Locale } from '../../i18n/ui';
 import { benchmarkCategories } from '../../lib/benchmarks';
-import { paperTiers } from '../../lib/papers';
+import { paperCategories, paperCategoryKeys, paperTiers } from '../../lib/papers';
+import { glossaryTerms } from '../../lib/glossary';
 import { verificationLabels, type Verification } from '../../lib/news';
 import { useCaseScenarios } from '../../lib/use-cases';
 import { labs } from '../../lib/lab';
 import { collectMyths } from '../../lib/myths';
+import { derivedView, editorialView, selectDerivedPairs } from '../../lib/comparisons';
 import { renderOgImage } from '../../lib/og';
 
 interface OgEntry {
@@ -33,6 +35,11 @@ export async function getStaticPaths() {
 
   const entries: OgEntry[] = [];
 
+  // 对比页有编辑型与数据型两条来源，OG 图要跟 /compare/[slug] 的 slug 完全对齐
+  const editorial = comparisons.map((c) => editorialView(c));
+  const taken = new Set(editorial.map((c) => c.slug));
+  const compareViews = [...editorial, ...selectDerivedPairs(tools, taken).map(([a, b]) => derivedView(a, b))];
+
   for (const locale of locales) {
     const s = t(locale);
     const zh = locale === 'zh';
@@ -40,6 +47,36 @@ export async function getStaticPaths() {
 
     entries.push(
       { slug: `${p}home`, title: s.siteName, kicker: s.tagline },
+      {
+        slug: `${p}about`,
+        title: s.about,
+        kicker: zh ? '这份目录是什么、写给谁' : 'what this directory is, and who it is for',
+      },
+      {
+        slug: `${p}methodology`,
+        title: s.methodology,
+        kicker: zh ? '核验方式与自动化边界' : 'how entries are checked, and where automation stops',
+      },
+      {
+        slug: `${p}glossary`,
+        title: s.glossary,
+        kicker: `${glossaryTerms.length} ${zh ? '个术语' : 'terms'}`,
+      },
+      {
+        slug: `${p}card`,
+        title: s.agentCard,
+        kicker: zh ? '导出一张 1200×630 的名片' : 'export a 1200×630 card',
+      },
+      {
+        slug: `${p}papers/topics`,
+        title: s.topics,
+        kicker: zh ? '按主题浏览论文' : 'papers grouped by topic',
+      },
+      {
+        slug: `${p}compare`,
+        title: s.compareTitle,
+        kicker: `${compareViews.length} ${zh ? '组工具对比' : 'head-to-head pages'}`,
+      },
       {
         slug: `${p}tools`,
         title: zh ? '全部工具' : 'All tools',
@@ -123,11 +160,41 @@ export async function getStaticPaths() {
       });
     }
 
-    for (const c of comparisons) {
+    for (const key of paperCategoryKeys) {
       entries.push({
-        slug: `${p}compare/${c.id}`,
-        title: zh ? c.data.titleZh : c.data.title,
-        kicker: zh ? '工具对比' : 'Tool comparison',
+        slug: `${p}papers/topics/${key}`,
+        title: paperCategories[key][locale],
+        kicker: `${papers.filter((x) => x.data.category === key).length} ${zh ? '篇论文' : 'papers'}`,
+      });
+    }
+
+    for (const term of glossaryTerms) {
+      entries.push({
+        slug: `${p}glossary/${term.slug}`,
+        title: term.term[locale],
+        kicker: zh ? '术语表' : 'Glossary',
+      });
+    }
+
+    for (const e of events) {
+      entries.push({
+        slug: `${p}news/${e.id}`,
+        title: zh ? e.data.titleZh : e.data.title,
+        kicker: `${e.data.eventDate} · ${verificationLabels[e.data.verification as Verification][locale]}`,
+      });
+    }
+
+    for (const c of compareViews) {
+      entries.push({
+        slug: `${p}compare/${c.slug}`,
+        title: zh ? c.titleZh : c.title,
+        kicker: c.editorial
+          ? zh
+            ? '编辑对比'
+            : 'Editorial comparison'
+          : zh
+            ? '数据对比'
+            : 'Data comparison',
       });
     }
 

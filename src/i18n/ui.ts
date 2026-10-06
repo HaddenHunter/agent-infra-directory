@@ -78,6 +78,24 @@ export const ui = {
     latestRevision: 'Latest revision',
     arxiv: 'arXiv',
     readOnArxiv: 'Read on arXiv',
+    compareTitle: 'Tool comparisons',
+    compareIntro:
+      'Head-to-head pages for tools that sit in the same category. Each page shows only the fields published for both entries — license, hosting model, primary language, star snapshot and maintenance signal — plus each entry\u2019s own citable judgment. Nothing is inferred and nothing is ranked.',
+    editorialCompare: 'Editorial comparison',
+    dataCompare: 'Data comparison',
+    headToHead: 'Head-to-head',
+    relatedComparisons: 'Comparisons featuring this tool',
+    about: 'About',
+    methodology: 'Methodology',
+    glossary: 'Glossary',
+    glossaryIntro:
+      'The terms that keep showing up in agent infrastructure write-ups, defined narrowly enough to be useful and linked to the entries and papers in this directory where each one shows up.',
+    relatedInDirectory: 'In this directory',
+    relatedPapers: 'Related papers',
+    allNews: 'All news',
+    topics: 'Topics',
+    papersInTopic: 'Papers in this topic',
+    agentCard: 'Agent card',
   },
 
   zh: {
@@ -139,6 +157,24 @@ export const ui = {
     latestRevision: '最新修订',
     arxiv: 'arXiv',
     readOnArxiv: '在 arXiv 阅读',
+    compareTitle: '工具对比',
+    compareIntro:
+      '同分类工具的正面对比。每页只展示两个条目都已发布的字段——许可证、部署形态、主要语言、星标时点数据与维护信号——以及各自的可引用判断句。不作推断，也不排名。',
+    editorialCompare: '编辑对比',
+    dataCompare: '数据对比',
+    headToHead: '正面对比',
+    relatedComparisons: '与这个工具相关的对比',
+    about: '关于',
+    methodology: '方法论',
+    glossary: '术语表',
+    glossaryIntro:
+      '在 Agent 基础设施的文章里反复出现的术语。这里的定义刻意收窄到可用，并链到本目录中它们各自出现的条目与论文。',
+    relatedInDirectory: '本目录中的相关条目',
+    relatedPapers: '相关论文',
+    allNews: '全部动态',
+    topics: '主题',
+    papersInTopic: '这个主题下的论文',
+    agentCard: 'Agent 名片',
   },
 } as const;
 

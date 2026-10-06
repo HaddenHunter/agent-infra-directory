@@ -3,6 +3,8 @@ import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 import { readdirSync, readFileSync } from 'node:fs';
 import path from 'node:path';
+import { derivedView, editorialView, selectDerivedPairs } from './src/lib/comparisons.ts';
+import { paperCategoryKeys } from './src/lib/papers.ts';
 
 /**
  * 收集「页面路径 → 该页内容最后一次更新的日期」，交给 sitemap 当 lastmod。
@@ -22,20 +24,26 @@ function collectLastmod() {
     try {
       return readdirSync(dir)
         .filter((f) => f.endsWith('.json'))
-        .map((f) => ({
-          slug: f.slice(0, -'.json'.length),
-          data: JSON.parse(readFileSync(path.join(dir, f), 'utf8')),
-        }));
+        .map((f) => {
+          const slug = f.slice(0, -'.json'.length);
+          // id 与 slug 同值：对比选择的派生函数读的是 Astro 集合条目的 id 字段
+          return { slug, id: slug, data: JSON.parse(readFileSync(path.join(dir, f), 'utf8')) };
+        });
     } catch {
       // 集合目录缺失（例如刚 clone）时不该让构建挂掉
       return [];
     }
   };
 
-  for (const { slug, data } of entries('src/content/tools')) {
+  const tools = entries('src/content/tools');
+
+  for (const { slug, data } of tools) {
     const d = data.updatedDate;
     bump(`/tools/${slug}/`, d);
     bump(`/zh/tools/${slug}/`, d);
+    // 同类替代页的内容跟着该类工具集走
+    bump(`/tools/${slug}/alternatives/`, d);
+    bump(`/zh/tools/${slug}/alternatives/`, d);
     bump('/tools/', d);
     bump('/zh/tools/', d);
     bump(`/categories/${data.category}/`, d);
@@ -44,6 +52,25 @@ function collectLastmod() {
     bump('/', d);
     bump('/zh/', d);
   }
+
+  // 对比页：两种来源的 slug 都要覆盖，否则 /compare/* 在 sitemap 里没有 lastmod
+  try {
+    const editorial = entries('src/content/comparisons').map((c) => editorialView(c));
+    const taken = new Set(editorial.map((c) => c.slug));
+    const views = [
+      ...editorial,
+      ...selectDerivedPairs(tools, taken).map(([a, b]) => derivedView(a, b)),
+    ];
+    const dateOf = new Map(tools.map((t) => [t.id, t.data.updatedDate]));
+    for (const view of views) {
+      const d = [dateOf.get(view.toolA), dateOf.get(view.toolB)].filter(Boolean).sort().at(-1);
+      bump(`/compare/${view.slug}/`, d);
+      bump(`/zh/compare/${view.slug}/`, d);
+    }
+  } catch {
+    // 对比页派生失败不该阻塞 sitemap 生成
+  }
+
   for (const { slug, data } of entries('src/content/benchmarks')) {
     const d = data.lastUpdated;
     bump(`/benchmarks/${slug}/`, d);
@@ -51,10 +78,40 @@ function collectLastmod() {
     bump('/benchmarks/', d);
     bump('/zh/benchmarks/', d);
   }
-  for (const { data } of entries('src/content/events')) {
-    bump('/news/', data.eventDate);
-    bump('/zh/news/', data.eventDate);
+
+  for (const { slug, data } of entries('src/content/events')) {
+    const d = data.eventDate;
+    bump(`/news/${slug}/`, d);
+    bump(`/zh/news/${slug}/`, d);
+    bump('/news/', d);
+    bump('/zh/news/', d);
   }
+
+  for (const { slug, data } of entries('src/content/use-cases')) {
+    const d = data.sourceDate;
+    bump(`/use-cases/${slug}/`, d);
+    bump(`/zh/use-cases/${slug}/`, d);
+    bump('/use-cases/', d);
+    bump('/zh/use-cases/', d);
+  }
+
+  for (const key of paperCategoryKeys) {
+    // 主题页的日期取该主题下最新一篇论文
+    const d = entries('src/content/papers')
+      .filter((p) => p.data.category === key)
+      .map((p) => p.data.updatedDate || p.data.publishedDate)
+      .sort()
+      .at(-1);
+    bump(`/papers/topics/${key}/`, d);
+    bump(`/zh/papers/topics/${key}/`, d);
+  }
+  const papersLatest = entries('src/content/papers')
+    .map((p) => p.data.updatedDate || p.data.publishedDate)
+    .sort()
+    .at(-1);
+  bump('/papers/topics/', papersLatest);
+  bump('/zh/papers/topics/', papersLatest);
+
   for (const { slug, data } of entries('src/content/papers')) {
     const d = data.updatedDate || data.publishedDate;
     bump(`/papers/${slug}/`, d);

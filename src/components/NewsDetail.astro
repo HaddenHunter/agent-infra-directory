@@ -1,0 +1,47 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import EventCard from './EventCard.astro';
+import { newsArticleSchema } from '../lib/schema';
+import { t, type Locale } from '../i18n/ui';
+import { eventTypes, newsIndexUrl } from '../lib/news';
+
+export interface Props {
+  locale: Locale;
+  event: CollectionEntry<'events'>;
+}
+
+const { locale, event } = Astro.props;
+const s = t(locale);
+const d = event.data;
+const zh = locale === 'zh';
+
+const title = zh ? d.titleZh : d.title;
+const path = zh ? `/zh/news/${event.id}/` : `/news/${event.id}/`;
+---
+
+<BaseLayout
+  locale={locale}
+  title={`${title} — ${s.siteName}`}
+  description={zh ? d.summaryZh : d.summary}
+  path={path}
+  alternates={{ en: `/news/${event.id}/`, zh: `/zh/news/${event.id}/` }}
+  jsonLd={newsArticleSchema(locale, event)}
+  ogType="article"
+>
+  <nav class="text-sm text-slate-500 dark:text-slate-400" aria-label="Breadcrumb">
+    <a class="hover:text-slate-900 dark:hover:text-slate-100" href={zh ? '/zh/' : '/'}>{s.home}</a>
+    <span class="mx-1">/</span>
+    <a class="hover:text-slate-900 dark:hover:text-slate-100" href={newsIndexUrl(locale)}>{s.news}</a>
+    <span class="mx-1">/</span>
+    <span class="text-slate-400">{eventTypes[d.type][locale]}</span>
+  </nav>
+
+  <div class="mt-6">
+    <EventCard locale={locale} event={event} titleTag="h1" />
+  </div>
+
+  <p class="mt-8 text-sm">
+    <a class="btn btn-ghost" href={newsIndexUrl(locale)}>← {s.allNews}</a>
+  </p>
+</BaseLayout>

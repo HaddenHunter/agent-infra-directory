@@ -1,0 +1,12 @@
+---
+import PaperTopic from '../../../../components/PaperTopic.astro';
+import { paperCategoryKeys, type PaperCategory } from '../../../../lib/papers';
+
+export async function getStaticPaths() {
+  return paperCategoryKeys.map((category) => ({ params: { category }, props: { category } }));
+}
+
+const { category } = Astro.props as { category: PaperCategory };
+---
+
+<PaperTopic locale="zh" category={category} />

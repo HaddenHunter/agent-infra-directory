@@ -114,7 +114,7 @@ const jsonLd = {
             </h2>
             <div class="space-y-4">
               {group.items.map((e) => (
-                <EventCard locale={locale} event={e} />
+                <EventCard locale={locale} event={e} detailHref={`/news/${e.id}/`} />
               ))}
             </div>
           </section>

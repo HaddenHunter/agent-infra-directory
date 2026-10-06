@@ -2,6 +2,7 @@
 import { ClientRouter } from 'astro:transitions';
 import { SITE_URL, t, type Locale, locales } from '../i18n/ui';
 import { ogImageUrl } from '../lib/og';
+import { siteSchema } from '../lib/schema';
 import '../styles/global.css';
 
 export interface Props {
@@ -32,7 +33,7 @@ const canonical = new URL(path, SITE_URL).href;
 const alts = alternates ?? { [locale]: path };
 const otherLocale: Locale = locale === 'en' ? 'zh' : 'en';
 const switchPath = alts[otherLocale] ?? (otherLocale === 'zh' ? '/zh/' : '/');
-const graph = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
+const graph = [...siteSchema(locale), ...(jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [])];
 const toolsIndex = locale === 'en' ? '/tools/' : '/zh/tools/';
 const newsIndex = locale === 'en' ? '/news/' : '/zh/news/';
 const benchIndex = locale === 'en' ? '/benchmarks/' : '/zh/benchmarks/';
@@ -244,6 +245,21 @@ const cfBeaconToken = import.meta.env.PUBLIC_CF_BEACON_TOKEN;
           </a>
           <a class="hover:text-slate-900 dark:hover:text-slate-100" href={locale === 'zh' ? '/zh/lab/' : '/lab/'}>
             {locale === 'zh' ? '实验区' : 'Lab'}
+          </a>
+          <a class="hover:text-slate-900 dark:hover:text-slate-100" href={locale === 'zh' ? '/zh/compare/' : '/compare/'}>
+            {locale === 'zh' ? '工具对比' : 'Comparisons'}
+          </a>
+          <a class="hover:text-slate-900 dark:hover:text-slate-100" href={locale === 'zh' ? '/zh/glossary/' : '/glossary/'}>
+            {strings.glossary}
+          </a>
+          <a class="hover:text-slate-900 dark:hover:text-slate-100" href={locale === 'zh' ? '/zh/card/' : '/card/'}>
+            {strings.agentCard}
+          </a>
+          <a class="hover:text-slate-900 dark:hover:text-slate-100" href={locale === 'zh' ? '/zh/about/' : '/about/'}>
+            {strings.about}
+          </a>
+          <a class="hover:text-slate-900 dark:hover:text-slate-100" href={locale === 'zh' ? '/zh/methodology/' : '/methodology/'}>
+            {strings.methodology}
           </a>
         </nav>
       </div>

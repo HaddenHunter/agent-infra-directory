@@ -1,0 +1,172 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { categoryKeys, t, type Locale } from '../i18n/ui';
+
+export interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const s = t(locale);
+const zh = locale === 'zh';
+
+const [tools, papers, benchmarks, events, useCases] = await Promise.all([
+  getCollection('tools'),
+  getCollection('papers'),
+  getCollection('benchmarks'),
+  getCollection('events'),
+  getCollection('useCases'),
+]);
+
+/** 统计数字全部现算，不手写——手写的数字会随着条目增加而变成假话 */
+const stats = [
+  { value: tools.length, label: zh ? '个工具' : 'tools' },
+  { value: categoryKeys.length, label: zh ? '个分类' : 'categories' },
+  { value: papers.length, label: zh ? '篇论文' : 'papers' },
+  { value: benchmarks.length, label: zh ? '个基准' : 'benchmarks' },
+  { value: events.length, label: zh ? '条动态' : 'news entries' },
+  { value: useCases.length, label: zh ? '条真实用例' : 'use cases' },
+];
+
+const repo = 'https://github.com/HaddenHunter/agent-infra-directory';
+const methodologyPath = zh ? '/zh/methodology/' : '/methodology/';
+
+const P = zh
+  ? {
+      lead: '这是一份中英双语的 AI Agent 基础设施目录。它不追求收录得最多，而是要求每一条都能被核对：条目按分类组织，带上可引用的判断句、来源链接、核验日期，以及——在有争议时——显式的注意事项。',
+      whatTitle: '这里有什么',
+      whatBody: [
+        '工具条目记录许可证、部署形态、主要语言、星标时点数据与维护信号，并为每条写一句自包含、可以直接引用的判断句。',
+        '论文条目只收录那些提出了某种被沿用至今的循环、基准或失败模式的文章。标题、作者与日期取自 arXiv API，不手写。',
+        '基准条目写的是一个基准究竟在测什么、2026 年的前沿水平、人类基线，以及它的可信度问题（数据污染、脚手架差异、口径不一致）。',
+        '动态与用例两栏记录 Agent 真正发生的事：发布、融资、安全事件、框架变更，以及普通人把真实任务交给 Agent 的可追溯记录。',
+      ],
+      whoTitle: '写给谁看',
+      whoBody:
+        '写给正在做选型决策的人：要为一个 Agent 产品挑运行时、沙箱、记忆层或可观测方案，需要在几个具体候选之间做出判断，而不是再看一遍「Top 50 工具」清单。',
+      policyTitle: '编辑原则',
+      policy: [
+        '不排名。目录不给工具打分，也不设「最佳」标签；同类工具之间只做字段层面的并置，不做优劣结论。',
+        '两语同步。每个条目中英字段存在同一条记录里，中文结论与英文结论来自同一份事实源，不靠翻译二次创作。',
+        '不删有争议的内容，而是标注它。查无实据的说法会以「注意」或「有争议」的形式保留在页面上，让读者自己判断。',
+        '没有付费收录，也没有赞助位。条目进出的唯一理由是它是否值得被做选型的人看到。',
+      ],
+      notTitle: '这里没有什么',
+      notBody:
+        '不是工具大全——收录是选择的结果，被排除的项目没有被排除的理由说明。也没有实时排行：星标是时点数据，只用来判断项目量级，不代表当前热度。',
+      fixTitle: '发现错误怎么办',
+      fixBody:
+        '每一条都带核验日期，所以错误是能被定位的。请带着来源链接提出，我们会重核并更新条目（包括把结论改成「有争议」）。流程写在方法论里。',
+      fixCta: '查看方法论',
+      repoCta: '在 GitHub 上提出更正',
+    }
+  : {
+      lead: 'A bilingual directory of AI Agent infrastructure. It does not try to list the most tools — it tries to make every entry checkable: each one is placed in a category and carries a citable judgment, a source link, a verification date and, where the record is contested, an explicit caveat.',
+      whatTitle: 'What is in here',
+      whatBody: [
+        'Tool entries record license, hosting model, primary language, a point-in-time star count and a maintenance signal, each with a self-contained judgment you can quote directly.',
+        'Paper entries only include work that introduced a loop, a benchmark or a failure mode the field still uses. Titles, authors and dates come from the arXiv API, never typed by hand.',
+        'Benchmark entries state what a benchmark actually measures, where its 2026 frontier sits, its human baseline, and its credibility problems — contamination, scaffold differences, inconsistent reporting.',
+        'The news and use-case sections record what actually happens: launches, funding, security incidents, framework changes, and traced accounts of people handing real tasks to agents.',
+      ],
+      whoTitle: 'Who it is for',
+      whoBody:
+        'People making a selection decision: choosing a runtime, sandbox, memory layer or observability stack for an agent product, and needing to judge between a handful of concrete candidates rather than read another "top 50 tools" list.',
+      policyTitle: 'Editorial policy',
+      policy: [
+        'No rankings. Nothing here is scored and nothing carries a "best" label; tools in the same category are placed side by side field by field, and no verdict is drawn for you.',
+        'Both languages move together. The English and Chinese text of an entry live in the same record, so the two versions rest on one set of facts rather than on a translation.',
+        'Contested material is labelled, not deleted. Claims that could not be traced stay on the page as a caveat or a disputed flag, so you can judge them yourself.',
+        'No paid listings and no sponsored slots. An entry is here only because it is worth the attention of someone making this decision.',
+      ],
+      notTitle: 'What is not in here',
+      notBody:
+        'This is not a complete list of tools — inclusion is a judgement call, and excluded projects come with no explanation of why. Nor is there a live ranking: star counts are point-in-time and only useful for judging order of magnitude, not current popularity.',
+      fixTitle: 'If something is wrong',
+      fixBody:
+        'Every entry carries a verification date, so an error can be located. Send the correction with a source link and the entry will be re-checked and updated — including being changed to "disputed" if the record does not hold.',
+      fixCta: 'Read the methodology',
+      repoCta: 'Open a correction on GitHub',
+    };
+---
+
+<BaseLayout
+  locale={locale}
+  title={`${zh ? '关于本站' : 'About'} — ${s.siteName}`}
+  description={P.lead}
+  path={zh ? '/zh/about/' : '/about/'}
+  alternates={{ en: '/about/', zh: '/zh/about/' }}
+>
+  <nav class="text-sm text-slate-500 dark:text-slate-400">
+    <a class="hover:text-slate-900 dark:hover:text-slate-100" href={zh ? '/zh/' : '/'}>{s.home}</a>
+    <span class="mx-1">/</span><span>{zh ? '关于' : 'About'}</span>
+  </nav>
+
+  <header class="mt-3">
+    <h1 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-50">
+      {zh ? '关于本站' : 'About this directory'}
+    </h1>
+    <p class="mt-3 max-w-3xl text-lg text-slate-600 dark:text-slate-400">{P.lead}</p>
+  </header>
+
+  <dl class="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+    {
+      stats.map((row) => (
+        <div class="card !p-4 text-center">
+          <dt class="text-xs text-slate-500 dark:text-slate-400">{row.label}</dt>
+          <dd class="mt-1 text-2xl font-semibold tabular-nums text-slate-900 dark:text-slate-100">
+            {row.value}
+          </dd>
+        </div>
+      ))
+    }
+  </dl>
+
+  <section class="mt-12">
+    <h2 class="section-title">{P.whatTitle}</h2>
+    <ul class="mt-4 space-y-3">
+      {
+        P.whatBody.map((line) => (
+          <li class="flex gap-3 text-slate-700 dark:text-slate-300">
+            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-indigo-500" />
+            <span>{line}</span>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <section class="mt-12">
+    <h2 class="section-title">{P.whoTitle}</h2>
+    <p class="mt-3 max-w-3xl text-slate-700 dark:text-slate-300">{P.whoBody}</p>
+  </section>
+
+  <section class="mt-12">
+    <h2 class="section-title">{P.policyTitle}</h2>
+    <ul class="mt-4 space-y-3">
+      {
+        P.policy.map((line) => (
+          <li class="flex gap-3 text-slate-700 dark:text-slate-300">
+            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-indigo-500" />
+            <span>{line}</span>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <section class="mt-12">
+    <h2 class="section-title">{P.notTitle}</h2>
+    <p class="mt-3 max-w-3xl text-slate-700 dark:text-slate-300">{P.notBody}</p>
+  </section>
+
+  <section class="mt-12">
+    <h2 class="section-title">{P.fixTitle}</h2>
+    <p class="mt-3 max-w-3xl text-slate-700 dark:text-slate-300">{P.fixBody}</p>
+    <div class="mt-4 flex flex-wrap gap-3">
+      <a class="btn btn-ghost" href={methodologyPath}>{P.fixCta}</a>
+      <a class="btn btn-ghost" href={repo} rel="noopener">{P.repoCta}</a>
+    </div>
+  </section>
+</BaseLayout>

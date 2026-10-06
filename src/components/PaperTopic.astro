@@ -1,0 +1,105 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PaperCard from './PaperCard.astro';
+import { t, SITE_URL, type Locale } from '../i18n/ui';
+import {
+  paperCategories,
+  paperCategoryBlurbs,
+  paperCategoryKeys,
+  paperTiers,
+  paperTopicUrl,
+  paperTopicsIndexUrl,
+  paperUrl,
+  type PaperCategory,
+} from '../lib/papers';
+
+export interface Props {
+  locale: Locale;
+  category: PaperCategory;
+}
+
+const { locale, category } = Astro.props;
+const s = t(locale);
+const zh = locale === 'zh';
+
+const all = await getCollection('papers');
+const inTopic = all
+  .filter((p) => p.data.category === category)
+  .sort((a, b) => a.data.publishedDate.localeCompare(b.data.publishedDate));
+
+const label = paperCategories[category][locale];
+const blurb = paperCategoryBlurbs[category][locale];
+const path = zh ? `/zh/papers/topics/${category}/` : `/papers/topics/${category}/`;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: `${label} — ${zh ? 'Agent 论文主题' : 'agent papers'}`,
+  description: blurb,
+  url: new URL(path, SITE_URL).href,
+  numberOfItems: inTopic.length,
+  inLanguage: zh ? 'zh-CN' : 'en',
+  hasPart: inTopic.map((p) => ({
+    '@type': 'ScholarlyArticle',
+    name: p.data.title,
+    url: new URL(paperUrl(locale, p.id), SITE_URL).href,
+  })),
+};
+
+const others = paperCategoryKeys.filter((k) => k !== category);
+const countOf = (k: PaperCategory) => all.filter((p) => p.data.category === k).length;
+---
+
+<BaseLayout
+  locale={locale}
+  title={`${label} — ${s.papers}`}
+  description={blurb}
+  path={path}
+  alternates={{ en: `/papers/topics/${category}/`, zh: `/zh/papers/topics/${category}/` }}
+  jsonLd={jsonLd}
+>
+  <nav class="text-sm text-slate-500 dark:text-slate-400" aria-label="Breadcrumb">
+    <a class="hover:text-slate-900 dark:hover:text-slate-100" href={zh ? '/zh/' : '/'}>{s.home}</a>
+    <span class="mx-1">/</span>
+    <a class="hover:text-slate-900 dark:hover:text-slate-100" href={zh ? '/zh/papers/' : '/papers/'}>
+      {s.papers}
+    </a>
+    <span class="mx-1">/</span>
+    <a class="hover:text-slate-900 dark:hover:text-slate-100" href={paperTopicsIndexUrl(locale)}>
+      {s.topics}
+    </a>
+  </nav>
+
+  <header class="mt-3">
+    <h1 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-50">{label}</h1>
+    <p class="mt-2 max-w-3xl text-slate-600 dark:text-slate-400">{blurb}</p>
+    <p class="mt-2 text-sm text-slate-500">
+      {inTopic.length} {zh ? '篇' : 'papers'}
+    </p>
+  </header>
+
+  <nav class="mt-6 flex flex-wrap gap-2" aria-label={s.topics}>
+    {
+      others.map((k) => (
+        <a class="badge badge-neutral" href={paperTopicUrl(locale, k)}>
+          {paperCategories[k][locale]} ({countOf(k)})
+        </a>
+      ))
+    }
+  </nav>
+
+  <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    {
+      inTopic.map((p) => (
+        <PaperCard locale={locale} paper={p} href={paperUrl(locale, p.id)} />
+      ))
+    }
+  </div>
+
+  <p class="mt-10 text-xs text-slate-500 dark:text-slate-400">
+    {zh
+      ? `主题归类由本目录的编辑判断决定，每篇论文另有层级标注（${paperTiers.landmark.zh} / ${paperTiers.frontier.zh}）与核验过的题录信息。`
+      : `Topic placement is an editorial call in this directory; every paper additionally carries a tier (${paperTiers.landmark.en} / ${paperTiers.frontier.en}) and verified bibliographic data.`}
+  </p>
+</BaseLayout>

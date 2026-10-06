@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import { categories, t, toolAlternativesUrl, toolMarkdownUrl, type Locale } from '../i18n/ui';
+import { compareIndexUrl, derivedView, editorialView, selectDerivedPairs } from '../lib/comparisons';
 import { licenseKind, licenseLabels, licenseBadgeClass } from '../lib/license';
 import ToolCard from './ToolCard.astro';
 
@@ -21,10 +22,32 @@ const caveat = locale === 'zh' ? d.caveatZh : d.caveat;
 const categoryLabel = categories[d.category][locale];
 const kind = licenseKind(d.license);
 
-const siblings = (await getCollection('tools'))
+const allTools = await getCollection('tools');
+const siblings = allTools
   .filter((x) => x.data.category === d.category && x.id !== tool.id)
   .sort((a, b) => (b.data.stars ?? 0) - (a.data.stars ?? 0));
 const related = siblings.slice(0, 3);
+
+/**
+ * 正面对比的反向链接。对比页本身只单向指向工具页，没有这组链接的话
+ * 40 个新页只能靠 sitemap 被发现——而工具页是全站权重最高的页面。
+ * 挑选规则与 /compare/[slug] 一致，两边不会出现指向 404 的链接。
+ */
+const nameById = new Map(allTools.map((x) => [x.id, x.data.name]));
+const editorialViews = (await getCollection('comparisons')).map((c) => editorialView(c));
+const takenSlugs = new Set(editorialViews.map((v) => v.slug));
+const comparisonsForTool = [
+  ...editorialViews,
+  ...selectDerivedPairs(allTools, takenSlugs).map(([a, b]) => derivedView(a, b)),
+]
+  .filter((v) => v.toolA === tool.id || v.toolB === tool.id)
+  .map((v) => ({
+    slug: v.slug,
+    other: nameById.get(v.toolA === tool.id ? v.toolB : v.toolA) ?? '',
+    editorial: v.editorial,
+  }));
+
+const compareIndex = compareIndexUrl(locale);
 ---
 
 <article>
@@ -49,7 +72,7 @@ const related = siblings.slice(0, 3);
         d.stars !== undefined && (
           <span class="badge badge-neutral">
             ★ {d.stars.toLocaleString('en-US')}
-            {d.starsAsOf ? <span class="opacity-70">（{d.starsAsOf}）</span> : null}
+            {d.starsAsOf ? <span class="opacity-70">{locale === 'zh' ? `（${d.starsAsOf}）` : ` (${d.starsAsOf})`}</span> : null}
           </span>
         )
       }
@@ -166,6 +189,34 @@ const related = siblings.slice(0, 3);
             <ToolCard locale={locale} tool={r} showCategory={false} />
           ))}
         </div>
+      </section>
+    )
+  }
+
+  {
+    comparisonsForTool.length > 0 && (
+      <section class="mt-12">
+        <div class="flex flex-wrap items-baseline justify-between gap-2">
+          <h2 class="section-title">{s.relatedComparisons}</h2>
+          <a
+            class="text-sm text-indigo-600 hover:underline dark:text-indigo-400"
+            href={compareIndex}
+          >
+            {locale === 'zh' ? '全部工具对比 →' : 'All comparisons →'}
+          </a>
+        </div>
+        <ul class="mt-4 flex flex-wrap gap-2">
+          {comparisonsForTool.slice(0, 8).map((c) => (
+            <li>
+              <a
+                class="badge badge-neutral hover:bg-indigo-50 hover:text-indigo-700 dark:hover:bg-indigo-950/60 dark:hover:text-indigo-300"
+                href={(locale === 'zh' ? '/zh/compare/' : '/compare/') + c.slug + '/'}
+              >
+                {name} <span class="opacity-60">vs</span> {c.other}
+              </a>
+            </li>
+          ))}
+        </ul>
       </section>
     )
   }

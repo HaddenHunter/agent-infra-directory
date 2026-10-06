@@ -7,6 +7,7 @@ import {
   paperCategoryKeys,
   paperCategories,
   paperTiers,
+  paperTopicUrl,
   paperUrl,
   type PaperCategory,
 } from '../../../lib/papers';
@@ -57,12 +58,15 @@ const jsonLd = {
     </p>
   </header>
 
-  <nav class="mt-6 flex flex-wrap gap-2" aria-label="分类">
+  <nav class="mt-6 flex flex-wrap items-center gap-2" aria-label="主题">
+    <a class="text-sm text-indigo-600 hover:underline dark:text-indigo-400" href="/zh/papers/topics/">
+      {s.topics} →
+    </a>
     {
       paperCategoryKeys.map((k) => (
-        <span class="badge badge-neutral">
+        <a class="badge badge-neutral" href={paperTopicUrl(locale, k)}>
           {paperCategories[k].zh} ({counts[k]})
-        </span>
+        </a>
       ))
     }
   </nav>

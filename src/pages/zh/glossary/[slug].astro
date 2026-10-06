@@ -1,0 +1,12 @@
+---
+import GlossaryTermPage from '../../../components/GlossaryTermPage.astro';
+import { glossaryTerms } from '../../../lib/glossary';
+
+export async function getStaticPaths() {
+  return glossaryTerms.map((entry) => ({ params: { slug: entry.slug }, props: { entry } }));
+}
+
+const { entry } = Astro.props as { entry: (typeof glossaryTerms)[number] };
+---
+
+<GlossaryTermPage locale="zh" entry={entry} />

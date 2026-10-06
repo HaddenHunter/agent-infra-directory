@@ -1,105 +1,35 @@
 ---
 import { getCollection, getEntry } from 'astro:content';
-import BaseLayout from '../../../layouts/BaseLayout.astro';
-import { faqSchema } from '../../../lib/schema';
-import { toolUrl, type Locale } from '../../../i18n/ui';
+import ComparisonPage from '../../../components/ComparisonPage.astro';
+import {
+  derivedView,
+  editorialView,
+  selectDerivedPairs,
+  type ComparisonView,
+} from '../../../lib/comparisons';
 
+/** 挑选规则与英文路由完全一致，保证两边 slug 一一对应 */
 export async function getStaticPaths() {
+  const tools = await getCollection('tools');
   const comparisons = await getCollection('comparisons');
-  return comparisons.map((c) => ({ params: { slug: c.id }, props: { comparison: c } }));
+
+  const editorial = comparisons.map((c) => editorialView(c));
+  const taken = new Set(editorial.map((c) => c.slug));
+  const derived = selectDerivedPairs(tools, taken).map(([a, b]) => derivedView(a, b));
+
+  return [...editorial, ...derived].map((view) => ({
+    params: { slug: view.slug },
+    props: { view },
+  }));
 }
 
-const { comparison } = Astro.props as {
-  comparison: Awaited<ReturnType<typeof getCollection<'comparisons'>>>[number];
-};
-const locale: Locale = 'zh';
+const { view } = Astro.props as { view: ComparisonView };
 
-const toolA = await getEntry('tools', comparison.data.toolA);
-const toolB = await getEntry('tools', comparison.data.toolB);
+const toolA = await getEntry('tools', view.toolA);
+const toolB = await getEntry('tools', view.toolB);
 if (!toolA || !toolB) {
-  throw new Error(`Comparison ${comparison.id} references a missing tool`);
+  throw new Error(`Comparison ${view.slug} references a missing tool`);
 }
-
-const nameA = toolA.data.name;
-const nameB = toolB.data.name;
-
-const qas = [
-  { q: `${nameA} 与 ${nameB} 的核心区别是什么？`, a: comparison.data.summaryZh },
-  ...comparison.data.dimensions.map((dim) => ({
-    q: `${nameA} 和 ${nameB} 在「${dim.labelZh}」上如何对比？`,
-    a: `${nameA}：${dim.valueA}。${nameB}：${dim.valueB}。`,
-  })),
-];
 ---
 
-<BaseLayout
-  locale={locale}
-  title={comparison.data.titleZh}
-  description={comparison.data.summaryZh}
-  path={`/zh/compare/${comparison.id}/`}
-  alternates={{ en: `/compare/${comparison.id}/`, zh: `/zh/compare/${comparison.id}/` }}
-  jsonLd={faqSchema(qas)}
->
-  <nav class="text-sm text-slate-500 dark:text-slate-400">
-    <a class="hover:text-slate-900 dark:hover:text-slate-100" href="/zh/">首页</a>
-    <span class="mx-1">/</span><span>对比</span>
-  </nav>
-
-  <header class="mt-3">
-    <h1 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-50">
-      {comparison.data.titleZh}
-    </h1>
-    <p class="mt-3 max-w-3xl text-lg text-slate-600 dark:text-slate-400">
-      {comparison.data.summaryZh}
-    </p>
-  </header>
-
-  <div class="mt-8 overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-800">
-    <table class="w-full text-sm">
-      <thead class="bg-slate-50 dark:bg-slate-900">
-        <tr>
-          <th class="w-40 px-4 py-3 text-left font-medium text-slate-500 dark:text-slate-400"></th>
-          <th class="px-4 py-3 text-left font-semibold text-slate-900 dark:text-slate-100">
-            <a class="hover:text-indigo-600 dark:hover:text-indigo-400" href={toolUrl(locale, toolA.id)}
-              >{nameA}</a
-            >
-          </th>
-          <th class="px-4 py-3 text-left font-semibold text-slate-900 dark:text-slate-100">
-            <a class="hover:text-indigo-600 dark:hover:text-indigo-400" href={toolUrl(locale, toolB.id)}
-              >{nameB}</a
-            >
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        {
-          comparison.data.dimensions.map((dim) => (
-            <tr class="border-t border-slate-200 dark:border-slate-800">
-              <th class="bg-slate-50/60 px-4 py-3 text-left align-top font-medium text-slate-500 dark:bg-slate-900/40 dark:text-slate-400">
-                {dim.labelZh}
-              </th>
-              <td class="px-4 py-3 align-top text-slate-700 dark:text-slate-300">{dim.valueA}</td>
-              <td class="px-4 py-3 align-top text-slate-700 dark:text-slate-300">{dim.valueB}</td>
-            </tr>
-          ))
-        }
-      </tbody>
-    </table>
-  </div>
-
-  <section class="mt-12">
-    <h2 class="text-xl font-semibold tracking-tight text-slate-900 dark:text-slate-100">FAQ</h2>
-    <div class="mt-4 space-y-3">
-      {
-        qas.map(({ q, a }) => (
-          <details class="card !p-0" open={q === qas[0].q}>
-            <summary class="cursor-pointer px-4 py-3 font-medium text-slate-900 dark:text-slate-100">
-              {q}
-            </summary>
-            <p class="px-4 pb-4 text-sm text-slate-600 dark:text-slate-400">{a}</p>
-          </details>
-        ))
-      }
-    </div>
-  </section>
-</BaseLayout>
+<ComparisonPage locale="zh" view={view} toolA={toolA} toolB={toolB} />

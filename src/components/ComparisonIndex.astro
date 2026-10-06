@@ -1,0 +1,117 @@
+---
+import { getCollection, getEntry } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import {
+  derivedView,
+  editorialView,
+  selectDerivedPairs,
+  type ComparisonView,
+} from '../lib/comparisons';
+import { categories, categoryKeys, t, type CategoryKey, type Locale } from '../i18n/ui';
+
+export interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const s = t(locale);
+const zh = locale === 'zh';
+
+const tools = await getCollection('tools');
+const byId = new Map(tools.map((tool) => [tool.id, tool]));
+
+const editorial = (await getCollection('comparisons')).map((c) => editorialView(c));
+const taken = new Set(editorial.map((c) => c.slug));
+const derived = selectDerivedPairs(tools, taken).map(([a, b]) => derivedView(a, b));
+
+/** 按分类分组；分类顺序沿用全站的一级分类顺序，组内编辑型排前面 */
+const groups = categoryKeys
+  .map((key: CategoryKey) => {
+    const items = [...editorial, ...derived].filter(
+      (view) => byId.get(view.toolA)?.data.category === key
+    );
+    items.sort((a, b) => Number(b.editorial) - Number(a.editorial));
+    return { key, label: categories[key][locale], items };
+  })
+  .filter((g) => g.items.length > 0);
+
+const total = editorial.length + derived.length;
+
+const title = `${s.compareTitle} — ${s.siteName}`;
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: s.compareTitle,
+  description: s.compareIntro,
+  url: zh ? 'https://agent.c8.fit/zh/compare/' : 'https://agent.c8.fit/compare/',
+  numberOfItems: total,
+  inLanguage: zh ? 'zh-CN' : 'en',
+};
+
+const nameOf = (view: ComparisonView) =>
+  [byId.get(view.toolA)?.data.name ?? view.toolA, byId.get(view.toolB)?.data.name ?? view.toolB];
+---
+
+<BaseLayout
+  locale={locale}
+  title={title}
+  description={s.compareIntro}
+  path={zh ? '/zh/compare/' : '/compare/'}
+  alternates={{ en: '/compare/', zh: '/zh/compare/' }}
+  jsonLd={jsonLd}
+>
+  <nav class="text-sm text-slate-500 dark:text-slate-400">
+    <a class="hover:text-slate-900 dark:hover:text-slate-100" href={zh ? '/zh/' : '/'}>{s.home}</a>
+    <span class="mx-1">/</span><span>{s.compareTitle}</span>
+  </nav>
+
+  <header class="mt-3">
+    <h1 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-50">
+      {s.compareTitle}
+    </h1>
+    <p class="mt-2 max-w-3xl text-slate-600 dark:text-slate-400">{s.compareIntro}</p>
+    <p class="mt-2 text-sm text-slate-500">
+      {total} {zh ? '组对比' : 'pairs'}
+    </p>
+  </header>
+
+  <div class="mt-10 space-y-10">
+    {
+      groups.map((group) => (
+        <section>
+          <h2 class="section-title">
+            <a
+              class="hover:text-indigo-600 dark:hover:text-indigo-400"
+              href={locale === 'zh' ? `/zh/categories/${group.key}/` : `/categories/${group.key}/`}
+            >
+              {group.label}
+            </a>
+            <span class="ml-2 text-sm font-normal text-slate-400">{group.items.length}</span>
+          </h2>
+          <ul class="mt-3 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+            {group.items.map((view) => {
+              const [a, b] = nameOf(view);
+              return (
+                <li>
+                  <a
+                    class="card card-interactive flex h-full flex-col gap-2 !p-3"
+                    href={(zh ? '/zh/compare/' : '/compare/') + view.slug + '/'}
+                  >
+                    <span class="text-sm font-medium text-slate-900 dark:text-slate-100">
+                      {a} <span class="text-slate-400">vs</span> {b}
+                    </span>
+                    <span
+                      class:list={['badge w-fit', view.editorial ? 'badge-open' : 'badge-neutral']}
+                    >
+                      {view.editorial ? s.editorialCompare : s.dataCompare}
+                    </span>
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      ))
+    }
+  </div>
+</BaseLayout>

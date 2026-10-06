@@ -1,0 +1,177 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { t, toolUrl, type Locale } from '../i18n/ui';
+import { licenseKind, licenseLabels } from '../lib/license';
+
+export interface Props {
+  locale: Locale;
+  tools: CollectionEntry<'tools'>[];
+}
+
+const { locale, tools } = Astro.props;
+const s = t(locale);
+const zh = locale === 'zh';
+
+/**
+ * 服务端默认按星标降序渲染，列头点击排序只是渐进增强：
+ * 没有 JS 时表格依然是完整、可读的，只是不能换个顺序看。
+ */
+const rows = [...tools].sort((a, b) => (b.data.stars ?? -1) - (a.data.stars ?? -1));
+
+const columns = [
+  { key: 'name', label: zh ? '名称' : 'Name', align: 'left' },
+  { key: 'license', label: s.license, align: 'left' },
+  { key: 'hosted', label: s.selfHosted, align: 'left' },
+  { key: 'language', label: s.language, align: 'left' },
+  { key: 'stars', label: s.stars, align: 'right' },
+  { key: 'push', label: zh ? '最近提交' : 'Last push', align: 'right' },
+];
+---
+
+<div class="mt-10">
+  <div class="flex flex-wrap items-baseline justify-between gap-2">
+    <h2 class="section-title">{zh ? '一览表' : 'At a glance'}</h2>
+    <p class="text-xs text-slate-500 dark:text-slate-400">
+      {zh
+        ? '与上方卡片同一份数据。排序在你的浏览器里完成，本站不对它们排名。'
+        : 'The same data as the cards above. Sorting happens in your browser; we do not rank them.'}
+    </p>
+  </div>
+
+  <div class="mt-3 overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-800">
+    <table class="w-full text-sm" data-sortable-table data-default-key="stars" data-default-dir="desc">
+      <thead class="bg-slate-50 dark:bg-slate-900">
+        <tr>
+          {
+            columns.map((col) => (
+              <th
+                scope="col"
+                aria-sort={col.key === 'stars' ? 'descending' : 'none'}
+                class:list={[
+                  'px-3 py-2 font-medium text-slate-500 dark:text-slate-400',
+                  col.align === 'right' ? 'text-right' : 'text-left',
+                ]}
+              >
+                <button
+                  type="button"
+                  data-sort={col.key}
+                  class="inline-flex w-full items-center gap-1 hover:text-slate-900 dark:hover:text-slate-100"
+                >
+                  <span class={col.align === 'right' ? 'ml-auto' : ''}>{col.label}</span>
+                  <span data-arrow class="text-[10px] opacity-50"></span>
+                </button>
+              </th>
+            ))
+          }
+        </tr>
+      </thead>
+      <tbody>
+        {
+          rows.map((tool) => {
+            const d = tool.data;
+            const kind = licenseKind(d.license);
+            return (
+              <tr
+                class="border-t border-slate-200 dark:border-slate-800"
+                data-name={d.name.toLowerCase()}
+                data-license={kind}
+                data-hosted={d.selfHosted ? '1' : '0'}
+                data-language={(d.language ?? '').toLowerCase()}
+                data-stars={d.stars ?? -1}
+                data-push={d.lastPush ?? ''}
+              >
+                <td class="px-3 py-2">
+                  <a
+                    class="font-medium text-slate-900 hover:text-indigo-600 dark:text-slate-100 dark:hover:text-indigo-400"
+                    href={toolUrl(locale, tool.id)}
+                  >
+                    {d.name}
+                  </a>
+                  {d.archived && (
+                    <span class="badge badge-danger ml-2">{zh ? '已归档' : 'Archived'}</span>
+                  )}
+                </td>
+                <td class="px-3 py-2 text-slate-600 dark:text-slate-400">
+                  {licenseLabels[kind][locale]}
+                </td>
+                <td class="px-3 py-2 text-slate-600 dark:text-slate-400">
+                  {d.selfHosted ? (zh ? '可自托管' : 'Yes') : zh ? '仅托管' : 'Managed only'}
+                </td>
+                <td class="px-3 py-2 text-slate-600 dark:text-slate-400">{d.language ?? '—'}</td>
+                <td class="px-3 py-2 text-right tabular-nums text-slate-700 dark:text-slate-300">
+                  {d.stars !== undefined ? d.stars.toLocaleString('en-US') : '—'}
+                </td>
+                <td class="px-3 py-2 text-right tabular-nums text-slate-500 dark:text-slate-400">
+                  {d.lastPush ?? '—'}
+                </td>
+              </tr>
+            );
+          })
+        }
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+  function initSortableTables() {
+    const tables = document.querySelectorAll<HTMLTableElement>('[data-sortable-table]');
+    for (const table of tables) {
+      if (table.dataset.bound === '1') continue;
+      table.dataset.bound = '1';
+
+      const tbody = table.querySelector('tbody');
+      if (!tbody) continue;
+      const headers = Array.from(table.querySelectorAll<HTMLElement>('th'));
+      let currentKey = table.dataset.defaultKey ?? 'stars';
+      let currentDir = table.dataset.defaultDir ?? 'desc';
+
+      const paintArrows = () => {
+        for (const th of headers) {
+          const button = th.querySelector<HTMLElement>('[data-sort]');
+          const arrow = th.querySelector<HTMLElement>('[data-arrow]');
+          const active = button?.dataset.sort === currentKey;
+          th.setAttribute('aria-sort', active ? (currentDir === 'asc' ? 'ascending' : 'descending') : 'none');
+          if (arrow) arrow.textContent = active ? (currentDir === 'asc' ? '▲' : '▼') : '';
+        }
+      };
+
+      const sortBy = (key: string, dir: string) => {
+        const rows = Array.from(tbody.querySelectorAll('tr'));
+        const attr = 'data-' + key;
+        rows.sort((a, b) => {
+          const av = a.getAttribute(attr) ?? '';
+          const bv = b.getAttribute(attr) ?? '';
+          // 星标列是数值，其余按字符串比较即可（日期字符串按字典序等于按时间序）
+          const an = Number(av);
+          const bn = Number(bv);
+          const numeric = av !== '' && bv !== '' && !Number.isNaN(an) && !Number.isNaN(bn);
+          let cmp = numeric ? an - bn : av.localeCompare(bv);
+          if (dir === 'desc') cmp = -cmp;
+          return cmp;
+        });
+        for (const row of rows) tbody.appendChild(row);
+        paintArrows();
+      };
+
+      for (const th of headers) {
+        const button = th.querySelector<HTMLElement>('[data-sort]');
+        if (!button) continue;
+        button.addEventListener('click', () => {
+          const key = button.dataset.sort ?? currentKey;
+          if (key === currentKey) {
+            currentDir = currentDir === 'desc' ? 'asc' : 'desc';
+          } else {
+            currentKey = key;
+            currentDir = 'desc';
+          }
+          sortBy(currentKey, currentDir);
+        });
+      }
+
+      sortBy(currentKey, currentDir);
+    }
+  }
+  initSortableTables();
+  document.addEventListener('astro:after-swap', initSortableTables);
+</script>

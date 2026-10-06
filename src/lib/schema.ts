@@ -62,6 +62,66 @@ export function faqSchema(qas: { q: string; a: string }[]) {
 }
 
 /**
+ * 动态详情页 → NewsArticle。
+ *
+ * dateModified 用核验/发布时点本身，不用构建时间；publisher 直接引用
+ * BaseLayout 已经在页面上声明的 Organization 节点。
+ */
+export function newsArticleSchema(locale: Locale, event: CollectionEntry<'events'>) {
+  const d = event.data;
+  const path = locale === 'zh' ? `/zh/news/${event.id}/` : `/news/${event.id}/`;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'NewsArticle',
+    headline: locale === 'zh' ? d.titleZh : d.title,
+    description: locale === 'zh' ? d.summaryZh : d.summary,
+    datePublished: d.eventDate,
+    dateModified: d.eventDate,
+    inLanguage: locale === 'zh' ? 'zh-CN' : 'en',
+    articleSection: d.type,
+    url: new URL(path, SITE_URL).href,
+    isBasedOn: d.sourceUrl,
+    citation: d.sourceUrl,
+    publisher: { '@id': `${SITE_URL}/#organization` },
+    mainEntityOfPage: new URL(path, SITE_URL).href,
+  };
+}
+
+/**
+ * 全站 WebSite + Organization 节点，由 BaseLayout 加在每个页面的图谱最前面。
+ *
+ * 之前全站没有任何实体节点：每个页面各自声明 SoftwareApplication / FAQPage，
+ * 但没有东西说明「这些页面属于同一个发布方」。Organization 是 E-E-A-T 与 AI
+ * 引擎判断可信度时最基础的一环，而 about / methodology 页正好是它的可验证落点。
+ */
+export function siteSchema(locale: Locale) {
+  const zh = locale === 'zh';
+  const orgId = `${SITE_URL}/#organization`;
+  return [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      '@id': orgId,
+      name: 'AI Agent Infrastructure Directory',
+      url: SITE_URL,
+      logo: `${SITE_URL}/favicon.svg`,
+      description: zh
+        ? '一份中英双语、逐条核验过的 AI Agent 基础设施目录。'
+        : 'A bilingual, fact-checked directory of AI Agent infrastructure.',
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      '@id': `${SITE_URL}/#website`,
+      name: 'AI Agent Infrastructure Directory',
+      url: SITE_URL,
+      inLanguage: zh ? 'zh-CN' : 'en',
+      publisher: { '@id': orgId },
+    },
+  ];
+}
+
+/**
  * 基准详情页 → Dataset，用于 Google Dataset Search。
  *
  * 只写有据可查的字段：creator 取来源机构名、citation/isBasedOn 取来源链接。
