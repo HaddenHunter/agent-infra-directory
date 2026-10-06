@@ -1,0 +1,201 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { t, SITE_URL, toolAlternativesUrl, toolUrl, categories, type Locale } from '../../../i18n/ui';
+import { licenseKind, licenseLabels } from '../../../lib/license';
+
+/**
+ * 同类替代方案页：把同一分类下的其它条目并列出来，只摆可核验属性，不做优劣排名。
+ *
+ * 只在该分类至少有 3 个条目（即至少 2 个替代项）时生成——否则页面没有实质内容，
+ * 只会变成空壳门页。
+ */
+export async function getStaticPaths() {
+  const tools = await getCollection('tools');
+  const byCategory = new Map<string, typeof tools>();
+  for (const tool of tools) {
+    const list = byCategory.get(tool.data.category) ?? [];
+    list.push(tool);
+    byCategory.set(tool.data.category, list);
+  }
+
+  return tools
+    .filter((tool) => (byCategory.get(tool.data.category)?.length ?? 0) >= 3)
+    .map((tool) => ({
+      params: { slug: tool.id },
+      props: {
+        tool,
+        alternatives: (byCategory.get(tool.data.category) ?? [])
+          .filter((x) => x.id !== tool.id)
+          .sort(
+            (a, b) =>
+              (b.data.stars ?? 0) - (a.data.stars ?? 0) || a.data.name.localeCompare(b.data.name)
+          ),
+      },
+    }));
+}
+
+const { tool, alternatives } = Astro.props as {
+  tool: Awaited<ReturnType<typeof getCollection<'tools'>>>[number];
+  alternatives: Awaited<ReturnType<typeof getCollection<'tools'>>>;
+};
+
+const locale: Locale = 'en';
+const s = t(locale);
+const d = tool.data;
+const categoryLabel = categories[d.category][locale];
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: `Alternatives to ${d.name}`,
+  url: `${SITE_URL}${toolAlternativesUrl(locale, tool.id)}`,
+  numberOfItems: alternatives.length,
+  itemListElement: alternatives.map((alt, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: alt.data.name,
+    url: `${SITE_URL}${toolUrl(locale, alt.id)}`,
+  })),
+};
+---
+
+<BaseLayout
+  locale={locale}
+  title={`Alternatives to ${d.name} — ${categoryLabel}`}
+  description={`${alternatives.length} other ${categoryLabel} tools, side by side with ${d.name} on license, hosting model, language and activity.`}
+  path={toolAlternativesUrl(locale, tool.id)}
+  alternates={{
+    en: toolAlternativesUrl('en', tool.id),
+    zh: toolAlternativesUrl('zh', tool.id),
+  }}
+  jsonLd={jsonLd}
+  ogType="article"
+>
+  <nav class="text-sm text-slate-500 dark:text-slate-400">
+    <a class="hover:text-slate-900 dark:hover:text-slate-100" href="/">{s.home}</a>
+    <span class="mx-1">/</span>
+    <a class="hover:text-slate-900 dark:hover:text-slate-100" href="/tools/">All tools</a>
+    <span class="mx-1">/</span>
+    <a
+      class="hover:text-slate-900 dark:hover:text-slate-100"
+      href={toolUrl(locale, tool.id)}>{d.name}</a
+    >
+    <span class="mx-1">/</span>
+    <span>Alternatives</span>
+  </nav>
+
+  <header class="mt-3">
+    <h1 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-50">
+      Alternatives to {d.name}
+    </h1>
+    <p class="mt-2 max-w-3xl text-slate-600 dark:text-slate-400">
+      {d.name} is listed under {categoryLabel}. These are the other {alternatives.length} entries in
+      that category, placed next to it on the attributes this directory actually verifies — license,
+      hosting model, primary language and how recently the repository moved.
+    </p>
+  </header>
+
+  <blockquote class="key-fact mt-6">
+    <p class="text-[15px] leading-relaxed">
+      <a class="underline" href={toolUrl(locale, tool.id)}>{d.name}</a>: {d.keyFact}
+    </p>
+  </blockquote>
+
+  <section class="mt-8">
+    <h2 class="section-title">Side by side</h2>
+    <div class="mt-3 overflow-x-auto">
+      <table class="w-full min-w-[52rem] border-collapse text-sm">
+        <thead>
+          <tr class="border-b border-slate-200 text-left text-xs uppercase tracking-wide text-slate-500 dark:border-slate-800 dark:text-slate-400">
+            <th class="py-2 pr-4 font-medium">Tool</th>
+            <th class="py-2 pr-4 font-medium">{s.license}</th>
+            <th class="py-2 pr-4 font-medium">{s.selfHosted}</th>
+            <th class="py-2 pr-4 font-medium">{s.language}</th>
+            <th class="py-2 pr-4 font-medium">{s.stars}</th>
+            <th class="py-2 font-medium">Last push</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+          <tr class="bg-slate-50/60 align-top dark:bg-slate-900/60">
+            <td class="py-3 pr-4">
+              <a class="font-medium underline" href={toolUrl(locale, tool.id)}>{d.name}</a>
+              <span class="ml-2 text-xs text-slate-500">this page</span>
+            </td>
+            <td class="py-3 pr-4">{licenseLabels[licenseKind(d.license)][locale]}</td>
+            <td class="py-3 pr-4">{d.selfHosted ? s.yes : s.no}</td>
+            <td class="py-3 pr-4">{d.language ?? '—'}</td>
+            <td class="py-3 pr-4 tabular-nums">
+              {d.stars !== undefined ? d.stars.toLocaleString('en-US') : '—'}
+            </td>
+            <td class="py-3 tabular-nums">{d.lastPush ?? '—'}</td>
+          </tr>
+          {
+            alternatives.map((alt) => (
+              <tr class="align-top">
+                <td class="py-3 pr-4">
+                  <a
+                    class="font-medium text-indigo-600 hover:underline dark:text-indigo-400"
+                    href={toolUrl(locale, alt.id)}
+                  >
+                    {alt.data.name}
+                  </a>
+                </td>
+                <td class="py-3 pr-4">{licenseLabels[licenseKind(alt.data.license)][locale]}</td>
+                <td class="py-3 pr-4">{alt.data.selfHosted ? s.yes : s.no}</td>
+                <td class="py-3 pr-4">{alt.data.language ?? '—'}</td>
+                <td class="py-3 pr-4 tabular-nums">
+                  {alt.data.stars !== undefined ? alt.data.stars.toLocaleString('en-US') : '—'}
+                </td>
+                <td class="py-3 tabular-nums">{alt.data.lastPush ?? '—'}</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-3 text-xs text-slate-500 dark:text-slate-400">
+      Star counts are point-in-time snapshots, labelled with their as-of date on each entry page.
+      The table is sorted by stars, which is a popularity signal — not a recommendation.
+    </p>
+  </section>
+
+  <section class="mt-10">
+    <h2 class="section-title">What each one is</h2>
+    <div class="mt-4 space-y-4">
+      {
+        alternatives.map((alt) => (
+          <article class="card">
+            <div class="flex flex-wrap items-center gap-2">
+              <h3 class="font-semibold text-slate-900 dark:text-slate-100">
+                <a
+                  class="hover:text-indigo-600 dark:hover:text-indigo-400"
+                  href={toolUrl(locale, alt.id)}
+                >
+                  {alt.data.name}
+                </a>
+              </h3>
+              <span class="badge badge-neutral">
+                {licenseLabels[licenseKind(alt.data.license)][locale]}
+              </span>
+            </div>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">{alt.data.description}</p>
+            <blockquote class="key-fact mt-3 !p-3 text-sm">
+              <p>{alt.data.keyFact}</p>
+            </blockquote>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <aside class="mt-10 rounded-xl border border-slate-200 bg-white p-5 text-sm text-slate-600 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-400">
+    <strong class="text-slate-900 dark:text-slate-100">No ranking, deliberately.</strong>{' '}
+    Which of these fits depends on constraints we cannot see — your compliance rules, your existing
+    stack, your team's language. So this page puts the verifiable attributes side by side and leaves
+    the judgement to you.
+    <a class="underline" href={`/categories/${d.category}/`}>
+      All {categoryLabel} tools →
+    </a>
+  </aside>
+</BaseLayout>

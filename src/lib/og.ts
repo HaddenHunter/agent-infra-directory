@@ -130,6 +130,8 @@ const KNOWN_SECTIONS = new Set([
   'benchmarks',
   'papers',
   'myths',
+  'use-cases',
+  'lab',
 ]);
 
 /**
@@ -144,5 +146,7 @@ export function ogImageUrl(path: string): string {
 
   if (rest.length === 0) return zh ? '/og/zh/home.png' : '/og/home.png';
   if (!KNOWN_SECTIONS.has(rest[0])) return '/og/default.png';
+  // 工具的子页面（/tools/<slug>/alternatives/）复用该工具自己的卡片
+  if (rest[0] === 'tools' && rest.length > 2) rest.length = 2;
   return `/og/${[...(zh ? ['zh'] : []), ...rest].join('/')}.png`;
 }

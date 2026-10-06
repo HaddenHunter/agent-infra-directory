@@ -1,0 +1,81 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import UseCaseCard from '../../../components/UseCaseCard.astro';
+import { t, SITE_URL, type Locale } from '../../../i18n/ui';
+import {
+  useCaseScenarios,
+  useCaseScenarioKeys,
+  type UseCaseScenario,
+} from '../../../lib/use-cases';
+
+const locale: Locale = 'zh';
+const s = t(locale);
+
+const items = (await getCollection('useCases')).sort((a, b) =>
+  b.data.sourceDate.localeCompare(a.data.sourceDate)
+);
+
+const counts = Object.fromEntries(
+  useCaseScenarioKeys.map((k) => [k, items.filter((e) => e.data.scenario === k).length])
+) as Record<UseCaseScenario, number>;
+
+const latest = items[0]?.data.sourceDate ?? '';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: `真实使用案例 — ${s.siteName}`,
+  url: `${SITE_URL}/zh/use-cases/`,
+  numberOfItems: items.length,
+  inLanguage: 'zh',
+};
+---
+
+<BaseLayout
+  locale={locale}
+  title={`真实使用案例 — ${s.siteName}`}
+  description="人们把真实事务交给 Agent 的可追溯记录——医疗、账单、出行、家庭。每条都写明来源、日期与核验状态。"
+  path="/zh/use-cases/"
+  alternates={{ en: '/use-cases/', zh: '/zh/use-cases/' }}
+  jsonLd={jsonLd}
+>
+  <nav class="text-sm text-slate-500 dark:text-slate-400">
+    <a class="hover:text-slate-900 dark:hover:text-slate-100" href="/zh/">{s.home}</a>
+    <span class="mx-1">/</span>
+    <span>真实用例</span>
+  </nav>
+
+  <header class="mt-3">
+    <h1 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-50">
+      真实使用案例
+    </h1>
+    <p class="mt-2 max-w-3xl text-slate-600 dark:text-slate-400">
+      把真实事务交给 Agent 的记录——打给保险公司的电话、重复订阅、家庭日程。每条都写明来源与日期，
+      并标注核验状态。查不到来源的传闻不会被悄悄删掉，而是留下并标明。
+    </p>
+    <p class="mt-2 text-sm text-slate-500 dark:text-slate-400">
+      {items.length} 条 · {s.lastUpdated} {latest}
+    </p>
+  </header>
+
+  <div class="mt-6 flex flex-wrap gap-2">
+    {
+      useCaseScenarioKeys.map((k) => (
+        <span class="badge badge-neutral">
+          {useCaseScenarios[k][locale]} ({counts[k]})
+        </span>
+      ))
+    }
+  </div>
+
+  <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    {items.map((useCase) => <UseCaseCard locale={locale} useCase={useCase} />)}
+  </div>
+
+  <aside class="mt-10 rounded-xl border border-slate-200 bg-white p-5 text-sm text-slate-600 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-400">
+    <strong class="text-slate-900 dark:text-slate-100">要的是来源，不是转述。</strong>
+    广为流传的故事恰恰最容易被改写。当市面上的版本无法追溯回原文时，条目会直接写明——
+    <a class="underline" href="/zh/myths/">查看误传核查 →</a>
+  </aside>
+</BaseLayout>

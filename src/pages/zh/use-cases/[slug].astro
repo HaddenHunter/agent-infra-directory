@@ -1,0 +1,169 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { faqSchema } from '../../../lib/schema';
+import { t, type Locale } from '../../../i18n/ui';
+import { useCaseScenarios, useCaseUrl } from '../../../lib/use-cases';
+import { verificationBadge, verificationLabels, type Verification } from '../../../lib/news';
+
+export async function getStaticPaths() {
+  const useCases = await getCollection('useCases');
+  return useCases.map((u) => ({ params: { slug: u.id }, props: { useCase: u } }));
+}
+
+const { useCase } = Astro.props as {
+  useCase: Awaited<ReturnType<typeof getCollection<'useCases'>>>[number];
+};
+const locale: Locale = 'zh';
+const s = t(locale);
+const d = useCase.data;
+
+const scenarioLabel = useCaseScenarios[d.scenario].zh;
+const vLabel = verificationLabels[d.verification as Verification].zh;
+const vClass = verificationBadge[d.verification as Verification];
+
+const qas = [
+  { q: `这个 ${d.product} 用例发生了什么？`, a: d.summaryZh },
+  { q: `这条记录经过核验吗？`, a: `${vLabel}——${d.outcomeZh}` },
+  { q: `来源是什么？`, a: `${d.sourceName}，发布于 ${d.sourceDate}：${d.sourceUrl}` },
+];
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: d.titleZh,
+    about: d.product,
+    datePublished: d.sourceDate,
+    inLanguage: 'zh',
+    isBasedOn: d.sourceUrl,
+    publisher: { '@type': 'Organization', name: d.sourceName },
+  },
+  faqSchema(qas),
+];
+---
+
+<BaseLayout
+  locale={locale}
+  title={`${d.titleZh} — ${scenarioLabel}`}
+  description={d.summaryZh}
+  path={useCaseUrl(locale, useCase.id)}
+  alternates={{ en: useCaseUrl('en', useCase.id), zh: useCaseUrl('zh', useCase.id) }}
+  jsonLd={jsonLd}
+  ogType="article"
+>
+  <nav class="text-sm text-slate-500 dark:text-slate-400">
+    <a class="hover:text-slate-900 dark:hover:text-slate-100" href="/zh/">{s.home}</a>
+    <span class="mx-1">/</span>
+    <a class="hover:text-slate-900 dark:hover:text-slate-100" href="/zh/use-cases/">真实用例</a>
+  </nav>
+
+  <header class="mt-3">
+    <h1 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-50">
+      {d.titleZh}
+    </h1>
+    <div class="mt-3 flex flex-wrap items-center gap-2">
+      <span class="badge badge-cat">{scenarioLabel}</span>
+      <span class={`badge ${vClass}`}>{vLabel}</span>
+      <span class="badge badge-neutral">{d.product}</span>
+      <span class="badge badge-neutral tabular-nums">{d.sourceDate}</span>
+    </div>
+  </header>
+
+  <blockquote class="key-fact mt-6">
+    <p class="text-[15px] leading-relaxed">{d.keyFactZh}</p>
+  </blockquote>
+
+  {
+    d.debunksZh && (
+      <p class="alert-caveat mt-4">
+        <strong>这条说法经过核对：</strong>
+        {d.debunksZh}
+        <a class="underline" href="/zh/myths/">误传核查 →</a>
+      </p>
+    )
+  }
+
+  <section class="mt-8">
+    <h2 class="section-title">发生了什么</h2>
+    <p class="mt-3 text-slate-700 dark:text-slate-300">{d.summaryZh}</p>
+  </section>
+
+  <section class="mt-8">
+    <h2 class="section-title">为什么测这个场景</h2>
+    <p class="mt-3 text-slate-700 dark:text-slate-300">{d.backgroundZh}</p>
+  </section>
+
+  {
+    d.actions.length > 0 && (
+      <section class="mt-8">
+        <h2 class="section-title">Agent 实际做了什么</h2>
+        <table class="facts-table mt-3">
+          <tbody>
+            {d.actions.map((row) => (
+              <tr>
+                <th>{row.labelZh}</th>
+                <td>{row.value}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </section>
+    )
+  }
+
+  <section class="mt-8">
+    <h2 class="section-title">结果</h2>
+    <p class="mt-3 text-slate-700 dark:text-slate-300">{d.outcomeZh}</p>
+  </section>
+
+  {
+    d.caveatZh && (
+      <p class="alert-caveat mt-6">
+        <strong>注意：</strong>
+        {d.caveatZh}
+      </p>
+    )
+  }
+
+  <section class="mt-8">
+    <h2 class="section-title">{s.facts}</h2>
+    <table class="facts-table mt-3">
+      <tbody>
+        <tr>
+          <th>产品</th>
+          <td>{d.product}</td>
+        </tr>
+        <tr>
+          <th>{s.verification}</th>
+          <td>{vLabel}</td>
+        </tr>
+        <tr>
+          <th>{s.newsSource}</th>
+          <td>
+            <a class="underline hover:text-indigo-600" href={d.sourceUrl} rel="nofollow noopener">
+              {d.sourceName}
+            </a>
+            <span class="ml-2 tabular-nums text-slate-500">{d.sourceDate}</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="mt-10">
+    <h2 class="section-title">常见问题</h2>
+    <div class="mt-4 space-y-3">
+      {
+        qas.map(({ q, a }) => (
+          <details class="card !p-0">
+            <summary class="cursor-pointer px-4 py-3 font-medium text-slate-900 dark:text-slate-100">
+              {q}
+            </summary>
+            <p class="px-4 pb-4 text-sm text-slate-600 dark:text-slate-400">{a}</p>
+          </details>
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>

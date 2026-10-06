@@ -1,0 +1,283 @@
+---
+import type { Locale } from '../../i18n/ui';
+
+export interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const zh = locale === 'zh';
+
+const steps = zh
+  ? [
+      { title: '问题进入', body: '用户的目标作为第一条输入。此时上下文里只有任务本身，没有任何外部信息。' },
+      { title: '推理（Thought）', body: '模型先写出一步推理：现在缺什么、下一步该做什么。推理文本会成为后续的上下文。' },
+      { title: '行动（Action）', body: '据此选择一个工具并给出参数——搜索、读文件、调 API。这一步是唯一真正接触外界的地方。' },
+      { title: '观察（Observation）', body: '环境返回结果，原样拼回上下文。它是事实来源，模型不能改写成更“好看”的版本。' },
+      { title: '循环或收束', body: '带着新观察回到推理步。信息足够时停止调用工具，直接给出答案。' },
+    ]
+  : [
+      { title: 'A question arrives', body: 'The user goal enters as the first input. At this point the context holds the task and nothing else.' },
+      { title: 'Reason (Thought)', body: 'The model writes one step of reasoning: what is missing, what to do next. That text becomes part of the context.' },
+      { title: 'Act (Action)', body: 'It picks a tool and supplies arguments — search, read a file, call an API. This is the only step that touches the outside world.' },
+      { title: 'Observe (Observation)', body: 'The environment returns a result and it is appended verbatim. It is the source of truth; the model does not get to rewrite it into something tidier.' },
+      { title: 'Loop or stop', body: 'With the new observation it returns to the reasoning step. Once nothing is missing, it stops calling tools and answers.' },
+    ];
+
+const boxW = 400;
+const boxH = 56;
+const x = 250;
+const ys = [20, 112, 204, 296, 400];
+const label = (i: number) => (zh ? steps[i].title : steps[i].title);
+---
+
+<div class="lab-loop" data-react-loop>
+  <div class="overflow-x-auto">
+    <svg
+      viewBox="0 0 900 500"
+      class="mx-auto block h-auto w-full min-w-[620px] max-w-3xl"
+      role="img"
+      aria-label={zh ? 'ReAct 循环示意图' : 'ReAct loop diagram'}
+    >
+      <defs>
+        <marker id="loop-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M 0 0 L 10 5 L 0 10 z" class="fill-slate-400 dark:fill-slate-500"></path>
+        </marker>
+        <marker id="loop-arrow-active" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M 0 0 L 10 5 L 0 10 z" class="fill-indigo-500"></path>
+        </marker>
+      </defs>
+
+      {
+        steps.map((_, i) => (
+          <g data-step={String(i)}>
+            <rect
+              x={x}
+              y={ys[i]}
+              width={boxW}
+              height={boxH}
+              rx="12"
+              class="loop-box"
+            />
+            <text
+              x={x + 24}
+              y={ys[i] + 35}
+              class="loop-title"
+            >
+              {label(i)}
+            </text>
+          </g>
+        ))
+      }
+
+      {/* 主链箭头 */}
+      {[0, 1, 2].map((i) => (
+        <line
+          x1={x + boxW / 2}
+          y1={ys[i] + boxH}
+          x2={x + boxW / 2}
+          y2={ys[i + 1] - 6}
+          class="loop-edge"
+          marker-end="url(#loop-arrow)"
+        />
+      ))}
+
+      {/* 回环：Observation → Thought */}
+      <path
+        d={`M ${x} ${ys[3] + boxH / 2} H 150 V ${ys[1] + boxH / 2} H ${x - 8}`}
+        class="loop-edge loop-loopback"
+        fill="none"
+        marker-end="url(#loop-arrow)"
+      />
+      <text x="120" y={(ys[1] + ys[3]) / 2 + boxH / 2} class="loop-note" transform={`rotate(-90 120 ${(ys[1] + ys[3]) / 2 + boxH / 2})`}>
+        {zh ? '重复直到信息足够' : 'repeat until nothing is missing'}
+      </text>
+
+      {/* 收束：直接给答案 */}
+      <line
+        x1={x + boxW / 2}
+        y1={ys[4] - 6}
+        x2={x + boxW / 2}
+        y2={ys[4]}
+        class="loop-edge"
+        marker-end="url(#loop-arrow)"
+      />
+    </svg>
+  </div>
+
+  <div class="mt-5 flex flex-wrap items-center gap-3">
+    <button type="button" class="btn btn-ghost" data-loop-prev disabled>
+      {zh ? '上一步' : 'Back'}
+    </button>
+    <button type="button" class="btn btn-ghost" data-loop-next>
+      {zh ? '下一步' : 'Next'}
+    </button>
+    <button type="button" class="btn btn-ghost" data-loop-play aria-pressed="false">
+      {zh ? '自动播放' : 'Auto-play'}
+    </button>
+    <span class="text-sm text-slate-500 tabular-nums dark:text-slate-400" data-loop-counter></span>
+  </div>
+
+  <ol class="mt-5 space-y-2 text-sm" data-loop-captions>
+    {
+      steps.map((step, i) => (
+        <li class="rounded-lg border border-slate-200 p-3 dark:border-slate-800" data-caption={String(i)}>
+          <strong class="text-slate-900 dark:text-slate-100">{step.title}</strong>
+          <span class="ml-2 text-slate-600 dark:text-slate-400">{step.body}</span>
+        </li>
+      ))
+    }
+  </ol>
+
+  <p class="alert-caveat mt-5">
+    <strong>{zh ? '这是示意图，不是真实运行记录。' : 'This is a diagram, not a live run.'}</strong>
+    {
+      zh
+        ? '它描述的是 ReAct 论文提出的循环结构，也是多数框架至今仍在实现的形态；具体某次运行的推理文本与工具调用不会长这样。'
+        : 'It describes the loop structure the ReAct paper introduced, which most frameworks still implement. Any given run will not look like this.'
+    }
+    <a class="underline" href={zh ? '/zh/papers/react/' : '/papers/react/'}>
+      {zh ? '读原论文 →' : 'Read the paper →'}
+    </a>
+  </p>
+</div>
+
+<style>
+  .loop-box {
+    fill: rgb(248 250 252);
+    stroke: rgb(203 213 225);
+    stroke-width: 1;
+    transition:
+      fill 200ms ease,
+      stroke 200ms ease;
+  }
+  :global(.dark) .loop-box {
+    fill: rgb(15 23 42);
+    stroke: rgb(51 65 85);
+  }
+  .loop-box[data-state='active'] {
+    stroke: rgb(99 102 241);
+    stroke-width: 2;
+    fill: rgb(238 242 255);
+  }
+  :global(.dark) .loop-box[data-state='active'] {
+    fill: rgb(30 27 75);
+  }
+  .loop-title {
+    font-size: 17px;
+    font-weight: 600;
+    fill: rgb(15 23 42);
+  }
+  :global(.dark) .loop-title {
+    fill: rgb(241 245 249);
+  }
+  .loop-edge {
+    stroke: rgb(148 163 184);
+    stroke-width: 1.5;
+  }
+  :global(.dark) .loop-edge {
+    stroke: rgb(71 85 105);
+  }
+  .loop-loopback {
+    stroke-dasharray: 5 5;
+  }
+  .loop-note {
+    font-size: 12px;
+    fill: rgb(100 116 139);
+  }
+  .lab-loop [data-caption] {
+    opacity: 0.45;
+  }
+  .lab-loop [data-caption][data-state='active'] {
+    opacity: 1;
+    border-color: rgb(99 102 241);
+  }
+</style>
+
+<script>
+  let stop: (() => void) | undefined;
+  let bound: HTMLElement | null = null;
+
+  function init() {
+    const root = document.querySelector<HTMLElement>('[data-react-loop]');
+    if (!root || root === bound) return;
+    bound = root;
+
+    const groups = Array.from(root.querySelectorAll<SVGGElement>('[data-step]'));
+    const captions = Array.from(root.querySelectorAll<HTMLElement>('[data-caption]'));
+    const prev = root.querySelector<HTMLButtonElement>('[data-loop-prev]');
+    const next = root.querySelector<HTMLButtonElement>('[data-loop-next]');
+    const play = root.querySelector<HTMLButtonElement>('[data-loop-play]');
+    const counter = root.querySelector<HTMLElement>('[data-loop-counter]');
+    const total = groups.length;
+    if (!total) return;
+
+    let current = 0;
+    let timer: number | undefined;
+
+    const paint = () => {
+      groups.forEach((group, i) => {
+        const box = group.querySelector('rect');
+        box?.setAttribute('data-state', i === current ? 'active' : 'idle');
+      });
+      captions.forEach((item, i) => {
+        item.dataset.state = i === current ? 'active' : 'idle';
+      });
+      if (counter) counter.textContent = `${current + 1} / ${total}`;
+      if (prev) prev.disabled = current === 0;
+      if (next) next.disabled = current === total - 1;
+    };
+
+    const go = (delta: number) => {
+      current = Math.min(total - 1, Math.max(0, current + delta));
+      paint();
+    };
+
+    const onPrev = () => go(-1);
+    const onNext = () => {
+      if (current === total - 1) current = -1;
+      go(1);
+    };
+
+    const stopAuto = () => {
+      if (timer !== undefined) {
+        clearInterval(timer);
+        timer = undefined;
+      }
+      play?.setAttribute('aria-pressed', 'false');
+    };
+
+    const onPlay = () => {
+      if (timer !== undefined) {
+        stopAuto();
+        return;
+      }
+      play?.setAttribute('aria-pressed', 'true');
+      timer = window.setInterval(onNext, 2600);
+    };
+
+    prev?.addEventListener('click', onPrev);
+    next?.addEventListener('click', onNext);
+    play?.addEventListener('click', onPlay);
+
+    // 系统开了「减少动态效果」就不默认自动播放
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    paint();
+    if (!reduced) onPlay();
+
+    stop = () => {
+      stopAuto();
+      prev?.removeEventListener('click', onPrev);
+      next?.removeEventListener('click', onNext);
+      play?.removeEventListener('click', onPlay);
+    };
+  }
+
+  document.addEventListener('astro:page-load', init);
+  document.addEventListener('astro:before-swap', () => {
+    stop?.();
+    stop = undefined;
+    bound = null;
+  });
+  void init();
+</script>

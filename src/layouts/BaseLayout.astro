@@ -39,6 +39,13 @@ const benchIndex = locale === 'en' ? '/benchmarks/' : '/zh/benchmarks/';
 const papersIndex = locale === 'en' ? '/papers/' : '/zh/papers/';
 const home = locale === 'en' ? '/' : '/zh/';
 const ogImage = new URL(ogImageUrl(path), SITE_URL).href;
+/**
+ * Cloudflare Web Analytics 的站点 token。
+ * 只在构建时通过环境变量注入；没配就不输出任何脚本，保持零副作用。
+ * 之所以要它：GitHub Pages 不给访问日志，没有这个就看不到访客与来源
+ * （尤其是 chatgpt.com / perplexity.ai 这类 AI 引荐）。
+ */
+const cfBeaconToken = import.meta.env.PUBLIC_CF_BEACON_TOKEN;
 ---
 
 <!doctype html>
@@ -109,6 +116,17 @@ const ogImage = new URL(ogImageUrl(path), SITE_URL).href;
     </script>
 
     <ClientRouter />
+
+    {
+      cfBeaconToken && (
+        <script
+          is:inline
+          defer
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon={JSON.stringify({ token: cfBeaconToken })}
+        />
+      )
+    }
   </head>
   <body class="min-h-screen">
     <a
@@ -217,6 +235,15 @@ const ogImage = new URL(ogImageUrl(path), SITE_URL).href;
           </a>
           <a class="hover:text-slate-900 dark:hover:text-slate-100" href={newsIndex}>
             {strings.news}
+          </a>
+          <a
+            class="hover:text-slate-900 dark:hover:text-slate-100"
+            href={locale === 'zh' ? '/zh/use-cases/' : '/use-cases/'}
+          >
+            {locale === 'zh' ? '真实用例' : 'Use cases'}
+          </a>
+          <a class="hover:text-slate-900 dark:hover:text-slate-100" href={locale === 'zh' ? '/zh/lab/' : '/lab/'}>
+            {locale === 'zh' ? '实验区' : 'Lab'}
           </a>
         </nav>
       </div>

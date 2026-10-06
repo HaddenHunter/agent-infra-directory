@@ -1,0 +1,287 @@
+---
+import { getCollection } from 'astro:content';
+import { categories, categoryKeys, categoryUrl, toolUrl, type Locale } from '../../i18n/ui';
+
+export interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const zh = locale === 'zh';
+
+const tools = await getCollection('tools');
+
+/** 八个分类一个色相，暗底上互相区分得开 */
+const palette = [
+  [0.655, 0.545, 0.98], // personal-agent  violet
+  [0.376, 0.647, 0.98], // runtime          blue
+  [0.204, 0.827, 0.6], // sandbox          emerald
+  [0.984, 0.749, 0.141], // observability    amber
+  [0.957, 0.447, 0.714], // identity         pink
+  [0.133, 0.827, 0.933], // payment          cyan
+  [0.506, 0.549, 0.973], // mcp              indigo
+  [0.984, 0.573, 0.235], // memory           orange
+];
+
+const maxStars = Math.max(...tools.map((x) => x.data.stars ?? 0), 1);
+/** 确定性抖动：同一个 id 在任何构建里都落在同一处，图不会每次构建都变样 */
+const jitter = (seed: string, salt: number) => {
+  let h = 2166136261;
+  for (let i = 0; i < seed.length; i++) {
+    h ^= seed.charCodeAt(i);
+    h = Math.imul(h, 16777619);
+  }
+  const v = ((h ^ Math.imul(salt, 2654435761)) >>> 0) / 4294967296;
+  return v;
+};
+
+const nodes: number[] = [];
+const links: number[] = [];
+const meta: { name: string; url: string; category: string; stars: number | null }[] = [];
+
+// 分类枢纽先入数组，节点下标 = 分类下标，便于按分类高亮
+categoryKeys.forEach((key, catIndex) => {
+  const angle = (catIndex / categoryKeys.length) * Math.PI * 2 - Math.PI / 2;
+  const [r, g, b] = palette[catIndex % palette.length];
+  nodes.push(Math.cos(angle) * 0.62, Math.sin(angle) * 0.62, 0.03, catIndex, r, g, b, 1);
+  meta.push({
+    name: categories[key][locale],
+    url: categoryUrl(locale, key),
+    category: categories[key][locale],
+    stars: null,
+  });
+});
+
+const hubCount = categoryKeys.length;
+
+categoryKeys.forEach((key, catIndex) => {
+  const hubAngle = (catIndex / categoryKeys.length) * Math.PI * 2 - Math.PI / 2;
+  const hubX = Math.cos(hubAngle) * 0.62;
+  const hubY = Math.sin(hubAngle) * 0.62;
+  const [r, g, b] = palette[catIndex % palette.length];
+
+  const members = tools
+    .filter((x) => x.data.category === key)
+    .sort((a, b2) => (b2.data.stars ?? 0) - (a.data.stars ?? 0));
+
+  members.forEach((tool, j) => {
+    const ring = Math.floor(j / 9);
+    const inRing = j % 9;
+    const ringCount = Math.min(9, members.length - ring * 9);
+    const radius = 0.085 + ring * 0.062;
+    const angle =
+      (inRing / Math.max(ringCount, 1)) * Math.PI * 2 +
+      hubAngle +
+      ring * 0.5 +
+      (jitter(tool.id, 1) - 0.5) * 0.35;
+    const finalRadius = radius + (jitter(tool.id, 2) - 0.5) * 0.03;
+    const x = hubX + Math.cos(angle) * finalRadius;
+    const y = hubY + Math.sin(angle) * finalRadius;
+
+    const stars = tool.data.stars ?? 0;
+    const size = 0.009 + 0.017 * Math.sqrt(stars / maxStars);
+    nodes.push(x, y, size, catIndex, r, g, b, 1);
+    links.push(hubX, hubY, x, y);
+    meta.push({
+      name: tool.data.name,
+      url: toolUrl(locale, tool.id),
+      category: categories[key][locale],
+      stars: tool.data.stars ?? null,
+    });
+  });
+});
+
+const payload = { nodes, links, meta };
+
+// 无 WebGPU / 无 JS 时看到的就是这份列表：内容完整，只是不动
+const fallback = categoryKeys.map((key) => ({
+  key,
+  label: categories[key][locale],
+  items: tools
+    .filter((x) => x.data.category === key)
+    .sort((a, b) => (b.data.stars ?? 0) - (a.data.stars ?? 0)),
+}));
+---
+
+<div class="lab-graph" data-ecosystem>
+  <div
+    class="lab-graph__stage relative overflow-hidden rounded-2xl border border-slate-800 bg-[#05070f]"
+  >
+    <canvas class="lab-graph__canvas absolute inset-0 h-full w-full" aria-hidden="true"></canvas>
+
+    <div
+      class="lab-graph__tooltip pointer-events-none absolute z-20 hidden max-w-xs rounded-lg border border-slate-700 bg-slate-950/95 px-3 py-2 text-xs text-slate-100 shadow-xl"
+    >
+    </div>
+
+    <p
+      class="lab-graph__notice absolute inset-x-0 bottom-0 z-10 px-4 py-3 text-center text-xs text-slate-400"
+    >
+      {
+        zh
+          ? '这个浏览器不支持 WebGPU，下面是不带动画的完整清单。'
+          : 'This browser does not support WebGPU — the full list is below, minus the animation.'
+      }
+    </p>
+  </div>
+
+  <div class="mt-4 flex flex-wrap gap-2" data-ecosystem-legend>
+    <button type="button" class="filter-chip badge badge-cat cursor-pointer" data-cat="all" aria-pressed="true">
+      {zh ? '全部' : 'All'}
+    </button>
+    {
+      categoryKeys.map((key, i) => (
+        <button
+          type="button"
+          class="filter-chip badge badge-neutral cursor-pointer"
+          data-cat={String(i)}
+          aria-pressed="false"
+        >
+          {categories[key][locale]}
+        </button>
+      ))
+    }
+  </div>
+
+  <div class="lab-graph__fallback mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+    {
+      fallback.map((group) => (
+        <div>
+          <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-100">{group.label}</h3>
+          <ul class="mt-2 space-y-1 text-sm">
+            {group.items.map((tool) => (
+              <li>
+                <a
+                  class="text-slate-600 hover:text-indigo-600 dark:text-slate-400 dark:hover:text-indigo-400"
+                  href={toolUrl(locale, tool.id)}
+                >
+                  {tool.data.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))
+    }
+  </div>
+</div>
+
+<style>
+  .lab-graph__stage {
+    height: min(72vh, 640px);
+  }
+  .lab-graph__notice {
+    display: none;
+  }
+  /* 图谱没接管时，说明文字与清单就是页面主体 */
+  .lab-graph:not([data-live]) .lab-graph__notice {
+    display: block;
+  }
+  .lab-graph:not([data-live]) .lab-graph__tooltip,
+  .lab-graph:not([data-live]) [data-ecosystem-legend] {
+    display: none;
+  }
+  /* 一旦接管，清单退场，避免同一份内容出现两次 */
+  .lab-graph[data-live] .lab-graph__fallback,
+  .lab-graph[data-live] .lab-graph__notice {
+    display: none;
+  }
+  .filter-chip[aria-pressed='true'] {
+    background-color: var(--color-indigo-600);
+    color: #fff;
+  }
+</style>
+
+<script type="application/json" data-ecosystem-payload set:html={JSON.stringify(payload)} />
+
+<script>
+  let dispose: (() => void) | undefined;
+  let bound: HTMLElement | null = null;
+
+  async function mount() {
+    const root = document.querySelector<HTMLElement>('[data-ecosystem]');
+    // 首帧与 astro:page-load 会撞车，同一个根只初始化一次
+    if (!root || root === bound) return;
+    bound = root;
+
+    const payloadEl = document.querySelector<HTMLScriptElement>('[data-ecosystem-payload]');
+    const canvas = root.querySelector<HTMLCanvasElement>('.lab-graph__canvas');
+    if (!payloadEl || !canvas) return;
+
+    if (!('gpu' in navigator)) return;
+
+    let payload;
+    try {
+      payload = JSON.parse(payloadEl.textContent || '{}');
+    } catch {
+      return;
+    }
+
+    const tooltip = root.querySelector<HTMLElement>('.lab-graph__tooltip');
+
+    try {
+      // 动态 import：不支持 WebGPU 的浏览器连这段渲染器都不下载
+      const { mountEcosystemGraph } = await import('../../lib/lab-ecosystem');
+      const api = await mountEcosystemGraph(canvas, payload, {
+        onHover(index) {
+          if (!tooltip) return;
+          const item = index === null ? null : payload.meta[index];
+          if (!item) {
+            tooltip.style.display = 'none';
+            return;
+          }
+          tooltip.innerHTML = '';
+          const strong = document.createElement('strong');
+          strong.textContent = item.name;
+          const sub = document.createElement('span');
+          sub.className = 'mt-1 block text-slate-400';
+          sub.textContent =
+            item.stars === null ? item.category : `${item.category} · ★ ${item.stars}`;
+          tooltip.append(strong, sub);
+          tooltip.style.display = 'block';
+        },
+        onPick(index) {
+          const item = payload.meta[index];
+          if (item?.url) window.location.href = item.url;
+        },
+      });
+
+      const legend = root.querySelector('[data-ecosystem-legend]');
+      legend?.addEventListener('click', (event) => {
+        const button = (event.target as HTMLElement).closest('button');
+        if (!button) return;
+        const raw = button.dataset.cat;
+        api.setCategory(raw === 'all' ? null : Number(raw));
+        legend.querySelectorAll('button').forEach((b) => {
+          b.setAttribute('aria-pressed', String(b === button));
+        });
+      });
+
+      const onMove = (event: PointerEvent) => {
+        if (!tooltip || tooltip.style.display !== 'block') return;
+        const rect = root.getBoundingClientRect();
+        tooltip.style.left = `${Math.min(event.clientX - rect.left + 14, rect.width - 200)}px`;
+        tooltip.style.top = `${event.clientY - rect.top + 14}px`;
+      };
+      canvas.addEventListener('pointermove', onMove);
+
+      root.dataset.live = '1';
+      const previous = api.dispose;
+      dispose = () => {
+        canvas.removeEventListener('pointermove', onMove);
+        previous();
+      };
+    } catch {
+      // 拿不到适配器 / 着色器编译失败：留在静态清单上，不报错也不留空白
+      delete root.dataset.live;
+    }
+  }
+
+  document.addEventListener('astro:page-load', mount);
+  document.addEventListener('astro:before-swap', () => {
+    dispose?.();
+    dispose = undefined;
+    bound = null;
+  });
+  void mount();
+</script>

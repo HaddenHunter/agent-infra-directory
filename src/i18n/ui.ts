@@ -161,6 +161,11 @@ export function toolMarkdownUrl(locale: Locale, slug: string) {
   return locale === 'en' ? `/tools/${slug}.md` : `/zh/tools/${slug}.md`;
 }
 
+/** 生成「同类替代方案」长尾页 URL */
+export function toolAlternativesUrl(locale: Locale, slug: string) {
+  return locale === 'en' ? `/tools/${slug}/alternatives/` : `/zh/tools/${slug}/alternatives/`;
+}
+
 /** 生成对比页 URL */
 export function compareUrl(locale: Locale, slug: string) {
   return locale === 'en' ? `/compare/${slug}/` : `/zh/compare/${slug}/`;

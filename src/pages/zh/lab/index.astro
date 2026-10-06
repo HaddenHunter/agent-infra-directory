@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { t, SITE_URL } from '../../../i18n/ui';
+import { labs, labUrl } from '../../../lib/lab';
+
+const locale = 'zh' as const;
+const s = t(locale);
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: `实验区 — ${s.siteName}`,
+  url: `${SITE_URL}/zh/lab/`,
+  numberOfItems: labs.length,
+  inLanguage: 'zh',
+};
+---
+
+<BaseLayout
+  locale={locale}
+  title={`实验区 — ${s.siteName}`}
+  description="用本站自己的数据集做的交互实验：GPU 渲染的生态图谱、浏览器内语义搜索、以及 ReAct 循环的逐步演示。"
+  path="/zh/lab/"
+  alternates={{ en: '/lab/', zh: '/zh/lab/' }}
+  jsonLd={jsonLd}
+>
+  <nav class="text-sm text-slate-500 dark:text-slate-400">
+    <a class="hover:text-slate-900 dark:hover:text-slate-100" href="/zh/">{s.home}</a>
+    <span class="mx-1">/</span>
+    <span>实验区</span>
+  </nav>
+
+  <header class="mt-3">
+    <h1 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-50">实验区</h1>
+    <p class="mt-2 max-w-3xl text-slate-600 dark:text-slate-400">
+      用本站自己的数据集做的交互实验。每个都只在自己的路由上加载自己的脚本，所以目录里那些参考页面该多轻还是多轻。
+    </p>
+  </header>
+
+  <div class="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+    {
+      labs.map((demo) => (
+        <a href={labUrl(locale, demo.id)} class="card card-interactive group flex flex-col gap-3">
+          <h2 class="font-semibold text-slate-900 group-hover:text-indigo-600 dark:text-slate-100 dark:group-hover:text-indigo-400">
+            {demo.title[locale]}
+          </h2>
+          <p class="text-sm text-slate-600 dark:text-slate-400">{demo.blurb[locale]}</p>
+          <p class="mt-auto text-xs text-slate-500 dark:text-slate-400">{demo.needs[locale]}</p>
+        </a>
+      ))
+    }
+  </div>
+</BaseLayout>

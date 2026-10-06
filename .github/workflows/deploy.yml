@@ -36,7 +36,12 @@ jobs:
           sudo apt-get update -qq
           sudo apt-get install -y -qq fonts-dejavu-core fonts-noto-cjk
 
+      # PUBLIC_CF_BEACON_TOKEN 为空时构建不会输出任何分析脚本；
+      # 在仓库 Settings → Secrets and variables → Actions → Variables 里加一个
+      # 名为 CF_BEACON_TOKEN 的变量即可启用 Cloudflare Web Analytics。
       - name: Build
+        env:
+          PUBLIC_CF_BEACON_TOKEN: ${{ vars.CF_BEACON_TOKEN }}
         run: npm run build
 
       - uses: actions/configure-pages@v5

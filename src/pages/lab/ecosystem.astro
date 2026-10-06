@@ -1,0 +1,12 @@
+---
+import LabDemo from '../../components/lab/LabDemo.astro';
+import EcosystemGraph from '../../components/lab/EcosystemGraph.astro';
+import { labs } from '../../lib/lab';
+
+const locale = 'en' as const;
+const demo = labs.find((entry) => entry.id === 'ecosystem')!;
+---
+
+<LabDemo locale={locale} demo={demo} lead={demo.blurb[locale]}>
+  <EcosystemGraph locale={locale} />
+</LabDemo>

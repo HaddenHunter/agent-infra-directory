@@ -1,0 +1,257 @@
+---
+import { getCollection } from 'astro:content';
+import { toolUrl, type Locale } from '../../i18n/ui';
+
+export interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const zh = locale === 'zh';
+
+/**
+ * 送给模型做 embedding 的文本：名称 + 定位 + 判断句。
+ * 只带英文原文——模型是英文的，硬塞中文只会拉低检索质量。
+ */
+const docs = (await getCollection('tools')).map((tool) => ({
+  i: tool.id,
+  n: tool.data.name,
+  u: toolUrl(locale, tool.id),
+  t: [tool.data.name, tool.data.description, tool.data.keyFact].filter(Boolean).join('. '),
+}));
+---
+
+<div class="lab-search" data-semantic-search>
+  <div class="flex flex-wrap items-center gap-3">
+    <button type="button" class="btn border-transparent bg-indigo-600 text-white hover:bg-indigo-500" data-search-load>
+      {zh ? '加载模型并开始' : 'Load the model and start'}
+    </button>
+    <span class="text-sm text-slate-500 dark:text-slate-400" data-search-status>
+      {
+        zh
+          ? '首次点击会从 huggingface.co 下载约 23MB 的英文句向量模型，之后走浏览器缓存。'
+          : 'The first click downloads a ~23MB English sentence-transformer from huggingface.co; later visits use the browser cache.'
+      }
+    </span>
+  </div>
+
+  <form class="mt-5 flex flex-wrap gap-2" data-search-form hidden>
+    <input
+      type="search"
+      data-search-input
+      placeholder={zh ? '例如：在本地跑沙箱隔离的代码' : 'e.g. run untrusted code in an isolated sandbox'}
+      class="min-w-0 flex-1 rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm
+        placeholder:text-slate-400 focus:border-indigo-500 focus:outline-none focus:ring-2
+        focus:ring-indigo-200 dark:border-slate-700 dark:bg-slate-900 dark:focus:ring-indigo-900"
+      disabled
+    />
+    <button type="submit" class="btn btn-ghost" disabled data-search-submit>
+      {zh ? '搜索' : 'Search'}
+    </button>
+  </form>
+
+  <p class="alert-caveat mt-4" data-search-note hidden>
+    {
+      zh
+        ? '模型 all-MiniLM-L6-v2 只懂英文。中文查询能跑，但排序明显不如英文——中文请用站内关键词搜索。'
+        : 'The bundled model (all-MiniLM-L6-v2) only understands English. Chinese queries will run but rank poorly.'
+    }
+    <a class="underline" href={zh ? '/zh/tools/' : '/tools/'}>
+      {zh ? '关键词搜索 →' : 'Keyword search →'}
+    </a>
+  </p>
+
+  <div class="mt-5 space-y-2" data-search-results></div>
+
+  <p class="mt-6 text-xs leading-relaxed text-slate-500 dark:text-slate-400">
+    {
+      zh
+        ? '整个检索在你的设备上完成：没有服务端、没有 API key、查询不会被发送到任何地方。代价是模型要下载一次。'
+        : 'The whole search runs on your device — no server, no API key, and the query never leaves the tab. The cost is the one-time model download.'
+    }
+  </p>
+</div>
+
+<script type="application/json" data-search-docs set:html={JSON.stringify(docs)} />
+
+<script>
+  // 固定大版本：v3 的 pipeline 签名是稳定的。用变量给 import()，Vite 才不会尝试内联打包。
+  const LIB_URL = 'https://cdn.jsdelivr.net/npm/@huggingface/transformers@3/+esm';
+  const MODEL = 'Xenova/all-MiniLM-L6-v2';
+  const MIRROR = 'https://hf-mirror.com/';
+
+  let bound: HTMLElement | null = null;
+
+  type Extractor = (input: unknown, options: unknown) => Promise<{ data: Float32Array }>;
+
+  function init() {
+    const root = document.querySelector<HTMLElement>('[data-semantic-search]');
+    if (!root || root === bound) return;
+    bound = root;
+    // 换页后 DOM 是新的，模型与向量只在本次会话内有效，不跨导航缓存
+    attach(root);
+  }
+
+  async function attach(root: HTMLElement) {
+    const loadButton = root.querySelector<HTMLButtonElement>('[data-search-load]');
+    const status = root.querySelector<HTMLElement>('[data-search-status]');
+    const form = root.querySelector<HTMLFormElement>('[data-search-form]');
+    const input = root.querySelector<HTMLInputElement>('[data-search-input]');
+    const submit = root.querySelector<HTMLButtonElement>('[data-search-submit]');
+    const results = root.querySelector<HTMLElement>('[data-search-results]');
+    const note = root.querySelector<HTMLElement>('[data-search-note]');
+    const docsEl = document.querySelector<HTMLScriptElement>('[data-search-docs]');
+    if (!loadButton || !status || !form || !input || !submit || !results || !docsEl) return;
+
+    if (note) note.hidden = false;
+
+    let docs: { i: string; n: string; u: string; t: string }[] = [];
+    try {
+      docs = JSON.parse(docsEl.textContent || '[]');
+    } catch {
+      return;
+    }
+
+    let vectors: Float32Array[] | null = null;
+    let extractor: Extractor | null = null;
+    let busy = false;
+
+    const say = (text: string) => {
+      status.textContent = text;
+    };
+
+    async function loadLibrary() {
+      const mod = (await import(/* @vite-ignore */ LIB_URL)) as {
+        pipeline: Function;
+        env: { allowLocalModels: boolean; remoteHost: string };
+      };
+      return mod;
+    }
+
+    async function buildExtractor() {
+      let lib = await loadLibrary();
+      lib.env.allowLocalModels = false;
+
+      const report = (info: { status?: string; progress?: number }) => {
+        if (info?.progress !== undefined) {
+          say(`${info.status ?? 'loading'} ${Math.round(info.progress)}%`);
+        }
+      };
+
+      const devices = ('gpu' in navigator ? ['webgpu', 'wasm'] : ['wasm']) as const;
+      let lastError: unknown;
+
+      for (const attempt of [0, 1]) {
+        if (attempt === 1) {
+          // 大陆网络访问 huggingface.co 常常直接超时，切镜像再试一次
+          lib.env.remoteHost = MIRROR;
+          say('huggingface.co unreachable, retrying via hf-mirror.com…');
+        }
+        for (const device of devices) {
+          try {
+            const pipe = await lib.pipeline('feature-extraction', MODEL, {
+              device,
+              progress_callback: report,
+            });
+            return { pipe: pipe as Extractor, device };
+          } catch (error) {
+            lastError = error;
+          }
+        }
+      }
+      throw lastError ?? new Error('model load failed');
+    }
+
+    const embed = async (texts: string[]) => {
+      if (!extractor) throw new Error('extractor not ready');
+      const output = await extractor(texts, { pooling: 'mean', normalize: true });
+      const data = output.data;
+      const dim = data.length / texts.length;
+      const out: Float32Array[] = [];
+      for (let i = 0; i < texts.length; i++) {
+        out.push(data.subarray(i * dim, (i + 1) * dim));
+      }
+      return out;
+    };
+
+    const dot = (a: Float32Array, b: Float32Array) => {
+      let sum = 0;
+      for (let i = 0; i < a.length; i++) sum += a[i] * b[i];
+      return sum;
+    };
+
+    const render = (hits: { doc: (typeof docs)[number]; score: number }[]) => {
+      results.innerHTML = '';
+      for (const { doc, score } of hits) {
+        const link = document.createElement('a');
+        link.href = doc.u;
+        link.className = 'card card-interactive block';
+        const title = document.createElement('div');
+        title.className = 'flex items-baseline justify-between gap-3';
+        const name = document.createElement('strong');
+        name.className = 'text-slate-900 dark:text-slate-100';
+        name.textContent = doc.n;
+        const value = document.createElement('span');
+        value.className = 'text-xs tabular-nums text-slate-500 dark:text-slate-400';
+        value.textContent = score.toFixed(3);
+        title.append(name, value);
+        const text = document.createElement('p');
+        text.className = 'mt-1 text-sm text-slate-600 dark:text-slate-400';
+        text.textContent = doc.t;
+        link.append(title, text);
+        results.append(link);
+      }
+    };
+
+    loadButton.addEventListener('click', async () => {
+      if (busy) return;
+      busy = true;
+      loadButton.disabled = true;
+      say('loading the runtime…');
+      try {
+        const { pipe, device } = await buildExtractor();
+        extractor = pipe;
+        say(`embedding ${docs.length} entries on ${device}…`);
+        vectors = await embed(docs.map((d) => d.t));
+        say(
+          `${docs.length} entries embedded on ${device}. Ask in English — everything runs locally.`
+        );
+        form.hidden = false;
+        input.disabled = false;
+        submit.disabled = false;
+        input.focus();
+      } catch (error) {
+        say(
+          'Could not load the model. Likely causes: no network access to huggingface.co or hf-mirror.com, or this browser blocks the required WebAssembly/WebGPU features. The keyword search still works.'
+        );
+        loadButton.disabled = false;
+        void error;
+      } finally {
+        busy = false;
+      }
+    });
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      if (!vectors || !extractor || busy) return;
+      const query = input.value.trim();
+      if (!query) return;
+      busy = true;
+      submit.disabled = true;
+      try {
+        const [queryVector] = await embed([query]);
+        const scored = docs.map((doc, index) => ({ doc, score: dot(queryVector, vectors![index]) }));
+        scored.sort((a, b) => b.score - a.score);
+        render(scored.slice(0, 8));
+      } catch {
+        say('The query failed to embed. The keyword search still works.');
+      } finally {
+        busy = false;
+        submit.disabled = false;
+      }
+    });
+  }
+
+  document.addEventListener('astro:page-load', init);
+  void init();
+</script>

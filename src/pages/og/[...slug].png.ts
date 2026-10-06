@@ -4,6 +4,8 @@ import { categories, categoryKeys, locales, t, type Locale } from '../../i18n/ui
 import { benchmarkCategories } from '../../lib/benchmarks';
 import { paperTiers } from '../../lib/papers';
 import { verificationLabels, type Verification } from '../../lib/news';
+import { useCaseScenarios } from '../../lib/use-cases';
+import { labs } from '../../lib/lab';
 import { collectMyths } from '../../lib/myths';
 import { renderOgImage } from '../../lib/og';
 
@@ -67,8 +69,26 @@ export async function getStaticPaths() {
         slug: `${p}myths`,
         title: zh ? '误传核查' : 'Myth check',
         kicker: zh ? '经不起核对的常见说法' : "claims that don't survive checking",
+      },
+      {
+        slug: `${p}use-cases`,
+        title: zh ? '真实使用案例' : 'Real-world use cases',
+        kicker: `${useCases.length} ${zh ? '条可追溯记录' : 'traced accounts'}`,
+      },
+      {
+        slug: `${p}lab`,
+        title: zh ? '实验区' : 'Lab',
+        kicker: zh ? '基于本站数据集的交互实验' : 'interactive experiments on this dataset',
       }
     );
+
+    for (const demo of labs) {
+      entries.push({
+        slug: `${p}lab/${demo.id}`,
+        title: demo.title[locale],
+        kicker: zh ? '交互实验' : 'Interactive demo',
+      });
+    }
 
     for (const k of categoryKeys) {
       const count = tools.filter((x) => x.data.category === k).length;
@@ -108,6 +128,15 @@ export async function getStaticPaths() {
         slug: `${p}compare/${c.id}`,
         title: zh ? c.data.titleZh : c.data.title,
         kicker: zh ? '工具对比' : 'Tool comparison',
+      });
+    }
+
+    // 用例标题太长，卡片上放不住；改用产品名 + 场景，读起来更像一张名片
+    for (const u of useCases) {
+      entries.push({
+        slug: `${p}use-cases/${u.id}`,
+        title: u.data.product,
+        kicker: `${useCaseScenarios[u.data.scenario][locale]} · ${verificationLabels[u.data.verification as Verification][locale]}`,
       });
     }
   }

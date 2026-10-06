@@ -1,0 +1,12 @@
+---
+import LabDemo from '../../components/lab/LabDemo.astro';
+import ReactLoop from '../../components/lab/ReactLoop.astro';
+import { labs } from '../../lib/lab';
+
+const locale = 'en' as const;
+const demo = labs.find((entry) => entry.id === 'react-loop')!;
+---
+
+<LabDemo locale={locale} demo={demo} lead={demo.blurb[locale]}>
+  <ReactLoop locale={locale} />
+</LabDemo>

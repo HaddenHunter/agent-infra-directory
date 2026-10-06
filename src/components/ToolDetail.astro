@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
-import { categories, t, toolMarkdownUrl, type Locale } from '../i18n/ui';
+import { categories, t, toolAlternativesUrl, toolMarkdownUrl, type Locale } from '../i18n/ui';
 import { licenseKind, licenseLabels, licenseBadgeClass } from '../lib/license';
 import ToolCard from './ToolCard.astro';
 
@@ -21,10 +21,10 @@ const caveat = locale === 'zh' ? d.caveatZh : d.caveat;
 const categoryLabel = categories[d.category][locale];
 const kind = licenseKind(d.license);
 
-const related = (await getCollection('tools'))
+const siblings = (await getCollection('tools'))
   .filter((x) => x.data.category === d.category && x.id !== tool.id)
-  .sort((a, b) => (b.data.stars ?? 0) - (a.data.stars ?? 0))
-  .slice(0, 3);
+  .sort((a, b) => (b.data.stars ?? 0) - (a.data.stars ?? 0));
+const related = siblings.slice(0, 3);
 ---
 
 <article>
@@ -148,7 +148,19 @@ const related = (await getCollection('tools'))
   {
     related.length > 0 && (
       <section class="mt-12">
-        <h2 class="section-title">{s.relatedTools}</h2>
+        <div class="flex flex-wrap items-baseline justify-between gap-2">
+          <h2 class="section-title">{s.relatedTools}</h2>
+          {siblings.length >= 2 && (
+            <a
+              class="text-sm text-indigo-600 hover:underline dark:text-indigo-400"
+              href={toolAlternativesUrl(locale, tool.id)}
+            >
+              {locale === 'zh'
+                ? `与全部 ${siblings.length} 个同类工具对比 →`
+                : `Compare all ${siblings.length} alternatives →`}
+            </a>
+          )}
+        </div>
         <div class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {related.map((r) => (
             <ToolCard locale={locale} tool={r} showCategory={false} />

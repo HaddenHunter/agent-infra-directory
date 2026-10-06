@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { t, type Locale } from '../../i18n/ui';
+import type { LabEntry } from '../../lib/lab';
+
+export interface Props {
+  locale: Locale;
+  demo: LabEntry;
+  /** 该 demo 的一句话说明，渲染在标题下方 */
+  lead: string;
+}
+
+const { locale, demo, lead } = Astro.props;
+const s = t(locale);
+const zh = locale === 'zh';
+const indexHref = zh ? '/zh/lab/' : '/lab/';
+---
+
+<BaseLayout
+  locale={locale}
+  title={`${demo.title[locale]} — ${s.siteName}`}
+  description={demo.blurb[locale]}
+  path={zh ? `/zh/lab/${demo.id}/` : `/lab/${demo.id}/`}
+  alternates={{
+    en: `/lab/${demo.id}/`,
+    zh: `/zh/lab/${demo.id}/`,
+  }}
+  ogType="article"
+>
+  <nav class="text-sm text-slate-500 dark:text-slate-400">
+    <a class="hover:text-slate-900 dark:hover:text-slate-100" href={zh ? '/zh/' : '/'}>{s.home}</a>
+    <span class="mx-1">/</span>
+    <a class="hover:text-slate-900 dark:hover:text-slate-100" href={indexHref}>
+      {zh ? '实验区' : 'Lab'}
+    </a>
+  </nav>
+
+  <header class="mt-3">
+    <h1 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-50">
+      {demo.title[locale]}
+    </h1>
+    <p class="mt-2 max-w-3xl text-slate-600 dark:text-slate-400">{lead}</p>
+    <p class="mt-3 text-xs text-slate-500 dark:text-slate-400">{demo.needs[locale]}</p>
+  </header>
+
+  <div class="mt-8">
+    <slot />
+  </div>
+
+  <aside class="mt-10 rounded-xl border border-slate-200 bg-white p-4 text-xs leading-relaxed text-slate-500 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-400">
+    {
+      zh
+        ? '这个页面的脚本只在这一页加载，目录里的内容页一行 JS 都没有因此变多。'
+        : 'This page loads its own script on this route only — the directory pages that carry the content gain nothing to download.'
+    }
+  </aside>
+</BaseLayout>
