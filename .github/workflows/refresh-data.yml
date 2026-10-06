@@ -1,15 +1,12 @@
 name: Refresh data
 
-# 数据动态更新：定时把工具元数据与新闻候选刷一遍，然后开一个 PR 等人签核。
+# 数据动态更新：定时刷工具元数据、论文元数据与新闻候选，验证能构建后直接提交并
+# 推送到 main，交给 deploy.yml 自动部署。全流程无人值守。
 #
-# 为什么是 PR 而不是直接提交 main：
-#   - fetch:github 只回填机器可验证的字段（stars / archived / lastPush），但它会
-#     报告 license 冲突这类需要人判断的情况（例如 Dify 的 "Dify Open Source License"
-#     对 GitHub 的 NOASSERTION）。自动合并等于把这些判断也自动化了。
-#   - fetch:news 产出的候选**必须**经人工挑选、补齐 keyFact 与 whyItMatters 后才能
-#     进 src/content/events/。这是全站可信度的底线，不能交给定时任务。
-#   候选落在 content-inbox/，不在 src/content/ 下，因此即使 PR 一直没人合，
-#   它们也不会出现在站点上。
+# 自动化的边界（只碰机器可验证的字段）：
+#   - fetch:github 只回填 stars / archived / lastPush；license 冲突只打印、不自动改写。
+#   - fetch:news 的候选只落在 content-inbox/，不在 src/content/ 下，因此不会被站点
+#     渲染；要收录仍需人工补齐 keyFact / whyItMatters 后手动移进 src/content/events/。
 
 on:
   schedule:
@@ -19,7 +16,6 @@ on:
 
 permissions:
   contents: write
-  pull-requests: write
 
 concurrency:
   group: refresh-data
@@ -60,11 +56,11 @@ jobs:
           npm run fetch:papers 2>&1 | tee /tmp/papers-refresh.log
 
       # 刷新后的数据若违反 schema（例如 category 拼错），这里会先失败，
-      # 不至于把一个构建不过的 PR 递到人面前。
+      # 不至于把坏数据直接推上 main 部署出去。
       - name: Verify the site still builds
         run: npm run build
 
-      - name: Compose PR body
+      - name: Write run summary
         run: |
           {
             echo "## 数据动态刷新"
@@ -79,7 +75,7 @@ jobs:
             echo
             echo "> \`stars\` / \`archived\` / \`lastPush\` 由 GitHub API 回填，只覆盖这三个字段，"
             echo "> 手写的 license、description、keyFact 不会被改动。上面若出现 license 冲突，"
-            echo "> 需要人工判断以谁为准。"
+            echo "> 说明手写值与 GitHub 的判定不一致，需要人工决定是否更新。"
             echo
             echo "### 论文元数据（机器可验证）"
             echo
@@ -106,46 +102,20 @@ jobs:
             echo
             echo "不打算收录的候选可以留在原处——脚本会按 URL 去重，不会重复刷出来。"
             echo
-            echo "- [ ] license 冲突已人工判断（若有）"
-            echo "- [ ] 已挑选并核验要收录的新闻候选（可选，可以只合工具元数据）"
-          } > /tmp/pr-body.md
+            echo "> 本轮刷新结果将自动提交并推送到 \`main\`，由 deploy.yml 自动部署。"
+          } >> "$GITHUB_STEP_SUMMARY"
 
-      - name: Open or update the review PR
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Commit and push to main
         run: |
           set -euo pipefail
-          if git diff --quiet; then
-            echo "本轮没有任何变更，跳过 PR。"
+          if [ -z "$(git status --porcelain -- src/content/tools src/content/papers content-inbox)" ]; then
+            echo "本轮没有任何变更，跳过提交。"
             exit 0
           fi
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          # 固定分支名：每次刷新都更新同一个 PR，而不是每天攒一个新的。
-          BRANCH="automated/data-refresh"
-          git checkout -B "$BRANCH"
           git add src/content/tools src/content/papers content-inbox
           git commit -m "chore: refresh tool, paper and news metadata"
-          git push --force-with-lease -u origin "$BRANCH"
-
-          # 分支已经推上去了，数据就在上面。所以「开 PR」失败不该让整个任务红掉——
-          # gh pr create 依赖仓库开关 "Allow GitHub Actions to create and approve
-          # pull requests"（默认关闭），该开关关着时会报 not permitted to create
-          # pull requests。这里降级为警告 + 给出一次性开 PR 的链接。
-          COMPARE="${{ github.server_url }}/${{ github.repository }}/compare/main...$BRANCH?expand=1"
-
-          if gh pr create \
-            --base main \
-            --head "$BRANCH" \
-            --title "chore: 数据动态刷新（$(date -u '+%Y-%m-%d')）" \
-            --body-file /tmp/pr-body.md 2>/tmp/gh-error.log; then
-            echo "已创建 PR。"
-          elif grep -qi "already exists" /tmp/gh-error.log; then
-            # 分支已存在说明上一轮已经开过 PR，这次 push 已经把内容更新进去了
-            echo "PR 已存在，本次刷新已更新到该分支。"
-          else
-            echo "::warning::自动开 PR 失败，但分支已推送成功，数据没丢。手动开 PR：$COMPARE"
-            cat /tmp/gh-error.log
-          fi
+          git push origin HEAD:main

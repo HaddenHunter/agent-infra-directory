@@ -49,6 +49,6 @@ npm run dev
 
 ## How content stays current
 
-[`.github/workflows/refresh-data.yml`](.github/workflows/refresh-data.yml) runs daily. It refreshes tool and paper metadata, collects news candidates, **verifies the site still builds**, then opens a single pull request for review.
+[`.github/workflows/refresh-data.yml`](.github/workflows/refresh-data.yml) runs daily. It refreshes tool and paper metadata, collects news candidates, **verifies the site still builds**, then commits the result straight to `main`, where the deploy workflow picks it up. Only machine-verifiable fields move this way — GitHub API numbers (`stars` / `archived` / `lastPush`) and arXiv metadata (title, authors, dates).
 
-Nothing publishes itself. The pipeline collects and triages; a person decides. News candidates land in `content-inbox/`, which sits outside `src/content/` and is therefore never rendered — promoting one means writing its `keyFact` and `whyItMatters` and setting an explicit `verification` field.
+Nothing editorial publishes itself. News candidates land in `content-inbox/`, which sits outside `src/content/` and is therefore never rendered — promoting one means writing its `keyFact` and `whyItMatters` and setting an explicit `verification` field.
