@@ -5,8 +5,8 @@
   "descriptionZh": "Vercel 的文件系统式 Agent 框架：agent/ 目录即一个 Agent。",
   "license": "Apache-2.0",
   "github": "https://github.com/vercel/eve",
-  "stars": 5455,
-  "starsAsOf": "2026-10-04",
+  "stars": 5477,
+  "starsAsOf": "2026-10-07",
   "language": "TypeScript",
   "selfHosted": true,
   "keyFact": "Vercel Eve is an Apache-2.0, filesystem-first agent framework released in June 2026, in which an agent/ directory (instructions.md, tools/, skills/, channels/) defines the agent itself.",
@@ -15,5 +15,5 @@
   "updatedDate": "2026-10-04",
   "caveat": "Public beta at time of verification; small ecosystem and low star count. Maturity should not be assumed.",
   "caveatZh": "核验时仍处 public beta；生态较新、星标量级小，不宜假定其成熟度。",
-  "lastPush": "2026-10-03"
+  "lastPush": "2026-10-07"
 }

@@ -5,13 +5,13 @@
   "descriptionZh": "Python 的基于角色的多 Agent 编排框架。",
   "license": "MIT",
   "github": "https://github.com/crewAIInc/crewAI",
-  "stars": 59331,
-  "starsAsOf": "2026-10-04",
+  "stars": 59410,
+  "starsAsOf": "2026-10-07",
   "language": "Python",
   "selfHosted": true,
   "keyFact": "CrewAI is an MIT-licensed Python framework for role-based multi-agent orchestration; its GitHub repository had roughly 57,000 stars as of August 2026.",
   "keyFactZh": "CrewAI 是 MIT 许可的 Python 多 Agent 编排框架，采用基于角色的协作模型；截至 2026 年 8 月其 GitHub 仓库约有 57,000 星标。",
   "addedDate": "2026-10-04",
   "updatedDate": "2026-10-04",
-  "lastPush": "2026-10-03"
+  "lastPush": "2026-10-07"
 }

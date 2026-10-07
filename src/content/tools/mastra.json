@@ -12,5 +12,8 @@
   "addedDate": "2026-10-04",
   "updatedDate": "2026-10-04",
   "caveat": "Mixed licensing: production commercial use of the ee/ enterprise directory requires a Mastra license. GitHub reports the repository license as NOASSERTION for this reason.",
-  "caveatZh": "许可混合：若生产环境商用 ee/ 企业目录，需获得 Mastra 授权。正因如此，GitHub 将该仓库许可证标记为 NOASSERTION。"
+  "caveatZh": "许可混合：若生产环境商用 ee/ 企业目录，需获得 Mastra 授权。正因如此，GitHub 将该仓库许可证标记为 NOASSERTION。",
+  "stars": 28610,
+  "starsAsOf": "2026-10-07",
+  "lastPush": "2026-10-07"
 }

@@ -11,7 +11,7 @@
   "keyFactZh": "LlamaIndex 是 MIT 许可的 Python LLM 数据框架，2022 年 11 月以 GPT Index 之名起步；其核心为 llama-index-core，附带 300+ 集成包，公司商业重心已转向 LlamaParse，开源框架仍在维护。",
   "addedDate": "2026-10-04",
   "updatedDate": "2026-10-04",
-  "stars": 52405,
-  "starsAsOf": "2026-10-04",
-  "lastPush": "2026-10-01"
+  "stars": 52428,
+  "starsAsOf": "2026-10-07",
+  "lastPush": "2026-10-06"
 }

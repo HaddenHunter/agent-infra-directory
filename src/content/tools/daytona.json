@@ -12,8 +12,8 @@
   "updatedDate": "2026-10-04",
   "caveat": "AGPL-3.0 has strong copyleft implications for hosted derivatives; the project has publicly disclosed several security CVEs.",
   "caveatZh": "AGPL-3.0 对托管衍生服务有较强的 copyleft 约束；项目曾公开披露多个安全 CVE。",
-  "stars": 71667,
-  "starsAsOf": "2026-10-04",
+  "stars": 71620,
+  "starsAsOf": "2026-10-07",
   "archived": true,
   "lastPush": "2026-07-24"
 }

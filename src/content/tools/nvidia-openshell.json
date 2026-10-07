@@ -5,8 +5,8 @@
   "descriptionZh": "策略治理的 Agent 运行时，默认拒绝所有出站网络流量。",
   "license": "Apache-2.0",
   "github": "https://github.com/NVIDIA/OpenShell",
-  "stars": 14749,
-  "starsAsOf": "2026-10-04",
+  "stars": 15192,
+  "starsAsOf": "2026-10-07",
   "language": "Rust",
   "selfHosted": true,
   "keyFact": "NVIDIA OpenShell is an Apache-2.0, Rust-based agent runtime that enforces default-deny network egress in every sandbox: outbound connections are blocked at a proxy unless explicitly allowlisted in a declarative YAML policy, and blocked attempts are logged with destination, binary and reason.",
@@ -15,5 +15,5 @@
   "updatedDate": "2026-10-04",
   "caveat": "The claim that OpenShell is the *only* open-source agent sandbox defaulting to deny-all egress is not independently verifiable and is not asserted here. OpenShell was labelled alpha as of mid-2026.",
   "caveatZh": "“OpenShell 是唯一默认拒绝所有出站流量的开源 Agent 沙箱”这一说法无法独立证实，本站不作此断言。OpenShell 在 2026 年中仍标注为 alpha。",
-  "lastPush": "2026-10-04"
+  "lastPush": "2026-10-07"
 }

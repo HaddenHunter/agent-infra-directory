@@ -12,5 +12,8 @@
   "addedDate": "2026-10-04",
   "updatedDate": "2026-10-04",
   "caveat": "Tempo is a blockchain network, not a 'protocol' — the protocol in this space is MPP. Reported testnet throughput (~20,000 TPS) is an engineering figure, not observed mainnet load, and on-chain value remains small.",
-  "caveatZh": "Tempo 是一条区块链网络而非「协议」——该领域真正的协议是 MPP。其测试网吞吐（约 20,000 TPS）属工程数据而非主网实测负载，且链上沉淀资金规模仍然有限。"
+  "caveatZh": "Tempo 是一条区块链网络而非「协议」——该领域真正的协议是 MPP。其测试网吞吐（约 20,000 TPS）属工程数据而非主网实测负载，且链上沉淀资金规模仍然有限。",
+  "stars": 1029,
+  "starsAsOf": "2026-10-07",
+  "lastPush": "2026-10-07"
 }

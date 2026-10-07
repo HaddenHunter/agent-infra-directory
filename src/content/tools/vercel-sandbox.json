@@ -14,6 +14,6 @@
   "caveat": "Managed-only; the platform is proprietary (the @vercel/sandbox SDK is Apache-2.0).",
   "caveatZh": "仅托管，平台为专有（@vercel/sandbox SDK 为 Apache-2.0）。",
   "stars": 208,
-  "starsAsOf": "2026-10-04",
-  "lastPush": "2026-09-30"
+  "starsAsOf": "2026-10-07",
+  "lastPush": "2026-10-07"
 }

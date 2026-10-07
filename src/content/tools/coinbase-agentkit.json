@@ -14,6 +14,6 @@
   "caveat": "GitHub's license detector reports NOASSERTION even though the package metadata states Apache-2.0; verify before redistribution.",
   "caveatZh": "尽管包元数据标注 Apache-2.0，GitHub 的许可证检测结果为 NOASSERTION；再分发前请自行核实。",
   "stars": 1322,
-  "starsAsOf": "2026-10-04",
+  "starsAsOf": "2026-10-07",
   "lastPush": "2026-09-03"
 }

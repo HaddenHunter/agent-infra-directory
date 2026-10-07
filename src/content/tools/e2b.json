@@ -12,8 +12,8 @@
   "updatedDate": "2026-10-04",
   "caveat": "The runtime is Apache-2.0 while the Python SDK package is published under MIT; most teams use the managed cloud rather than self-hosting.",
   "caveatZh": "运行时为 Apache-2.0，而 Python SDK 包标注为 MIT；多数团队使用其托管云而非自托管。",
-  "stars": 14150,
-  "starsAsOf": "2026-10-04",
+  "stars": 14209,
+  "starsAsOf": "2026-10-07",
   "language": "Python",
-  "lastPush": "2026-10-02"
+  "lastPush": "2026-10-06"
 }

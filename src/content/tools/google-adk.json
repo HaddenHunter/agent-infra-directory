@@ -5,13 +5,13 @@
   "descriptionZh": "开源 Agent 开发套件，可原生部署到 Vertex AI Agent Engine。",
   "license": "Apache-2.0",
   "github": "https://github.com/google/adk-python",
-  "stars": 21702,
-  "starsAsOf": "2026-10-04",
+  "stars": 21729,
+  "starsAsOf": "2026-10-07",
   "language": "Python",
   "selfHosted": true,
   "keyFact": "Google ADK (Agent Development Kit) is an Apache-2.0 agent framework whose Python repository had about 21,600 GitHub stars as of September 2026, and which deploys natively to Vertex AI Agent Engine.",
   "keyFactZh": "Google ADK（Agent Development Kit）是 Apache-2.0 许可的 Agent 开发框架；截至 2026 年 9 月其 Python 仓库约有 21,600 星标，并可原生部署到 Vertex AI Agent Engine。",
   "addedDate": "2026-10-04",
   "updatedDate": "2026-10-04",
-  "lastPush": "2026-10-04"
+  "lastPush": "2026-10-07"
 }

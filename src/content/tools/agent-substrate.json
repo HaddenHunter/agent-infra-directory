@@ -5,8 +5,8 @@
   "descriptionZh": "高密度运行时，把大量有状态 Agent 复用到少量 Kubernetes worker 上。",
   "license": "Apache-2.0",
   "github": "https://github.com/agent-substrate/substrate",
-  "stars": 4248,
-  "starsAsOf": "2026-10-04",
+  "stars": 4460,
+  "starsAsOf": "2026-10-07",
   "language": "Go",
   "selfHosted": true,
   "keyFact": "Agent Substrate is an Apache-2.0 runtime that suspends idle agent 'actors' and resumes them in under a second, letting it multiplex roughly 250 stateful agents onto 8 Kubernetes pods; Google states it achieves about 10x higher density than standard container runtimes.",
@@ -15,5 +15,5 @@
   "updatedDate": "2026-10-04",
   "caveat": "Google open-sourced it but states it is not an officially supported Google product and was in early development (not production-ready) at verification time.",
   "caveatZh": "Google 开源了该项目，但声明其并非 Google 官方支持产品，且核验时处于早期开发阶段（尚未生产可用）。",
-  "lastPush": "2026-10-03"
+  "lastPush": "2026-10-07"
 }

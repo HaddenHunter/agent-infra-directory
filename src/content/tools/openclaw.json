@@ -12,5 +12,8 @@
   "addedDate": "2026-10-05",
   "updatedDate": "2026-10-05",
   "caveat": "Third-party sites report star counts between roughly 346,000 and 400,000 with no agreed figure. A site calling itself OpenClaw Cloud / getopenclaw.ai presents itself as official, which contradicts the project's stated position of having no hosted tier.",
-  "caveatZh": "第三方站点给出的星标在约 34.6 万至 40 万之间，无一致口径。另有自称官方的 OpenClaw Cloud / getopenclaw.ai 站点，与项目方「不提供托管版」的公开表述相矛盾。"
+  "caveatZh": "第三方站点给出的星标在约 34.6 万至 40 万之间，无一致口径。另有自称官方的 OpenClaw Cloud / getopenclaw.ai 站点，与项目方「不提供托管版」的公开表述相矛盾。",
+  "stars": 391543,
+  "starsAsOf": "2026-10-07",
+  "lastPush": "2026-10-07"
 }

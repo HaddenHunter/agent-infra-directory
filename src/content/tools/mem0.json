@@ -5,13 +5,13 @@
   "descriptionZh": "开源 + 托管的记忆层，为 Agent 提供跨会话的持久记忆。",
   "license": "Apache-2.0",
   "github": "https://github.com/mem0ai/mem0",
-  "stars": 66556,
-  "starsAsOf": "2026-10-04",
+  "stars": 66742,
+  "starsAsOf": "2026-10-07",
   "language": "Python",
   "selfHosted": true,
   "keyFact": "Mem0 is an Apache-2.0 memory layer (with a paid Pro tier for some features) that adds persistent cross-session memory to agents via add/search APIs and an optional graph-based memory; it reported 65,000+ GitHub stars as of mid-2026 and is backed by Y Combinator.",
   "keyFactZh": "Mem0 是 Apache-2.0 许可的记忆层（部分功能归于付费 Pro 层），通过 add/search API 及可选的图记忆为 Agent 增加跨会话持久记忆；其 2026 年中报告 65,000+ GitHub 星标，并获得 Y Combinator 投资。",
   "addedDate": "2026-10-04",
   "updatedDate": "2026-10-04",
-  "lastPush": "2026-10-01"
+  "lastPush": "2026-10-06"
 }

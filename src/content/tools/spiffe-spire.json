@@ -10,8 +10,8 @@
   "keyFactZh": "SPIFFE 是 CNCF 毕业级（2022 年 8 月 23 日毕业）的加密工作负载身份规范，SPIRE 是其参考实现；二者通过 Workload API 签发 X.509-SVID 与 JWT-SVID 凭据，无需预共享密钥，依赖节点与工作负载 attestation。",
   "addedDate": "2026-10-04",
   "updatedDate": "2026-10-04",
-  "stars": 2569,
-  "starsAsOf": "2026-10-04",
+  "stars": 2572,
+  "starsAsOf": "2026-10-07",
   "language": "Go",
-  "lastPush": "2026-10-02"
+  "lastPush": "2026-10-07"
 }

@@ -10,8 +10,8 @@
   "keyFactZh": "mcp-use 是 MIT 许可的全栈 MCP 框架，既可构建面向 ChatGPT 与 Claude 的 MCP App，也可构建 MCP Server；它由 Pietro Zullo 创建，现归属 mcp-use 组织，同时发布 Python 包与 @mcp-use npm 包。",
   "addedDate": "2026-10-04",
   "updatedDate": "2026-10-04",
-  "stars": 10714,
-  "starsAsOf": "2026-10-04",
+  "stars": 10729,
+  "starsAsOf": "2026-10-07",
   "language": "TypeScript",
-  "lastPush": "2026-10-02"
+  "lastPush": "2026-10-06"
 }
