@@ -5,8 +5,8 @@
   "descriptionZh": "腾讯云开源的 microVM Agent 沙箱，兼容 E2B SDK。",
   "license": "Apache-2.0",
   "github": "https://github.com/TencentCloud/CubeSandbox",
-  "stars": 12815,
-  "starsAsOf": "2026-10-07",
+  "stars": 12833,
+  "starsAsOf": "2026-10-08",
   "language": "Rust",
   "selfHosted": true,
   "keyFact": "CubeSandbox, open-sourced by Tencent Cloud on 21 April 2026 under Apache-2.0, runs each agent in a KVM-isolated microVM built on RustVMM: it reports a best-case cold start under 60ms (about 67ms average) and under 5MB memory overhead per sandbox, and is API-compatible with the E2B SDK.",
@@ -15,5 +15,5 @@
   "updatedDate": "2026-10-04",
   "caveat": "The <60ms figure is a best case at low concurrency; P95 is ~90ms and P99 ~137ms under 50 concurrent creates on bare metal per the project.",
   "caveatZh": "<60ms 为低并发下的最优值；据项目方数据，裸金属上 50 并发创建时 P95 约 90ms、P99 约 137ms。",
-  "lastPush": "2026-09-30"
+  "lastPush": "2026-10-08"
 }

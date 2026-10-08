@@ -11,7 +11,7 @@
   "keyFactZh": "Haystack 是 deepset 于 2020 年首次发布的 Apache-2.0 LLM 框架；3.0 版把 Agent 编排（工具执行循环、状态与流式）并入核心 haystack-ai 包并移除了 ToolInvoker，其企业级安全能力则保留在 deepset 商业平台中。",
   "addedDate": "2026-10-04",
   "updatedDate": "2026-10-04",
-  "stars": 26686,
-  "starsAsOf": "2026-10-07",
-  "lastPush": "2026-10-07"
+  "stars": 26694,
+  "starsAsOf": "2026-10-08",
+  "lastPush": "2026-10-08"
 }

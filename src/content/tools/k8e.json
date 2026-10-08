@@ -13,7 +13,7 @@
   "updatedDate": "2026-10-04",
   "caveat": "Its lineage matters when evaluating maturity: the project began as a Kubernetes distribution, and the agent-sandbox positioning is a 2026 rebrand rather than a from-scratch agent-native design.",
   "caveatZh": "评估成熟度时需注意其出身：该项目最初是 Kubernetes 发行版，Agent 沙箱定位是 2026 年的重新定位，而非从零设计的 Agent 原生方案。",
-  "stars": 499,
-  "starsAsOf": "2026-10-07",
+  "stars": 500,
+  "starsAsOf": "2026-10-08",
   "lastPush": "2026-09-28"
 }

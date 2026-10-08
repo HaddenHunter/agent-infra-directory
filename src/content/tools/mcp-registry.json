@@ -12,8 +12,8 @@
   "updatedDate": "2026-10-04",
   "caveat": "GitHub reports the repository license as NOASSERTION; the exact SPDX license could not be confirmed at verification time.",
   "caveatZh": "GitHub 将该仓库的许可证标为 NOASSERTION；核验时未能确认其确切 SPDX 许可。",
-  "stars": 7322,
-  "starsAsOf": "2026-10-07",
+  "stars": 7327,
+  "starsAsOf": "2026-10-08",
   "language": "Go",
-  "lastPush": "2026-10-06"
+  "lastPush": "2026-10-07"
 }

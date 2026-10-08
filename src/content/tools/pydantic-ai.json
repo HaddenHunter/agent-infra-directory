@@ -11,7 +11,7 @@
   "keyFactZh": "Pydantic AI 是 Pydantic 团队以 MIT 许可开源的 Python Agent 框架，会用 Pydantic 模型校验模型输出，并在校验失败时自动重试，把该库的类型安全保证带入 Agent 的结构化输出。",
   "addedDate": "2026-10-04",
   "updatedDate": "2026-10-04",
-  "stars": 20466,
-  "starsAsOf": "2026-10-07",
-  "lastPush": "2026-10-07"
+  "stars": 20483,
+  "starsAsOf": "2026-10-08",
+  "lastPush": "2026-10-08"
 }

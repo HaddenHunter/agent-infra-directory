@@ -13,7 +13,7 @@
   "updatedDate": "2026-10-04",
   "caveat": "Open-core split: the free MIT package covers only OpenClaw, NemoClaw and Goose; Claude Code, Codex, Cursor and others require the paid closed-source companion. New project (first released 2026), tightly coupled to the OpenClaw ecosystem.",
   "caveatZh": "Open-core 拆分：免费 MIT 包仅覆盖 OpenClaw、NemoClaw 与 Goose；Claude Code、Codex、Cursor 等需付费闭源组件。项目很新（2026 年首发），且与 OpenClaw 生态强绑定。",
-  "stars": 424,
-  "starsAsOf": "2026-10-07",
-  "lastPush": "2026-10-07"
+  "stars": 425,
+  "starsAsOf": "2026-10-08",
+  "lastPush": "2026-10-08"
 }

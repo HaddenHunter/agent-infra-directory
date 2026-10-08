@@ -5,8 +5,8 @@
   "descriptionZh": "Nous Research 的自托管个人智能体，具备自我改进的技能闭环。",
   "license": "MIT",
   "github": "https://github.com/NousResearch/hermes-agent",
-  "stars": 251776,
-  "starsAsOf": "2026-10-07",
+  "stars": 252063,
+  "starsAsOf": "2026-10-08",
   "language": "Python",
   "selfHosted": true,
   "keyFact": "Hermes Agent is Nous Research's MIT-licensed Python personal agent, self-hostable across CLI, desktop, Docker, Nix and Termux with seven terminal backends; it closes a self-improvement loop by creating and refining its own skills, and Nous Research also offers a hosted Hermes Cloud preview.",
@@ -15,5 +15,5 @@
   "updatedDate": "2026-10-05",
   "caveat": "Its first public release date is disputed (reports say February 2026 while the repository was created in July 2025), and the Hermes Cloud launch is reported anywhere between May and July 2026.",
   "caveatZh": "其首次公开发布日期存在分歧（有报道称 2026 年 2 月，而仓库创建于 2025 年 7 月）；Hermes Cloud 的上线时间在不同来源间介于 2026 年 5 月至 7 月。",
-  "lastPush": "2026-10-07"
+  "lastPush": "2026-10-08"
 }

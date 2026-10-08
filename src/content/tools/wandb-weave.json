@@ -10,8 +10,8 @@
   "keyFactZh": "Weave 是 Weights & Biases 以 Apache-2.0 开源的 AI Agent 追踪与评测工具包，提供 guardrails、playground 与 leaderboards；W&B 已被 CoreWeave 收购，另有单独发布的自托管 W&B Server。",
   "addedDate": "2026-10-04",
   "updatedDate": "2026-10-04",
-  "stars": 1136,
-  "starsAsOf": "2026-10-07",
+  "stars": 1137,
+  "starsAsOf": "2026-10-08",
   "language": "Python",
-  "lastPush": "2026-10-07"
+  "lastPush": "2026-10-08"
 }

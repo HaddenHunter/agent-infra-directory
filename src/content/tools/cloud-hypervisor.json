@@ -10,8 +10,8 @@
   "keyFactZh": "Cloud Hypervisor 是基于 KVM、用 Rust 编写在 rust-vmm crate 之上的虚拟机监控器，采用 Apache-2.0 OR MIT 双许可；它面向云负载，支持 CPU/内存/设备热插拔、Windows 与 Linux guest 以及 vhost-user 设备卸载，并刻意保持极小的攻击面。",
   "addedDate": "2026-10-04",
   "updatedDate": "2026-10-04",
-  "stars": 6296,
-  "starsAsOf": "2026-10-07",
+  "stars": 6298,
+  "starsAsOf": "2026-10-08",
   "language": "Rust",
-  "lastPush": "2026-10-06"
+  "lastPush": "2026-10-08"
 }

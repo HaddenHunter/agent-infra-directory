@@ -13,8 +13,8 @@
   "updatedDate": "2026-10-04",
   "caveat": "End-of-life: repository archived August 2026, no further development or security patches. Listed here as a caution, not a recommendation.",
   "caveatZh": "已终止维护：仓库于 2026 年 8 月归档，不再开发、不再提供安全补丁。此处列出仅为风险提示，并非推荐。",
-  "stars": 55487,
-  "starsAsOf": "2026-10-07",
+  "stars": 55493,
+  "starsAsOf": "2026-10-08",
   "archived": true,
   "lastPush": "2026-08-13"
 }
