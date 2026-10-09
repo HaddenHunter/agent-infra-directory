@@ -10,8 +10,8 @@
   "keyFactZh": "Kata Containers 是由 Open Infrastructure Foundation 治理的 Apache-2.0 项目，以类似容器的使用方式提供 VM 级隔离；它支持 QEMU、Cloud Hypervisor 与 Firecracker 三种 hypervisor，兼容 OCI/CRI，但需要裸金属或嵌套虚拟化环境。",
   "addedDate": "2026-10-04",
   "updatedDate": "2026-10-04",
-  "stars": 8899,
-  "starsAsOf": "2026-10-08",
+  "stars": 8906,
+  "starsAsOf": "2026-10-09",
   "language": "Rust",
-  "lastPush": "2026-10-08"
+  "lastPush": "2026-10-09"
 }

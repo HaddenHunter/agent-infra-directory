@@ -11,7 +11,7 @@
   "keyFactZh": "smolagents 是 Hugging Face 以 Apache-2.0 开源的 Agent 库，核心逻辑约 1,000 行；其标志性设计是 CodeAgent——把动作写成可执行代码而非 JSON 工具调用，并可在 E2B、Modal 或 Docker 沙箱中执行。",
   "addedDate": "2026-10-04",
   "updatedDate": "2026-10-04",
-  "stars": 29729,
-  "starsAsOf": "2026-10-08",
+  "stars": 29748,
+  "starsAsOf": "2026-10-09",
   "lastPush": "2026-10-06"
 }

@@ -13,7 +13,7 @@
   "updatedDate": "2026-10-04",
   "caveat": "Only Graphiti (the graph engine) is Apache-2.0; the managed Zep Cloud platform is proprietary. Benchmark figures are the vendor's own published results and have not been independently reproduced here.",
   "caveatZh": "仅 Graphiti（图引擎）为 Apache-2.0，托管的 Zep Cloud 平台为专有。基准数字来自厂商自行发表的论文，本站未独立复现。",
-  "stars": 31546,
-  "starsAsOf": "2026-10-08",
-  "lastPush": "2026-10-07"
+  "stars": 31583,
+  "starsAsOf": "2026-10-09",
+  "lastPush": "2026-10-09"
 }

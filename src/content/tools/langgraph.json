@@ -13,7 +13,7 @@
   "updatedDate": "2026-10-04",
   "caveat": "Star counts circulating for LangGraph (e.g. 147k) are frequently confused with the langchain-ai/langchain monorepo (~136k). LangGraph itself is in the tens of thousands; no verified star figure is published here.",
   "caveatZh": "网络上流传的 LangGraph 星标数（如 147k）常与 langchain-ai/langchain 主仓库（约 136k）混淆。LangGraph 自身为数万量级；此处不给出未经核实的星标数字。",
-  "stars": 42879,
-  "starsAsOf": "2026-10-08",
+  "stars": 42937,
+  "starsAsOf": "2026-10-09",
   "lastPush": "2026-10-08"
 }

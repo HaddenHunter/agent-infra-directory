@@ -11,7 +11,7 @@
   "keyFactZh": "Firecracker 是 AWS 以 Apache-2.0 开源的 microVM 监控器（Rust），是 AWS Lambda 与 Fargate 的底层；其 microVM 启动约 125ms，每个 VM 内存开销低于 5 MiB。",
   "addedDate": "2026-10-04",
   "updatedDate": "2026-10-04",
-  "stars": 37224,
-  "starsAsOf": "2026-10-08",
-  "lastPush": "2026-10-07"
+  "stars": 37255,
+  "starsAsOf": "2026-10-09",
+  "lastPush": "2026-10-08"
 }

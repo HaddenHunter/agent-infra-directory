@@ -12,8 +12,8 @@
   "updatedDate": "2026-10-04",
   "caveat": "Sometimes mislabelled as Apache-2.0; the actual license is Elastic License 2.0, which is source-available rather than OSI open source.",
   "caveatZh": "常被误标为 Apache-2.0，实际许可为 Elastic License 2.0，属 source-available 而非 OSI 开源。",
-  "stars": 11749,
-  "starsAsOf": "2026-10-08",
+  "stars": 11765,
+  "starsAsOf": "2026-10-09",
   "language": "Python",
-  "lastPush": "2026-10-08"
+  "lastPush": "2026-10-09"
 }

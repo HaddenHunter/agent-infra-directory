@@ -13,7 +13,7 @@
   "caveat": "Managed-only; the platform is proprietary and flyctl (the CLI) is Apache-2.0.",
   "caveatZh": "仅托管，平台为专有，flyctl（CLI）为 Apache-2.0。",
   "stars": 1716,
-  "starsAsOf": "2026-10-08",
+  "starsAsOf": "2026-10-09",
   "language": "Go",
-  "lastPush": "2026-10-08"
+  "lastPush": "2026-10-09"
 }

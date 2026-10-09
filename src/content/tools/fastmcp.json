@@ -10,8 +10,8 @@
   "keyFactZh": "FastMCP 是 Apache-2.0 的 Python 框架，用于构建 MCP 服务器与客户端，由 Prefect CEO Jeremiah Lowin 创建；FastMCP 1.0 于 2024 年被并入官方 MCP Python SDK，仓库也已从 jlowin/fastmcp 迁移至 PrefectHQ 组织。",
   "addedDate": "2026-10-04",
   "updatedDate": "2026-10-04",
-  "stars": 28006,
-  "starsAsOf": "2026-10-08",
+  "stars": 28019,
+  "starsAsOf": "2026-10-09",
   "language": "Python",
-  "lastPush": "2026-10-08"
+  "lastPush": "2026-10-09"
 }

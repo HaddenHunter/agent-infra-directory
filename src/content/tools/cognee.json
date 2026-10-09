@@ -10,8 +10,8 @@
   "keyFactZh": "Cognee 是 Apache-2.0 的 AI 记忆平台，把知识图谱与向量存储融合在一个由 remember/recall/forget/improve 四个动词构成的 API 之后；它由德国的 Topoteretes UG 开发，提供 cognee-mcp 集成与托管的 Cognee Cloud。",
   "addedDate": "2026-10-04",
   "updatedDate": "2026-10-04",
-  "stars": 31601,
-  "starsAsOf": "2026-10-08",
+  "stars": 31822,
+  "starsAsOf": "2026-10-09",
   "language": "Python",
-  "lastPush": "2026-10-08"
+  "lastPush": "2026-10-09"
 }

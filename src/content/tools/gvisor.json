@@ -13,7 +13,7 @@
   "updatedDate": "2026-10-04",
   "caveat": "The commonly quoted '200-500ms cold start' has no official published figure; observed numbers range widely (roughly 100ms to multiple seconds) depending on platform and configuration.",
   "caveatZh": "常被引用的“200-500ms 冷启动”并无官方定值；实测数字随平台与配置差异极大（约 100ms 到数秒不等）。",
-  "stars": 19596,
-  "starsAsOf": "2026-10-08",
-  "lastPush": "2026-10-08"
+  "stars": 19610,
+  "starsAsOf": "2026-10-09",
+  "lastPush": "2026-10-09"
 }
