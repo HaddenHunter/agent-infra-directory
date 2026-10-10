@@ -11,7 +11,7 @@
   "keyFactZh": "OpenAI Agents SDK 是 2025 年 3 月发布的 MIT 许可 Agent 框架，作为 OpenAI 实验项目 Swarm 的生产级后继者，同时提供 Python（openai-agents-python）与 TypeScript（@openai/agents）版本。",
   "addedDate": "2026-10-04",
   "updatedDate": "2026-10-04",
-  "stars": 29927,
-  "starsAsOf": "2026-10-09",
+  "stars": 29943,
+  "starsAsOf": "2026-10-10",
   "lastPush": "2026-10-08"
 }

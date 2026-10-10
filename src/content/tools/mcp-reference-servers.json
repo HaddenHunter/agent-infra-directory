@@ -12,8 +12,8 @@
   "updatedDate": "2026-10-04",
   "caveat": "Repository is mid-transition between MIT and Apache-2.0; check per-file licensing before commercial reuse.",
   "caveatZh": "仓库正处于 MIT 与 Apache-2.0 的过渡期；商用前请逐文件核对许可。",
-  "stars": 91091,
-  "starsAsOf": "2026-10-09",
+  "stars": 91109,
+  "starsAsOf": "2026-10-10",
   "language": "TypeScript",
-  "lastPush": "2026-10-07"
+  "lastPush": "2026-10-10"
 }

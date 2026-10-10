@@ -11,7 +11,7 @@
   "keyFactZh": "Langflow 是 MIT 许可的可视化构建工具，用于搭建基于 LangChain 的 Agent，由 DataStax 赞助（DataStax 已于 2025 年 5 月被 IBM 收购）；画布上的每个节点都可展开编辑为 Python，并可一键导出为 OpenAI 兼容 API 或 MCP Server。",
   "addedDate": "2026-10-04",
   "updatedDate": "2026-10-04",
-  "stars": 155417,
-  "starsAsOf": "2026-10-09",
-  "lastPush": "2026-10-09"
+  "stars": 155458,
+  "starsAsOf": "2026-10-10",
+  "lastPush": "2026-10-10"
 }

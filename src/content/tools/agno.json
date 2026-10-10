@@ -11,7 +11,7 @@
   "keyFactZh": "Agno（2025 年 1 月由 Phidata 更名）是 Apache-2.0 许可的 Python Agent 框架；它于 2026 年 2 月从 MPL-2.0 转为 Apache-2.0，自 2.0 起提供 AgentOS——基于 FastAPI 的运行时，含控制面 UI、JWT RBAC、human-in-the-loop 与审计日志。",
   "addedDate": "2026-10-04",
   "updatedDate": "2026-10-04",
-  "stars": 42632,
-  "starsAsOf": "2026-10-09",
-  "lastPush": "2026-10-09"
+  "stars": 42646,
+  "starsAsOf": "2026-10-10",
+  "lastPush": "2026-10-10"
 }

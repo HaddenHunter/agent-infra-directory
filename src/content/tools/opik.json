@@ -5,8 +5,8 @@
   "descriptionZh": "Comet 出品的开源 LLM 可观测、评测与 Agent 追踪平台。",
   "license": "Apache-2.0",
   "github": "https://github.com/comet-ml/opik",
-  "stars": 22469,
-  "starsAsOf": "2026-10-09",
+  "stars": 22482,
+  "starsAsOf": "2026-10-10",
   "language": "Python",
   "selfHosted": true,
   "keyFact": "Opik is Comet's Apache-2.0 open-source platform for LLM observability, evaluation and agent tracing; its README reported 20,000+ GitHub stars as of mid-2026.",
@@ -15,5 +15,5 @@
   "updatedDate": "2026-10-04",
   "caveat": "Star counts differ by source: Comet's landing page showed ~15.6k while the README and third parties reported 20k-21.8k.",
   "caveatZh": "星标口径不一：Comet 官网落地页显示约 15.6k，而 README 与第三方记录为 20k-21.8k。",
-  "lastPush": "2026-10-09"
+  "lastPush": "2026-10-10"
 }
