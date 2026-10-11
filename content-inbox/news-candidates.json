@@ -3950,5 +3950,236 @@
     ],
     "status": "needs-review",
     "fetchedAt": "2026-10-10"
+  },
+  {
+    "title": "Here are the top AI agents that can live in your text messages",
+    "link": "https://techcrunch.com/2026/10/10/all-the-ai-agents-that-can-live-in-your-text-messages/",
+    "publishedAt": "Sat, 10 Oct 2026 14:00:00 +0000",
+    "excerpt": "We created a list of the most notable AI agents that can live in your text messages, from general assistants to agents designed for families, travel, and work.",
+    "source": "TechCrunch AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-11"
+  },
+  {
+    "title": "Anthropic is cutting off its internal evaluations from the internet",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/1009286/anthropic-is-cutting-off-its-internal-evaluations-from-the-internet",
+    "publishedAt": "2026-10-10T10:41:16-04:00",
+    "excerpt": "After a recent spate of high-profile incidents in which AI agents escaped containment, Anthropic is cutting off internet access for all internal evaluations. In a report Friday, the company detailed \"unintended model actions,\" including submitting a false tip regarding an unsolved murder, that led to the decision. Although the impact of these behaviors was minimal [&#8230;]",
+    "source": "The Verge AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-11"
+  },
+  {
+    "title": "AI agent makers are promising privacy — will they deliver?",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/1009051/privacy-ai-agent-promises-openai-meta-muse-dots",
+    "publishedAt": "2026-10-10T09:00:00-04:00",
+    "excerpt": "At this year's OpenAI DevDay, CEO Sam Altman unveiled the company's new AI agent Dots - and told the crowd that the company wants to \"set a new standard for privacy in frontier AI.\" OpenAI would spend the day taking veiled shots at Meta's Muse, its primary competitor, for failing to keep users' data safe. [&#8230;]",
+    "source": "The Verge AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-11"
+  },
+  {
+    "title": "Show HN: GSD Task Manager – an MCP server that gives your AI agent a task list",
+    "link": "https://github.com/vscarpenter/gsd-task-manager",
+    "publishedAt": "Sun, 11 Oct 2026 03:42:56 +0000",
+    "excerpt": "Article URL: https://github.com/vscarpenter/gsd-task-manager Comments URL: https://news.ycombinator.com/item?id=50039633 Points: 6 # Comments: 3",
+    "source": "Hacker News (agent)",
+    "matchedKeywords": [
+      "agent",
+      "mcp"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-11"
+  },
+  {
+    "title": "Rogue Anthropic AI agent gave police fake tip in unsolved murder case",
+    "link": "https://www.bbc.com/news/articles/cqkg50j1yd5lo",
+    "publishedAt": "Sun, 11 Oct 2026 02:41:19 +0000",
+    "excerpt": "Article URL: https://www.bbc.com/news/articles/cqkg50j1yd5lo Comments URL: https://news.ycombinator.com/item?id=50039318 Points: 6 # Comments: 4",
+    "source": "Hacker News (agent)",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-11"
+  },
+  {
+    "title": "Barnaby: Self-hosted Matrix agent that reads the room",
+    "link": "https://github.com/pkulak/barnaby-home",
+    "publishedAt": "Sun, 11 Oct 2026 02:28:19 +0000",
+    "excerpt": "Article URL: https://github.com/pkulak/barnaby-home Comments URL: https://news.ycombinator.com/item?id=50039234 Points: 2 # Comments: 1",
+    "source": "Hacker News (agent)",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-11"
+  },
+  {
+    "title": "Ario – a bounded agent runtime where a local PASS cannot become global truth",
+    "link": "https://zenodo.org/records/23132717",
+    "publishedAt": "Sat, 10 Oct 2026 20:26:29 +0000",
+    "excerpt": "Article URL: https://zenodo.org/records/23132717 Comments URL: https://news.ycombinator.com/item?id=50036803 Points: 1 # Comments: 0",
+    "source": "Hacker News (agent)",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-11"
+  },
+  {
+    "title": "Show HN: Eval-skills for automatic agent improvement",
+    "link": "https://github.com/confident-ai/eval-skills",
+    "publishedAt": "Sat, 10 Oct 2026 18:46:27 +0000",
+    "excerpt": "Article URL: https://github.com/confident-ai/eval-skills Comments URL: https://news.ycombinator.com/item?id=50035864 Points: 1 # Comments: 0",
+    "source": "Hacker News (agent)",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-11"
+  },
+  {
+    "title": "ShareBox – share the web tools your AI agent builds, like a Google Doc",
+    "link": "https://github.com/zalaso/sharebox",
+    "publishedAt": "Sat, 10 Oct 2026 18:27:08 +0000",
+    "excerpt": "Article URL: https://github.com/zalaso/sharebox Comments URL: https://news.ycombinator.com/item?id=50035691 Points: 2 # Comments: 0",
+    "source": "Hacker News (agent)",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-11"
+  },
+  {
+    "title": "Integrating Decision Models into Agent Harnesses",
+    "link": "https://vivekhaldar.com/articles/llms-do-too-much-offload-to-decision-models/",
+    "publishedAt": "Sat, 10 Oct 2026 17:53:50 +0000",
+    "excerpt": "Article URL: https://vivekhaldar.com/articles/llms-do-too-much-offload-to-decision-models/ Comments URL: https://news.ycombinator.com/item?id=50035362 Points: 1 # Comments: 0",
+    "source": "Hacker News (agent)",
+    "matchedKeywords": [
+      "agent",
+      "harness"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-11"
+  },
+  {
+    "title": "Blackcat – Yet Another Personal Agent",
+    "link": "https://github.com/vpuna/blackcat",
+    "publishedAt": "Sat, 10 Oct 2026 16:32:38 +0000",
+    "excerpt": "Article URL: https://github.com/vpuna/blackcat Comments URL: https://news.ycombinator.com/item?id=50034508 Points: 1 # Comments: 1",
+    "source": "Hacker News (agent)",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-11"
+  },
+  {
+    "title": "Show HN: An agent harness for long-running pentests and code audits",
+    "link": "https://github.com/VigilOSS/Vigil",
+    "publishedAt": "Sat, 10 Oct 2026 15:59:52 +0000",
+    "excerpt": "Article URL: https://github.com/VigilOSS/Vigil Comments URL: https://news.ycombinator.com/item?id=50034204 Points: 3 # Comments: 0",
+    "source": "Hacker News (agent)",
+    "matchedKeywords": [
+      "agent",
+      "harness"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-11"
+  },
+  {
+    "title": "My personal AI agent posted my bank details on company Slack",
+    "link": "https://www.businessinsider.com/personal-ai-agent-grok-bot-posted-bank-details-company-slack-2026-10",
+    "publishedAt": "Sat, 10 Oct 2026 14:46:16 +0000",
+    "excerpt": "Article URL: https://www.businessinsider.com/personal-ai-agent-grok-bot-posted-bank-details-company-slack-2026-10 Comments URL: https://news.ycombinator.com/item?id=50033517 Points: 61 # Comments: 66",
+    "source": "Hacker News (agent)",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-11"
+  },
+  {
+    "title": "AI Agent Security: Six Controls from Nine Real Incidents",
+    "link": "https://blog.gitguardian.com/ai-agent-security-six-controls/",
+    "publishedAt": "Sat, 10 Oct 2026 14:09:50 +0000",
+    "excerpt": "Article URL: https://blog.gitguardian.com/ai-agent-security-six-controls/ Comments URL: https://news.ycombinator.com/item?id=50033190 Points: 2 # Comments: 0",
+    "source": "Hacker News (agent)",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-11"
+  },
+  {
+    "title": "Show HN: Tessary – Find the AI agent failures your sampled evals miss",
+    "link": "https://github.com/tessaryai/tessary",
+    "publishedAt": "Sat, 10 Oct 2026 14:09:36 +0000",
+    "excerpt": "Hey, I'm Akhil, co-founder of Tessary. An open-source agent reliability platform that monitors every production trace, detects issues that sampled evals miss, and investigates to find the root cause. We started up about a year ago building synthetic users for usability testing of B2B software, we built the agents that would personify real users and use the software but, we were never able to make ",
+    "source": "Hacker News (agent)",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-11"
+  },
+  {
+    "title": "Building Piclaw on Top of an Opinionated Coding Agent",
+    "link": "https://taoofmac.com/space/blog/2026/08/21/2218",
+    "publishedAt": "Sat, 10 Oct 2026 11:39:13 +0000",
+    "excerpt": "Article URL: https://taoofmac.com/space/blog/2026/08/21/2218 Comments URL: https://news.ycombinator.com/item?id=50031893 Points: 1 # Comments: 0",
+    "source": "Hacker News (agent)",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-11"
+  },
+  {
+    "title": "Talorys – A self-hosted personal AI agent on Cloudflare's free tier",
+    "link": "https://github.com/rociiu/talorys",
+    "publishedAt": "Sat, 10 Oct 2026 10:52:09 +0000",
+    "excerpt": "Article URL: https://github.com/rociiu/talorys Comments URL: https://news.ycombinator.com/item?id=50031614 Points: 287 # Comments: 133",
+    "source": "Hacker News (agent)",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-11"
+  },
+  {
+    "title": "Rogue Anthropic AI agent gave police fake tip in unsolved murder case",
+    "link": "https://www.bbc.co.uk/news/articles/cqkg50j1yd5lo",
+    "publishedAt": "Sat, 10 Oct 2026 10:23:44 +0000",
+    "excerpt": "Article URL: https://www.bbc.co.uk/news/articles/cqkg50j1yd5lo Comments URL: https://news.ycombinator.com/item?id=50031438 Points: 15 # Comments: 7",
+    "source": "Hacker News (agent)",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-11"
+  },
+  {
+    "title": "Agent Mode in the DuckDB CLI",
+    "link": "https://duckdb.org/2026/10/09/agent-mode",
+    "publishedAt": "Sat, 10 Oct 2026 10:23:16 +0000",
+    "excerpt": "Article URL: https://duckdb.org/2026/10/09/agent-mode Comments URL: https://news.ycombinator.com/item?id=50031435 Points: 2 # Comments: 1",
+    "source": "Hacker News (agent)",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-11"
   }
 ]
