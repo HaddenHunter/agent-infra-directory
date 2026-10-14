@@ -1,117 +1,5 @@
 [
   {
-    "title": "Fast Models, Slow Evidence: A Paired and Self-Audited Evaluation of System-1 Decision Models for LLM Agent Harnesses",
-    "link": "https://arxiv.org/abs/2610.02267",
-    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.02267v1 Announce Type: new Abstract: Agent harnesses make many small, typed decisions per task: which model to call, which tool to use, whether retrieved text is relevant, whether an input carries an injection. System-1 decision models answer such questions in a single forward pass with class probabilities, promising large cost and latency savings over LLM calls. We present a paired eva",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent",
-      "harness"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-05"
-  },
-  {
-    "title": "Choosing Before Acting: Comparative Value Estimation for Long-Horizon Tool-Use Agents",
-    "link": "https://arxiv.org/abs/2610.02330",
-    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.02330v1 Announce Type: new Abstract: Large language models (LLMs) rely on long-horizon tool invocation sequences for complex tasks, where each invocation can alter the task state and condition subsequent decisions. In long-horizon tool use, final-outcome rewards provide weak credit assignment over long interaction traces. Step-level rewards can offer more targeted feedback, but obtainin",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent",
-      "tool use",
-      "tool-use"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-05"
-  },
-  {
-    "title": "DeReAct: Decomposed Reasoning and Acting for Reliable AI Agents",
-    "link": "https://arxiv.org/abs/2610.02351",
-    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.02351v1 Announce Type: new Abstract: ReAct-based agents typically rely on a single LLM policy to propose actions, interact with the environment, and decide when a task is complete. This coupling makes action authorization and completion control difficult to enforce independently, allowing errors to propagate and unsupported completion claims to terminate execution. We introduce DeReAct,",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-05"
-  },
-  {
-    "title": "When Terminal-Agent Training Stalls: Demystifying Data Generation and Verification Challenge",
-    "link": "https://arxiv.org/abs/2610.02405",
-    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.02405v1 Announce Type: new Abstract: Using a frontier model like Claude Opus as a meta-agent to generate terminal tasks and verifiers for RL training is increasingly common. Yet a runnable Docker image and executable test suite do not guarantee a faithful end-to-end pipeline for terminal agent training. We present a meta-agent pipeline motivated by this gap, diagnosing three classes of ",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-05"
-  },
-  {
-    "title": "MEA: A Reward-Driven Multi-Agent System for Faithful Model Explanations",
-    "link": "https://arxiv.org/abs/2610.02480",
-    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.02480v1 Announce Type: new Abstract: Recent years have seen the employment of a plethora of machine learning (ML) models in high-stakes domains, but they remain largely opaque to the practitioners who act on their predictions. While post-hoc explanation methods offer a lens into this model behavior, wielding them effectively demands expertise most domain experts lack: navigating high-di",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent",
-      "multi-agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-05"
-  },
-  {
-    "title": "What Does a Token Cost? A Mixture-of-Agents Measurement of Sufficient Per-Token Compute",
-    "link": "https://arxiv.org/abs/2610.02491",
-    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.02491v1 Announce Type: new Abstract: Large language models spend the same amount of computation on every token they generate, regardless of how difficult each token is to produce. Methods such as speculative decoding and model routing are built on the premise that much of this computation is unnecessary, yet the computation an individual token actually requires has not been measured. We",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-05"
-  },
-  {
-    "title": "Learning What to Investigate Next: Meta-Reasoning for Long-Horizon Research Agents",
-    "link": "https://arxiv.org/abs/2610.02525",
-    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.02525v1 Announce Type: new Abstract: Long-horizon research agents must decide both how to investigate and what to investigate next as evidence accumulates. This is hard to learn because such decisions are sparse in long execution traces, and their consequences may emerge several investigations later. We introduce Meta-reasoning for Iterative Research Agents (MIRA), a hierarchical archit",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-05"
-  },
-  {
-    "title": "How To Train Your World Model: Fine-tuning vs RAG for LM-based World Modeling",
-    "link": "https://arxiv.org/abs/2610.02542",
-    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.02542v1 Announce Type: new Abstract: World models (WMs) simulate the transition dynamics of environments, enabling agents to plan over the consequences of their actions. In text-based environments, fine-tuning a Language Model (LM) to serve as a WM has emerged as a dominant paradigm. However, despite the widespread success of non-parametric approaches such as Retrieval Augmented Generat",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-05"
-  },
-  {
-    "title": "Open-Endedness Bench: Measuring Epistemic Process from Agent Records",
-    "link": "https://arxiv.org/abs/2610.02588",
-    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.02588v1 Announce Type: new Abstract: Agents are increasingly given open-ended research tasks: discovering an empirical law from self-designed experiments, improving a heuristic whose optimum nobody knows, or beating a standing record. Their execution logs record every step of this research, yet the runs are still judged by their outcome score. That score alone does not establish whether",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-05"
-  },
-  {
     "title": "VERSE: Verified Self-Evolving Optimizer for Agent Harnesses",
     "link": "https://arxiv.org/abs/2610.02616",
     "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
@@ -4936,5 +4824,116 @@
     ],
     "status": "needs-review",
     "fetchedAt": "2026-10-13"
+  },
+  {
+    "title": "Ringg’s AI agents resolve up to 65% of customer calls with OpenAI",
+    "link": "https://openai.com/index/ringg",
+    "publishedAt": "Wed, 23 Sep 2026 12:00:00 GMT",
+    "excerpt": "Using GPT-5.6, Ringg powers multilingual agents across voice, chat, WhatsApp, and web for 90% less cost vs. GPT-4.1.",
+    "source": "OpenAI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-14"
+  },
+  {
+    "title": "Laplace Intelligence red-teams robots and self-driving cars before they hit the real world",
+    "link": "https://techcrunch.com/2026/10/13/laplace-intelligence-red-teams-robots-and-self-driving-cars-before-they-hit-the-real-world/",
+    "publishedAt": "Tue, 13 Oct 2026 17:30:00 +0000",
+    "excerpt": "University of Michigan spinout Laplace Intelligence uses AI agents and interactive simulation to stress-test robots and self-driving vehicles before deployment. The profitable startup is competing in Startup Battlefield at TechCrunch Disrupt, October 13-15 in San Francisco.",
+    "source": "TechCrunch AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-14"
+  },
+  {
+    "title": "Amex introduces a framework to prevent AI agents from making unauthorized purchases",
+    "link": "https://techcrunch.com/2026/10/13/amex-introduces-a-framework-to-prevent-ai-agents-from-making-unauthorized-purchases/",
+    "publishedAt": "Tue, 13 Oct 2026 13:00:00 +0000",
+    "excerpt": "American Express is introducing a new framework designed to ensure AI agents only make purchases their users have authorized, potentially preventing costly mistakes and disputes as AI-powered shopping grows.",
+    "source": "TechCrunch AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-14"
+  },
+  {
+    "title": "Shopify opens its catalog up to more AI agents",
+    "link": "https://www.theverge.com/news/1010365/shopify-opens-its-catalog-up-to-more-ai-agents",
+    "publishedAt": "2026-10-13T15:42:42-04:00",
+    "excerpt": "More AI agents will soon be able to browse and purchase from Shopify listings, marking an expansion of the company's agentic commerce ambitions. Shopify announced Tuesday it will let shoppers configure their AI agents to purchase products on their behalf, giving more agents access to over a billion listings in Shopify's catalog. (The catalog consists [&#8230;]",
+    "source": "The Verge AI",
+    "matchedKeywords": [
+      "agent",
+      "agentic"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-14"
+  },
+  {
+    "title": "From Enterprise to Earthshot: UK’s Ecosystem Moves From Ambition to Application With NVIDIA",
+    "link": "https://blogs.nvidia.com/blog/uk-ecosystem-deployment/",
+    "publishedAt": "Wed, 14 Oct 2026 06:04:15 +0000",
+    "excerpt": "Across industries, the U.K. is putting the full stack to work — and the scale of deployment is growing fast, from enterprises transforming their businesses to startups solving some of the planet’s hardest problems. NVIDIA is putting that principle into practice, including through a five-year, $250 million compute commitment to strengthen the U.K.’s agentic safety [&#8230;]",
+    "source": "NVIDIA Blog",
+    "matchedKeywords": [
+      "agent",
+      "agentic"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-14"
+  },
+  {
+    "title": "European Cities Deploy NVIDIA-Powered AI Agents to Run Smarter Urban Operations",
+    "link": "https://blogs.nvidia.com/blog/european-cities-agents-urban-operations/",
+    "publishedAt": "Wed, 14 Oct 2026 06:00:28 +0000",
+    "excerpt": "Keeping a city running means making decisions that affect residents every day — from when to repair a road to how to use energy more efficiently. Across the EMEA region, cities and local software, infrastructure and integration partners are using NVIDIA accelerated computing to build physical AI agents and digital twins that help teams make [&#8230;]",
+    "source": "NVIDIA Blog",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-14"
+  },
+  {
+    "title": "NVIDIA DGX Spark 64GB Gives Developers More Ways to Build and Scale Local AI",
+    "link": "https://blogs.nvidia.com/blog/local-ai-dgx-spark-64gb-sync/",
+    "publishedAt": "Fri, 02 Oct 2026 13:00:39 +0000",
+    "excerpt": "Local AI is becoming more useful by the token. As AI agents move from experiments into everyday development, increasingly capable open models are shrinking to fit on more devices, giving builders more to run locally. Coming this month, NVIDIA DGX Spark will be available with 64GB of unified memory from top manufacturer partners — Acer, [&#8230;]",
+    "source": "NVIDIA Blog",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-14"
+  },
+  {
+    "title": "From Training to Production, NVIDIA and CoreWeave Close the Loop on Agentic AI",
+    "link": "https://blogs.nvidia.com/blog/coreweave-agentic-ai-vera-rubin/",
+    "publishedAt": "Wed, 30 Sep 2026 15:00:00 +0000",
+    "excerpt": "Building on nearly a decade of co-engineering, CoreWeave has built NVIDIA compute, networking and software into a cloud purpose-built for AI that’s still returning on investment across multiple generations of deployment. Now, CoreWeave is bringing the next generation of NVIDIA infrastructure to production. At CoreWeave Fully Connected, running this week in San Francisco, CoreWeave announced [&#823",
+    "source": "NVIDIA Blog",
+    "matchedKeywords": [
+      "agent",
+      "agentic"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-14"
+  },
+  {
+    "title": "Quoting Geoffrey Huntley",
+    "link": "https://simonwillison.net/2026/Oct/13/geoffrey-huntley/",
+    "publishedAt": "2026-10-13T13:32:00+00:00",
+    "excerpt": "<blockquote cite=\"https://ghuntley.com/agency/\"><p>If the agent isn't using my diagnostics library, I could introspect and update AGENTS.md, but there's still a delta, and it'll drift. Instead, I write a pre-commit hook that checks the git diff for direct calls to observability modules that bypass my diagnostics module. Boom: fail the commit, inject a prompt telling the agent to use the diagnostic",
+    "source": "Simon Willison",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-14"
   }
 ]
