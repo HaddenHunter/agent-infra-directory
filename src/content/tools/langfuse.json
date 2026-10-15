@@ -12,8 +12,8 @@
   "updatedDate": "2026-10-04",
   "caveat": "Enterprise features (RBAC, audit logs) live in the separately licensed ee/ directory.",
   "caveatZh": "企业功能（RBAC、审计日志）位于单独授权许可的 ee/ 目录。",
-  "stars": 35800,
-  "starsAsOf": "2026-10-14",
+  "stars": 35844,
+  "starsAsOf": "2026-10-15",
   "language": "TypeScript",
-  "lastPush": "2026-10-14"
+  "lastPush": "2026-10-15"
 }
