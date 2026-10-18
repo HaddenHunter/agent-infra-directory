@@ -10,8 +10,8 @@
   "keyFactZh": "Chroma 是 2022 年创建的 Apache-2.0、AI 原生嵌入数据库，提供 Python、JavaScript 与 Rust SDK，支持嵌入式、单机与分布式部署，另提供托管的 Chroma Cloud。",
   "addedDate": "2026-10-04",
   "updatedDate": "2026-10-04",
-  "stars": 29504,
-  "starsAsOf": "2026-10-15",
+  "stars": 29521,
+  "starsAsOf": "2026-10-18",
   "language": "Rust",
-  "lastPush": "2026-10-15"
+  "lastPush": "2026-10-17"
 }

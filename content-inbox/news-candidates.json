@@ -1,90 +1,5 @@
 [
   {
-    "title": "Show HN: Browsentic Open-source Claude for Chrome alternative for any agent CLI",
-    "link": "https://github.com/imshaikot/browsentic",
-    "publishedAt": "Mon, 05 Oct 2026 13:08:05 +0000",
-    "excerpt": "A personal agent harness lives in your existing browser, connects to your claude-code (or any other major harness codex or cursor-cli...) NOT the SDK API, exposes web-optimized tools to the harness - that's Browsentic. A free, opensource (Apache 2.0) with rich capabilities alternative to Comet, BrowserOS, Browser-use, Claude for Chrome or nanobrowser. The unique architecture of Browsentic makes it",
-    "source": "Hacker News (agent)",
-    "matchedKeywords": [
-      "agent",
-      "harness"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-05"
-  },
-  {
-    "title": "One runaway AI agent racked up a $50k cloud bill",
-    "link": "https://www.helpnetsecurity.com/2026/09/16/google-mandiant-enterprise-ai-security-risks-report/",
-    "publishedAt": "Mon, 05 Oct 2026 12:43:45 +0000",
-    "excerpt": "Article URL: https://www.helpnetsecurity.com/2026/09/16/google-mandiant-enterprise-ai-security-risks-report/ Comments URL: https://news.ycombinator.com/item?id=49964116 Points: 1 # Comments: 0",
-    "source": "Hacker News (agent)",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-05"
-  },
-  {
-    "title": "How (and Why) to Build an AI Agent from Scratch in Python",
-    "link": "https://machinelearningmastery.com/how-and-why-to-build-an-ai-agent-from-scratch-in-python/",
-    "publishedAt": "Mon, 05 Oct 2026 12:30:48 +0000",
-    "excerpt": "Article URL: https://machinelearningmastery.com/how-and-why-to-build-an-ai-agent-from-scratch-in-python/ Comments URL: https://news.ycombinator.com/item?id=49963993 Points: 2 # Comments: 0",
-    "source": "Hacker News (agent)",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-05"
-  },
-  {
-    "title": "You Need to Stop Babysitting Your Agent [video]",
-    "link": "https://www.youtube.com/watch?v=RQEwXaawOso",
-    "publishedAt": "Mon, 05 Oct 2026 12:12:30 +0000",
-    "excerpt": "Article URL: https://www.youtube.com/watch?v=RQEwXaawOso Comments URL: https://news.ycombinator.com/item?id=49963801 Points: 4 # Comments: 0",
-    "source": "Hacker News (agent)",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-05"
-  },
-  {
-    "title": "What is Firecracker, and why do all the Agent Infra companies care about it?",
-    "link": "https://www.browserbase.com/blog/what-is-firecracker",
-    "publishedAt": "Mon, 05 Oct 2026 11:27:43 +0000",
-    "excerpt": "Article URL: https://www.browserbase.com/blog/what-is-firecracker Comments URL: https://news.ycombinator.com/item?id=49963464 Points: 3 # Comments: 0",
-    "source": "Hacker News (agent)",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-05"
-  },
-  {
-    "title": "Constrain the Agent, Not the User",
-    "link": "https://www.research.autodesk.com/blog/constrain-agent-not-user/",
-    "publishedAt": "Mon, 05 Oct 2026 10:58:22 +0000",
-    "excerpt": "Article URL: https://www.research.autodesk.com/blog/constrain-agent-not-user/ Comments URL: https://news.ycombinator.com/item?id=49963257 Points: 2 # Comments: 0",
-    "source": "Hacker News (agent)",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-05"
-  },
-  {
-    "title": "Show HN: Reright.it – Human approval for agent-written text",
-    "link": "https://reright.it/",
-    "publishedAt": "Mon, 05 Oct 2026 10:18:39 +0000",
-    "excerpt": "So, I use agents to write a ton of stuff now: e-mails, client messages, commit messages, comments, etc. The problem is that AI writing is VERY easy to spot and most of the time I don't want it being sent under my name, since it does not sound like me at all. After failing at trying to fix it with rulebooks or skills like humanizer, I decided it was better to try to \"catch\" every time the agents wr",
-    "source": "Hacker News (agent)",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-05"
-  },
-  {
     "title": "FBI arrests 'Chinese foreign agent' for spying on Taiwan president's son",
     "link": "https://www.aljazeera.com/news/2026/10/5/fbi-arrests-chinese-foreign-agent-for-spying-on-taiwan-presidents-son",
     "publishedAt": "Mon, 05 Oct 2026 10:17:23 +0000",
@@ -4939,5 +4854,90 @@
     ],
     "status": "needs-review",
     "fetchedAt": "2026-10-15"
+  },
+  {
+    "title": "Stack Overflow for Agents triples signups with ChatGPT plugin",
+    "link": "https://openai.com/index/stack-overflow-chatgpt-plugin",
+    "publishedAt": "Fri, 16 Oct 2026 00:00:00 GMT",
+    "excerpt": "Two engineers shipped Stack Overflow for Agents in a few weeks with Codex, and its ChatGPT plugin helped drive up to 10× growth in agent creation.",
+    "source": "OpenAI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-18"
+  },
+  {
+    "title": "India becomes the latest country to report rogue AI agent activity",
+    "link": "https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity/",
+    "publishedAt": "Fri, 16 Oct 2026 17:52:24 +0000",
+    "excerpt": "The agents got in through credentials and connection settings left exposed in app configurations, public code repositories, and overly permissive cloud roles.",
+    "source": "TechCrunch AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-18"
+  },
+  {
+    "title": "Replit&#8217;s CEO says the future of work is the &#8216;self-driving company&#8217;",
+    "link": "https://techcrunch.com/2026/10/16/replits-ceo-says-the-future-of-work-is-the-self-driving-company/",
+    "publishedAt": "Fri, 16 Oct 2026 12:55:09 +0000",
+    "excerpt": "Replit CEO Amjad Masad envisions a future of “self-driving companies,” where AI agents handle day-to-day tasks and people focus on higher-level decisions.",
+    "source": "TechCrunch AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-18"
+  },
+  {
+    "title": "AI agents are coming to Rivian&#8217;s cars",
+    "link": "https://techcrunch.com/2026/10/15/ai-agents-are-coming-to-rivians-cars/",
+    "publishedAt": "Thu, 15 Oct 2026 15:02:36 +0000",
+    "excerpt": "We'll likely learn more about how this will work at the company's upcoming \"AI &#038; Autonomy Day\" event in December.",
+    "source": "TechCrunch AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-18"
+  },
+  {
+    "title": "Websites are closing their doors to AI agents",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/1013195/ai-agents-blocked-web",
+    "publishedAt": "2026-10-17T09:00:00-04:00",
+    "excerpt": "Autonomous agents are the hottest thing in AI. OpenAI, Meta, Google, Instinct, and others promise their agents can scour the internet on your behalf, doing anything from booking a dinner reservation and cleaning out your inbox to buying new shoes. But what happens when the rest of the internet won't play nice? In recent weeks, [&#8230;]",
+    "source": "The Verge AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-18"
+  },
+  {
+    "title": "Be There for the Beginning: Celebrate the Launch of NVIDIA RTX Spark",
+    "link": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-launch-event-invite/",
+    "publishedAt": "Thu, 15 Oct 2026 17:00:23 +0000",
+    "excerpt": "A new beginning for Windows PCs starts tomorrow with the launch of NVIDIA RTX Spark — one PC built for creators, gamers and AI agents. All are invited to celebrate with NVIDIA and partners at launch events around the world. Share Your Spark Every PC has a story. What was your first Windows PC, and [&#8230;]",
+    "source": "NVIDIA Blog",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-18"
+  },
+  {
+    "title": "Open From Data Center to Desktop: NVIDIA Expands Nemotron Family With Highest Efficiency Super VL and Bolt Models",
+    "link": "https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/",
+    "publishedAt": "Thu, 15 Oct 2026 15:00:24 +0000",
+    "excerpt": "NVIDIA today released Nemotron 3.5 Super VL, an open 120-billion-parameter model that delivers the fastest task completion and highest accuracy for specialized always-on agents. Joining it are two new edge models: Nemotron 3.5 Bolt 74B-A9B 24GB, optimized to balance intelligence and speed per GB for local agentic workloads, and Nemotron 3.5 Bolt E4B 4GB, optimized [&#8230;]",
+    "source": "NVIDIA Blog",
+    "matchedKeywords": [
+      "agent",
+      "agentic"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-18"
   }
 ]
