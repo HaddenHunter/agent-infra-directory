@@ -1,309 +1,5 @@
 [
   {
-    "title": "FBI arrests 'Chinese foreign agent' for spying on Taiwan president's son",
-    "link": "https://www.aljazeera.com/news/2026/10/5/fbi-arrests-chinese-foreign-agent-for-spying-on-taiwan-presidents-son",
-    "publishedAt": "Mon, 05 Oct 2026 10:17:23 +0000",
-    "excerpt": "Article URL: https://www.aljazeera.com/news/2026/10/5/fbi-arrests-chinese-foreign-agent-for-spying-on-taiwan-presidents-son Comments URL: https://news.ycombinator.com/item?id=49962942 Points: 3 # Comments: 0",
-    "source": "Hacker News (agent)",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-05"
-  },
-  {
-    "title": "Agent should lose access when the task ends",
-    "link": "https://www.drjoshcsimmons.com/writing/your-agent-should-lose-access-when-the-task-ends",
-    "publishedAt": "Mon, 05 Oct 2026 10:12:10 +0000",
-    "excerpt": "Article URL: https://www.drjoshcsimmons.com/writing/your-agent-should-lose-access-when-the-task-ends Comments URL: https://news.ycombinator.com/item?id=49962905 Points: 1 # Comments: 0",
-    "source": "Hacker News (agent)",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-05"
-  },
-  {
-    "title": "We found a Chinese agent fleet",
-    "link": "https://swarmcha.se/posts/chinese-agent-fleet",
-    "publishedAt": "Mon, 05 Oct 2026 09:10:02 +0000",
-    "excerpt": "Article URL: https://swarmcha.se/posts/chinese-agent-fleet Comments URL: https://news.ycombinator.com/item?id=49962401 Points: 4 # Comments: 0",
-    "source": "Hacker News (agent)",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-05"
-  },
-  {
-    "title": "OpenInstinct Eve Agent",
-    "link": "https://vercel.com/templates/eve/openinstinct-eve-agent",
-    "publishedAt": "Mon, 05 Oct 2026 07:39:08 +0000",
-    "excerpt": "Article URL: https://vercel.com/templates/eve/openinstinct-eve-agent Comments URL: https://news.ycombinator.com/item?id=49961796 Points: 1 # Comments: 0",
-    "source": "Hacker News (agent)",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-05"
-  },
-  {
-    "title": "ZQK – An open-core substrate for autonomous agent swarms in Go",
-    "link": "https://github.com/zqk-os/zqk",
-    "publishedAt": "Mon, 05 Oct 2026 07:33:50 +0000",
-    "excerpt": "Article URL: https://github.com/zqk-os/zqk Comments URL: https://news.ycombinator.com/item?id=49961771 Points: 1 # Comments: 0",
-    "source": "Hacker News (agent)",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-05"
-  },
-  {
-    "title": "Tmux-agent-status – Quiet, keyboard-first control of coding agents",
-    "link": "https://github.com/gs/tmux-agent-status",
-    "publishedAt": "Mon, 05 Oct 2026 06:53:36 +0000",
-    "excerpt": "Article URL: https://github.com/gs/tmux-agent-status Comments URL: https://news.ycombinator.com/item?id=49961485 Points: 1 # Comments: 0",
-    "source": "Hacker News (agent)",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-05"
-  },
-  {
-    "title": "Show HN: Recursant, the agent-aware model router built for hybrid workloads",
-    "link": "https://github.com/ajensenwaud/recursant/",
-    "publishedAt": "Mon, 05 Oct 2026 04:01:18 +0000",
-    "excerpt": "Sharing Recursant, the agent-aware model router for private/public workloads. Cut your AI agent bill by 30% and seamlessly operate agents across private and public inference infrastructure. Recursant is agent-aware, routes intelligently, built to be fast (C), and intended for privacy. github.com/ajensenwaud/re… It’s still rough around the edges, but good enough to run across private/public routing",
-    "source": "Hacker News (agent)",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-05"
-  },
-  {
-    "title": "Show HN: Moching – AI desktop agent with 219 built-in tools (Rust)",
-    "link": "https://github.com/moching-ai-dev/moching",
-    "publishedAt": "Mon, 05 Oct 2026 02:00:19 +0000",
-    "excerpt": "Article URL: https://github.com/moching-ai-dev/moching Comments URL: https://news.ycombinator.com/item?id=49959897 Points: 1 # Comments: 1",
-    "source": "Hacker News (agent)",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-05"
-  },
-  {
-    "title": "LEAP: Learning Efficient Action Proposals For LLM Agents",
-    "link": "https://arxiv.org/abs/2610.02670",
-    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.02670v1 Announce Type: cross Abstract: LLM agents are known to be slow in rollouts. An agent completes a task one step at a time. At each step, it reasons and then chooses an action to execute. The next step and action cannot start until the previous one has finished. Speculative decoding accelerates the rollouts at the reason phase by drafting and verifying the inference tokens. Recent",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-05"
-  },
-  {
-    "title": "Self-Supervised Scaling of Terminal Environments for Scientific Domains",
-    "link": "https://arxiv.org/abs/2610.02710",
-    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.02710v1 Announce Type: cross Abstract: Terminal agents are increasingly deployed beyond software engineering in science and other specialized domains. Constructing training environments requires executable reference behavior and a domain-specific verifier that distinguishes semantic correctness from superficially plausible artifacts. Authoring these components for each task requires rep",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-05"
-  },
-  {
-    "title": "Prospective Hindsight: Self-Calibrating Reinforcement Learning via Prediction-Reality Gaps",
-    "link": "https://arxiv.org/abs/2610.02740",
-    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.02740v1 Announce Type: cross Abstract: Reinforcement learning for long-horizon agents relies on purely retrospective training signals: credit is assigned only after observing environmental consequences, leaving the agent's belief at action time invisible to the gradient. We introduce Prospective Hindsight (PH), a self-calibrating training principle that augments any retrospective base m",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-05"
-  },
-  {
-    "title": "When History Fails to Become Experience: Action Calibration in Language Agents",
-    "link": "https://arxiv.org/abs/2610.02769",
-    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.02769v1 Announce Type: cross Abstract: Language agents should draw on prior attempts and environmental feedback to improve subsequent decisions within the same task. However, providing additional interaction history can sometimes reduce task success, suggesting that agents do not consistently use this information effectively. To investigate this limitation, we examine how agents use his",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-05"
-  },
-  {
-    "title": "AgentTrap: Stateful Feedback Deception against Autonomous Penetration Testing Agents",
-    "link": "https://arxiv.org/abs/2610.02869",
-    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.02869v1 Announce Type: cross Abstract: Autonomous penetration testing agents conduct multi-step attacks by continuously adapting their plans and actions to target responses. As a common defense, honeypots can be deployed to divert these agents from real assets by presenting decoy services, while also supporting attack tracing and active counterattacks. However, conventional honeypots re",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-05"
-  },
-  {
-    "title": "Discriminating Fixture Coverage in Agent-Infrastructure Verification Suites",
-    "link": "https://arxiv.org/abs/2610.02928",
-    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.02928v1 Announce Type: cross Abstract: Invariant suites and runtime monitors increasingly gate agent deployment decisions, and the evidence offered for any particular suite is almost always a single observation: it passes an implementation believed correct and fails one believed broken. We measure what that observation is worth. Applying mutation analysis to an invariant suite for a mul",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-05"
-  },
-  {
-    "title": "Dynamic Expert Pruning for Multi-Agent Systems",
-    "link": "https://arxiv.org/abs/2610.02951",
-    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.02951v1 Announce Type: cross Abstract: Mixture-of-Experts (MoE) architectures scale language models efficiently by activating only a few experts per token, but the saving is confined to computation: every expert must stay resident on the accelerator, so memory bounds where these models can be deployed. Expert pruning reduces this footprint, yet existing methods are static --- a single m",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent",
-      "multi-agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-05"
-  },
-  {
-    "title": "Sentry: Learning to Recover from LLM Agent Failures at Test Time",
-    "link": "https://arxiv.org/abs/2610.02994",
-    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.02994v1 Announce Type: cross Abstract: LLM agents often fail mid-task due to invalid tool calls, repeated actions, or poorly grounded reasoning, and learning from these failures is a path to reliability. We find that how failure knowledge reaches the agent matters as much as what it contains. Failure lessons are conditional: kept in the agent's context, they misfire when their failure i",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-05"
-  },
-  {
-    "title": "Beyond Predefined Sinks: Security-Aware Dependency Analysis for LLM Agents",
-    "link": "https://arxiv.org/abs/2610.03014",
-    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.03014v1 Announce Type: cross Abstract: Large language model (LLM)-based agents increasingly connect model-generated decisions to security-sensitive software capabilities such as command execution, filesystem access, network communication, browser control, and external tools. Existing analyses often use predefined sensitive operations as anchors, but operation identity alone is insuffici",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-05"
-  },
-  {
-    "title": "OmniAct3D: Leveraging Foundation Geometry and Evidence-Grounded Reasoning for Panoramic 3D Detection",
-    "link": "https://arxiv.org/abs/2610.03015",
-    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.03015v1 Announce Type: cross Abstract: Accurate 3D detection is essential for mobile embodied agents, while Vision Foundation Models (VFMs) offer transferable visual and geometric priors. Yet existing VFM-based 3D detectors rely on narrow-view monocular images or discrete perspective views, limiting coherent surround perception; equirectangular projection (ERP) instead encodes a continu",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-05"
-  },
-  {
-    "title": "WebFovea: When the Model Is Right but the Click Is Wrong -- Reliable Round Trips for Vision-Based Web Agents on Live Websites",
-    "link": "https://arxiv.org/abs/2610.03036",
-    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.03036v1 Announce Type: cross Abstract: We present WebFovea, a vision-based web agent that placed 2nd in the WebRetriever Challenge 2026 with a final score of 57.0 out of 100. The challenge evaluates agents end to end on Protocol III of the WebRetriever benchmark (arXiv:2607.06118): starting from an entry URL on a live website, the agent must operate the site's own interface and return a",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-05"
-  },
-  {
-    "title": "Securing Computer-Use Agents Against Branch Steering Attacks",
-    "link": "https://arxiv.org/abs/2610.03089",
-    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.03089v1 Announce Type: cross Abstract: Modern Computer Use Agents (CUAs) directly interact with graphical user interfaces and execute third-party web tools, exposing them to indirect prompt injection across every rendered page and tool response. While the Dual-LLM pattern is the primary system-level architecture offering formal security guarantees - using an isolated Planner LLM (P-LLM)",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-05"
-  },
-  {
-    "title": "Ask, Relax, or Act? Evaluating Actionable Indeterminacy in LLM Preference Reasoning",
-    "link": "https://arxiv.org/abs/2610.03102",
-    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.03102v1 Announce Type: cross Abstract: An LLM agent can recognize uncertainty yet still choose the wrong next step: asking when action is already justified, or seeking clarification when the constraints must change. We formalize actionable indeterminacy: act when an accepted action is shared across all admissible preferences or objectives, clarify when each possibility is feasible but n",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-05"
-  },
-  {
-    "title": "EvoRiskBench: An Evolving Benchmark for Runtime Security Risks in Workspace Agents",
-    "link": "https://arxiv.org/abs/2610.03153",
-    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.03153v1 Announce Type: cross Abstract: Workspace agents combine large language models with execution harnesses to perform stateful, multi-step tasks that access or modify external resources. Existing benchmarks leave gaps in executable coverage of their runtime security risks, while evolving model capabilities, harnesses, tools, and threats motivate benchmark evolution. We introduce Evo",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent",
-      "harness"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-05"
-  },
-  {
-    "title": "D2K-Bench: Can LLM Agents Turn Expert Designs into Efficient GPU Kernels?",
-    "link": "https://arxiv.org/abs/2610.03226",
-    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.03226v1 Announce Type: cross Abstract: GPU kernels generated by large language model (LLM) agents can remain less efficient than expert implementations, but runtime alone does not reveal how the gap relates to design discovery and implementation. We introduce D2K-Bench, a diagnostic benchmark of 26 tasks and 85 workloads that measures how effectively agents translate expert design guida",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-05"
-  },
-  {
-    "title": "Cordial Learning: Distributed Training with Correlated Data",
-    "link": "https://arxiv.org/abs/2610.03330",
-    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.03330v1 Announce Type: cross Abstract: We consider a distributed learning task with agents that have correlated data. Specifically, the label of an agent depends on the input of other agents for the same sample, and these inputs are also correlated. Correlated data is the reality when agents share the same environment. Existing decentralized methods, such as federated learning, ignore t",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-05"
-  },
-  {
-    "title": "Follow the Winners: Conservative Policy Improvement with the Cross-Entropy Method for Critic-Free RFT",
-    "link": "https://arxiv.org/abs/2610.03361",
-    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.03361v1 Announce Type: cross Abstract: Critic-free reinforcement fine-tuning (RFT) for agentic large language models is often done through GRPO-style methods, which compute a group baseline over repeated rollouts to reduce target variance. However, this setup is ill-suited to agents acting in stateful environments such as live services or security sandboxes, where repeated rollouts are ",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent",
-      "agentic",
-      "sandbox"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-05"
-  },
-  {
     "title": "MobiAgent: Dual-Loop Recursive Policy Self-Improvement for Long-Horizon Mobile Manipulation",
     "link": "https://arxiv.org/abs/2610.03476",
     "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
@@ -4939,5 +4635,325 @@
     ],
     "status": "needs-review",
     "fetchedAt": "2026-10-18"
+  },
+  {
+    "title": "Structured Authority Injection: Persistent Human Control for LLM Agents via Typed MCP Overrides",
+    "link": "https://arxiv.org/abs/2610.22373",
+    "publishedAt": "Mon, 19 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.22373v1 Announce Type: new Abstract: LLM-based agents are increasingly used as autonomous orchestrators in distributed and multi-agent systems, yet a control gap remains: no protocol-level mechanism allows human operators to inject binding directives that persist across planning cycles. Free-text overrides suffer from ambiguous interpretation due to lack of schema validation and from au",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent",
+      "mcp",
+      "multi-agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-19"
+  },
+  {
+    "title": "ECHOES: Seeing Beyond the Current Image via Recursive History Compression and Privileged On-Policy Distillation",
+    "link": "https://arxiv.org/abs/2610.22408",
+    "publishedAt": "Mon, 19 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.22408v1 Announce Type: new Abstract: Long-horizon GUI agents rely on visual history to maintain task states, but retaining historical screenshots increases visual-token usage and inference costs, while textual summaries can discard critical state information, undermining long-horizon reliability. We propose ECHOES, which leverages training-time privileged information to guide textual hi",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-19"
+  },
+  {
+    "title": "Sensitivity Analysis of Decision Rules in an Agent-Based Agro-Ecological Model",
+    "link": "https://arxiv.org/abs/2610.22420",
+    "publishedAt": "Mon, 19 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.22420v1 Announce Type: new Abstract: Agent-based models are well-suited for modelling agro-ecological systems for decision-making, yet turning their simulations into actionable insight requires identifying which decisions actually drive the behaviours. In such a context, sensitivity analysis stumbles upon a structural feature of many complex systems: the parameters are not a flat vector",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-19"
+  },
+  {
+    "title": "PRIME: Towards Verifiable Evidence-Grounded Reasoning in LLM Agents",
+    "link": "https://arxiv.org/abs/2610.22426",
+    "publishedAt": "Mon, 19 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.22426v1 Announce Type: new Abstract: LLM agents are used to check records against an organization's requirements, for example whether a vulnerability report is ready for investigation. Requirements often allow several ways to be met, such as a severity rating with a curator-reviewed advisory or a published advisory link. Agents fail by accepting a report after a required check has faile",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-19"
+  },
+  {
+    "title": "Author-in-the-loop Agentic Reproducibility Auditing for a Machine Learning Conference",
+    "link": "https://arxiv.org/abs/2610.22465",
+    "publishedAt": "Mon, 19 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.22465v1 Announce Type: new Abstract: Reproducibility checks during peer review require a shared understanding of what authors' code is expected to reproduce. We present an author-in-the-loop collaborative audit that makes author declarations explicit inputs to an AI agent's investigation and assessment. A structured checklist records reproduction instructions and limitations; a two-stag",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent",
+      "agentic"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-19"
+  },
+  {
+    "title": "Harness-Delta Attribution: Dissecting Gains From Harness Evolution",
+    "link": "https://arxiv.org/abs/2610.22466",
+    "publishedAt": "Mon, 19 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.22466v1 Announce Type: new Abstract: Harness evolution automatically optimizes the prompts, skills, tools, and orchestration code around a fixed-weight model, offering a way to improve agentic systems without updating model weights. The agent harness is iteratively optimized to achieve higher performance on the search set. But how much of this gain reflects benchmark-specific overfittin",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent",
+      "agentic",
+      "orchestration",
+      "harness"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-19"
+  },
+  {
+    "title": "Testing the Planning Claims of LLM-Based Agents against Formal Semantics",
+    "link": "https://arxiv.org/abs/2610.22469",
+    "publishedAt": "Mon, 19 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.22469v1 Announce Type: new Abstract: LLM-based agents are increasingly credited with the competences of practical reasoning: planning, monitoring, and correcting their own actions. Their success is attributed to the prompting strategies and agent architectures built around the model, such as chain-of-thought, search-based prompting, self-refinement, reflection, critics and tool-using lo",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-19"
+  },
+  {
+    "title": "FRACTAL: A Self-Similar Multi-Agent Orchestration Architecture with Formal Communication, Convergence, and Depth Bounds",
+    "link": "https://arxiv.org/abs/2610.22561",
+    "publishedAt": "Mon, 19 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.22561v1 Announce Type: new Abstract: We present FRACTAL, a self-similar multi-agent architecture for recursive goal decomposition, in which the same five-component organizational pattern -- Orchestrator, Ensemble, Knowledge Ledger, Decision Maker, Meta-Observer -- recurs at every level of a decomposition tree. We make four formal contributions: (1) a communication bound showing intra-no",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent",
+      "multi-agent",
+      "orchestration"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-19"
+  },
+  {
+    "title": "From Relevant Memories to Sufficient Evidence: Rethinking Memory Utilization in LLM Agents",
+    "link": "https://arxiv.org/abs/2610.22668",
+    "publishedAt": "Mon, 19 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.22668v1 Announce Type: new Abstract: Long-term memory enables LLM agents to reuse past experiences, yet retrieving relevant memories does not necessarily provide sufficient evidence for answering a query. Essential information may remain fragmented across memory records, obscured by abstraction, or disconnected from the relations required for reasoning. We identify this relevance-suffic",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-19"
+  },
+  {
+    "title": "Not All Graphs Are Maps: A Task-Agnostic Exploration Framework for Mobile GUI Navigation",
+    "link": "https://arxiv.org/abs/2610.22672",
+    "publishedAt": "Mon, 19 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.22672v1 Announce Type: new Abstract: Modern mobile GUI agents can perceive visible screens and execute local actions, but they still lack persistent app-specific navigation knowledge: where functions live, which pages contain them, and which screens are equivalent across repeated visits. We introduce TAG-Nav, a Task-Agnostic Graph Navigation framework that wraps existing GUI-agent backb",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-19"
+  },
+  {
+    "title": "R$^2$Orch: Recursive Self-Improvement for Agent Orchestration via Self-Play within a Skill-Internalization Loop",
+    "link": "https://arxiv.org/abs/2610.22740",
+    "publishedAt": "Mon, 19 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.22740v1 Announce Type: new Abstract: In recent years, agentic orchestration has been widely applied to solve complex human tasks. However, existing orchestration learning still faces key challenges, including hand-designed curricula, advantage collapse when a task's rollouts all reach the same outcome, and unreliable evaluation signals that judge each skill by one noisy score. To addres",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent",
+      "agentic",
+      "orchestration"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-19"
+  },
+  {
+    "title": "When Can You Trust an Agent's Own Verifier? Stress-Testing Counterfactual Rationale Verification Under Search Pressure and Oracle Access",
+    "link": "https://arxiv.org/abs/2610.22779",
+    "publishedAt": "Mon, 19 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.22779v1 Announce Type: new Abstract: Automated agent design increasingly trusts a single score to decide whether a change is an improvement -- but a score optimized aggressively enough ceases to measure what it was meant to. When an agent also explains its design, that explanation is a second signal we can check without human labels: negate each stated claim, re-run, and observe whether",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-19"
+  },
+  {
+    "title": "MS-Eval: Benchmarking Sub-Agent Delegation and Orchestration in MCP-Intensive Working Scenarios",
+    "link": "https://arxiv.org/abs/2610.22869",
+    "publishedAt": "Mon, 19 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.22869v1 Announce Type: new Abstract: LLM agents are increasingly integrated into real-world works, yet they must handle diverse domain-specific tools and complex multi-sub-task problems that sequential tool invocation resolves inefficiently and with severe context bloat. The Main-Agent Delegation and Sub-Agent Execution (MAD-SAE) paradigm addresses these issues by delegating sub-tasks t",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent",
+      "mcp",
+      "orchestration"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-19"
+  },
+  {
+    "title": "When to Forget: Risk-Controlled Context Adaptation for Long-Horizon Agents",
+    "link": "https://arxiv.org/abs/2610.22897",
+    "publishedAt": "Mon, 19 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.22897v1 Announce Type: new Abstract: Long-horizon agents learn from failure, but the value of a failure record can change as execution progresses. We study when retaining, compressing, or removing the same history block improves subsequent execution relative to full-history KEEP. We introduce RECAP, a framework that combines matched context interventions, execution-relational prediction",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-19"
+  },
+  {
+    "title": "Reward Engine: Reward-Centric Self-Evolution for Open-Ended Tool Agents",
+    "link": "https://arxiv.org/abs/2610.22915",
+    "publishedAt": "Mon, 19 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.22915v1 Announce Type: new Abstract: Open-ended tool agents can complete the same objective through different tool paths, and their quality depends jointly on the interaction trace, environment state, and final artifacts, so such tasks rarely admit an executable ground-truth reward. The central challenge is therefore to construct a reward from existing experience that exposes the curren",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-19"
+  },
+  {
+    "title": "From Approval to Abuse: Privilege Escalation Attacks on Harness-Protected Coding Agents",
+    "link": "https://arxiv.org/abs/2610.22987",
+    "publishedAt": "Mon, 19 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.22987v1 Announce Type: new Abstract: Coding agents use execution harnesses to constrain the consequences of prompt injection by enforcing permission boundaries. These systems deterministically intercept any out-of-sandbox action and prompt the user for approval. To reduce approval fatigue, users can approve allow-rules proposed by the agent, after which any future action matching the ru",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent",
+      "sandbox",
+      "harness"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-19"
+  },
+  {
+    "title": "Adaptation of Computer Use Agents to New Software with User Manuals",
+    "link": "https://arxiv.org/abs/2610.23012",
+    "publishedAt": "Mon, 19 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.23012v1 Announce Type: new Abstract: Recent advances in multimodal foundation models have significantly improved the ability to operate real-world software through graphical user interfaces (GUIs) using visual observations and natural language instructions. However, maintaining strong performance on unseen applications remains challenging, as practical tasks often require long-horizon p",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-19"
+  },
+  {
+    "title": "Where Research Ideation Begins: Forward-Citation Supervision for Actionable Limitation Generation",
+    "link": "https://arxiv.org/abs/2610.23038",
+    "publishedAt": "Mon, 19 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.23038v1 Announce Type: new Abstract: Automated research ideation has advanced rapidly, with multi-agent workflows that generate whole research ideas end to end. These frameworks leave largely unexamined the step that seeds a good idea: identifying an actionable limitation from literature. In this paper, we focus on this first step in the research ideation pipeline. Starting from a pilot",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent",
+      "multi-agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-19"
+  },
+  {
+    "title": "Distill Until Divergence: Error-Truncated Hindsight Distillation for Agentic RL",
+    "link": "https://arxiv.org/abs/2610.23048",
+    "publishedAt": "Mon, 19 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.23048v1 Announce Type: new Abstract: Long-horizon interaction requires agents to make multiple decisions in a changing environment. Outcome-based GRPO lacks fine-grained guidance for intermediate decisions. Recent methods distill completed trajectories into reusable skills and use hindsight-conditioned OPD to provide dense token-level credit. However, skill-induced probability shifts do",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent",
+      "agentic"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-19"
+  },
+  {
+    "title": "Agentic In-Context Learning: What Algorithms Can Transformers Learn in Closed-Loop Interaction?",
+    "link": "https://arxiv.org/abs/2610.23051",
+    "publishedAt": "Mon, 19 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.23051v1 Announce Type: new Abstract: The learning algorithm view of in-context learning (ICL) studies how fixed-parameter Transformers learn from supplied examples. Language model agents extend this setting through interaction: their actions determine what evidence enters context next. We call this regime Agentic In-Context Learning (Agentic ICL). Existing studies largely depend on exte",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent",
+      "agentic"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-19"
+  },
+  {
+    "title": "WebCoder: Scaling General Frontend Development with Artifact-Grounded Agentic Reinforcement Learning",
+    "link": "https://arxiv.org/abs/2610.23104",
+    "publishedAt": "Mon, 19 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.23104v1 Announce Type: new Abstract: Real-world frontend development requires agents to compose reproduction, generation, modification, and repair over an evolving application state. Learning a general policy for this process requires translating heterogeneous execution feedback into task-aligned rewards and effective credit assignment across long sequences of interdependent actions. We",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent",
+      "agentic"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-19"
+  },
+  {
+    "title": "QuAD: Quantitative Assessment via Distribution-Alignment for Qualitative Data Quality Enabled by a Content-Aware Multi-Agent System",
+    "link": "https://arxiv.org/abs/2610.23153",
+    "publishedAt": "Mon, 19 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.23153v1 Announce Type: new Abstract: Assessing whether qualitative responses collected from semi-structured questions are ready for a particular analysis goal is a persistent challenge. Manual qualitative analysis is interpretive and labor-intensive, while existing automated methods often lack a dataset-level perspective for deciding whether a response set supports a researcher-selected",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent",
+      "multi-agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-19"
+  },
+  {
+    "title": "OfficeTown: Generative Organizations for Evolving Agent Intelligence",
+    "link": "https://arxiv.org/abs/2610.23194",
+    "publishedAt": "Mon, 19 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.23194v1 Announce Type: new Abstract: AI agents increasingly use files and software tools to produce professional deliverables. Such work draws on materials, decisions, and feedback accumulated across assignments. We introduce OfficeTown, a generative simulation framework for professional organizations in which tasks and their context arise from continuing organizational work. From a nat",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-19"
+  },
+  {
+    "title": "Beyond Reward Scoring: Online Multi-Agent Preference Learning for Multimodal Response Generation",
+    "link": "https://arxiv.org/abs/2610.23256",
+    "publishedAt": "Mon, 19 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.23256v1 Announce Type: new Abstract: Multimodal preference alignment often follows a score-based RLHF pipeline: a reward model is first trained to learn human preferences, then used to score on-policy responses and optimize the response model's generation. This turns preference supervision into a scalar signal for generation: a model may learn to produce answers with higher preference s",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent",
+      "multi-agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-19"
+  },
+  {
+    "title": "Annotrace: A Workbench for Step-Level Annotation of Agent Traces",
+    "link": "https://arxiv.org/abs/2610.23284",
+    "publishedAt": "Mon, 19 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.23284v1 Announce Type: new Abstract: Every study of why LLM agents fail begins by labelling traces by hand, and every such study builds its own throwaway tool. Observability platforms record agent traces but offer no structured labelling; annotation tools label text but have no notion of a step, a delegation or a tool call, leaving it unclear what the smallest unit of execution to label",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-19"
   }
 ]
