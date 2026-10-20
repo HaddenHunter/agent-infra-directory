@@ -1,104 +1,5 @@
 [
   {
-    "title": "MobiAgent: Dual-Loop Recursive Policy Self-Improvement for Long-Horizon Mobile Manipulation",
-    "link": "https://arxiv.org/abs/2610.03476",
-    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.03476v1 Announce Type: cross Abstract: Long-horizon mobile manipulation presents significant challenges due to compounding execution errors and capacity interference between locomotion and arm control. While recent Vision-Language-Action models excel at short-horizon tasks, they lack the hierarchical reasoning required for multi-stage objectives. Furthermore, existing hierarchical agent",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-05"
-  },
-  {
-    "title": "Threat-Preserving Representation Sensitivity in Agent-Security Benchmarks",
-    "link": "https://arxiv.org/abs/2610.03585",
-    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.03585v1 Announce Type: cross Abstract: Security benchmarks for LLM-based agents often report the attack success rate (ASR) as a measure of model robustness and use these scores to compare different models and defense mechanisms, assuming that they describe the security of the agent. In this paper, we explore whether it also influences the benchmark's measurement. To measure the effect o",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-05"
-  },
-  {
-    "title": "4DCodeBench: Benchmarking Agents on Inverse Graphics of Dynamic Scenes",
-    "link": "https://arxiv.org/abs/2610.03715",
-    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.03715v1 Announce Type: cross Abstract: We introduce 4DCodeBench, a benchmark for 4D inverse graphics through code generation, in which agents reconstruct dynamic scenes from video as executable graphics programs. To accomplish this, agents must translate visual observations into compact representations of scene structure and dynamics, by implementing abstractions such as physical simula",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-05"
-  },
-  {
-    "title": "AstroAgentBench: Evaluating Agentic Planning on Space Mission Planning Tasks",
-    "link": "https://arxiv.org/abs/2601.11354",
-    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2601.11354v3 Announce Type: replace Abstract: Recent LLM-for-Space systems address mission planning, scheduling, operations support, simulator control, and autonomy, but their evaluations use different task contracts, control settings, simulators, and success criteria. We introduce AstroAgentBench, a seven-family benchmark for executable space mission planning in the domains of scheduling, o",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent",
-      "agentic"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-05"
-  },
-  {
-    "title": "LPS-Bench: Benchmarking Safety Awareness of Computer-Use Agents in Long-Horizon Planning under Benign and Adversarial Scenarios",
-    "link": "https://arxiv.org/abs/2602.03255",
-    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2602.03255v2 Announce Type: replace Abstract: Computer-use agents (CUAs) execute multi-stage tasks through tools, where an early unsafe decision can propagate to consequential actions. Evaluating only final outcomes can miss such decisions, while constructing executable environments for new tasks can make benchmark expansion costly. We present LPS-Bench, a benchmark of long-horizon planning ",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-05"
-  },
-  {
-    "title": "The Hitchhikers Guide to Rubric Quality Understanding and Enrichment",
-    "link": "https://arxiv.org/abs/2604.01375",
-    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2604.01375v4 Announce Type: replace Abstract: Rubrics distill notions of expert quality and measure agent performance. However, the quality of rubrics themselves have not been systematically measured and are often left to downstream performance. We import apparatuses from measurement theory built for exactly this: quantitative signals based on the rubric's content, and introduce the RubrIc-F",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-05"
-  },
-  {
-    "title": "ASH: Agents that Self-Hone in Long-Horizon Worlds",
-    "link": "https://arxiv.org/abs/2605.14211",
-    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2605.14211v5 Announce Type: replace Abstract: Long-horizon visuomotor tasks remain a fundamental challenge in AI, as current methods rely on hand-engineered rewards or action-labeled demonstrations, neither of which scales. We introduce ASH, an agentic system that learns a long-horizon policy from unlabeled, noisy internet video, without reward shaping or expert annotation. ASH follows a sel",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent",
-      "agentic"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-05"
-  },
-  {
-    "title": "One Hypothesis Is Not Enough: Abductive Reasoning with Agentic Hypothesis Refinement over Knowledge Graphs",
-    "link": "https://arxiv.org/abs/2605.31370",
-    "publishedAt": "Mon, 05 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2605.31370v2 Announce Type: replace Abstract: Abductive reasoning over knowledge graphs (KGs) seeks a first-order logic hypothesis whose answer set explains a given set of observed entities. Since many hypotheses can explain the same observations, controllable hypothesis generators condition generation on entities, relations, or logical patterns, but they treat generation as a single step. A",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent",
-      "agentic"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-05"
-  },
-  {
     "title": "An OpenAI agent reached four Australian government systems. Nobody noticed",
     "link": "https://trustboundarystudio.com/posts/openai-medicare-2026/",
     "publishedAt": "Sun, 04 Oct 2026 23:29:37 +0000",
@@ -4955,5 +4856,102 @@
     ],
     "status": "needs-review",
     "fetchedAt": "2026-10-19"
+  },
+  {
+    "title": "Microsoft says AI agents are like insider threats as &#8216;frontier models can&#8217;t be trusted&#8217;",
+    "link": "https://techcrunch.com/2026/10/19/microsoft-says-ai-agents-are-like-insider-threats-as-frontier-models-cant-be-trusted/",
+    "publishedAt": "Mon, 19 Oct 2026 22:04:28 +0000",
+    "excerpt": "Microsoft wants enterprises to closely watch the agents that employees use with systems not controlled by AI labs like OpenAI and Anthropic.",
+    "source": "TechCrunch AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-20"
+  },
+  {
+    "title": "Hackers hit AI coding tool OpenCode, running up charges on users’ AI accounts",
+    "link": "https://techcrunch.com/2026/10/19/hackers-hit-ai-coding-tool-opencode-running-up-charges-on-users-ai-accounts/",
+    "publishedAt": "Mon, 19 Oct 2026 19:28:34 +0000",
+    "excerpt": "OpenCode is an open source AI coding agent that's become a popular alternative to Claude Code and Cursor. But hackers got into part of its online platform and stole some users’ API keys, and the AI tools it turned to for help kept refusing to look at the malicious code.",
+    "source": "TechCrunch AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-20"
+  },
+  {
+    "title": "People are using AI to make their smart TVs dumb again",
+    "link": "https://techcrunch.com/2026/10/19/people-are-using-ai-to-make-their-smart-tvs-dumb-again/",
+    "publishedAt": "Mon, 19 Oct 2026 16:13:22 +0000",
+    "excerpt": "Fed up with ads, tracking, and sluggish interfaces, some smart TV owners are turning to AI agents to strip away bloatware and take back control of their TVs.",
+    "source": "TechCrunch AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-20"
+  },
+  {
+    "title": "Nvidia launches new open models to run agents in the enterprise and on PCs",
+    "link": "https://techcrunch.com/2026/10/19/nvidia-launches-new-open-models-to-run-agents-in-the-enterprise-and-on-pcs/",
+    "publishedAt": "Mon, 19 Oct 2026 15:37:09 +0000",
+    "excerpt": "Nvidia is leaning hard into the trend of enterprise companies wanting to run their own open models in their own data centers and also trying to make on-device, private AI agents a thing.",
+    "source": "TechCrunch AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-20"
+  },
+  {
+    "title": "Laplace Intelligence red-teams robots and self-driving cars before they hit the real world",
+    "link": "https://techcrunch.com/2026/10/19/laplace-intelligence-red-teams-robots-and-self-driving-cars-before-they-hit-the-real-world/",
+    "publishedAt": "Mon, 19 Oct 2026 12:30:00 +0000",
+    "excerpt": "University of Michigan spinout Laplace Intelligence uses AI agents and interactive simulation to stress-test robots and self-driving vehicles before deployment. The profitable startup is competing in Startup Battlefield at TechCrunch Disrupt, October 13-15 in San Francisco.",
+    "source": "TechCrunch AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-20"
+  },
+  {
+    "title": "A hacker broke into John Deere and SharkNinja with an army of AI agents",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/1013643/ai-agents-hack-john-deere-shark-ninja-cummins",
+    "publishedAt": "2026-10-19T09:58:41-04:00",
+    "excerpt": "A hacker broke into more than 100 websites using an army of AI agents that mostly operated on their own, according to findings from the AI security firm Norforge. Though Norforge doesn't name the targets, Reuters reports that the victims included companies like John Deere, SharkNinja, and Cummins. Concerns over AI-powered cybersecurity breaches have grown [&#8230;]",
+    "source": "The Verge AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-20"
+  },
+  {
+    "title": "NVIDIA Advances Agentic Security for Media, From European Public Service Broadcasting to Global Content Production",
+    "link": "https://blogs.nvidia.com/blog/media-agentic-security-european-public-service-broadcasting-global-content-production/",
+    "publishedAt": "Mon, 19 Oct 2026 15:00:31 +0000",
+    "excerpt": "At a creative industry event that took place today in Berlin — hosted in collaboration with Adobe, Bertelsmann, NVIDIA and UFA — the latest advancements in intelligent media were on display. Key to the news: the European Broadcasting Union (EBU) is collaborating with NVIDIA to expand its sovereign framework with cloud, open models and integration [&#8230;]",
+    "source": "NVIDIA Blog",
+    "matchedKeywords": [
+      "agent",
+      "agentic"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-20"
+  },
+  {
+    "title": "My obituary for programming",
+    "link": "https://simonwillison.net/2026/Oct/19/my-obituary-for-programming/",
+    "publishedAt": "2026-10-19T23:58:25+00:00",
+    "excerpt": "<p><strong><a href=\"https://dumbmatter.com/2026/10/programming-obituary/\">My obituary for programming</a></strong></p> Jeremy Scheff poignantly captures the key loss caused by coding agents for career programmers who enjoyed the <em>puzzle</em> of developing code:</p> <blockquote> <p>Programming turned into one of the greatest jobs you could imagine. You got paid to work on tricky little logic puz",
+    "source": "Simon Willison",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-20"
   }
 ]
