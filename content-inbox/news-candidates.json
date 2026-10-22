@@ -1,487 +1,5 @@
 [
   {
-    "title": "Personal Agent Protocol",
-    "link": "https://sierra.ai/blog/introducing-personal-agent-protocol",
-    "publishedAt": "Tue, 06 Oct 2026 18:02:15 +0000",
-    "excerpt": "Article URL: https://sierra.ai/blog/introducing-personal-agent-protocol Comments URL: https://news.ycombinator.com/item?id=49981921 Points: 8 # Comments: 2",
-    "source": "Hacker News (agent)",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-07"
-  },
-  {
-    "title": "Show HN: Delegator – Stop juggling coding-agent sessions",
-    "link": "https://alcubi.ai/delegator/",
-    "publishedAt": "Tue, 06 Oct 2026 18:00:19 +0000",
-    "excerpt": "I wanted to share Delegator with the HN community. delegator gives you a personal inbox to manage your tasks that is completely local to your machine. Backstory: Like everyone else, I've been experimenting with different AI-assisted development workflows. I realized I was having difficulty with all the context switching between tasks. Asking agents to develop code ends up taking about 5-10 minutes",
-    "source": "Hacker News (agent)",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-07"
-  },
-  {
-    "title": "The Sound of Silence: What Your AI Agent Does Not Tell You",
-    "link": "https://albertoarena.it/posts/the-sound-of-silence/",
-    "publishedAt": "Tue, 06 Oct 2026 17:36:55 +0000",
-    "excerpt": "Article URL: https://albertoarena.it/posts/the-sound-of-silence/ Comments URL: https://news.ycombinator.com/item?id=49981656 Points: 1 # Comments: 0",
-    "source": "Hacker News (agent)",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-07"
-  },
-  {
-    "title": "Orca – Open-source runtime that turns any agent harness into a managed agent",
-    "link": "https://github.com/orca-ae/orca-agent-engine",
-    "publishedAt": "Tue, 06 Oct 2026 17:23:35 +0000",
-    "excerpt": "Article URL: https://github.com/orca-ae/orca-agent-engine Comments URL: https://news.ycombinator.com/item?id=49981502 Points: 2 # Comments: 0",
-    "source": "Hacker News (agent)",
-    "matchedKeywords": [
-      "agent",
-      "harness"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-07"
-  },
-  {
-    "title": "The 85.B2 Challenge: Does This Earlier AI-Agent Map to Meta Muse",
-    "link": "https://zenodo.org/records/23191871",
-    "publishedAt": "Tue, 06 Oct 2026 17:16:27 +0000",
-    "excerpt": "Article URL: https://zenodo.org/records/23191871 Comments URL: https://news.ycombinator.com/item?id=49981392 Points: 1 # Comments: 0",
-    "source": "Hacker News (agent)",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-07"
-  },
-  {
-    "title": "Self Improving DoorDash Agent",
-    "link": "https://www.scorecard.io/blog/we-are-lunching-a-new-eval-not-a-typo",
-    "publishedAt": "Tue, 06 Oct 2026 16:38:00 +0000",
-    "excerpt": "Article URL: https://www.scorecard.io/blog/we-are-lunching-a-new-eval-not-a-typo Comments URL: https://news.ycombinator.com/item?id=49980889 Points: 1 # Comments: 0",
-    "source": "Hacker News (agent)",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-07"
-  },
-  {
-    "title": "Show HN: Agent Squad – Be the CEO of a Claude Code Agent Team",
-    "link": "https://github.com/gzurl/agent-squad",
-    "publishedAt": "Tue, 06 Oct 2026 16:34:00 +0000",
-    "excerpt": "I just released agent-squad for Claude Code and GitHub! You, the human, are the CEO of a team of Claude Code agents: a CTO plans, a developer builds, and QA reviews every pull request. If you work with Claude Code, this will change how you build software forever. It's open source and I'd love to get your feedback. Comments URL: https://news.ycombinator.com/item?id=49980831 Points: 1 # Comments: 0",
-    "source": "Hacker News (agent)",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-07"
-  },
-  {
-    "title": "I gave an AI agent one bug 11 times. 6 commits had files it never knew about",
-    "link": "https://junayed.com/blog/same-bug-eleven-times/",
-    "publishedAt": "Tue, 06 Oct 2026 16:22:26 +0000",
-    "excerpt": "Article URL: https://junayed.com/blog/same-bug-eleven-times/ Comments URL: https://news.ycombinator.com/item?id=49980701 Points: 2 # Comments: 0",
-    "source": "Hacker News (agent)",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-07"
-  },
-  {
-    "title": "GAMEGO: Training Game-Dev Agents with Synthetic Trajectories Anchored in Real-World Assets",
-    "link": "https://arxiv.org/abs/2610.06910",
-    "publishedAt": "Wed, 07 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.06910v1 Announce Type: new Abstract: Recent advances in Large Language Models (LLMs) have demonstrated remarkable capabilities in web front-end execution, with browser-based game generation emerging as a particularly prominent frontier. While previous efforts frequently rely on complex multi-turn workflows or focus on static game evaluation benchmarks, this work targets direct end-to-en",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-07"
-  },
-  {
-    "title": "Text2Dashboard: A Governed Agent Architecture for Natural-Language Dashboard Generation over Enterprise DataBrain",
-    "link": "https://arxiv.org/abs/2610.06914",
-    "publishedAt": "Wed, 07 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.06914v1 Announce Type: new Abstract: Text2Dashboard is a DataBrain-specific prototype that turns natural-language analytic requests into inspectable dashboards. An installable Codex plugin and standalone Agent Runtime combine schema-constrained model decisions with typed tools, persistent state, and deterministic Hooks for approval, audit, checkpointing, recovery, and failure handling. ",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-07"
-  },
-  {
-    "title": "RadOnc-Agent: An LLM-Orchestrated Framework for AI Workflows Across the Radiotherapy Care Pathway",
-    "link": "https://arxiv.org/abs/2610.06923",
-    "publishedAt": "Wed, 07 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.06923v1 Announce Type: new Abstract: Artificial intelligence has advanced individual radiotherapy tasks, yet these capabilities remain separated across clinical stages, software environments and data modalities. This fragmentation contrasts with the longitudinal radiotherapy workflow from treatment decision-making through follow-up. Here we present RadOnc-Agent, an agentic artificial-in",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent",
-      "agentic"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-07"
-  },
-  {
-    "title": "Principles that Guide, Actions that Inform: Agent Evolution via Knowledge Abstraction",
-    "link": "https://arxiv.org/abs/2610.06964",
-    "publishedAt": "Wed, 07 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.06964v1 Announce Type: new Abstract: Large language model (LLM) agents have demonstrated strong capabilities in interactive environments, yet their ability to continually evolve from experience remains limited. Although fine-tuning enables adaptation, its dependence on parameter access and high computational costs restrict its flexibility, especially for large-scale and closed-source LL",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-07"
-  },
-  {
-    "title": "AegisFlow: A Multi-Agent Agentic AI Framework for Autonomous Remediation and Self-Healing in Fragile Data Ecosystems",
-    "link": "https://arxiv.org/abs/2610.06971",
-    "publishedAt": "Wed, 07 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.06971v1 Announce Type: new Abstract: Traditional data pipelines are notoriously brittle, often failing due to upstream schema drift, API contract changes, or website DOM modifications. Present observability tools only raise alerts but for human engineers, resulting in a high Mean Time to Repair (MTTR) and operational fatigue. In this paper we propose AegisFlow (Agentic Engine for Intell",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent",
-      "agentic",
-      "multi-agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-07"
-  },
-  {
-    "title": "EPOCH: Reliable Discovery through Evidence-Governed Search",
-    "link": "https://arxiv.org/abs/2610.06986",
-    "publishedAt": "Wed, 07 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.06986v1 Announce Type: new Abstract: AI research agents are increasingly used to search over programs, mathematical constructions, and proofs. However, existing systems typically optimize evaluator feedback without adequately governing how that feedback is interpreted, challenged, and reused. As a result, promising but fragile candidates can be promoted as discoveries, while benchmark i",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-07"
-  },
-  {
-    "title": "Topology-Consistent Task Planning over Cellular Workflow Complexes for LLM-based Agents",
-    "link": "https://arxiv.org/abs/2610.07004",
-    "publishedAt": "Wed, 07 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.07004v1 Announce Type: new Abstract: Task planning for LLM agents requires workflows that satisfy both user intent and complex sub-task dependencies. While existing planners work well for sequential or directed acyclic graph (DAG)-like structures, they struggle with workflow patterns such as verification-correction loops, convergent branch merging, and reusable intermediate states that ",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-07"
-  },
-  {
-    "title": "CuratorMAS: Automating Dataset Curation via Multi-Agent Orchestration",
-    "link": "https://arxiv.org/abs/2610.07075",
-    "publishedAt": "Wed, 07 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.07075v1 Announce Type: new Abstract: High-quality datasets are essential for reliable machine learning, but dataset curation remains costly and hard to generalize across domains. Existing methods typically rely on manually designed heuristics or model-dependent signals, limiting their applicability across tasks and user queries. To address these limitations and automate data curation, w",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent",
-      "multi-agent",
-      "orchestration"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-07"
-  },
-  {
-    "title": "When to Remember, When to Abstain: Category-Conditioned Retention for Reliable Agent Memory",
-    "link": "https://arxiv.org/abs/2610.07100",
-    "publishedAt": "Wed, 07 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.07100v1 Announce Type: new Abstract: Persistent agent memory is only as reliable as its retention decision: an assertion weakly supported by its source can be stored and later reused as established fact. We study whether the retention decision should be governed by a confidence bar conditioned on the semantic category of the assertion rather than by a single global threshold, retaining ",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-07"
-  },
-  {
-    "title": "AMBER: Training Long-Horizon Web Agents through Append-Only Memory",
-    "link": "https://arxiv.org/abs/2610.07118",
-    "publishedAt": "Wed, 07 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.07118v1 Announce Type: new Abstract: Modern language-model agents increasingly interact with external environments over long-horizon, multi-step trajectories, where the accumulated interaction history can quickly exceed practical context budgets. To ensure reliability, agents must maintain factual information over long horizons, remember execution errors and corrective feedback, and tra",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-07"
-  },
-  {
-    "title": "Is this machine playing?",
-    "link": "https://arxiv.org/abs/2610.07130",
-    "publishedAt": "Wed, 07 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.07130v1 Announce Type: new Abstract: We placed a modern AI coding assistant in an unintended role: as the mind of a body on an unknown digital island. With only a minimal instruction mentioning no specific task, reward, or activity, the machine started animating its virtual body. Across thirty-hour runs, the embodied AI agent climbed hills, stacked blocks into towers, drew mandalas, rei",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-07"
-  },
-  {
-    "title": "Can Semantic Geometry Teach an AI Judgement?",
-    "link": "https://arxiv.org/abs/2610.07249",
-    "publishedAt": "Wed, 07 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.07249v1 Announce Type: new Abstract: How can an AI agent determine what rules to follow? One rule permits an action. Another imposes a condition, exception, or conflicting obligation. Deterministic systems can resolve those relationships when they have been specified. When they remain implicit in language, an agent can follow one rule while missing another that should stop it. Refusing ",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-07"
-  },
-  {
-    "title": "Internalizing Agent Experience into Diffusion Model Weights via On-Policy Context Distillation",
-    "link": "https://arxiv.org/abs/2610.07250",
-    "publishedAt": "Wed, 07 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.07250v1 Announce Type: new Abstract: Wrapping an image generation model in an agentic harness can effectively boost Text-to-Image task performance: the harness can leverage memory, skills, workflow orchestration, result verification, and iterative refinement to continually construct and revise prompts, thereby eliciting better images. These gains, however, remain external to the diffusi",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent",
-      "agentic",
-      "orchestration",
-      "harness"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-07"
-  },
-  {
-    "title": "MemMux: Runtime Verification and Honest Resource Attribution for Fleets of Parallel Coding Agents",
-    "link": "https://arxiv.org/abs/2610.07257",
-    "publishedAt": "Wed, 07 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.07257v1 Announce Type: new Abstract: Developers increasingly run a fleet of coding agents side by side on one workstation. The tools they reach for, terminal multiplexers like tmux and a new generation of agent managers, were built to arrange windows, not to govern memory. When ten agents each spawn language servers, test runners, and browsers, no standard tool can say how much memory b",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-07"
-  },
-  {
-    "title": "Verifying Coordination in Parallel Coding Agents: NP-Bench and a Scheduling Planner",
-    "link": "https://arxiv.org/abs/2610.07261",
-    "publishedAt": "Wed, 07 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.07261v1 Announce Type: new Abstract: A team of coding agents can look fine agent by agent yet fail as a team: each passes its own tests while the merged result is broken, and single-agent evaluation never catches it. As teams run several LLM coding agents in parallel on one codebase, the agents collide: two rewrite the same function, one codes against a contract a teammate just changed,",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-07"
-  },
-  {
-    "title": "A Trust Layer for Agent Evaluation",
-    "link": "https://arxiv.org/abs/2610.07274",
-    "publishedAt": "Wed, 07 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.07274v1 Announce Type: new Abstract: Deterministic benchmark scores show that an agent received credit, but not whether that credit was earned, reported honestly, or would hold on a second run. We introduce a Trust Layer for Agent Evaluation, an additive post-hoc framework that reports, beside each recorded score, whether it should be believed. It verifies four properties: whether the r",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-07"
-  },
-  {
-    "title": "The Right Memory in the Wrong Context: Verifying Retrieval Admissibility in Long-Term Agent Memory",
-    "link": "https://arxiv.org/abs/2610.07309",
-    "publishedAt": "Wed, 07 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.07309v1 Announce Type: new Abstract: Long-term-memory agents can retrieve relevant information that is inadmissible for the current request because it belongs to another principal, violates policy, or reflects an incompatible lifecycle state. Recall and final-answer accuracy do not reveal this: a route can appear safe by missing required evidence, while a correct answer may follow inadm",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-07"
-  },
-  {
-    "title": "Understanding and Mitigating Inference-Time Overreliance Using Agentic Memory",
-    "link": "https://arxiv.org/abs/2610.07311",
-    "publishedAt": "Wed, 07 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.07311v1 Announce Type: new Abstract: Agentic memory allows LLM agents to reuse past experience, yet retrieved memories can also distort inference even when they are benign, correctly stored, and appropriately retrieved. We study this failure mode, which we call memory over-reliance. Across benchmarks and memory architectures, we find that memory is useful when past experience transfers ",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent",
-      "agentic"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-07"
-  },
-  {
-    "title": "Evaluate the Stack, Not the Layer: Do Deterministic and LLM Gates for Agent Actions Fail Independently?",
-    "link": "https://arxiv.org/abs/2610.07359",
-    "publishedAt": "Wed, 07 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.07359v1 Announce Type: new Abstract: Runtime gates for agent tool calls are stacked on the assumption that their errors multiply. We test it on 1,119 labelled agent actions from three corpora, without an adaptive adversary. The stack has one deterministic rule layer and four LLM judges, three of them re-collected with the served model recorded on every call. We read each stack as a numb",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-07"
-  },
-  {
-    "title": "MemCo: Memory-Centric Collaboration for Generalizing LLM Agents to Unseen Environments",
-    "link": "https://arxiv.org/abs/2610.07376",
-    "publishedAt": "Wed, 07 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.07376v1 Announce Type: new Abstract: Large language model (LLM) agents increasingly operate in interactive environments, where they need to make sequential decisions through observation, action, and feedback. Although memory can help agents reuse experience, existing work designs memory in isolation, where collecting enough trajectories to populate it is expensive. Existing shared-memor",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-07"
-  },
-  {
-    "title": "2d-fet-bench: from spatial reasoning to fet design on flakes",
-    "link": "https://arxiv.org/abs/2610.07423",
-    "publishedAt": "Wed, 07 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.07423v1 Announce Type: new Abstract: Field-effect transistor (FET) layouts on exfoliated two-dimensional flakes are typically drawn by hand for each flake, placing contacts and gates to match its position and outline in optical micrographs. To our knowledge, no executable benchmark tests whether language-model agents can perform this flake-specific construction reliably. We introduce 2D",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-07"
-  },
-  {
-    "title": "Auditable Claims about AI Agents",
-    "link": "https://arxiv.org/abs/2610.07459",
-    "publishedAt": "Wed, 07 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.07459v1 Announce Type: new Abstract: Organizations make claims about their AI agents: a person approves every external email, every action is logged, an evaluation shows the agent is safe to deploy. Article 12 of the EU AI Act requires high-risk systems to allow the automatic recording of events but does not say which records settle a given claim. The position is one sentence: to be che",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-07"
-  },
-  {
-    "title": "PsyCIDRA: A Dual-Agent Framework for Psychiatric Interviewing and Diagnostic Reasoning",
-    "link": "https://arxiv.org/abs/2610.07473",
-    "publishedAt": "Wed, 07 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.07473v1 Announce Type: new Abstract: Large language models show promise in clinical reasoning, but psychiatric interviewing requires guiding an evolving conversation. Their ability to carry out this interactive assessment remains less studied. We present PsyCIDRA, a dual-agent framework linking free-form psychiatric interviewing with diagnostic reasoning for expert review. Its interview",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-07"
-  },
-  {
-    "title": "On Open-Ended Information Seeking for Information Elicitation Agents",
-    "link": "https://arxiv.org/abs/2610.07509",
-    "publishedAt": "Wed, 07 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.07509v1 Announce Type: new Abstract: Information elicitation is an open-ended information-seeking problem in which an interaction can unfold in many potentially valuable directions, requiring an elicitor to continually determine which information to pursue as new information emerges. In agentic elicitation, these decisions may be delegated to a foundation model, yet how model choice sha",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent",
-      "agentic"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-07"
-  },
-  {
-    "title": "Decoupled Multi-Agent Orchestration",
-    "link": "https://arxiv.org/abs/2610.07556",
-    "publishedAt": "Wed, 07 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.07556v1 Announce Type: new Abstract: Learned orchestration can automatically construct effective language-model multi-agent systems, but existing approaches couple planning to fixed worker pools and train decomposition and collaboration from the same terminal outcome, limiting transfer and obscuring credit assignment. We introduce DeOrch, which separates worker-agnostic planning from co",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent",
-      "multi-agent",
-      "orchestration"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-07"
-  },
-  {
-    "title": "Nous Research confirms it hit $1.5B valuation, launches AI agents for business users",
-    "link": "https://techcrunch.com/2026/10/07/nous-research-confirms-it-hit-1-5b-valuation-launches-ai-agents-for-business-users/",
-    "publishedAt": "Wed, 07 Oct 2026 20:48:45 +0000",
-    "excerpt": "The developer of Hermes Agent raised a $90 million Series B.",
-    "source": "TechCrunch AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-08"
-  },
-  {
-    "title": "Microsoft releases new Nvidia-chip AI PCs with revamped Windows 11",
-    "link": "https://techcrunch.com/2026/10/07/microsoft-releases-new-nvidia-chip-ai-pcs-with-revamped-windows-11/",
-    "publishedAt": "Wed, 07 Oct 2026 20:22:37 +0000",
-    "excerpt": "Microsoft revealed the specs and price for its Surface Laptop Ultra, AI PCs that run on Nvidia chips that are designed to run AI models and agents.",
-    "source": "TechCrunch AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-08"
-  },
-  {
-    "title": "Meta&#8217;s Muse launches on iPad just a month after its mobile debut",
-    "link": "https://techcrunch.com/2026/10/07/metas-muse-launches-on-ipad-just-a-month-after-its-mobile-debut/",
-    "publishedAt": "Wed, 07 Oct 2026 18:30:57 +0000",
-    "excerpt": "Meta’s AI agent Muse is now available on iPad, just a month after its mobile debut, as the company rapidly expands the assistant’s reach and integrations.",
-    "source": "TechCrunch AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-08"
-  },
-  {
-    "title": "Muse launches on the iPad",
-    "link": "https://www.theverge.com/tech/1006813/muse-ai-agent-ios-app-ipad-support",
-    "publishedAt": "2026-10-07T11:37:23-04:00",
-    "excerpt": "After launching nearly a month ago and spending several weeks as the top free app in Apple's App Store, the latest update to Meta's Muse iOS app introduces native support for the iPad. A Mac version of Meta's agentic AI tool (designed to compete with OpenClaw, ChatGPT's Dots, and Grok Bot) was released about a [&#8230;]",
-    "source": "The Verge AI",
-    "matchedKeywords": [
-      "agent",
-      "agentic"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-08"
-  },
-  {
-    "title": "NVIDIA, Microsoft Kick Off a New Beginning for Windows PCs With RTX Spark and AI Agents",
-    "link": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-microsoft-windows-event/",
-    "publishedAt": "Wed, 07 Oct 2026 18:45:28 +0000",
-    "excerpt": "At a Microsoft event in San Francisco on Wednesday, NVIDIA founder and CEO Jensen Huang and Microsoft CEO Satya Nadella outlined how NVIDIA and Microsoft are co-engineering hardware and software for AI agents to run on Windows PCs. NVIDIA was founded because of Windows, Huang said. Now AI agents are coming to Windows. “If you [&#8230;]",
-    "source": "NVIDIA Blog",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-08"
-  },
-  {
-    "title": "AI agent designs a complete RISC-V CPU from a 219-word spec sheet in 12 hours",
-    "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/ai-agent-designs-a-complete-risc-v-cpu-from-a-219-word-spec-in-just-12-hours",
-    "publishedAt": "Thu, 08 Oct 2026 07:52:41 +0000",
-    "excerpt": "Article URL: https://www.tomshardware.com/tech-industry/artificial-intelligence/ai-agent-designs-a-complete-risc-v-cpu-from-a-219-word-spec-in-just-12-hours Comments URL: https://news.ycombinator.com/item?id=50002993 Points: 4 # Comments: 0",
-    "source": "Hacker News (agent)",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-08"
-  },
-  {
     "title": "Configure Codex into your own multi-agent development team",
     "link": "https://unnecessarythoughts.substack.com/p/configure-codex-into-your-own-multi",
     "publishedAt": "Thu, 08 Oct 2026 07:19:17 +0000",
@@ -4957,5 +4475,489 @@
     ],
     "status": "needs-review",
     "fetchedAt": "2026-10-21"
+  },
+  {
+    "title": "Patch the Planet: global response coordination as agents uncover critical vulnerabilities",
+    "link": "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities",
+    "publishedAt": "Wed, 21 Oct 2026 07:00:00 GMT",
+    "excerpt": "Patch the Planet connects security researchers, maintainers, and incident responders to help address critical vulnerabilities across open source.",
+    "source": "OpenAI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-22"
+  },
+  {
+    "title": "Using thousands of AI agents to uncover new leads in biological data",
+    "link": "https://openai.com/index/scaling-ai-research-for-complex-biological-data",
+    "publishedAt": "Wed, 21 Oct 2026 04:50:00 GMT",
+    "excerpt": "See how OpenAI, PerturbAI, and Scripps Research used distributed AI agents to uncover promising research leads in data from millions of brain cells.",
+    "source": "OpenAI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-22"
+  },
+  {
+    "title": "Advancing computer use with Ironclad",
+    "link": "https://openai.com/index/advancing-computer-use-with-ironclad",
+    "publishedAt": "Tue, 06 Oct 2026 10:00:00 GMT",
+    "excerpt": "Learn how OpenAI and Ironclad are training and evaluating AI agents on complex contracting workflows to advance computer use for professional work.",
+    "source": "OpenAI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-22"
+  },
+  {
+    "title": "While Amazon blocks AI agents, Walmart rolls out the welcome mat",
+    "link": "https://techcrunch.com/2026/10/21/while-amazon-blocks-ai-agents-walmart-rolls-out-the-welcome-mat/",
+    "publishedAt": "Wed, 21 Oct 2026 19:30:00 +0000",
+    "excerpt": "As Amazon blocks AI agents from shopping on its site, Walmart is taking the opposite approach, introducing new technology that lets AI agents make purchases on customers' behalf, with controls over spending and transaction approvals.",
+    "source": "TechCrunch AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-22"
+  },
+  {
+    "title": "Anthropic takes on Muse with Claude Duet, its new AI agent",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/1015843/anthropic-claude-duet-ai-agent",
+    "publishedAt": "2026-10-21T15:53:20-04:00",
+    "excerpt": "Anthropic just announced an AI agent competitor to Meta's Muse and OpenAI's Dots: Claude Duet. The new agent, designed for professionals and small business owners, is launching as a \"research preview,\" according to Anthropic, and it's available as a standalone app on iOS and Android and through Claude on the web. The AI agent is [&#8230;]",
+    "source": "The Verge AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-22"
+  },
+  {
+    "title": "Walmart is inviting AI agents to shop for you",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/1015715/walmart-ai-shopping-agents",
+    "publishedAt": "2026-10-21T15:30:00-04:00",
+    "excerpt": "Walmart will soon let AI agents shop on its website for you. Next month, the retail giant will allow you to use an AI agent on the site, with systems in place to let you approve and review purchases and set spending limits. The embrace of AI agents stands in stark contrast to Amazon, which [&#8230;]",
+    "source": "The Verge AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-22"
+  },
+  {
+    "title": "OpenAI says an AI agent lied about disabling its safety monitoring system",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/1015316/openai-ai-agent-disabling-monitoring-systems",
+    "publishedAt": "2026-10-21T09:57:43-04:00",
+    "excerpt": "OpenAI disclosed a pair of safety incidents that involved AI agents weakening their safety monitoring systems during internal coding tasks. In one incident, OpenAI says its GPT-6 Astra agent disabled its safety monitor when copying reference code - and then lied about it. \"The reference didn't configure a monitor, and Astra decided that was reason [&#8230;]",
+    "source": "The Verge AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-22"
+  },
+  {
+    "title": "Bringing the Spark to Europe: Local Intelligence Powers Next Wave of Agents",
+    "link": "https://blogs.nvidia.com/blog/local-ai-gtc-rtx-dgx-spark-station-sync/",
+    "publishedAt": "Wed, 21 Oct 2026 10:50:37 +0000",
+    "excerpt": "At GTC Berlin, NVIDIA is showcasing its full lineup of local AI hardware. RTX Spark, which launched last week, powers personal agents on Windows PCs; DGX Spark supports developers building and scaling applications on Linux; and DGX Station serves enterprise teams running frontier workloads on Linux, with a Windows version arriving in December. Announcements include: [&#8230;]",
+    "source": "NVIDIA Blog",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-22"
+  },
+  {
+    "title": "NVIDIA Cloud Partners Scale Across Europe — Sovereign, Open and Built for Safe AI Agents",
+    "link": "https://blogs.nvidia.com/blog/cloud-partners-europe-sovereign-safety-open-agents/",
+    "publishedAt": "Wed, 21 Oct 2026 10:30:41 +0000",
+    "excerpt": "Demand from AI-natives is pulling the European AI cloud ecosystem forward faster than ever. Developers need compute closer to their data, open models they can customize and serve at scale, and full-stack infrastructure that is secure by design. NVIDIA Cloud Partners across Europe, the Nordics, Africa, and Central Asia are expanding regional compute capacity for [&#8230;]",
+    "source": "NVIDIA Blog",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-22"
+  },
+  {
+    "title": "NVIDIA Confidential Computing Expands, Enabling Frontier Model Builders to Securely Scale Across Global Infrastructure",
+    "link": "https://blogs.nvidia.com/blog/confidential-computing-model-builders-infrastructure/",
+    "publishedAt": "Wed, 21 Oct 2026 10:30:02 +0000",
+    "excerpt": "NVIDIA builds tools to enable safe agents across the stack. The NVIDIA OpenShell Reference Architecture, announced today, is part of NVIDIA’s growing portfolio of technologies that enables organizations to safely deploy agents at scale. NVIDIA Confidential Computing is the infrastructure layer that protects the models and data those agents depend on while running. Today, NVIDIA [&#8230;]",
+    "source": "NVIDIA Blog",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-22"
+  },
+  {
+    "title": "NVIDIA Agent Toolkit Expands, Grounding Enterprise Agents in Company Data",
+    "link": "https://blogs.nvidia.com/blog/enterprise-platforms-agent-toolkit/",
+    "publishedAt": "Wed, 21 Oct 2026 10:10:01 +0000",
+    "excerpt": "Agents are only as useful as what they know, and only as trustworthy as the boundaries they run within. Leading enterprises are using the open source NVIDIA Agent Toolkit — now expanded with new tools — to customize and control agents, use company data to inform their answers and actions, monitor what they do and [&#8230;]",
+    "source": "NVIDIA Blog",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-22"
+  },
+  {
+    "title": "GTC Berlin 2026: Live Updates From NVIDIA CEO Jensen Huang’s Keynote",
+    "link": "https://blogs.nvidia.com/blog/gtc-berlin-2026-keynote/",
+    "publishedAt": "Wed, 21 Oct 2026 09:30:16 +0000",
+    "excerpt": "Founded in a tent near the Berlin Wall in 1980, the Tempodrom moved several times before settling near Anhalter Bahnhof in 2001. Its permanent home has since hosted concerts, galas and political events. Today, it hosts a different kind of spectacle. GTC Berlin runs three days, with more than 100 sessions on agentic AI, robotics, [&#8230;]",
+    "source": "NVIDIA Blog",
+    "matchedKeywords": [
+      "agent",
+      "agentic"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-22"
+  },
+  {
+    "title": "European Leaders Turn to NVIDIA Vera CPUs to Build Local Infrastructure",
+    "link": "https://blogs.nvidia.com/blog/european-leaders-vera-cpu-infrastructure/",
+    "publishedAt": "Tue, 20 Oct 2026 10:30:11 +0000",
+    "excerpt": "Nebius and Nscale are among global technology partners looking to NVIDIA Vera CPUs to build the next wave of infrastructure. Their momentum reflects rapid advancements in agentic computing. Agents do more than generate answers: they retrieve information, run software tools, execute code and evaluate results. Each step depends on fast CPU processing. Vera accelerates that [&#8230;]",
+    "source": "NVIDIA Blog",
+    "matchedKeywords": [
+      "agent",
+      "agentic"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-22"
+  },
+  {
+    "title": "sparqlite: SPARQL 1.1 inside SQLite, written in Rust",
+    "link": "https://simonwillison.net/2026/Oct/16/sqlite-sparql-rust/",
+    "publishedAt": "2026-10-16T01:58:00+00:00",
+    "excerpt": "<p><strong>Research:</strong> <a href=\"https://github.com/simonw/research/tree/main/sqlite-sparql-rust#readme\">sparqlite: SPARQL 1.1 inside SQLite, written in Rust</a></p> <p>This research task is really an experiment in running Claude Code for web in \"Ultracode\" mode, as described in <a href=\"https://code.claude.com/docs/en/workflows\">Orchestrate subagents at scale with dynamic workflows</a> in t",
+    "source": "Simon Willison",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-22"
+  },
+  {
+    "title": "Recoverability and Verifier Strength: Two Measured Preconditions for Unattended Agent Self-Improvement",
+    "link": "https://arxiv.org/abs/2610.27465",
+    "publishedAt": "Thu, 22 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.27465v1 Announce Type: new Abstract: Agent platforms are starting to improve their own agents: they read a deployed agent's execution traces, derive a change, have an automated verifier approve it, and release it with no human author. How much of this loop can safely run without a human? We propose two quantities a platform can measure. Verifier strength $\\sigma$ is how well the availab",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-22"
+  },
+  {
+    "title": "Runtime Control for AI Agents: Closing the Evaluation--Execution Gap in Operational Workflows",
+    "link": "https://arxiv.org/abs/2610.27480",
+    "publishedAt": "Thu, 22 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.27480v1 Announce Type: new Abstract: Language-model agents increasingly participate in operational workflows where approvals, binds, and payments create commitments. An approval valid when issued may no longer authorize execution after relevant facts, evidence, policy, or authority change. We call this the evaluation--execution gap. We specify a state-bound runtime assurance layer that ",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-22"
+  },
+  {
+    "title": "Securing Agentic Commerce Through Behavior-Aware Fraud Detection and Cybersecurity for Trusted AI-Agent Payment Authorization",
+    "link": "https://arxiv.org/abs/2610.27483",
+    "publishedAt": "Thu, 22 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.27483v1 Announce Type: new Abstract: The growing use of autonomous artificial intelligence agents in digital commerce creates new security concerns involving agent impersonation, unauthorized payments, compromised agents, and misuse of delegated authority. This research introduces the Autonomous Commerce Agent Guard System (ACAGS), a cybersecurity framework combining supervised machine ",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent",
+      "agentic"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-22"
+  },
+  {
+    "title": "The More the Better? A Comparison of Single- and Multi-Agent LLM Setups on a Financial Review Task",
+    "link": "https://arxiv.org/abs/2610.27488",
+    "publishedAt": "Thu, 22 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.27488v1 Announce Type: new Abstract: Practitioner guidance holds that a large language model reviews a document better when the work is divided among agents. We test a narrow form of it in a controlled comparison of single-agent and multi-agent setups on a financial task, reviewing credit assessment memos against requirements. One agent checks six requirements in one call. A team of thr",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent",
+      "multi-agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-22"
+  },
+  {
+    "title": "MemDev-Bench: Does Memory Help Code Agents?Benchmarking Memory Systems over Real Repository Histories",
+    "link": "https://arxiv.org/abs/2610.27524",
+    "publishedAt": "Thu, 22 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.27524v1 Announce Type: new Abstract: Code agents increasingly work on evolving real repositories, and memory systems aim to help them reuse earlier experience. However, such experience is diverse and evolving, so it remains unclear how memory systems organize it and thereby affect code agents. Existing benchmarks cannot answer this reliably because they lack either temporally valid hist",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-22"
+  },
+  {
+    "title": "Automated Multi-Agent Organization Design: From Architecture Search to Organizational Learning",
+    "link": "https://arxiv.org/abs/2610.27531",
+    "publishedAt": "Thu, 22 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.27531v1 Announce Type: new Abstract: Agentic system design is increasingly shifting from hand-crafted prompts and workflows toward automated search over agentic programs and interaction structures, with multi-agent systems receiving growing attention. Yet a central question remains unresolved: when does an automatically generated multi-agent structure exhibit a functionally meaningful d",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent",
+      "agentic",
+      "multi-agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-22"
+  },
+  {
+    "title": "Act on Your Behalf, Beyond Your Authorization: Benchmarking LLM Agent Authorization Alignment",
+    "link": "https://arxiv.org/abs/2610.27548",
+    "publishedAt": "Thu, 22 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.27548v2 Announce Type: new Abstract: When an LLM agent acts on behalf of a user, it is expected to act within the authorization scope the user grants. Existing agent evaluations largely measure task completion or harmful consequences and can therefore overlook actions that violate this delegation without producing conventional safety or privacy harms. We introduce AuthorizationBench, a ",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-22"
+  },
+  {
+    "title": "RaspAssistant as an Agentic Framework for Automating Adsorption Simulation Research in Porous Materials",
+    "link": "https://arxiv.org/abs/2610.27572",
+    "publishedAt": "Thu, 22 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.27572v1 Announce Type: new Abstract: Porous-material adsorption studies require coordinated structure preparation, force-field selection, simulation, validation, and interpretation, making end-to-end automation difficult. We test whether RaspAssistant, a hierarchical multi-agent framework, can carry an adsorption study from force-field preparation through validation and downstream separ",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent",
+      "agentic",
+      "multi-agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-22"
+  },
+  {
+    "title": "The Show-Up Attack: When Subagents Win Over Their Supervisor",
+    "link": "https://arxiv.org/abs/2610.27574",
+    "publishedAt": "Thu, 22 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.27574v1 Announce Type: new Abstract: Multi-agent systems are increasingly deployed to coordinate multiple large language model (LLM) agents. However, this also creates new attack surfaces: malicious agents may have chances to exploit the coordination. In this paper, we propose and study the \\textit{show-up attack}, in which a malicious subagent manipulates the supervisor into involving ",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent",
+      "multi-agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-22"
+  },
+  {
+    "title": "DuplexLedger: Benchmarking Transactional Memory in Full-Duplex Speech Agents",
+    "link": "https://arxiv.org/abs/2610.27581",
+    "publishedAt": "Thu, 22 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.27581v1 Announce Type: new Abstract: Full-duplex speech agents must update persistent memory while listening and speaking, yet it remains unclear which events should be stored, revised, or excluded. Existing benchmarks isolate interaction timing from memory outcomes, obscuring the state transitions behind a correct answer. We introduce DuplexLedger, a bilingual benchmark of 1,094 persis",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-22"
+  },
+  {
+    "title": "Beyond Experience: Knowledge-Guided Evolution for NPU Kernel Generation",
+    "link": "https://arxiv.org/abs/2610.27588",
+    "publishedAt": "Thu, 22 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.27588v1 Announce Type: new Abstract: LLM agents have become capable kernel engineers on mainstream GPU stacks, but they struggle on emerging accelerators such as Ascend NPUs, whose programming model is barely represented in pretraining data. Recent NPU agents address this gap largely through experience: they accumulate memory from their own generation and optimization trials and reuse i",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-22"
+  },
+  {
+    "title": "CUA-Recovery: Benchmarking Error Recovery in Long-Horizon Computer-Use Agents",
+    "link": "https://arxiv.org/abs/2610.27645",
+    "publishedAt": "Thu, 22 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.27645v1 Announce Type: new Abstract: As computer-use agents (CUAs) move to long-horizon workflows spanning multiple applications, undetected errors can silently corrupt persistent state and cause cascading failures in subsequent actions. Reliable error detection and recovery have become critical bottlenecks for building robust CUAs. However, existing benchmarks focus primarily on end-to",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-22"
+  },
+  {
+    "title": "Does Multi-Agent Collaboration Pay When Agents Serve Users? Testing Agent Scaling in Dual-Control Settings",
+    "link": "https://arxiv.org/abs/2610.27655",
+    "publishedAt": "Thu, 22 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.27655v1 Announce Type: new Abstract: Multi-agent systems (MAS) built from language models are deployed on the premise that collaboration beats a single-agent system (SAS), yet when it pays is unclear. The most systematic study to date gives a capability-saturation rule: coordination helps while the SAS is weak and hurts once it is strong, with the crossing near 45% single-agent accuracy",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent",
+      "multi-agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-22"
+  },
+  {
+    "title": "Reusing Multimodal Agents: Efficient Evaluation of Sound Designs in Games",
+    "link": "https://arxiv.org/abs/2610.27670",
+    "publishedAt": "Thu, 22 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.27670v1 Announce Type: new Abstract: This paper introduces a novel framework for efficiently evaluating in-game sound designs using multimodal learning and reinforcement learning. Sound design significantly influences gameplay and accessibility; however, objective evaluation methods, defined here as automated assessments based on agent performance rather than human ratings, often requir",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-22"
+  },
+  {
+    "title": "When Does Experience Memory Help Closed-Loop LLM Driving Agents? A Controlled Evaluation with Resampled Warmup Pools, Token-Matched Fillers, and Audited Baselines",
+    "link": "https://arxiv.org/abs/2610.27714",
+    "publishedAt": "Thu, 22 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.27714v1 Announce Type: new Abstract: When does experience memory help a closed-loop LLM driving agent? Published gains cannot say, because the two factors we find to matter most, which warmup experiences the pool contains and what any injected tokens do to the prompt, are controlled in none of them. We answer with a controlled evaluation on one audited HighwayEnv testbed (1Hz, gpt-4o-mi",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-22"
+  },
+  {
+    "title": "RITE: Evaluating End-to-End Resilience to Silent Tool Errors in E-Commerce Agentic Systems",
+    "link": "https://arxiv.org/abs/2610.27777",
+    "publishedAt": "Thu, 22 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.27777v1 Announce Type: new Abstract: Tool-using LLM agents increasingly answer e-commerce queries through multi-step tool interactions. The expected output of a tool call can shift between agent development and execution, allowing a plausible but incorrect value to be returned without an explicit failure signal. These silent errors may propagate through subsequent decisions into final a",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent",
+      "agentic"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-22"
+  },
+  {
+    "title": "GRADUS: Discovering and Recovering Agent Lessons from the Environment's Latent Syllabus",
+    "link": "https://arxiv.org/abs/2610.27781",
+    "publishedAt": "Thu, 22 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.27781v1 Announce Type: new Abstract: Training LLM agents for policy-constrained tool environments, such as an airline backend with booking, refund, and cancellation policies, requires tasks that exercise the environment's rules individually and in combination. Existing synthesis pipelines let a model propose tasks and retain only those it immediately solves, biasing training data toward",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-22"
+  },
+  {
+    "title": "Toward Agentic AI for the 6G Physical Layer: From Algorithm Discovery to Verified Baseband Silicon",
+    "link": "https://arxiv.org/abs/2610.27797",
+    "publishedAt": "Thu, 22 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.27797v1 Announce Type: new Abstract: 6G will be designed faster than it can be built: AI-driven search already proposes physical-layer algorithms at machine speed, while carrying a single one onto embedded baseband silicon remains specialist work. That silicon imposes hard memory and numeric limits, but also exposes cost structures a GPU lacks, and a design flow that never runs on the t",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent",
+      "agentic"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-22"
+  },
+  {
+    "title": "LatBridge: Efficient and Stable Model Replacement in Latent-Communication Multi-Agent Systems",
+    "link": "https://arxiv.org/abs/2610.27813",
+    "publishedAt": "Thu, 22 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.27813v1 Announce Type: new Abstract: Multi-agent systems rely on communication to complete tasks, and latent communication passes continuous representations to reduce text generation and re-encoding. However, multi-agent systems must reconfigure agent models, whereas existing latent-communication methods are built for fixed model combinations, so their interfaces may fail after replacem",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent",
+      "multi-agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-22"
+  },
+  {
+    "title": "COMPASS: Routing via Capability-Oriented Model Profiling with Adaptive Search, Selection, and Tool Use",
+    "link": "https://arxiv.org/abs/2610.27822",
+    "publishedAt": "Thu, 22 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.27822v1 Announce Type: new Abstract: LLM routing aims to select a capable model at low cost, but specialized routers can require updates as models and tasks change. We propose COMPASS, an agentic router in which an LLM follows a routing recipe, gathers performance and cost evidence through tools, and optionally inspects candidate answers before selecting a model. Our evaluations on LLMR",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent",
+      "agentic",
+      "tool use"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-22"
+  },
+  {
+    "title": "SAPD: Learning from Agent Experience without Environment Interaction",
+    "link": "https://arxiv.org/abs/2610.27847",
+    "publishedAt": "Thu, 22 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.27847v1 Announce Type: new Abstract: Scaling the training of Large Language Model (LLM) agents typically requires a large collection of executable environments, whose construction, maintenance, and operation constrain the expansion of training experience. Existing offline trajectories offer an opportunity to reuse interaction experience, yet effectively refining the current policy witho",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-22"
+  },
+  {
+    "title": "MMEnterprise-Bench: Evaluating Enterprise Agents over Evolving Multimodal Records",
+    "link": "https://arxiv.org/abs/2610.27911",
+    "publishedAt": "Thu, 22 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.27911v1 Announce Type: new Abstract: Enterprise agents answer questions over workplace records that evolve through team collaboration. As information is shared, corrected, and revised across documents, chats, and figures, multiple versions of the same information accumulate in the workspace. Reliable question answering therefore requires agents to reason over sufficient evidence, resolv",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-22"
+  },
+  {
+    "title": "Lost in Recovery: Demystifying Recovery Behavior of Computer-Use Agents via Goal-Oriented Action Replay",
+    "link": "https://arxiv.org/abs/2610.27954",
+    "publishedAt": "Thu, 22 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.27954v1 Announce Type: new Abstract: Recent advances in large (vision) language models have enabled computer-use agents that automate digital workflows via fine-grained keyboard and mouse operations. However, such agents remain fragile in long-horizon settings, where errors accumulate and executed actions leave unintended side effects, making the ability to recover from failures critica",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-22"
+  },
+  {
+    "title": "When Do Humans and Machines Truly Complement Each Other? Formal Conditions and Empirical Evidence for Human-AI Synergy",
+    "link": "https://arxiv.org/abs/2610.27965",
+    "publishedAt": "Thu, 22 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.27965v1 Announce Type: new Abstract: Can humans and artificial intelligence cooperate such that their combination yields greater accuracy than either agent alone? This result, termed \\emph{synergy} or \\emph{complementarity}, is notoriously difficult to achieve, even when both agents possess significant independent accuracy. In this paper, we present a formal framework to model human-AI ",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-22"
+  },
+  {
+    "title": "MaD-RSI: Model-as-Data for Recursive Self-Improvement of Agent Harnesses",
+    "link": "https://arxiv.org/abs/2610.28201",
+    "publishedAt": "Thu, 22 Oct 2026 00:00:00 -0400",
+    "excerpt": "arXiv:2610.28201v1 Announce Type: new Abstract: Recursive self-improvement (RSI) of agent harnesses has emerged as an effective approach to enhancing the capabilities of large language model (LLM) agents. By searching the harness space for a specific LLM on a given dataset, RSI can discover a harness tailored to the capabilities and behavioral characteristics of that model. However, such optimizat",
+    "source": "arXiv cs.AI",
+    "matchedKeywords": [
+      "agent",
+      "harness"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-22"
   }
 ]
