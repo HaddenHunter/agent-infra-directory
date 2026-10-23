@@ -12,8 +12,8 @@
   "updatedDate": "2026-10-04",
   "caveat": "Labelled beta/experimental at verification time.",
   "caveatZh": "核验时标注为 beta/experimental 阶段。",
-  "stars": 8762,
-  "starsAsOf": "2026-10-22",
+  "stars": 8775,
+  "starsAsOf": "2026-10-23",
   "language": "Rust",
-  "lastPush": "2026-10-22"
+  "lastPush": "2026-10-23"
 }
