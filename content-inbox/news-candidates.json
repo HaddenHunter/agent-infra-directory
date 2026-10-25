@@ -1,19 +1,5 @@
 [
   {
-    "title": "Plan-and-Patch: Diffusion Language Models for Agentic Planning",
-    "link": "https://arxiv.org/abs/2610.10786",
-    "publishedAt": "Fri, 09 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.10786v1 Announce Type: new Abstract: Planning is increasingly important for long-horizon agents, where successful execution requires coordinating subgoals, tool use, and intermediate outcomes over many steps. Yet assumptions made during planning may be invalidated by the environment, tools may return unexpected results, or actions may fail. Effective agents must therefore not only gener",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent",
-      "agentic",
-      "tool use"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-09"
-  },
-  {
     "title": "On the Clock: Towards Punctual and Productive Time-Budgeted AI Agents",
     "link": "https://arxiv.org/abs/2610.10833",
     "publishedAt": "Fri, 09 Oct 2026 00:00:00 -0400",
@@ -4951,5 +4937,17 @@
     ],
     "status": "needs-review",
     "fetchedAt": "2026-10-24"
+  },
+  {
+    "title": "Here are the top AI agents that can live in your text messages",
+    "link": "https://techcrunch.com/2026/10/24/all-the-ai-agents-that-can-live-in-your-text-messages/",
+    "publishedAt": "Sat, 24 Oct 2026 14:00:00 +0000",
+    "excerpt": "We created a list of the most notable AI agents that can live in your text messages, from general assistants to agents designed for families, travel, and work.",
+    "source": "TechCrunch AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-25"
   }
 ]
