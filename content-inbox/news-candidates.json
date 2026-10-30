@@ -1,66 +1,5 @@
 [
   {
-    "title": "CLEAT: Learning Value-Guided Clarification for Interactive Agents",
-    "link": "https://arxiv.org/abs/2610.12655",
-    "publishedAt": "Mon, 12 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.12655v1 Announce Type: new Abstract: LLM agents can execute increasingly complex tasks, but effective assistance also requires aligning their actions with goals and constraints that users may leave unstated. We study this problem as interactive intent alignment through clarification. Yet clarification is useful only when the agent can turn the answer into better decisions. As training c",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-12"
-  },
-  {
-    "title": "EvoBelief: Falsifiable World Models for Self-Improving LLM Agents",
-    "link": "https://arxiv.org/abs/2610.12789",
-    "publishedAt": "Mon, 12 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.12789v1 Announce Type: new Abstract: Self-evolving LLM agents typically improve how they act through accumulated experience, reflection, or skills. Yet even procedurally capable agents can fail when their beliefs about environment dynamics are incomplete, incorrect, or outdated. We study a complementary axis of self-evolution: evolving those beliefs during deployment. Such beliefs can s",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-12"
-  },
-  {
-    "title": "VEPA: Verified Evolving Formal Policy for Lifelong LLM Agent Guardrails",
-    "link": "https://arxiv.org/abs/2610.12813",
-    "publishedAt": "Mon, 12 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.12813v1 Announce Type: new Abstract: LLM agents increasingly operate over sensitive resources, such as private documents and mutable system states, which can create serious safety and security risks. Runtime guardrails should therefore make inspectable, reproducible, and deterministic allow or refuse decisions before potentially irreversible agent actions are executed. However, safety a",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-12"
-  },
-  {
-    "title": "Reward Hacking as a Transmissible Strategy in Multi-Agent Coding Systems",
-    "link": "https://arxiv.org/abs/2610.12822",
-    "publishedAt": "Mon, 12 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.12822v1 Announce Type: new Abstract: Multi-agent systems are increasingly used to solve coding tasks by coordinating agents that share code and plans. These agents are often optimized with reinforcement learning (RL) using automated evaluators, but bypassing evaluation can earn reward without producing a genuine solution. Prior work has largely treated reward hacking as a single-agent f",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent",
-      "multi-agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-12"
-  },
-  {
-    "title": "SmartSalesBench: A Resistance-Aware Multi-Turn Benchmark for Evaluating LLM Sales Agents",
-    "link": "https://arxiv.org/abs/2610.12975",
-    "publishedAt": "Mon, 12 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.12975v1 Announce Type: new Abstract: We present SmartSalesBench, the first multi-turn conversational benchmark explicitly designed to evaluate large language model (LLM) sales agents against psychologically grounded, resistant buyer personas. Existing task-oriented dialogue benchmarks assume cooperative users and measure task completion; SmartSalesBench inverts this assumption, placing ",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-12"
-  },
-  {
     "title": "Work2Skill: Capturing Human GUI Experience for Reusable Agent Skill Induction",
     "link": "https://arxiv.org/abs/2610.12984",
     "publishedAt": "Mon, 12 Oct 2026 00:00:00 -0400",
@@ -4948,5 +4887,67 @@
     ],
     "status": "needs-review",
     "fetchedAt": "2026-10-29"
+  },
+  {
+    "title": "How we detect frontier model misalignment",
+    "link": "https://openai.com/index/how-we-detect-frontier-model-misalignment",
+    "publishedAt": "Thu, 29 Oct 2026 09:00:00 GMT",
+    "excerpt": "OpenAI uses layered monitoring to detect frontier model misalignment and unauthorized agent behavior so responders can intervene before incidents escalate.",
+    "source": "OpenAI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-30"
+  },
+  {
+    "title": "Wabi, the AI agent that builds mini apps, now valued at $1.25B after latest round",
+    "link": "https://techcrunch.com/2026/10/29/wabi-the-ai-agent-that-builds-mini-apps-now-valued-at-1-25b-after-latest-round/",
+    "publishedAt": "Thu, 29 Oct 2026 14:35:26 +0000",
+    "excerpt": "On Thursday, AI app Wabi, now describing itself as a \"personal agent,\" said it has raised $55 million at a $1.25 billion valuation.",
+    "source": "TechCrunch AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-30"
+  },
+  {
+    "title": "Into the Omniverse: How Developers Turn Ideas Into Simulations With Frontier AI Agents",
+    "link": "https://blogs.nvidia.com/blog/developers-simulation-frontier-ai-agents/",
+    "publishedAt": "Thu, 29 Oct 2026 16:00:35 +0000",
+    "excerpt": "Turning a simulation idea into a working application means assembling assets, connecting physics and rendering, and checking that the scene behaves as intended. Developers are combining frontier AI models with NVIDIA Omniverse libraries to help carry out that work — building applications for exploring scenarios, investigating failures and improving designs. Developers direct AI agents through [&#8",
+    "source": "NVIDIA Blog",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-30"
+  },
+  {
+    "title": "Building a multiplayer game world with autonomous Fable-class models",
+    "link": "https://simonwillison.net/2026/Oct/29/how-i-built-the-most-ai-pilled-company-in-the-world/",
+    "publishedAt": "2026-10-29T17:00:26+00:00",
+    "excerpt": "<p><strong><a href=\"https://twitter.com/jsnnsa/status/2115623382721126826\">How I Built the Most AI-Pilled Company in the World</a></strong></p> Don't be put off by the clickbait headline, this piece by Jacob Sansbury describing how they are building <a href=\"https://spawn.co\">Spawn</a> is a fascinating exploration of the bleeding edge of what's possible with agentic engineering against frontier mo",
+    "source": "Simon Willison",
+    "matchedKeywords": [
+      "agent",
+      "agentic"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-30"
+  },
+  {
+    "title": "Quoting Ben Hylak",
+    "link": "https://simonwillison.net/2026/Oct/29/ben-hylak/",
+    "publishedAt": "2026-10-29T14:06:27+00:00",
+    "excerpt": "<blockquote cite=\"https://twitter.com/benhylak/status/2115172657910120740\"><p>every product i use should just be a headless mcp, that feeds into an agent, where i never have to think about anything underneath.</p> <p>except for our product, of course. </p> <p>in our product, customers love the ui and love us very much.</p> <p>we're special that way.</p></blockquote> <p class=\"cite\">&mdash; <a href",
+    "source": "Simon Willison",
+    "matchedKeywords": [
+      "agent",
+      "mcp"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-10-30"
   }
 ]
