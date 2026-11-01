@@ -1,17 +1,5 @@
 [
   {
-    "title": "Amp puts AI agents to work beyond code with OpenAI models",
-    "link": "https://openai.com/index/amp-beyond-coding",
-    "publishedAt": "Wed, 14 Oct 2026 12:00:00 GMT",
-    "excerpt": "See how Amp pushes the frontier of what agents can do with GPT-6 Astra, Ultrafast, GPT-Live-1, and Sign in with ChatGPT.",
-    "source": "OpenAI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-15"
-  },
-  {
     "title": "How Third Moment Research runs 10,000 agents for 36+ hours",
     "link": "https://openai.com/index/third-moment-research",
     "publishedAt": "Wed, 14 Oct 2026 07:00:00 GMT",
@@ -4933,5 +4921,17 @@
     ],
     "status": "needs-review",
     "fetchedAt": "2026-10-31"
+  },
+  {
+    "title": "datasette-llm 0.1a9",
+    "link": "https://simonwillison.net/2026/Oct/31/datasette-llm/",
+    "publishedAt": "2026-10-31T22:10:01+00:00",
+    "excerpt": "<p><strong>Release:</strong> <a href=\"https://github.com/datasette/datasette-llm/releases/tag/0.1a9\">datasette-llm 0.1a9</a></p> <p>I have some big upgrades to <a href=\"https://agent.datasette.io/\">Datasette Agent</a> in the pipeline, but in the meantime here's a tiny user experience improvement to the underlying <code>datasette-llm</code> plugin. </p> <p>It now picks up the default model used by ",
+    "source": "Simon Willison",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-11-01"
   }
 ]
