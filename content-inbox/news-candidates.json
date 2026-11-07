@@ -1,67 +1,5 @@
 [
   {
-    "title": "Reusing Multimodal Agents: Efficient Evaluation of Sound Designs in Games",
-    "link": "https://arxiv.org/abs/2610.27670",
-    "publishedAt": "Thu, 22 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.27670v1 Announce Type: new Abstract: This paper introduces a novel framework for efficiently evaluating in-game sound designs using multimodal learning and reinforcement learning. Sound design significantly influences gameplay and accessibility; however, objective evaluation methods, defined here as automated assessments based on agent performance rather than human ratings, often requir",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-22"
-  },
-  {
-    "title": "When Does Experience Memory Help Closed-Loop LLM Driving Agents? A Controlled Evaluation with Resampled Warmup Pools, Token-Matched Fillers, and Audited Baselines",
-    "link": "https://arxiv.org/abs/2610.27714",
-    "publishedAt": "Thu, 22 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.27714v1 Announce Type: new Abstract: When does experience memory help a closed-loop LLM driving agent? Published gains cannot say, because the two factors we find to matter most, which warmup experiences the pool contains and what any injected tokens do to the prompt, are controlled in none of them. We answer with a controlled evaluation on one audited HighwayEnv testbed (1Hz, gpt-4o-mi",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-22"
-  },
-  {
-    "title": "RITE: Evaluating End-to-End Resilience to Silent Tool Errors in E-Commerce Agentic Systems",
-    "link": "https://arxiv.org/abs/2610.27777",
-    "publishedAt": "Thu, 22 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.27777v1 Announce Type: new Abstract: Tool-using LLM agents increasingly answer e-commerce queries through multi-step tool interactions. The expected output of a tool call can shift between agent development and execution, allowing a plausible but incorrect value to be returned without an explicit failure signal. These silent errors may propagate through subsequent decisions into final a",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent",
-      "agentic"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-22"
-  },
-  {
-    "title": "GRADUS: Discovering and Recovering Agent Lessons from the Environment's Latent Syllabus",
-    "link": "https://arxiv.org/abs/2610.27781",
-    "publishedAt": "Thu, 22 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.27781v1 Announce Type: new Abstract: Training LLM agents for policy-constrained tool environments, such as an airline backend with booking, refund, and cancellation policies, requires tasks that exercise the environment's rules individually and in combination. Existing synthesis pipelines let a model propose tasks and retain only those it immediately solves, biasing training data toward",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-22"
-  },
-  {
-    "title": "Toward Agentic AI for the 6G Physical Layer: From Algorithm Discovery to Verified Baseband Silicon",
-    "link": "https://arxiv.org/abs/2610.27797",
-    "publishedAt": "Thu, 22 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.27797v1 Announce Type: new Abstract: 6G will be designed faster than it can be built: AI-driven search already proposes physical-layer algorithms at machine speed, while carrying a single one onto embedded baseband silicon remains specialist work. That silicon imposes hard memory and numeric limits, but also exposes cost structures a GPU lacks, and a design flow that never runs on the t",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent",
-      "agentic"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-22"
-  },
-  {
     "title": "LatBridge: Efficient and Stable Model Replacement in Latent-Communication Multi-Agent Systems",
     "link": "https://arxiv.org/abs/2610.27813",
     "publishedAt": "Thu, 22 Oct 2026 00:00:00 -0400",
@@ -4919,5 +4857,65 @@
     ],
     "status": "needs-review",
     "fetchedAt": "2026-11-06"
+  },
+  {
+    "title": "Measuring how AI agents handle everyday wet-lab science",
+    "link": "https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science",
+    "publishedAt": "Fri, 06 Nov 2026 00:00:00 GMT",
+    "excerpt": "OpenAI introduces BioBasicsBench, a 100-task benchmark measuring how well AI agents interpret raw experimental data and handle everyday wet-lab science.",
+    "source": "OpenAI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-11-07"
+  },
+  {
+    "title": "Patch the Planet: global response coordination as agents uncover critical vulnerabilities",
+    "link": "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities",
+    "publishedAt": "Wed, 21 Oct 2026 07:00:00 GMT",
+    "excerpt": "Patch the Planet connects security researchers, maintainers, and incident responders to help address critical vulnerabilities across open source.",
+    "source": "OpenAI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-11-07"
+  },
+  {
+    "title": "Using thousands of AI agents to uncover new leads in biological data",
+    "link": "https://openai.com/index/scaling-ai-research-for-complex-biological-data",
+    "publishedAt": "Wed, 21 Oct 2026 04:50:00 GMT",
+    "excerpt": "See how OpenAI, PerturbAI, and Scripps Research used distributed AI agents to uncover promising research leads in data from millions of brain cells.",
+    "source": "OpenAI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-11-07"
+  },
+  {
+    "title": "Meta introduces Spaces, a new way to collaborate with your Muse agent",
+    "link": "https://techcrunch.com/2026/11/06/meta-introduces-spaces-a-new-way-to-collaborate-with-your-muse-agent/",
+    "publishedAt": "Fri, 06 Nov 2026 18:44:20 +0000",
+    "excerpt": "Meta's Muse agents continue to get new features and integrations. Spaces promises to be a new way to interact with the AI helpers.",
+    "source": "TechCrunch AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-11-07"
+  },
+  {
+    "title": "Quoting Nilay Patel",
+    "link": "https://simonwillison.net/2026/Nov/6/nilay-patel/",
+    "publishedAt": "2026-11-06T17:13:12+00:00",
+    "excerpt": "<blockquote cite=\"https://www.youtube.com/watch?v=-U4thshDTL8&amp;t=422s\"><p>The products aren't good enough to sell people on the costs.</p> <p>You cannot tell people that you have to listen to the whine of a data center in their backyard for AI overviews and some of the most hilarious deep fake slop in history.</p> <p>It's not worth it. It just isn't worth it to anyone. And agents aren't real an",
+    "source": "Simon Willison",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-11-07"
   }
 ]
