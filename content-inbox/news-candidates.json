@@ -1,377 +1,5 @@
 [
   {
-    "title": "LatBridge: Efficient and Stable Model Replacement in Latent-Communication Multi-Agent Systems",
-    "link": "https://arxiv.org/abs/2610.27813",
-    "publishedAt": "Thu, 22 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.27813v1 Announce Type: new Abstract: Multi-agent systems rely on communication to complete tasks, and latent communication passes continuous representations to reduce text generation and re-encoding. However, multi-agent systems must reconfigure agent models, whereas existing latent-communication methods are built for fixed model combinations, so their interfaces may fail after replacem",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent",
-      "multi-agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-22"
-  },
-  {
-    "title": "COMPASS: Routing via Capability-Oriented Model Profiling with Adaptive Search, Selection, and Tool Use",
-    "link": "https://arxiv.org/abs/2610.27822",
-    "publishedAt": "Thu, 22 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.27822v1 Announce Type: new Abstract: LLM routing aims to select a capable model at low cost, but specialized routers can require updates as models and tasks change. We propose COMPASS, an agentic router in which an LLM follows a routing recipe, gathers performance and cost evidence through tools, and optionally inspects candidate answers before selecting a model. Our evaluations on LLMR",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent",
-      "agentic",
-      "tool use"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-22"
-  },
-  {
-    "title": "SAPD: Learning from Agent Experience without Environment Interaction",
-    "link": "https://arxiv.org/abs/2610.27847",
-    "publishedAt": "Thu, 22 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.27847v1 Announce Type: new Abstract: Scaling the training of Large Language Model (LLM) agents typically requires a large collection of executable environments, whose construction, maintenance, and operation constrain the expansion of training experience. Existing offline trajectories offer an opportunity to reuse interaction experience, yet effectively refining the current policy witho",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-22"
-  },
-  {
-    "title": "MMEnterprise-Bench: Evaluating Enterprise Agents over Evolving Multimodal Records",
-    "link": "https://arxiv.org/abs/2610.27911",
-    "publishedAt": "Thu, 22 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.27911v1 Announce Type: new Abstract: Enterprise agents answer questions over workplace records that evolve through team collaboration. As information is shared, corrected, and revised across documents, chats, and figures, multiple versions of the same information accumulate in the workspace. Reliable question answering therefore requires agents to reason over sufficient evidence, resolv",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-22"
-  },
-  {
-    "title": "Lost in Recovery: Demystifying Recovery Behavior of Computer-Use Agents via Goal-Oriented Action Replay",
-    "link": "https://arxiv.org/abs/2610.27954",
-    "publishedAt": "Thu, 22 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.27954v1 Announce Type: new Abstract: Recent advances in large (vision) language models have enabled computer-use agents that automate digital workflows via fine-grained keyboard and mouse operations. However, such agents remain fragile in long-horizon settings, where errors accumulate and executed actions leave unintended side effects, making the ability to recover from failures critica",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-22"
-  },
-  {
-    "title": "When Do Humans and Machines Truly Complement Each Other? Formal Conditions and Empirical Evidence for Human-AI Synergy",
-    "link": "https://arxiv.org/abs/2610.27965",
-    "publishedAt": "Thu, 22 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.27965v1 Announce Type: new Abstract: Can humans and artificial intelligence cooperate such that their combination yields greater accuracy than either agent alone? This result, termed \\emph{synergy} or \\emph{complementarity}, is notoriously difficult to achieve, even when both agents possess significant independent accuracy. In this paper, we present a formal framework to model human-AI ",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-22"
-  },
-  {
-    "title": "MaD-RSI: Model-as-Data for Recursive Self-Improvement of Agent Harnesses",
-    "link": "https://arxiv.org/abs/2610.28201",
-    "publishedAt": "Thu, 22 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.28201v1 Announce Type: new Abstract: Recursive self-improvement (RSI) of agent harnesses has emerged as an effective approach to enhancing the capabilities of large language model (LLM) agents. By searching the harness space for a specific LLM on a given dataset, RSI can discover a harness tailored to the capabilities and behavioral characteristics of that model. However, such optimizat",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent",
-      "harness"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-22"
-  },
-  {
-    "title": "Left alone with nothing to do, AI agents started playing",
-    "link": "https://techcrunch.com/2026/10/22/left-alone-with-nothing-to-do-ai-agents-started-playing/",
-    "publishedAt": "Fri, 23 Oct 2026 00:45:37 +0000",
-    "excerpt": "MIT researchers marooned 13 AIs on a virtual island, and they responded by inventing games, mourning a lost ring and, eventually, getting better at their jobs.",
-    "source": "TechCrunch AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-23"
-  },
-  {
-    "title": "1Password launches a way for AI agents to log in on your behalf without seeing your password",
-    "link": "https://techcrunch.com/2026/10/22/1password-launches-a-way-for-ai-agents-to-log-in-on-your-behalf-without-seeing-your-password/",
-    "publishedAt": "Thu, 22 Oct 2026 19:07:09 +0000",
-    "excerpt": "The new feature allows agents to log into a customer's personal accounts while still protecting the private credentials that secure those accounts.",
-    "source": "TechCrunch AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-23"
-  },
-  {
-    "title": "Chinese hackers spied on thousands of companies after breaching IT giant ConnectWise",
-    "link": "https://techcrunch.com/2026/10/22/chinese-hackers-spied-on-thousands-of-companies-after-breaching-it-giant-connectwise/",
-    "publishedAt": "Thu, 22 Oct 2026 16:47:17 +0000",
-    "excerpt": "Microsoft points the blame for ConnectWise's breach at a China-aligned hacker, which relied on AI agents to rapidly hack into thousands of its customers.",
-    "source": "TechCrunch AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-23"
-  },
-  {
-    "title": "Uber puts all 30,000 employees on ChatGPT Work",
-    "link": "https://techcrunch.com/2026/10/22/uber-puts-all-30000-employees-on-chatgpt-work/",
-    "publishedAt": "Thu, 22 Oct 2026 16:00:00 +0000",
-    "excerpt": "The ride-share giant previously deployed a much smaller pilot for ChatGPT Work but is now taking the enterprise agent company-wide.",
-    "source": "TechCrunch AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-23"
-  },
-  {
-    "title": "Spotify&#8217;s current AI bet is about being the music service that agents choose",
-    "link": "https://techcrunch.com/2026/10/22/spotifys-current-ai-bet-is-about-being-the-music-service-that-agents-choose/",
-    "publishedAt": "Thu, 22 Oct 2026 15:03:58 +0000",
-    "excerpt": "Spotify co-CEO Gustav Söderström explains why the rise of AI agents could be good news for the music service.",
-    "source": "TechCrunch AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-23"
-  },
-  {
-    "title": "Claude Duet app is Anthropic&#8217;s bet on agents",
-    "link": "https://techcrunch.com/2026/10/22/claude-duet-app-is-anthropics-bet-on-agents/",
-    "publishedAt": "Thu, 22 Oct 2026 13:53:26 +0000",
-    "excerpt": "Claude Duet is available through waitlist for Pro and Max plan users.",
-    "source": "TechCrunch AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-23"
-  },
-  {
-    "title": "Discord now formats Markdown previews right",
-    "link": "https://www.theverge.com/news/1017012/discord-markdown-previews-organize-servers-channels",
-    "publishedAt": "2026-10-22T14:58:19-04:00",
-    "excerpt": "Discord's latest update released today has a big improvement for Markdown previews: they should now render correctly instead of with \"a bunch of symbols,\" according to the company. LLMs and AI agents often rely on Markdown files for instructions and context, so these improved previews could be helpful for people sharing information about AI projects [&#8230;]",
-    "source": "The Verge AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-23"
-  },
-  {
-    "title": "In Meta’s version of the future, I’ll have my Muse call your Muse",
-    "link": "https://www.theverge.com/tech/1016905/meta-earnings-fall-2026-muse-network",
-    "publishedAt": "2026-10-22T14:15:00-04:00",
-    "excerpt": "Mark Zuckerberg is barrelling toward a future in which an autonomous network of AI agents will run our lives - shopping for us, working for us, talking to other people's AI agents for us. Are humans ready for this very specific and unrelenting vision of a life in which we communicate primarily through bot proxies? [&#8230;]",
-    "source": "The Verge AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-23"
-  },
-  {
-    "title": "Donating Agent Skills to the Agentic AI Foundation",
-    "link": "https://simonwillison.net/2026/Oct/22/donating-agent-skills/",
-    "publishedAt": "2026-10-22T18:09:56+00:00",
-    "excerpt": "<p><strong><a href=\"https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation\">Donating Agent Skills to the Agentic AI Foundation</a></strong></p> News today from Anthropic:</p> <blockquote> <p>We’re committed to keeping Agent Skills open, community-driven, and vendor-neutral. Today, we are donating the standard to the Agentic AI Foundation (AAIF) under the Linux Foundation",
-    "source": "Simon Willison",
-    "matchedKeywords": [
-      "agent",
-      "agentic"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-23"
-  },
-  {
-    "title": "Scaling in Games: Continued Pre-Training For Embodied Agents In Diverse Virtual Worlds",
-    "link": "https://arxiv.org/abs/2610.28698",
-    "publishedAt": "Fri, 23 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.28698v1 Announce Type: new Abstract: Scaling data, diversity and model capacity has improved embodied learning in physical environments, where diverse experiences remain grounded in shared physical laws. Whether these gains extend to virtual worlds with different visual styles, dynamics, controls, and objectives remains unclear. We investigate this question through a controlled study of",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-23"
-  },
-  {
-    "title": "Automating ML for Science: Can Frontier Agents Climb Scientific Hills in the Wild?",
-    "link": "https://arxiv.org/abs/2610.28763",
-    "publishedAt": "Fri, 23 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.28763v1 Announce Type: new Abstract: Frontier coding agents are increasingly framed as end-to-end automated researchers, and ML for science offers a demanding test of that promise: improving a scientific model often requires domain insight beyond routine ML engineering. We introduce Agent4Sci, a long-horizon testbed for measuring how far today's agents can improve the published best mod",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-23"
-  },
-  {
-    "title": "Forging More Tasks into Better Harnesses: Agentic Harness Evolution via Successive Scale Racing",
-    "link": "https://arxiv.org/abs/2610.28815",
-    "publishedAt": "Fri, 23 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.28815v1 Announce Type: new Abstract: Agentic harness evolution optimizes an agent's instructions, tools, and control flow by using its task execution experiences as evolving evidence. While more evolution tasks should intuitively improve performance, our preliminary study reveals a paradoxical failure mode: the performance of existing methods degrades as the task pool expands. Our furth",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent",
-      "agentic",
-      "harness"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-23"
-  },
-  {
-    "title": "Fig: Automated Multiagent Behavior Elicitor",
-    "link": "https://arxiv.org/abs/2610.28891",
-    "publishedAt": "Fri, 23 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.28891v1 Announce Type: new Abstract: Many social evaluations for multiagent systems study behaviors as they emerge from environments instead of systematically intervening in the environment to elicit such behaviors. We introduce Fig (Finding Interactions in Games), an agentic system that performs targeted elicitation interventions on game environments. It takes a natural language behavi",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent",
-      "agentic"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-23"
-  },
-  {
-    "title": "Hidden Messages Between Diffusion Language Model Agents: Causal Evidence for Latent Communication",
-    "link": "https://arxiv.org/abs/2610.28905",
-    "publishedAt": "Fri, 23 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.28905v1 Announce Type: new Abstract: Diffusion language models form answers through a sequence of revisable continuous states, but multi-agent systems usually discard those states and make agents communicate only after decoding text. We ask whether one independent diffusion trajectory can pass a compact hidden message into another and, crucially, whether the receiver uses what that mess",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent",
-      "multi-agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-23"
-  },
-  {
-    "title": "DiffResearch: Accelerating Deep Research with Diffusion Language Models",
-    "link": "https://arxiv.org/abs/2610.28909",
-    "publishedAt": "Fri, 23 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.28909v1 Announce Type: new Abstract: Deep research systems iteratively plan, gather evidence, synthesize, and revise, making end-to-end latency a key bottleneck for interactive use. Almost all production systems are built on autoregressive (AR) language models and inherit left-to-right decoding in planning and long-form writing. We present DiffResearch, an open multi-agent deep research",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent",
-      "multi-agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-23"
-  },
-  {
-    "title": "D-Skill: Distilling Teacher Knowledge through Agent Skills",
-    "link": "https://arxiv.org/abs/2610.28914",
-    "publishedAt": "Fri, 23 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.28914v1 Announce Type: new Abstract: Frontier language-model agents excel at complex tasks, but high inference costs make transferring their capabilities to smaller models essential. Traditional knowledge distillation achieves this through parameter updates, requiring access to the student's weights and additional training compute while encoding the transferred knowledge implicitly in t",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-23"
-  },
-  {
-    "title": "Back Up Before You Regret: Measuring Backup Awareness and Automating Backup in Coding Agents",
-    "link": "https://arxiv.org/abs/2610.28934",
-    "publishedAt": "Fri, 23 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.28934v1 Announce Type: new Abstract: Coding agents now complete tasks autonomously, modifying real-world state such as artifacts, software environments, and configurations along the way. Yet they show limited backup awareness: recognizing that an action will modify state that may later be needed, and preserving it beforehand. To evaluate backup awareness, we introduce RegretBench, a ben",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-23"
-  },
-  {
-    "title": "Self-Improving Agents with World Model Predictive Paths",
-    "link": "https://arxiv.org/abs/2610.28945",
-    "publishedAt": "Fri, 23 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.28945v1 Announce Type: new Abstract: Large language model (LLM) agents are increasingly expected to interact with environments and improve their decisions during deployment. However, how anticipating future outcomes and drawing on accumulated interaction experience can jointly support decision-making remains underexplored. We propose a test-time framework, inspired by Model Predictive P",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-23"
-  },
-  {
-    "title": "Behavior Beyond Text: Evaluating Refusal Transfer Failure in LLM Agents",
-    "link": "https://arxiv.org/abs/2610.28982",
-    "publishedAt": "Fri, 23 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.28982v1 Announce Type: new Abstract: While large language models are increasingly deployed as tool-calling agents, their safety evaluations still focus primarily on their ability to refuse harmful requests in text. We investigate whether the refusal behavior in text transfers to tool use. We construct a benchmark of 2,304 prompts across four domains, consisting of matched triplets that ",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent",
-      "tool use"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-23"
-  },
-  {
-    "title": "PerMIT: Securing Persistent Memory for LLM Agents via Machine-Checked Integrity Theorems and Scalable Community Trust",
-    "link": "https://arxiv.org/abs/2610.28987",
-    "publishedAt": "Fri, 23 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.28987v1 Announce Type: new Abstract: Persistent memory is a largely undefended surface for injection and poisoning, and the same risk limits memory sharing among agents. We present PerMIT, a memory architecture with provable integrity guarantees under an explicit trust assumption: only user-typed inputs and values confirmed at a gate are trusted. PerMIT mediates the release and use of u",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-23"
-  },
-  {
-    "title": "AgentPolicyForge: From Executable Environments to Policy Benchmarks and Adaptive Guards",
-    "link": "https://arxiv.org/abs/2610.28989",
-    "publishedAt": "Fri, 23 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.28989v1 Announce Type: new Abstract: Customized agent deployments define policies over tools, resources, and execution conditions. Providing these policies in the task agent's prompt does not reliably prevent violations. Training a guard requires examples of tool calls that comply with or violate those policies. We introduce AgentPolicyForge, a framework that uses executable environment",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-23"
-  },
-  {
-    "title": "An Evidence-Driven Multi-Agent Compound AI System for Head and Neck Proton Radiotherapy Planning",
-    "link": "https://arxiv.org/abs/2610.29010",
-    "publishedAt": "Fri, 23 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.29010v1 Announce Type: new Abstract: Radiation treatment planning requires balancing competing objectives to satisfy clinical criteria while accommodating physicians' preferences. This study aims to develop an evidence-driven, multi-agent compound AI system that integrates DRL-based automated treatment planning with LLM-based conversational plan refinement for proton PBS therapy. A poli",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent",
-      "multi-agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-23"
-  },
-  {
-    "title": "GenXR-Bench: Benchmarking Coding Agents for Interactive XR Development",
-    "link": "https://arxiv.org/abs/2610.29014",
-    "publishedAt": "Fri, 23 Oct 2026 00:00:00 -0400",
-    "excerpt": "arXiv:2610.29014v1 Announce Type: new Abstract: Coding agents are rapidly advancing from single-file generation to long-horizon repository-scale engineering, yet the evaluation of their capabilities to author interactive extended reality (XR) applications remains an open challenge. Unlike traditional software, XR applications operate within dynamic 3D physical environments where runtime robustness",
-    "source": "arXiv cs.AI",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-10-23"
-  },
-  {
     "title": "Inheritance as an Admission Test for LLM Prompt Merge Operators",
     "link": "https://arxiv.org/abs/2610.29023",
     "publishedAt": "Fri, 23 Oct 2026 00:00:00 -0400",
@@ -4917,5 +4545,368 @@
     ],
     "status": "needs-review",
     "fetchedAt": "2026-11-07"
+  },
+  {
+    "title": "Here’s the full text of Jensen Huang’s memo to Nvidia",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/1029595/full-text-jensen-huang-affair-memo-nvidia",
+    "publishedAt": "2026-11-08T17:54:50-05:00",
+    "excerpt": "On Sunday, Nvidia announced it was launching an investigation into CEO Jensen Huang's relationship with Alice Huang, an AI executive and agent of the Chinese government. In addition to the Board of Directors announcing the investigation, Huang sent a memo to Nvidia employees acknowledging the affair. You can read the full text below. To my [&#8230;]",
+    "source": "The Verge AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-11-09"
+  },
+  {
+    "title": "Apple is racing to make Siri more agentic",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/1029552/apple-siri-ai-agentic",
+    "publishedAt": "2026-11-08T14:18:19-05:00",
+    "excerpt": "Bloomberg's Mark Gurman says CEO John Ternus is pressuring AI czar Craig Federighi to accelerate the Siri roadmap and deliver a powerful AI agent that can compete with OpenAI's Dots or Meta's Muse. While Federighi has delivered a functional version of Siri AI on an incredibly short timeline, the company has no illusions that it's [&#8230;]",
+    "source": "The Verge AI",
+    "matchedKeywords": [
+      "agent",
+      "agentic"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-11-09"
+  },
+  {
+    "title": "Korea’s AI Ecosystem Advances and Secures Agentic AI With NVIDIA",
+    "link": "https://blogs.nvidia.com/blog/korea-secure-agentic-ai/",
+    "publishedAt": "Mon, 09 Nov 2026 05:00:39 +0000",
+    "excerpt": "As AI agents take on more work, they need capable open models and security that advances alongside them. Hyundai Motor Group is exploring NVIDIA NemoClaw blueprints and the NVIDIA OpenShell runtime, while AIM Intelligence is integrating its Starfort platform with NVIDIA OpenShell to support secure AI agents for employee productivity and enterprise workflows. A key [&#8230;]",
+    "source": "NVIDIA Blog",
+    "matchedKeywords": [
+      "agent",
+      "agentic"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-11-09"
+  },
+  {
+    "title": "From Chips to Skills, NVIDIA and Korea Expand Sovereign AI Collaboration",
+    "link": "https://blogs.nvidia.com/blog/korea-sovereign-ai-collaboration/",
+    "publishedAt": "Mon, 09 Nov 2026 05:00:04 +0000",
+    "excerpt": "NVIDIA and Korea’s Ministry of Science and ICT (MSIT) are expanding their collaboration across the country’s sovereign AI ecosystem, from AI semiconductors and data center infrastructure to talent, startups, models, agents and security. The collaboration lays the groundwork for Korean NPU and XPU companies to explore participation in the NVIDIA NVLink Fusion ecosystem, and includes [&#8230;]",
+    "source": "NVIDIA Blog",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-11-09"
+  },
+  {
+    "title": "Hide your slop PR descriptions behind <details><summary>",
+    "link": "https://simonwillison.net/2026/Nov/9/details-summary/",
+    "publishedAt": "2026-11-09T04:25:05+00:00",
+    "excerpt": "<p>Most of the changes I make to my projects these days come in the form of PRs opened for me by Claude Code or Codex. The PR is my unit of work - I use them to bundle commits together, iterating on them until a feature is complete, document decisions and then merge the finished result. Today's coding agents are great at writing PR descriptions.</p> <h4 id=\"they-re-too-good-at-describing-the-work\"",
+    "source": "Simon Willison",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-11-09"
+  },
+  {
+    "title": "Show HN: Glassbrain – Read your agent's brain, know what your agent knows",
+    "link": "https://github.com/voidixyn/glassbrain",
+    "publishedAt": "Mon, 09 Nov 2026 09:22:54 +0000",
+    "excerpt": "Article URL: https://github.com/voidixyn/glassbrain Comments URL: https://news.ycombinator.com/item?id=50423154 Points: 1 # Comments: 1",
+    "source": "Hacker News (agent)",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-11-09"
+  },
+  {
+    "title": "ChatGPT Desktop forwards your SSH agent to remote machines",
+    "link": "https://news.ycombinator.com/item?id=50422628",
+    "publishedAt": "Mon, 09 Nov 2026 08:17:49 +0000",
+    "excerpt": "The agent running on a remote machine can authenticate using your local SSH credentials. That means it can push to your private repos on GitHub, for example. Proof: https://github.com/openai/codex/pull/28131#discussion_r3410013180 Comments URL: https://news.ycombinator.com/item?id=50422628 Points: 6 # Comments: 1",
+    "source": "Hacker News (agent)",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-11-09"
+  },
+  {
+    "title": "My AI agent archived 53 of its own skills during a maintenance run",
+    "link": "https://www.dhawalshah.net/article/ai-agent-governance/",
+    "publishedAt": "Mon, 09 Nov 2026 06:55:24 +0000",
+    "excerpt": "Article URL: https://www.dhawalshah.net/article/ai-agent-governance/ Comments URL: https://news.ycombinator.com/item?id=50421997 Points: 2 # Comments: 0",
+    "source": "Hacker News (agent)",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-11-09"
+  },
+  {
+    "title": "Best-Effort Extent-Same, a btrfs dedupe agent",
+    "link": "https://github.com/Zygo/bees",
+    "publishedAt": "Mon, 09 Nov 2026 04:11:31 +0000",
+    "excerpt": "Article URL: https://github.com/Zygo/bees Comments URL: https://news.ycombinator.com/item?id=50420981 Points: 2 # Comments: 0",
+    "source": "Hacker News (agent)",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-11-09"
+  },
+  {
+    "title": "AML Cycle 2 results are approaching: What should agent memory benchmarks reveal?",
+    "link": "https://twitter.com/AgentMemoryL/status/2118704959344493029",
+    "publishedAt": "Mon, 09 Nov 2026 03:34:59 +0000",
+    "excerpt": "Article URL: https://twitter.com/AgentMemoryL/status/2118704959344493029 Comments URL: https://news.ycombinator.com/item?id=50420732 Points: 4 # Comments: 0",
+    "source": "Hacker News (agent)",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-11-09"
+  },
+  {
+    "title": "Astryx: An open source design system that's customizable and agent ready",
+    "link": "https://github.com/meta/astryx",
+    "publishedAt": "Sun, 08 Nov 2026 23:27:30 +0000",
+    "excerpt": "Article URL: https://github.com/meta/astryx Comments URL: https://news.ycombinator.com/item?id=50418809 Points: 3 # Comments: 1",
+    "source": "Hacker News (agent)",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-11-09"
+  },
+  {
+    "title": "Harness Leaderboard Which coding-agent harness should you run your open model in",
+    "link": "https://huggingface.co/spaces/joelniklaus/harness-leaderboard",
+    "publishedAt": "Sun, 08 Nov 2026 22:28:48 +0000",
+    "excerpt": "Article URL: https://huggingface.co/spaces/joelniklaus/harness-leaderboard Comments URL: https://news.ycombinator.com/item?id=50418101 Points: 1 # Comments: 0",
+    "source": "Hacker News (agent)",
+    "matchedKeywords": [
+      "agent",
+      "harness"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-11-09"
+  },
+  {
+    "title": "My Local Coding Agent",
+    "link": "https://hdembinski.github.io/posts/coding_agent.html",
+    "publishedAt": "Sun, 08 Nov 2026 19:12:20 +0000",
+    "excerpt": "Article URL: https://hdembinski.github.io/posts/coding_agent.html Comments URL: https://news.ycombinator.com/item?id=50416082 Points: 1 # Comments: 0",
+    "source": "Hacker News (agent)",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-11-09"
+  },
+  {
+    "title": "Show HN: Email-like interface to review, decide, and annotate agent work",
+    "link": "https://plannotator.ai/inbox/",
+    "publishedAt": "Sun, 08 Nov 2026 17:57:01 +0000",
+    "excerpt": "There is some recent discourse about what a \"better\" interface for humans managing agents looks like. Email/inboxes have come up, and it's reinforcing the premise of thing i've been building. e.g. - https://x.com/brian_armstrong/status/2119112609223827547 - https://x.com/rough__sea/status/2119288646671155217?a=KRzp4CnuV6SijzvCTUw&s=20 This isn't 'another ADE', this is a side-car type of experience",
+    "source": "Hacker News (agent)",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-11-09"
+  },
+  {
+    "title": "Designing an Always-On Agent",
+    "link": "https://rubriclabs.com/blog/always-on-agents",
+    "publishedAt": "Sun, 08 Nov 2026 17:51:44 +0000",
+    "excerpt": "Article URL: https://rubriclabs.com/blog/always-on-agents Comments URL: https://news.ycombinator.com/item?id=50415441 Points: 2 # Comments: 0",
+    "source": "Hacker News (agent)",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-11-09"
+  },
+  {
+    "title": "Show HN: psi, a 6.4 MB cross-platform portable coding agent in ANSI C & Lua",
+    "link": "https://psicode.ai/",
+    "publishedAt": "Sun, 08 Nov 2026 17:48:19 +0000",
+    "excerpt": "Article URL: https://psicode.ai/ Comments URL: https://news.ycombinator.com/item?id=50415406 Points: 4 # Comments: 0",
+    "source": "Hacker News (agent)",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-11-09"
+  },
+  {
+    "title": "I gave an agent a lakehouse and control of my garden",
+    "link": "https://jatorre.github.io/garden/",
+    "publishedAt": "Sun, 08 Nov 2026 17:19:06 +0000",
+    "excerpt": "Article URL: https://jatorre.github.io/garden/ Comments URL: https://news.ycombinator.com/item?id=50415162 Points: 1 # Comments: 0",
+    "source": "Hacker News (agent)",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-11-09"
+  },
+  {
+    "title": "We deleted almost all our agent code, and other lessons from 100k PRs",
+    "link": "https://lovable.dev/blog/how-we-built-lovable-and-why-we-keep-rebuilding-it",
+    "publishedAt": "Sun, 08 Nov 2026 16:09:37 +0000",
+    "excerpt": "Article URL: https://lovable.dev/blog/how-we-built-lovable-and-why-we-keep-rebuilding-it Comments URL: https://news.ycombinator.com/item?id=50414445 Points: 13 # Comments: 2",
+    "source": "Hacker News (agent)",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-11-09"
+  },
+  {
+    "title": "I Just Deleted All My Agent Skills",
+    "link": "https://philippdubach.com/posts/i-just-deleted-all-my-agent-skills/",
+    "publishedAt": "Sun, 08 Nov 2026 15:04:51 +0000",
+    "excerpt": "Article URL: https://philippdubach.com/posts/i-just-deleted-all-my-agent-skills/ Comments URL: https://news.ycombinator.com/item?id=50413912 Points: 8 # Comments: 0",
+    "source": "Hacker News (agent)",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-11-09"
+  },
+  {
+    "title": "One step agents own end to end: how agent.ceo fixes its own bugs",
+    "link": "https://onomos.ai/articles/how-agent-ceo-fixes-its-own-bugs",
+    "publishedAt": "Sun, 08 Nov 2026 12:37:34 +0000",
+    "excerpt": "Article URL: https://onomos.ai/articles/how-agent-ceo-fixes-its-own-bugs Comments URL: https://news.ycombinator.com/item?id=50412737 Points: 1 # Comments: 0",
+    "source": "Hacker News (agent)",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-11-09"
+  },
+  {
+    "title": "Four Bugs, One Day: What a Self-Policing Agent Org Looks Like When It Works",
+    "link": "https://agent.ceo/blog/2026-06-10-self-policing-agent-org-four-bugs-one-day",
+    "publishedAt": "Sun, 08 Nov 2026 12:35:14 +0000",
+    "excerpt": "Article URL: https://agent.ceo/blog/2026-06-10-self-policing-agent-org-four-bugs-one-day Comments URL: https://news.ycombinator.com/item?id=50412720 Points: 2 # Comments: 0",
+    "source": "Hacker News (agent)",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-11-09"
+  },
+  {
+    "title": "Why Your AI Agent Can't Solve CTF Challenges",
+    "link": "https://h4c.team/en/posts/97",
+    "publishedAt": "Sun, 08 Nov 2026 12:25:54 +0000",
+    "excerpt": "Article URL: https://h4c.team/en/posts/97 Comments URL: https://news.ycombinator.com/item?id=50412675 Points: 1 # Comments: 0",
+    "source": "Hacker News (agent)",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-11-09"
+  },
+  {
+    "title": "Show HN: RepoMagpie – your coding agent remembers the repos you've tried",
+    "link": "https://github.com/Varshavia/RepoMagpie",
+    "publishedAt": "Sun, 08 Nov 2026 10:13:24 +0000",
+    "excerpt": "While building projects, I kept searching the internet for resources, repos and skill sets. One day I noticed something: why isn’t there a single repo that collects all of these in one place and makes them usable? That’s why I built this. Comments URL: https://news.ycombinator.com/item?id=50411918 Points: 1 # Comments: 0",
+    "source": "Hacker News (agent)",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-11-09"
+  },
+  {
+    "title": "Agent memory needs its OpenTelemetry moment",
+    "link": "https://www.lorekit.io/blog/open-agent-memory-format",
+    "publishedAt": "Sun, 08 Nov 2026 08:40:23 +0000",
+    "excerpt": "Article URL: https://www.lorekit.io/blog/open-agent-memory-format Comments URL: https://news.ycombinator.com/item?id=50411467 Points: 182 # Comments: 107",
+    "source": "Hacker News (agent)",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-11-09"
+  },
+  {
+    "title": "Show HN: Ramen – an AI agent that has to earn its own rent",
+    "link": "https://usdt-kit-production.up.railway.app/ramen",
+    "publishedAt": "Sun, 08 Nov 2026 07:38:55 +0000",
+    "excerpt": "Article URL: https://usdt-kit-production.up.railway.app/ramen Comments URL: https://news.ycombinator.com/item?id=50411182 Points: 1 # Comments: 1",
+    "source": "Hacker News (agent)",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-11-09"
+  },
+  {
+    "title": "Show HN: We Build Shareable Context Layer for Agent Teams",
+    "link": "https://github.com/volcengine/OpenViking",
+    "publishedAt": "Sun, 08 Nov 2026 04:44:14 +0000",
+    "excerpt": "Article URL: https://github.com/volcengine/OpenViking Comments URL: https://news.ycombinator.com/item?id=50410477 Points: 2 # Comments: 1",
+    "source": "Hacker News (agent)",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-11-09"
+  },
+  {
+    "title": "Elephant-Goldfish Model (Agent Skill)",
+    "link": "https://github.com/google/elephant-goldfish-model",
+    "publishedAt": "Sun, 08 Nov 2026 03:50:34 +0000",
+    "excerpt": "Article URL: https://github.com/google/elephant-goldfish-model Comments URL: https://news.ycombinator.com/item?id=50410270 Points: 1 # Comments: 0",
+    "source": "Hacker News (agent)",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-11-09"
+  },
+  {
+    "title": "Uncensored LLMs in agent loops: 31 models, 5 tasks, most fail half the time",
+    "link": "https://openuncensored.com/blog/uncensored-models-in-agent-loops",
+    "publishedAt": "Sun, 08 Nov 2026 01:24:17 +0000",
+    "excerpt": "Article URL: https://openuncensored.com/blog/uncensored-models-in-agent-loops Comments URL: https://news.ycombinator.com/item?id=50409685 Points: 1 # Comments: 1",
+    "source": "Hacker News (agent)",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-11-09"
+  },
+  {
+    "title": "An AI agent's public attempt to get 5k GitHub stars in a month (it's at 0)",
+    "link": "https://rogermas05.github.io/agent-recap/",
+    "publishedAt": "Sun, 08 Nov 2026 00:32:08 +0000",
+    "excerpt": "Article URL: https://rogermas05.github.io/agent-recap/ Comments URL: https://news.ycombinator.com/item?id=50409425 Points: 2 # Comments: 0",
+    "source": "Hacker News (agent)",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-11-09"
+  },
+  {
+    "title": "Show HN: Sentient, Your Coding Agent Shouldn't Be a Black Box",
+    "link": "https://nosaka.ai/sentient/",
+    "publishedAt": "Sat, 07 Nov 2026 23:26:26 +0000",
+    "excerpt": "after working quite rigorously for a few months with claude code, I found out that I was blindly approving permission requests for the sake of progressing my projects, this led me to realize that coding agents generate hundreds of commands underneath the covers which is necessary, but quite scary if you ask me. you've probably seen news recently about agents deleting databases or environments in p",
+    "source": "Hacker News (agent)",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-11-09"
   }
 ]
