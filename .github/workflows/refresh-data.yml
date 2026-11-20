@@ -1,7 +1,7 @@
 name: Refresh data
 
 # 数据动态更新：定时刷工具元数据、论文元数据与新闻候选，验证能构建后直接提交并
-# 推送到 main，交给 deploy.yml 自动部署。全流程无人值守。
+# 推送到 main，并显式触发 deploy.yml。全流程无人值守。
 #
 # 自动化的边界（只碰机器可验证的字段）：
 #   - fetch:github 只回填 stars / archived / lastPush；license 冲突只打印、不自动改写。
@@ -14,8 +14,7 @@ on:
     - cron: '17 2 * * *'
   workflow_dispatch:
 
-permissions:
-  contents: write
+permissions: {}
 
 concurrency:
   group: refresh-data
@@ -24,6 +23,10 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    outputs:
+      pushed: ${{ steps.push.outputs.pushed }}
     steps:
       - uses: actions/checkout@v4
 
@@ -102,10 +105,12 @@ jobs:
             echo
             echo "不打算收录的候选可以留在原处——脚本会按 URL 去重，不会重复刷出来。"
             echo
-            echo "> 本轮刷新结果将自动提交并推送到 \`main\`，由 deploy.yml 自动部署。"
+            echo "> 若有变更，将从 main 自动提交、推送并显式触发部署。"
           } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Commit and push to main
+        id: push
+        if: github.ref == 'refs/heads/main'
         run: |
           set -euo pipefail
           if [ -z "$(git status --porcelain -- src/content/tools src/content/papers content-inbox)" ]; then
@@ -119,3 +124,17 @@ jobs:
           git add src/content/tools src/content/papers content-inbox
           git commit -m "chore: refresh tool, paper and news metadata"
           git push origin HEAD:main
+          echo "pushed=true" >> "$GITHUB_OUTPUT"
+
+  dispatch-deploy:
+    needs: refresh
+    if: github.ref == 'refs/heads/main' && needs.refresh.outputs.pushed == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+    steps:
+      - name: Dispatch Pages deployment
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: gh workflow run deploy.yml --ref main
