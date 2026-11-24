@@ -1,66 +1,5 @@
 [
   {
-    "title": "Worse Together: How Performance Breaks Down in Multi-User Multi-Agent Teams",
-    "link": "https://alignment.anthropic.com/2026/worse-together/",
-    "publishedAt": "Thu, 12 Nov 2026 06:48:42 +0000",
-    "excerpt": "Article URL: https://alignment.anthropic.com/2026/worse-together/ Comments URL: https://news.ycombinator.com/item?id=50463856 Points: 3 # Comments: 0",
-    "source": "Hacker News (agent)",
-    "matchedKeywords": [
-      "agent",
-      "multi-agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-11-12"
-  },
-  {
-    "title": "Show HN: Receipts, agent skills that make PRDs and metrics cite their evidence",
-    "link": "https://github.com/aliraza2025/receipts",
-    "publishedAt": "Thu, 12 Nov 2026 01:51:05 +0000",
-    "excerpt": "Article URL: https://github.com/aliraza2025/receipts Comments URL: https://news.ycombinator.com/item?id=50461995 Points: 2 # Comments: 0",
-    "source": "Hacker News (agent)",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-11-12"
-  },
-  {
-    "title": "Modern Web Guidance 1.0: The web platform expertise your coding agent is missing",
-    "link": "https://developer.chrome.com/blog/modern-web-guidance-v1",
-    "publishedAt": "Wed, 11 Nov 2026 23:22:29 +0000",
-    "excerpt": "Article URL: https://developer.chrome.com/blog/modern-web-guidance-v1 Comments URL: https://news.ycombinator.com/item?id=50460398 Points: 31 # Comments: 7",
-    "source": "Hacker News (agent)",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-11-12"
-  },
-  {
-    "title": "Show HN: Agent skill and Claude/Codex plugins for Google Ads campaigns",
-    "link": "https://github.com/adeptads/agent-skills",
-    "publishedAt": "Wed, 11 Nov 2026 23:11:38 +0000",
-    "excerpt": "Article URL: https://github.com/adeptads/agent-skills Comments URL: https://news.ycombinator.com/item?id=50460287 Points: 1 # Comments: 0",
-    "source": "Hacker News (agent)",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-11-12"
-  },
-  {
-    "title": "Think of an Apple – A Case for Agent Memory",
-    "link": "https://nishantjosh.dev/blogs/think-of-an-apple/",
-    "publishedAt": "Wed, 11 Nov 2026 22:30:33 +0000",
-    "excerpt": "Article URL: https://nishantjosh.dev/blogs/think-of-an-apple/ Comments URL: https://news.ycombinator.com/item?id=50459696 Points: 1 # Comments: 0",
-    "source": "Hacker News (agent)",
-    "matchedKeywords": [
-      "agent"
-    ],
-    "status": "needs-review",
-    "fetchedAt": "2026-11-12"
-  },
-  {
     "title": "SkillOpt: Self-Evolving Agent Skills with Zero Inference Overhead",
     "link": "https://github.com/microsoft/skillopt",
     "publishedAt": "Wed, 11 Nov 2026 22:20:08 +0000",
@@ -4894,5 +4833,65 @@
     ],
     "status": "needs-review",
     "fetchedAt": "2026-11-22"
+  },
+  {
+    "title": "Richpanel helps companies automate 50% of support in 30 days",
+    "link": "https://openai.com/business/customer-stories/richpanel-ai-customer-support",
+    "publishedAt": "Mon, 23 Nov 2026 08:00:00 GMT",
+    "excerpt": "Richpanel uses GPT-6 Astra and GPT-6.1 Sol to equip its AI support agents with tools and procedures, and GPT-6 Luna for their conversations.",
+    "source": "OpenAI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-11-24"
+  },
+  {
+    "title": "Anthropic launches Claude Ship, letting AI agents review, fix, and approve code changes",
+    "link": "https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/",
+    "publishedAt": "Mon, 23 Nov 2026 22:05:50 +0000",
+    "excerpt": "As AI-generated code piles up, Anthropic's new developer tools aim to eliminate another bottleneck by letting agents handle routine approvals.",
+    "source": "TechCrunch AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-11-24"
+  },
+  {
+    "title": "Supertake raises $20M to let AI agents turn your market predictions into stock portfolios",
+    "link": "https://techcrunch.com/2026/11/23/supertake-raises-20m-to-let-ai-agents-turn-your-market-predictions-into-stock-portfolios/",
+    "publishedAt": "Mon, 23 Nov 2026 22:02:05 +0000",
+    "excerpt": "Think you know where the market is headed? A startup called Supertake lets you put money behind your ideas without having to pick the stocks yourself.",
+    "source": "TechCrunch AI",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-11-24"
+  },
+  {
+    "title": "datasette-charts 0.2a0",
+    "link": "https://simonwillison.net/2026/Nov/24/datasette-charts/",
+    "publishedAt": "2026-11-24T04:24:29+00:00",
+    "excerpt": "<p><strong>Release:</strong> <a href=\"https://github.com/datasette/datasette-charts/releases/tag/0.2a0\">datasette-charts 0.2a0</a></p> <p>I introduced this new charting plugin for Datasette <a href=\"https://simonwillison.net/2026/Nov/23/datasette-charts/\">yesterday</a>. Today it's gained integration with <a href=\"https://agent.datasette.io/\">Datasette Agent</a>, so now you can ask chat for a chart",
+    "source": "Simon Willison",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-11-24"
+  },
+  {
+    "title": "datasette-agent 0.7a1",
+    "link": "https://simonwillison.net/2026/Nov/24/datasette-agent/",
+    "publishedAt": "2026-11-24T03:45:57+00:00",
+    "excerpt": "<p><strong>Release:</strong> <a href=\"https://github.com/datasette/datasette-agent/releases/tag/0.7a1\">datasette-agent 0.7a1</a></p> <p>I small improvement to <a href=\"https://agent.datasette.io/\">Datasette Agent</a>: chat sessions can open an iframe side panel, and that panel can then navigate to different pages. This version improves navigation by fragment hashes, for deeper integration with oth",
+    "source": "Simon Willison",
+    "matchedKeywords": [
+      "agent"
+    ],
+    "status": "needs-review",
+    "fetchedAt": "2026-11-24"
   }
 ]
